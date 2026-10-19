@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1360" viewBox="0 0 1560 1360">
+<rect width="1560" height="1360" fill="white"/>
+<defs><path id="zig" d="M-0.615000,13.300039 L-0.615000,3.300039 L-1.215000,3.150034 L-0.615000,3.000039 L-1.215000,2.850034 L-0.615000,2.700029 L-1.215000,2.550034 L-0.615000,2.400029 L-1.215000,2.250024 L-0.615000,2.100029 L-1.215000,1.950024 L-0.615000,1.800019 L-1.215000,1.650014 L-0.615000,1.500019 L-1.215000,1.350014 L-0.615000,1.200009 L-1.215000,1.050014 L-0.615000,0.900009 L-1.215000,0.750005 L-0.615000,0.600010 L-1.215000,0.450005 L-0.615000,0.300000 L-1.215000,0.150005 L-0.615000,-0.000000 L-1.215000,-0.150005 L-0.615000,-0.300000 L-1.215000,-0.450005 L-0.615000,-0.600010 L-1.215000,-0.750005 L-0.615000,-0.900010 L-1.215000,-1.050015 L-0.615000,-1.200009 L-1.215000,-1.350014 L-0.615000,-1.500019 L-1.215000,-1.650014 L-0.615000,-1.800019 L-1.215000,-1.950024 L-0.615000,-2.100029 L-1.215000,-2.250024 L-0.615000,-2.400029 L-1.215000,-2.550034 L-0.615000,-2.700029 L-1.215000,-2.850034 L-0.615000,-3.000035 L-1.215000,-3.150037 L-0.615000,-3.300039 L-0.615000,-13.300039" fill="none" stroke-linejoin="miter"/></defs>
+<g font-family="Arial,sans-serif" fill="#172534">
+<text x="50" y="40" font-size="28" font-weight="bold">Zigzag settings matrix — left-to-right print order</text>
+<text x="50" y="71" font-size="18">21 mirrored pairs. Each pair finishes completely before the next pair starts.</text>
+<text x="50" y="100" font-size="17">245°C nozzle · 85°C bed · 0.15 mm line width · 0.06 mm layers · 10 mm intro/outro · purge 20 mm/s</text>
+<rect x="65" y="130" width="1430" height="340" rx="12" fill="#f0f4f8" stroke="#64748b" stroke-width="2"/>
+<text x="80" y="155" font-size="16">Top view of build plate; front is at the bottom. Row centered at Y126 mm.</text>
+<text x="230" y="190" font-size="19" font-weight="bold">Single layer: 0.06 mm tall</text>
+<text x="800" y="190" font-size="19" font-weight="bold">Four layers: 0.24 mm tall</text>
+<g transform="translate(231.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="231.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">01</text>
+<text x="231.200" y="440" text-anchor="middle" font-size="12">1</text>
+<text x="231.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(285.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="285.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">02</text>
+<text x="285.200" y="440" text-anchor="middle" font-size="12">1</text>
+<text x="285.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(339.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="339.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">03</text>
+<text x="339.200" y="440" text-anchor="middle" font-size="12">5</text>
+<text x="339.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(393.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="393.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">04</text>
+<text x="393.200" y="440" text-anchor="middle" font-size="12">5</text>
+<text x="393.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(447.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="447.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">05</text>
+<text x="447.200" y="440" text-anchor="middle" font-size="12">10</text>
+<text x="447.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(501.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="501.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">06</text>
+<text x="501.200" y="440" text-anchor="middle" font-size="12">10</text>
+<text x="501.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(555.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="555.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">07</text>
+<text x="555.200" y="440" text-anchor="middle" font-size="12">5</text>
+<text x="555.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(609.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="609.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">08</text>
+<text x="609.200" y="440" text-anchor="middle" font-size="12">5</text>
+<text x="609.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(663.200 305) scale(5.4)"><use href="#zig" stroke="#b44916" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#b44916" stroke-width=".25"/></g>
+<text x="663.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">09</text>
+<text x="663.200" y="440" text-anchor="middle" font-size="12">5</text>
+<text x="663.200" y="457" text-anchor="middle" font-size="12">100%</text>
+<g transform="translate(717.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="717.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">10</text>
+<text x="717.200" y="440" text-anchor="middle" font-size="12">7.5</text>
+<text x="717.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(771.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="771.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">11</text>
+<text x="771.200" y="440" text-anchor="middle" font-size="12">7.5</text>
+<text x="771.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(825.200 305) scale(5.4)"><use href="#zig" stroke="#b44916" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#b44916" stroke-width=".25"/></g>
+<text x="825.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">12</text>
+<text x="825.200" y="440" text-anchor="middle" font-size="12">7.5</text>
+<text x="825.200" y="457" text-anchor="middle" font-size="12">100%</text>
+<g transform="translate(879.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="879.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">13</text>
+<text x="879.200" y="440" text-anchor="middle" font-size="12">10</text>
+<text x="879.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(933.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="933.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">14</text>
+<text x="933.200" y="440" text-anchor="middle" font-size="12">10</text>
+<text x="933.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(987.200 305) scale(5.4)"><use href="#zig" stroke="#b44916" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#b44916" stroke-width=".25"/></g>
+<text x="987.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">15</text>
+<text x="987.200" y="440" text-anchor="middle" font-size="12">10</text>
+<text x="987.200" y="457" text-anchor="middle" font-size="12">100%</text>
+<g transform="translate(1041.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="1041.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">16</text>
+<text x="1041.200" y="440" text-anchor="middle" font-size="12">15</text>
+<text x="1041.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(1095.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="1095.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">17</text>
+<text x="1095.200" y="440" text-anchor="middle" font-size="12">15</text>
+<text x="1095.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(1149.200 305) scale(5.4)"><use href="#zig" stroke="#b44916" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#b44916" stroke-width=".25"/></g>
+<text x="1149.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">18</text>
+<text x="1149.200" y="440" text-anchor="middle" font-size="12">15</text>
+<text x="1149.200" y="457" text-anchor="middle" font-size="12">100%</text>
+<g transform="translate(1203.200 305) scale(5.4)"><use href="#zig" stroke="#526477" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#526477" stroke-width=".25"/></g>
+<text x="1203.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">19</text>
+<text x="1203.200" y="440" text-anchor="middle" font-size="12">20</text>
+<text x="1203.200" y="457" text-anchor="middle" font-size="12">0%</text>
+<g transform="translate(1257.200 305) scale(5.4)"><use href="#zig" stroke="#087f8c" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#087f8c" stroke-width=".25"/></g>
+<text x="1257.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">20</text>
+<text x="1257.200" y="440" text-anchor="middle" font-size="12">20</text>
+<text x="1257.200" y="457" text-anchor="middle" font-size="12">50%</text>
+<g transform="translate(1311.200 305) scale(5.4)"><use href="#zig" stroke="#b44916" stroke-width=".25"/><use href="#zig" transform="scale(-1 1)" stroke="#b44916" stroke-width=".25"/></g>
+<text x="1311.200" y="416" text-anchor="middle" font-size="15" font-weight="bold">21</text>
+<text x="1311.200" y="440" text-anchor="middle" font-size="12">20</text>
+<text x="1311.200" y="457" text-anchor="middle" font-size="12">100%</text>
+<text x="50" y="504" font-size="18">Numbers identify specimens. Under each: test speed (mm/s), then part-cooling fan percentage.</text>
+<text x="50" y="537" font-size="18" font-weight="bold">All four-layer specimens: layer 1 = 1 mm/s, fan OFF. Listed settings apply to layers 2–4.</text>
+<text x="50" y="587" font-size="21" font-weight="bold">Single-layer specimens</text>
+<rect x="50" y="607" width="34" height="27" rx="4" fill="#526477"/><text x="67" y="627" text-anchor="middle" fill="white" font-size="16">01</text><text x="96" y="627" font-size="18">1 mm/s · PCF 0%</text>
+<rect x="50" y="647" width="34" height="27" rx="4" fill="#087f8c"/><text x="67" y="667" text-anchor="middle" fill="white" font-size="16">02</text><text x="96" y="667" font-size="18">1 mm/s · PCF 50%</text>
+<rect x="50" y="687" width="34" height="27" rx="4" fill="#526477"/><text x="67" y="707" text-anchor="middle" fill="white" font-size="16">03</text><text x="96" y="707" font-size="18">5 mm/s · PCF 0%</text>
+<rect x="50" y="727" width="34" height="27" rx="4" fill="#087f8c"/><text x="67" y="747" text-anchor="middle" fill="white" font-size="16">04</text><text x="96" y="747" font-size="18">5 mm/s · PCF 50%</text>
+<rect x="50" y="767" width="34" height="27" rx="4" fill="#526477"/><text x="67" y="787" text-anchor="middle" fill="white" font-size="16">05</text><text x="96" y="787" font-size="18">10 mm/s · PCF 0%</text>
+<rect x="50" y="807" width="34" height="27" rx="4" fill="#087f8c"/><text x="67" y="827" text-anchor="middle" fill="white" font-size="16">06</text><text x="96" y="827" font-size="18">10 mm/s · PCF 50%</text>
+<text x="555" y="587" font-size="21" font-weight="bold">Four-layer specimens</text>
+<rect x="555" y="607" width="34" height="27" rx="4" fill="#526477"/><text x="572" y="627" text-anchor="middle" fill="white" font-size="16">07</text><text x="601" y="627" font-size="18">5 mm/s · PCF 0%</text>
+<rect x="555" y="647" width="34" height="27" rx="4" fill="#087f8c"/><text x="572" y="667" text-anchor="middle" fill="white" font-size="16">08</text><text x="601" y="667" font-size="18">5 mm/s · PCF 50%</text>
+<rect x="555" y="687" width="34" height="27" rx="4" fill="#b44916"/><text x="572" y="707" text-anchor="middle" fill="white" font-size="16">09</text><text x="601" y="707" font-size="18">5 mm/s · PCF 100%</text>
+<rect x="555" y="727" width="34" height="27" rx="4" fill="#526477"/><text x="572" y="747" text-anchor="middle" fill="white" font-size="16">10</text><text x="601" y="747" font-size="18">7.5 mm/s · PCF 0%</text>
+<rect x="555" y="767" width="34" height="27" rx="4" fill="#087f8c"/><text x="572" y="787" text-anchor="middle" fill="white" font-size="16">11</text><text x="601" y="787" font-size="18">7.5 mm/s · PCF 50%</text>
+<rect x="555" y="807" width="34" height="27" rx="4" fill="#b44916"/><text x="572" y="827" text-anchor="middle" fill="white" font-size="16">12</text><text x="601" y="827" font-size="18">7.5 mm/s · PCF 100%</text>
+<rect x="555" y="847" width="34" height="27" rx="4" fill="#526477"/><text x="572" y="867" text-anchor="middle" fill="white" font-size="16">13</text><text x="601" y="867" font-size="18">10 mm/s · PCF 0%</text>
+<rect x="555" y="887" width="34" height="27" rx="4" fill="#087f8c"/><text x="572" y="907" text-anchor="middle" fill="white" font-size="16">14</text><text x="601" y="907" font-size="18">10 mm/s · PCF 50%</text>
+<rect x="555" y="927" width="34" height="27" rx="4" fill="#b44916"/><text x="572" y="947" text-anchor="middle" fill="white" font-size="16">15</text><text x="601" y="947" font-size="18">10 mm/s · PCF 100%</text>
+<text x="1060" y="587" font-size="21" font-weight="bold">Four-layer specimens, continued</text>
+<rect x="1060" y="607" width="34" height="27" rx="4" fill="#526477"/><text x="1077" y="627" text-anchor="middle" fill="white" font-size="16">16</text><text x="1106" y="627" font-size="18">15 mm/s · PCF 0%</text>
+<rect x="1060" y="647" width="34" height="27" rx="4" fill="#087f8c"/><text x="1077" y="667" text-anchor="middle" fill="white" font-size="16">17</text><text x="1106" y="667" font-size="18">15 mm/s · PCF 50%</text>
+<rect x="1060" y="687" width="34" height="27" rx="4" fill="#b44916"/><text x="1077" y="707" text-anchor="middle" fill="white" font-size="16">18</text><text x="1106" y="707" font-size="18">15 mm/s · PCF 100%</text>
+<rect x="1060" y="727" width="34" height="27" rx="4" fill="#526477"/><text x="1077" y="747" text-anchor="middle" fill="white" font-size="16">19</text><text x="1106" y="747" font-size="18">20 mm/s · PCF 0%</text>
+<rect x="1060" y="767" width="34" height="27" rx="4" fill="#087f8c"/><text x="1077" y="787" text-anchor="middle" fill="white" font-size="16">20</text><text x="1106" y="787" font-size="18">20 mm/s · PCF 50%</text>
+<rect x="1060" y="807" width="34" height="27" rx="4" fill="#b44916"/><text x="1077" y="827" text-anchor="middle" fill="white" font-size="16">21</text><text x="1106" y="827" font-size="18">20 mm/s · PCF 100%</text>
+<text x="50" y="1040" font-size="19" font-weight="bold">Geometry and positioning</text>
+<text x="50" y="1075" font-size="18">Pair centers: X28, X38, …, X228 mm. Center spacing: 10 mm; clear gap between pairs: 7.42 mm.</text>
+<text x="50" y="1110" font-size="18">Model envelope including bead margin: X26.71–229.29, Y112.62–139.38 mm.</text>
+<text x="50" y="1145" font-size="18">Actual toolpath geometry is unchanged. SVG lines represent nozzle centerlines, not bead width.</text>
+<text x="50" y="1200" font-size="18">50% fan is commanded as PWM 128/255; 100% as 255/255. Auxiliary fan stays off during printing.</text>
+<text x="50" y="1235" font-size="18">Fan is set for each condition with a two-second settling pause. Travel clearance: Z0.64 mm.</text>
+<text x="50" y="1295" font-size="17">Static validation passed. No physical printer test has been performed. Labels in this SVG are not printed.</text>
+</g></svg>
