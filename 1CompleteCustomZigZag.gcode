@@ -50,7 +50,7 @@ M190 S70 ;wait for bed temp
 M106 P2 S100 ; turn on big fan ,to cool down toolhead
 
 ;===== prepare print temperature and material ==========
-M104 S245 ;set extruder temp
+M104 S255 ;set extruder temp
 G91
 G0 Z10 F1200
 G90
@@ -61,7 +61,7 @@ G1 Y245
 G1 Y265 F3000
 M620 M
 M620 S0A   ; switch material if AMS exist
-    M109 S245
+    M109 S255
     G1 X120 F12000
 
     G1 X20 Y50 F12000
@@ -76,12 +76,12 @@ M620.1 E F24.9449 T245
 
 M412 S1 ; ===turn on filament runout detection===
 
-M109 S245 ;set nozzle to common flush temp
+M109 S255 ;set nozzle to common flush temp
 M106 P1 S0
 G92 E0
 G1 E50 F200
 M400
-M104 S245
+M104 S255
 G92 E0
 G1 E50 F200
 M400
@@ -226,7 +226,7 @@ M975 S1 ; turn on vibration supression
 M106 P2 S100 ; turn on big fan ,to cool down toolhead
 
 
-M104 S245 ; set extrude temp earlier, to reduce wait time
+M104 S255 ; set extrude temp earlier, to reduce wait time
 
 ;===== mech mode fast check============================
 G1 X128 Y128 Z10 F20000
@@ -252,7 +252,7 @@ G90
 M83
 T1000
 G1 X18.0 Y1.0 Z0.8 F18000;Move to start position
-M109 S245
+M109 S255
 G1 Z0.2
 G0 E2 F300
 G0 X240 E15 F1500
@@ -285,7 +285,7 @@ M981 S1 P20000 ;open spaghetti detector
 M106 S0
 M106 P2 S0
 ; Confirm requested temperatures before model deposition
-M109 S245
+M109 S255
 M190 S70
 ; CHANGE_LAYER
 ; Z_HEIGHT: 0.06
