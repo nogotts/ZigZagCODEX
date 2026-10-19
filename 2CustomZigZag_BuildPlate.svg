@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1050" viewBox="0 0 1100 1050">
+<rect width="1100" height="1050" fill="white"/>
+<defs><path id="p" d="M0.000,2660.008 L0.000,1660.008 L-60.000,1645.007 L0.000,1630.008 L-60.000,1615.007 L0.000,1600.007 L-60.000,1585.007 L0.000,1570.007 L-60.000,1555.006 L0.000,1540.007 L-60.000,1525.006 L0.000,1510.006 L-60.000,1495.005 L0.000,1480.006 L-60.000,1465.005 L0.000,1450.005 L-60.000,1435.005 L0.000,1420.005 L-60.000,1405.004 L0.000,1390.005 L-60.000,1375.004 L0.000,1360.004 L-60.000,1345.004 L0.000,1330.004 L-60.000,1315.003 L0.000,1300.004 L-60.000,1285.003 L0.000,1270.003 L-60.000,1255.003 L0.000,1240.003 L-60.000,1225.002 L0.000,1210.003 L-60.000,1195.002 L0.000,1180.002 L-60.000,1165.002 L0.000,1150.002 L-60.000,1135.001 L0.000,1120.001 L-60.000,1105.001 L0.000,1090.001 L-60.000,1075.000 L0.000,1060.001 L-60.000,1045.000 L0.000,1030.000 L-60.000,1015.000 L0.000,1000.000 L0.000,0.000" fill="none" stroke-linejoin="miter"/>
+<marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker></defs>
+<g font-family="Arial,sans-serif" fill="#172534">
+<text x="45" y="42" font-size="27" font-weight="bold">New geometry: 2CustomZigZag</text>
+<text x="45" y="74" font-size="17">Two mirrored paths directly on the build plate — no rectangular base</text>
+<text x="65" y="125" font-size="21" font-weight="bold">Full top view</text>
+<g transform="translate(170 160) scale(.27)">
+<use href="#p" stroke="#1264a3" stroke-width="7"/>
+<use href="#p" transform="translate(123 0) scale(-1 1)" stroke="#c34c00" stroke-width="7"/>
+</g>
+<g font-size="16" text-anchor="middle"><text x="170" y="148">END</text><text x="203.21" y="148">END</text><text x="170" y="905">START</text><text x="231" y="925">START</text></g>
+<g font-size="17">
+<text x="265" y="280">10 mm straight outro</text>
+<text x="265" y="525">New sharp zigzag geometry</text>
+<text x="265" y="760">10 mm straight intro</text>
+<text x="560" y="125" font-size="21" font-weight="bold">Enlarged zigzag detail</text>
+</g>
+<svg x="550" y="160" width="480" height="480" viewBox="-72 1290 100 100">
+<rect x="-72" y="1290" width="100" height="100" fill="#f1f5f9"/>
+<use href="#p" stroke="#1264a3" stroke-width=".7"/>
+<path d="M16 1300V1330" stroke="#334155" stroke-width=".4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="20" y="1315" font-size="3.3" transform="rotate(90 20 1315)">0.300 mm repeat</text>
+</svg>
+<g font-size="18">
+<text x="555" y="690">Sharp corners on both sides.</text>
+<text x="555" y="728">Repeat spacing: nominal 0.300 mm.</text>
+<text x="555" y="766">Zigzag width: 0.600 mm.</text>
+<text x="555" y="804">Zigzag length: 6.600 mm.</text>
+<text x="555" y="842">Total path span: 26.600 mm.</text>
+</g>
+<text x="45" y="980" font-size="18">Four layers: 0.06 / 0.12 / 0.18 / 0.24 mm. Width 0.15 mm. All layers 1 mm/s.</text>
+<text x="45" y="1015" font-size="18">Nozzle 245°C. Bed 85°C. Purge lines 20 mm/s. Diagram lines show nozzle centers.</text>
+</g></svg>
