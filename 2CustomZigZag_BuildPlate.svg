@@ -10,7 +10,7 @@
 <use href="#p" stroke="#1264a3" stroke-width="7"/>
 <use href="#p" transform="translate(123 0) scale(-1 1)" stroke="#c34c00" stroke-width="7"/>
 </g>
-<g font-size="16" text-anchor="middle"><text x="170" y="148">END</text><text x="203.21" y="148">END</text><text x="170" y="905">START</text><text x="231" y="925">START</text></g>
+<g font-size="16" text-anchor="middle"><text x="186.6" y="148">ENDS</text><text x="186.6" y="905">STARTS</text></g>
 <g font-size="17">
 <text x="265" y="280">10 mm straight outro</text>
 <text x="265" y="525">New sharp zigzag geometry</text>
