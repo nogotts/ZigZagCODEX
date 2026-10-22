@@ -1,0 +1,43 @@
+{
+  "source": "SquareWave_Matrix_Coalesced_255C_OrcaMotion.gcode",
+  "geometry_variants": 30,
+  "pairs": 90,
+  "plate_envelope_mm": [
+    20.694960000000002,
+    239.458399,
+    20.0,
+    244.901028
+  ],
+  "speeds_mm_s": [
+    5,
+    10,
+    15
+  ],
+  "first_layer_speed_mm_s": 5,
+  "part_cooling_percent": 0,
+  "first_accel_mm_s2": 500,
+  "upper_accel_mm_s2": 2000,
+  "jobs": {
+    "SquareWave_Speed_Matrix_0PCF_OrcaMotion": {
+      "layers": 900,
+      "path_passes": 1800,
+      "deposition_moves": 81000,
+      "wipes": 1800
+    },
+    "SquareWave_Speed_Matrix_0PCF_OrcaMotion_QuickCheck_0p4mm": {
+      "layers": 30,
+      "path_passes": 60,
+      "deposition_moves": 2700,
+      "wipes": 60
+    }
+  },
+  "tests": {
+    "all_deposition_replayed_against_source_geometry_and_material": true,
+    "same_shape_and_E_within_speed_triplets": true,
+    "no_sample_overlap": true,
+    "all_inside_plate_and_outside_exclusion": true,
+    "all_90_degree_corners_preserved": true,
+    "no_internal_retractions_or_dwells": true,
+    "no_physical_print_verification": true
+  }
+}
