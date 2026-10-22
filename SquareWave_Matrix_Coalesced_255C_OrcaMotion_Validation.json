@@ -1,0 +1,36 @@
+{
+  "source_commit": "ef3f96d",
+  "source_sha256": "40a6060f7289e356e8d1ed515fcf499eed518d3e4ea2207a368013ee6fb967ba",
+  "full": {
+    "layers": 600,
+    "wipes": 1200,
+    "fan_settle_events": 0
+  },
+  "short": {
+    "layers": 60,
+    "wipes": 120,
+    "fan_settle_events": 0
+  },
+  "validation": {
+    "exact_deposition_xy_e_and_feed_preserved": true,
+    "all_90_degree_deposition_turns_preserved": true,
+    "each_path_has_45_deposition_moves": true,
+    "all_first_layers_accel_500_upper_2000": true,
+    "all_deposition_255C_nozzle_85C_bed": true,
+    "added_fan_settling_waits_removed": true,
+    "all_wipes_on_existing_outro": true,
+    "footer_unchanged": true,
+    "pressure_advance_not_guessed": true,
+    "physical_print_verified": false
+  },
+  "reference_files": [
+    "ZigZagSlicerVerSquare_PETG_17m24s.gcode",
+    "2XZigzagSquare_PETG_17m39s.gcode"
+  ],
+  "intentional_differences_from_reference": {
+    "line_width": "fixed 0.15 mm rather than Arachne variable widths",
+    "bed_C": 85,
+    "fan_percent": "original 0/50% matrix conditions",
+    "geometry": "exact square corners rather than centerline blending"
+  }
+}
