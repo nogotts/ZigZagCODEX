@@ -1,0 +1,13 @@
+{
+  "source": "/workspace/ZigZagCODEX/SquareWave_Spacing_Matrix_10Layers.gcode",
+  "output": "/workspace/output/SquareWave_Spacing_Matrix_10Layers_Coalesced.gcode",
+  "source_sha256": "0e8e90e4ef110fd4b27dfa3d37e86fa78498bb3eabc691d9f3baecb2d95d9bf4",
+  "source_deposition_moves": 1227600,
+  "coalesced_deposition_moves": 54000,
+  "merged_moves": 1173600,
+  "path_passes_compared": 1200,
+  "corners_identical": true,
+  "extrusion_totals_identical_at_1e8_precision": true,
+  "all_other_commands_byte_identical": true,
+  "proven_physical_fix": false
+}
