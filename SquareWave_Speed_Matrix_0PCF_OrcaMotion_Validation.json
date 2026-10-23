@@ -15,7 +15,10 @@
   ],
   "first_layer_speed_mm_s": 5,
   "part_cooling_percent": 0,
-  "first_accel_mm_s2": 500,
+  "K": 0.5,
+  "nozzle_C": 245,
+  "bed_C": 80,
+  "first_accel_mm_s2": 2000,
   "upper_accel_mm_s2": 2000,
   "jobs": {
     "SquareWave_Speed_Matrix_0PCF_OrcaMotion": {
@@ -38,6 +41,14 @@
     "all_inside_plate_and_outside_exclusion": true,
     "all_90_degree_corners_preserved": true,
     "no_internal_retractions_or_dwells": true,
-    "no_physical_print_verification": true
-  }
+    "no_physical_print_verification": true,
+    "all_motion_and_extrusion_commands_unchanged_from_previous_matrix": true,
+    "K_0p5_set_before_purge_and_model": true,
+    "all_specimen_layer_accelerations_2000": true,
+    "print_and_flush_nozzle_245_bed_80": true
+  },
+  "startup_cleaning_nozzle_C": [
+    75,
+    140
+  ]
 }

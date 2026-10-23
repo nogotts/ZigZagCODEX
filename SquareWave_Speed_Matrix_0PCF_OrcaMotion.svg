@@ -2,7 +2,7 @@
 <g font-family="Arial,sans-serif" fill="#172534">
 <text x="50" y="42" font-size="29" font-weight="bold">Square-wave speed matrix — 0% part cooling throughout</text>
 <text x="50" y="78" font-size="20">90 mirrored pairs: every original geometry/size at upper-layer speeds 5, 10 and 15 mm/s.</text>
-<text x="50" y="114" font-size="19">All first layers: 5 mm/s, acceleration 500. Layers 2–10: test speed, acceleration 2000 mm/s².</text>
+<text x="50" y="114" font-size="19">First layers: 5 mm/s. Layers 2–10: labeled test speed. All specimen layers: 2000 mm/s²; K=0.5.</text>
 <text x="50" y="150" font-size="19">Every group of three uses identical geometry and extrusion. Complete each pair, left to right, then the next row.</text>
 <rect x="60" y="225" width="1024" height="1024" rx="5" fill="#f0f4f8" stroke="#64748b" stroke-width="2"/>
 <rect x="60" y="1137" width="72" height="112" fill="#f3d7d7"/>
@@ -524,8 +524,8 @@
 <text x="50" y="2040" font-size="20">Spacing refers to one vertical step between horizontal bars. Full repeating cycle = twice that spacing.</text>
 <text x="50" y="2080" font-size="20">Exact square corners; 45 extrusion moves per path; 10 mm straight intro/outro; 2 mm retraction-wipe.</text>
 <text x="50" y="2120" font-size="20">Fixed 0.15 mm line width, 0.06 mm layers, 10 layers per specimen (0.60 mm total height).</text>
-<text x="50" y="2160" font-size="20">255°C nozzle; 85°C bed; part cooling OFF; auxiliary fan OFF; purge-line speed 20 mm/s.</text>
-<text x="50" y="2200" font-size="20">Acceleration uses the supplied Orca profile: first layer 500, upper layers 2000 mm/s² at every test speed.</text>
+<text x="50" y="2160" font-size="20">245°C nozzle; 80°C bed; part cooling OFF; auxiliary fan OFF; purge-line speed 20 mm/s.</text>
+<text x="50" y="2200" font-size="20">Requested acceleration: 2000 mm/s² on every specimen layer. Flow dynamics: M900 K0.5.</text>
 <text x="50" y="2240" font-size="20">Plate envelope: X20.69–239.46, Y20.00–244.90 mm. Travel clearance Z1.00 mm.</text>
 <text x="50" y="2300" font-size="20" font-weight="bold">Optional quick check: IDs 10, 11, 12 only — same 0.4 mm-step geometry at 5, 10 and 15 mm/s.</text>
 <text x="50" y="2360" font-size="18">SVG lines show nozzle centerlines; labels are not printed. Static checks passed; physical verification required.</text>

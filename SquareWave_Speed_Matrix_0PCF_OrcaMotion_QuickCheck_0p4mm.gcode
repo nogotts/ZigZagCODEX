@@ -2,11 +2,11 @@
 ; Bambu Lab P1S / 0.2 mm nozzle / PETG
 ; 3 sequential mirrored pairs, 30 layer events; exact square-wave corners, coalesced edges
 ; Upper-layer test speeds 5, 10, 15 mm/s; all printing part cooling OFF
-; All first layers 5 mm/s at 500 mm/s^2; all upper layers use Orca profile 2000 mm/s^2
+; All first layers 5 mm/s; every specimen layer uses acceleration 2000 mm/s^2; flow dynamics K=0.5
 ; Fixed width 0.15 mm; layer height 0.06 mm; 10 layers / specimen, height 0.60 mm
-; Nozzle 255 C; bed 85 C; purge-line XY speed 20 mm/s
+; Nozzle 245 C; bed 80 C; purge-line XY speed 20 mm/s
 ; 10 mm straight intro/outro; 2 mm retraction-wipe on existing outro, then lift to Z1
-; No added fan-settling waits; original startup/calibration retained except mesh coverage
+; No added fan-settling waits; startup/calibration retained with requested print temperatures and K; cold cleaning retained
 ; IDs in the full SVG key remain valid for the quick check
 ; Static validation only; physical print verification required
 ; EXECUTABLE_BLOCK_START
@@ -43,8 +43,8 @@ M204 S10000 ; init ACC set to 10m/s^2
 
 ;===== heatbed preheat ====================
 M1002 gcode_claim_action : 2
-M140 S85 ;set bed temp
-M190 S85 ;wait for bed temp
+M140 S80 ;set bed temp
+M190 S80 ;wait for bed temp
 
 
 ;=============turn on fans to prevent PLA jamming=================
@@ -52,7 +52,7 @@ M190 S85 ;wait for bed temp
 M106 P2 S100 ; turn on big fan ,to cool down toolhead
 
 ;===== prepare print temperature and material ==========
-M104 S255 ;set extruder temp
+M104 S245 ;set extruder temp
 G91
 G0 Z10 F1200
 G90
@@ -63,7 +63,7 @@ G1 Y245
 G1 Y265 F3000
 M620 M
 M620 S0A   ; switch material if AMS exist
-    M109 S255
+    M109 S245
     G1 X120 F12000
 
     G1 X20 Y50 F12000
@@ -78,19 +78,19 @@ M620.1 E F24.9449 T245
 
 M412 S1 ; ===turn on filament runout detection===
 
-M109 S250 ;set nozzle to common flush temp
+M109 S245 ;set nozzle to common flush temp
 M106 P1 S0
 G92 E0
 G1 E50 F200
 M400
-M104 S255
+M104 S245
 G92 E0
 G1 E50 F200
 M400
 M106 P1 S255
 G92 E0
 G1 E5 F300
-M109 S235 ; drop nozzle temp, make filament shink a bit
+M109 S245 ; requested nozzle temperature before wipe
 G92 E0
 G1 E-0.5 F300
 
@@ -114,7 +114,7 @@ M975 S1
 M106 S255
 G1 X65 Y230 F18000
 G1 Y264 F6000
-M109 S235
+M109 S245
 G1 X100 F18000 ; first wipe mouth
 
 G0 X135 Y253 F20000  ; move to exposed steel surface edge
@@ -228,7 +228,7 @@ M975 S1 ; turn on vibration supression
 M106 P2 S100 ; turn on big fan ,to cool down toolhead
 
 
-M104 S255 ; set extrude temp earlier, to reduce wait time
+M104 S245 ; set extrude temp earlier, to reduce wait time
 
 ;===== mech mode fast check============================
 G1 X128 Y128 Z10 F20000
@@ -253,8 +253,9 @@ M975 S1
 G90
 M83
 T1000
+M900 K0.5 ; requested flow dynamics for purge
 G1 X18.0 Y1.0 Z0.8 F18000;Move to start position
-M109 S255
+M109 S245
 G1 Z0.2
 G0 E2 F300
 G0 X240 E15 F1200
@@ -286,9 +287,10 @@ M83 ; use relative distances for extrusion
 M981 S1 P20000 ;open spaghetti detector
 M106 S0
 M106 P2 S0
+M900 K0.5 ; requested flow dynamics for every specimen
 ; Confirm requested temperatures before model deposition
-M109 S255
-M190 S85
+M109 S245
+M190 S80
 G90
 G21
 M83
@@ -307,7 +309,7 @@ M400
 M106 P1 S0
 ; FEATURE: Outer wall
 ; LINE_WIDTH: 0.15
-M204 S500
+M204 S2000
 ; Specimen 10 left path
 G1 X158.180000 Y21.125013 F12000
 G1 Z0.06 F1200
@@ -1488,7 +1490,7 @@ M400
 M106 P1 S0
 ; FEATURE: Outer wall
 ; LINE_WIDTH: 0.15
-M204 S500
+M204 S2000
 ; Specimen 11 left path
 G1 X173.180000 Y21.125013 F12000
 G1 Z0.06 F1200
@@ -2669,7 +2671,7 @@ M400
 M106 P1 S0
 ; FEATURE: Outer wall
 ; LINE_WIDTH: 0.15
-M204 S500
+M204 S2000
 ; Specimen 12 left path
 G1 X188.180000 Y21.125013 F12000
 G1 Z0.06 F1200
