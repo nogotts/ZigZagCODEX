@@ -1,0 +1,55 @@
+{
+  "reference": "FZigZagSquare1.4.gcode",
+  "reference_sha256": "878f631615492d7e297f446fbe9d2d06521c09ed34567dcac6e98f5934d285fe",
+  "geometry_source": "ZigZag_Spacing_Matrix_10Layers.gcode",
+  "specimens": 5,
+  "mirrored_paths_per_specimen": 2,
+  "layers_per_specimen": 10,
+  "layer_events": 50,
+  "path_passes": 100,
+  "deposition_moves": 5000,
+  "tip_spacings_mm": [
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "model_speed_mm_s": 5,
+  "purge_line_speed_mm_s": 20,
+  "nozzle_C": 255,
+  "bed_C": 70,
+  "K": 0.55,
+  "pressure_command": "M900 K0.55 L1000 M10",
+  "commanded_width_mm": 0.162876,
+  "filament_flow_ratio": 1.4,
+  "E_per_mm": 0.005238467421371646,
+  "layer_height_mm": 0.06,
+  "first_acceleration": 500,
+  "upper_acceleration": 2000,
+  "PCF_layers_1_3": 0,
+  "PCF_layers_4_10_PWM": 229,
+  "maximum_geometry_simplification_error_mm": 8.842981962446553e-06,
+  "plate_envelope_mm": [
+    61.42,
+    196.20000000000002,
+    104.84987,
+    147.15013000000002
+  ],
+  "moves_per_path": [
+    50,
+    50,
+    50,
+    50,
+    50
+  ],
+  "tests": {
+    "exact_XY_E_repeat_all_layers": true,
+    "all_deposition_settings_replayed": true,
+    "purge_XY_speed_verified": true,
+    "triangle_legs_remain_diagonal": true,
+    "source_geometry_preserved_within_0p00001_mm": true,
+    "plate_bounds_and_inter_specimen_clearance": true,
+    "physical_print_verified": false
+  }
+}
