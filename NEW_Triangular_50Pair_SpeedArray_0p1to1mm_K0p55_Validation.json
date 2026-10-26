@@ -1,0 +1,69 @@
+{
+  "name": "NEW_Triangular_50Pair_SpeedArray_0p1to1mm_K0p55",
+  "reference": "FZigZagSquare1.4.gcode",
+  "source": "ZigZag_Spacing_Matrix_10Layers.gcode",
+  "reference_sha256": "878f631615492d7e297f446fbe9d2d06521c09ed34567dcac6e98f5934d285fe",
+  "pairs": 50,
+  "rows": 5,
+  "sizes": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "layers_per_pair": 10,
+  "layer_events": 500,
+  "path_passes": 1000,
+  "deposition_moves": 46000,
+  "first_layer_speed_mm_s": 5,
+  "upper_speeds_by_row_mm_s": [
+    2.5,
+    5,
+    7.5,
+    10,
+    5
+  ],
+  "main_width_mm": 0.162876,
+  "main_flow_ratio": 1.4,
+  "control_width_mm": 0.15,
+  "control_flow_ratio": 1.4,
+  "nozzle_C": 255,
+  "bed_C": 70,
+  "K": 0.55,
+  "layer_height_mm": 0.06,
+  "fan_reference": "FZigZag5mmS1.4.gcode",
+  "fan_policy": {
+    "first_layers_off": 3,
+    "minimum_percent": 40,
+    "maximum_percent": 90,
+    "min_fan_at_seconds": 30,
+    "max_fan_at_seconds": 12,
+    "timing": "rest-to-rest motion estimate including travel, prime and wipe; not exact Orca timing"
+  },
+  "geometry_max_baseline_error_mm": 8.665061366691833e-06,
+  "plate_envelope_mm": [
+    23.150000000000002,
+    235.20000000000002,
+    13.84987,
+    242.15013000000002
+  ],
+  "tests": {
+    "source_geometry_uniformly_scaled": true,
+    "same_XY_E_across_layers_per_object": true,
+    "same_geometry_across_all_five_rows": true,
+    "all_modal_deposition_settings_replayed": true,
+    "all_first_layers_5_mm_s": true,
+    "fan_policy_matches_supplied_reference_config": true,
+    "purge_extruding_XY_moves_20_mm_s": true,
+    "no_pair_envelope_overlap": true,
+    "plate_and_exclusion_clearance": true,
+    "no_internal_retractions_or_added_dwells": true,
+    "physical_print_verified": false
+  }
+}
