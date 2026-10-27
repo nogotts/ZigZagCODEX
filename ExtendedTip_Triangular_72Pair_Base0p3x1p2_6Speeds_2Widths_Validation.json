@@ -1,0 +1,87 @@
+{
+  "name": "ExtendedTip_Triangular_72Pair_Base0p3x1p2_6Speeds_2Widths",
+  "reference": "FZigZagSquare1.4.gcode",
+  "source": "analytic new triangle; mirrored baseline positions and 22 cycles from previous 72-pair array",
+  "baseline_geometry": {
+    "same_side_pitch_mm": 0.3,
+    "horizontal_reach_mm": 1.2,
+    "half_pitch_mm": 0.15,
+    "cycles": 22,
+    "tip_angle_degrees": 14.250032697803595
+  },
+  "horizontal_reaches_mm": [
+    2,
+    2.4,
+    2.8,
+    3.2,
+    3.6,
+    4
+  ],
+  "reference_sha256": "878f631615492d7e297f446fbe9d2d06521c09ed34567dcac6e98f5934d285fe",
+  "pairs": 72,
+  "physical_rows": 4,
+  "columns_per_row": 18,
+  "sizes_mm": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "nominal_widths_mm": [
+    0.162876,
+    0.15
+  ],
+  "upper_speeds_mm_s": [
+    5,
+    7.5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "layers_per_pair": 10,
+  "layer_events": 720,
+  "path_passes": 1440,
+  "deposition_moves": 66240,
+  "first_layer_speed_mm_s": 5,
+  "flow_ratio": 1.4,
+  "nozzle_C": 255,
+  "bed_C": 70,
+  "K": 0.55,
+  "layer_height_mm": 0.06,
+  "fan_reference": "FZigZag5mmS1.4.gcode",
+  "fan_policy": {
+    "first_layers_off": 3,
+    "minimum_percent": 40,
+    "maximum_percent": 90,
+    "min_fan_at_seconds": 30,
+    "max_fan_at_seconds": 12,
+    "timing": "rest-to-rest motion estimate including travel, prime and wipe; not exact Orca timing"
+  },
+  "analytical_geometry_error_mm": 0.0,
+  "plate_envelope_mm": [
+    20.825000000000003,
+    242.70000000000002,
+    23.85,
+    231.15
+  ],
+  "tests": {
+    "all_72_size_speed_width_combinations_once": true,
+    "new_analytic_geometry_uniformly_scaled": true,
+    "all_horizontal_reaches_four_times_spacing": true,
+    "all_outer_tips_at_inner_tip_midpoints": true,
+    "left_and_right_exact_mirrors": true,
+    "same_XY_E_across_layers_per_object": true,
+    "same_geometry_across_speed_width_combinations": true,
+    "all_modal_deposition_settings_replayed": true,
+    "all_first_layers_5_mm_s": true,
+    "fan_policy_matches_prior_array": true,
+    "purge_extruding_XY_moves_20_mm_s": true,
+    "no_pair_envelope_overlap": true,
+    "plate_and_exclusion_clearance": true,
+    "no_internal_retractions_or_added_dwells": true,
+    "physical_print_verified": false
+  }
+}
