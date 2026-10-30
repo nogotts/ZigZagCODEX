@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1160" viewBox="0 0 1700 1160">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#334155"/></marker></defs>
+<rect width="1700" height="1160" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#172534">
+<text x="60" y="58" font-size="36" font-weight="bold">0.6 mm tip spacing — extended-tip triangular zigzag</text>
+<text x="60" y="101" font-size="23">Latest geometry · top view · all XY dimensions follow the nozzle centerline</text>
+<text x="280" y="151" font-size="25" font-weight="bold">FULL MIRRORED PAIR</text>
+<path d="M335.20,943.60 L335.20,713.60 L280.00,706.70 L335.20,699.80 L280.00,692.90 L335.20,686.00 L280.00,679.10 L335.20,672.20 L280.00,665.30 L335.20,658.40 L280.00,651.50 L335.20,644.60 L280.00,637.70 L335.20,630.80 L280.00,623.90 L335.20,617.00 L280.00,610.10 L335.20,603.20 L280.00,596.30 L335.20,589.40 L280.00,582.50 L335.20,575.60 L280.00,568.70 L335.20,561.80 L280.00,554.90 L335.20,548.00 L280.00,541.10 L335.20,534.20 L280.00,527.30 L335.20,520.40 L280.00,513.50 L335.20,506.60 L280.00,499.70 L335.20,492.80 L280.00,485.90 L335.20,479.00 L280.00,472.10 L335.20,465.20 L280.00,458.30 L335.20,451.40 L280.00,444.50 L335.20,437.60 L280.00,430.70 L335.20,423.80 L280.00,416.90 L335.20,410.00 L335.20,180.00" fill="none" stroke="#0f766e" stroke-width="3" stroke-linejoin="miter"/>
+<path d="M391.78,943.60 L391.78,713.60 L446.98,706.70 L391.78,699.80 L446.98,692.90 L391.78,686.00 L446.98,679.10 L391.78,672.20 L446.98,665.30 L391.78,658.40 L446.98,651.50 L391.78,644.60 L446.98,637.70 L391.78,630.80 L446.98,623.90 L391.78,617.00 L446.98,610.10 L391.78,603.20 L446.98,596.30 L391.78,589.40 L446.98,582.50 L391.78,575.60 L446.98,568.70 L391.78,561.80 L446.98,554.90 L391.78,548.00 L446.98,541.10 L391.78,534.20 L446.98,527.30 L391.78,520.40 L446.98,513.50 L391.78,506.60 L446.98,499.70 L391.78,492.80 L446.98,485.90 L391.78,479.00 L446.98,472.10 L391.78,465.20 L446.98,458.30 L391.78,451.40 L446.98,444.50 L391.78,437.60 L446.98,430.70 L391.78,423.80 L446.98,416.90 L391.78,410.00 L391.78,180.00" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="miter"/>
+<line x1="125" y1="180.0" x2="270" y2="180.0" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="125" y1="943.6" x2="270" y2="943.6" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="145" y1="180.0" x2="145" y2="943.6" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="120" y="561.8" text-anchor="middle" font-size="23" font-weight="bold" transform="rotate(-90 120 561.8)">33.2 mm overall</text>
+<line x1="458.98000000000013" y1="180.0" x2="555" y2="180.0" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="458.98000000000013" y1="410.0" x2="555" y2="410.0" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="458.98000000000013" y1="713.6" x2="555" y2="713.6" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="458.98000000000013" y1="943.6" x2="555" y2="943.6" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="540" y1="180.0" x2="540" y2="410.0" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="576" y="295.0" text-anchor="middle" font-size="23" font-weight="bold" transform="rotate(-90 576 295.0)">10 mm straight</text>
+<line x1="540" y1="410.0" x2="540" y2="713.6" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="576" y="561.8" text-anchor="middle" font-size="23" font-weight="bold" transform="rotate(-90 576 561.8)">13.2 mm zigzag</text>
+<line x1="540" y1="713.6" x2="540" y2="943.6" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="576" y="828.6" text-anchor="middle" font-size="23" font-weight="bold" transform="rotate(-90 576 828.6)">10 mm straight</text>
+<line x1="280" y1="713.6" x2="280" y2="1022" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="446.98000000000013" y1="713.6" x2="446.98000000000013" y2="1022" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="280" y1="1005" x2="446.98000000000013" y2="1005" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="363.49000000000007" y="1042" text-anchor="middle" font-size="23" font-weight="bold">7.26 mm pair width</text>
+<line x1="335.20000000000016" y1="951.6" x2="335.20000000000016" y2="1095" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="391.78" y1="951.6" x2="391.78" y2="1095" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="335.20000000000016" y1="1080" x2="391.78" y2="1080" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="363.49000000000007" y="1120" text-anchor="middle" font-size="23" font-weight="bold">2.46 mm straight-line gap</text>
+<rect x="730" y="175" width="910" height="620" rx="14" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="770" y="220" font-size="27" font-weight="bold">ENLARGED LEFT TRIANGLE</text>
+<text x="770" y="254" font-size="21">The right-hand zigzag is its mirror image.</text>
+<path d="M1370 345 L890 405 L1370 465" fill="none" stroke="#0f766e" stroke-width="5"/>
+<line x1="1370" y1="345" x2="1370" y2="465" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<line x1="890" y1="405" x2="1370" y2="405" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<circle cx="1370" cy="345" r="6" fill="#0f766e"/><text x="1383" y="333" font-size="24" font-weight="bold">A</text>
+<circle cx="890" cy="405" r="6" fill="#0f766e"/><text x="860" y="405" font-size="24" font-weight="bold">B</text>
+<circle cx="1370" cy="465" r="6" fill="#0f766e"/><text x="1383" y="494" font-size="24" font-weight="bold">C</text>
+<line x1="1392" y1="345" x2="1510" y2="345" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="1392" y1="465" x2="1510" y2="465" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="1485" y1="345" x2="1485" y2="465" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="1550" y="412" text-anchor="middle" font-size="23" font-weight="bold">0.6 mm</text>
+<text x="1390" y="381" font-size="20">0.3</text>
+<text x="1390" y="440" font-size="20">0.3</text>
+<line x1="890" y1="425" x2="890" y2="550" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="1370" y1="480" x2="1370" y2="550" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="890" y1="535" x2="1370" y2="535" stroke="#334155" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="1130" y="572" text-anchor="middle" font-size="23" font-weight="bold">2.4 mm horizontal reach</text>
+<text x="775" y="635" font-size="24">A → B → C is one complete repeat.</text>
+<text x="775" y="680" font-size="24">Each diagonal: 2.419 mm</text>
+<text x="775" y="725" font-size="24">Outward-tip angle at B: 14.25°</text>
+<text x="760" y="860" font-size="26" font-weight="bold">Printed height: 0.60 mm</text>
+<text x="760" y="900" font-size="23">10 layers × 0.06 mm · 22 repeats per zigzag</text>
+<text x="760" y="950" font-size="22">One path: 2.4 mm wide × 33.2 mm long</text>
+<text x="760" y="997" font-size="21">Bead thickness adds to these centerline dimensions.</text>
+</g></svg>
