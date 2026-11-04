@@ -1,0 +1,73 @@
+{
+  "name": "FilledIn_ZigZag_0p6mm_10Layers_Obj68_25mms_K0p55_Flow1p4",
+  "settings_parent": "ExtendedTip_Triangular_72Pair_Base0p3x1p2_6Speeds_2Widths.gcode",
+  "parent_object": 68,
+  "geometry_source": "filledInZigZag0.6.gcode",
+  "geometry_source_sha256": "d7fca3d75a7ed14e13a735de1806ccc030fa8aec0bf004000a0f8b04d8936cce",
+  "source_mean_pitch_mm": 0.6183895454545454,
+  "uniform_scale": 0.970262198658245,
+  "printed_pitch_mm": {
+    "mean": 0.6,
+    "min": 0.5999917086684836,
+    "max": 0.6000130544368554
+  },
+  "mirror_baseline_gap_mm": 2.46,
+  "objects": 1,
+  "filled_mirrored_paths": 2,
+  "layers": 10,
+  "layer_height_mm": 0.06,
+  "nominal_width_mm": 0.15,
+  "flow_ratio": 1.4,
+  "E_per_mm": 0.004788797047574801,
+  "K": 0.55,
+  "nozzle_C": 255,
+  "bed_C": 70,
+  "first_speed_mm_s": 5,
+  "upper_speed_mm_s": 25,
+  "fan_PWM_by_layer": [
+    0,
+    0,
+    0,
+    226,
+    226,
+    226,
+    227,
+    227,
+    227,
+    227
+  ],
+  "source_moves_per_path": 4340,
+  "linear_coalesced_moves_per_path": 692,
+  "output_moves_per_path": 193,
+  "arcs_per_path": 83,
+  "total_model_moves": 3860,
+  "arc_fit_max_source_chord_deviation_mm": 0.0025073837684705556,
+  "centerline_dimensions_mm": {
+    "pair_width": 8.060008000000007,
+    "single_width": 2.8000040000000035,
+    "total_length": 15.394048000000009,
+    "sharp_zigzag_reach": 2.399990120966705,
+    "sharp_zigzag_height": 13.2
+  },
+  "plate_envelope_mm": [
+    123.81999599999999,
+    132.180004,
+    120.152976,
+    135.847024
+  ],
+  "tests": {
+    "all_deposition_modal_settings_replayed": true,
+    "all_arc_lengths_and_E_verified": true,
+    "ten_identical_XY_E_layers": true,
+    "all_first_layer_moves_5_mm_s": true,
+    "all_upper_layer_moves_25_mm_s": true,
+    "exact_object68_fan_schedule_copied": true,
+    "source_scaled_uniformly": true,
+    "exact_mirror": true,
+    "inside_plate": true,
+    "no_physical_print_verification": true,
+    "object_markers_balanced": true,
+    "startup_retained_except_mesh": true,
+    "shutdown_retained": true
+  }
+}
