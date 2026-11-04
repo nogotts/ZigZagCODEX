@@ -2,7 +2,11 @@
   "name": "FilledInZigZag_ChannelStack_10plus5Layers_0p6mm_Channel15p2mm_Obj68",
   "base_file": "FilledIn_ZigZag_0p6mm_10Layers_Obj68_25mms_K0p55_Flow1p4.gcode",
   "base_file_sha256": "8c1ff516e5c922eb6e03da3d836aa46f253d392ebfab73113f7efdcd13909172",
-  "preserved_executable_base_block_sha256": "c80dd58f02163d0d7eef357b660f293977e2dc62cef2be5fa5ece847967c0401",
+  "original_executable_base_block_sha256": "c80dd58f02163d0d7eef357b660f293977e2dc62cef2be5fa5ece847967c0401",
+  "relocated_executable_base_block_sha256": "48300718733941eea129faa366000191e174934fe385fbb5a2994421ecc522d8",
+  "mirror_gap_mm": 0.9,
+  "left_X_shift_mm": 0.78,
+  "right_X_shift_mm": -0.78,
   "channel_source": "channel1_kamm.gcode",
   "channel_source_sha256": "8ca8a130c78e24563f6b280b97b9ae12a27c9a192ff8675472b338afbbff09d2",
   "base_layers": 10,
@@ -29,7 +33,8 @@
   "channel_fan_PWM": 227,
   "tests": {
     "original_base_file_unchanged": true,
-    "first_ten_executable_layers_and_startup_copied_verbatim": true,
+    "individual_base_geometry_and_E_unchanged_rigid_X_translation_only": true,
+    "mirror_gap_0p9_mm": true,
     "no_0p9_scaling_applied_to_existing_base": true,
     "channel_long_vertical_exactly_15p2": true,
     "channel_long_vertical_on_filled_inner_tip_baseline": true,
@@ -40,6 +45,9 @@
     "channel_inside_existing_startup_mesh_envelope": true,
     "same_channel_XY_E_each_layer": true,
     "all_paths_start_at_bottom_endpoints": true,
-    "physical_print_verified": false
-  }
+    "physical_print_verified": false,
+    "compared_to_previous_stack_only_model_X_translation_changed": true,
+    "all_E_F_I_J_Y_Z_and_other_executable_commands_unchanged": true
+  },
+  "translated_model_X_moves": 4010
 }
