@@ -1,48 +1,54 @@
-# Kamm inlet assembly: unchanged ten-layer platform plus both complete channel files
+# Kamm inlet assembly: 70°C bed, off-part transition wait, wall-attached roof
 
-This new assembly prints the existing `KammInletPlatform_Mirrored_10Layers_Start2mm_End1p5mm_Gap2p09904mm.gcode` platform for ten layers, then both uploaded channel models on top. Each uploaded channel contains 129 layers of 0.06 mm. They are interleaved left/right at every height, giving 139 physical layers and a final model height of 8.34 mm.
+This updates the existing assembly artifacts under their existing filenames. The first ten platform layers and their startup are unchanged. Both channels still contain 129 layers, interleaved left/right at each height, for 139 physical layers and an 8.34 mm final model height. The inlet alignment is unchanged.
 
-## Alignment references
+## Bed temperature and transition parking
 
-The left inlet is aligned to the outer left vertical and lowest horizontal **centerlines of the bottom inlet platform rectangle**, not the farther-left zigzag rail. Those reference lines are X124.420016 and Y114.710299.
+The bed remains at 70°C throughout platform and channel printing. The source channels' 85°C bed setting is deliberately overridden. There is no bed-temperature wait after the platform.
 
-The lower inlet-circle center is placed 1.84000 mm to the right of the reference vertical and 1.96165 mm above the reference horizontal:
+After platform layer 10, while already retracted, the nozzle lifts to Z5 and moves to X20/Y220. M400 completes that parking move before the nozzle-temperature wait for 245°C. This is well away from the model footprint around X124–132/Y115–141. It does not hover over or touch the print during cooldown. The transition repeats no startup, homing, calibration or purging. Normal heater shutdown remains at the end.
 
-- Left center: X126.260016, Y116.671949.
-- Right center: X129.739984, Y116.671949, the exact mirror position about X128.
+## Why the original roof failed
 
-The lower circle centers in the supplied G-code are recovered with a least-squares fit of the exposed first-layer inlet ring away from its stem junction. The left source fit is approximately (128.002435132, 114.671912412), and the right fit is (128.002510792, 114.671860894). Their fitted radii are approximately 1.536 mm. The source points are rounded slicer toolpaths with variable bead widths, not a supplied analytic CAD circle; these fitted centers are an alignment reference, not a promise of physical five-decimal manufacturing accuracy. The selected ring samples deviate from their fitted circle by roughly 0.0022 mm or less.
+The uploaded channel files label their first roof island as `Overhang wall`. At source layer 7 (physical layer 17, Z1.02 mm), they start a narrow closed loop near the middle of the channel before printing the supported surrounding walls. In the left source, that loop lies between X128.086 and X128.290, spanning Y119.946–132.256. Its roads have no contact with the previous-layer side walls; the first island runs at 10 mm/s.
 
-No XY scaling or toolpath regeneration is applied to either uploaded channel. Only rigid XY translation is applied:
+The working `cantilver_PETG_9m25s.gcode` and `LongOVERHANG2_PETG_16m19s.gcode` emit actual `WAVE_OVERHANG_START` blocks: slow parallel bands built progressively from an existing boundary, using 2 mm/s and full part cooling. They use a 0.4 mm nozzle and 0.2 mm layers, with 0.35 mm lateral spacing and a larger volumetric bead. Those absolute dimensions/flow amounts are unsuitable for this assembly's 0.2 mm nozzle and 0.06 mm layers; the boundary-first method is adapted instead.
 
-| Source | X translation | Y translation |
-|---|---:|---:|
-| KammInletChannel1Try1.gcode | -1.742419132 mm | +2.000036588 mm |
-| KammInletChannel1Try1Right.gcode | +1.737473208 mm | +2.000088106 mm |
+## New wall-attached wave generation
 
-The right upload is used for the right member as supplied. Its model is the mirrored channel, but its slicer seam positions, path subdivision and local widths differ slightly from the left upload; the right file is not replaced with a newly mirrored/resliced copy of the left. Its inlet center is placed at the mirrored reference coordinates while all its own deposition moves remain intact.
+Only the detached first island of source layer 7 is replaced on each channel. The supported circular/normal perimeters and scarf wall contours in that layer are retained and printed first. The orphaned initial helical travel that belonged to the removed island is omitted; the layer-entry wrapper already provides a safe lift.
 
-## Layer sequence and settings
+The repair then prints three continuous longitudinal bands, alternating direction. Short lateral transfers between adjacent bands do not extrude, following the successful long-overhang example's method. There are no fan-settling dwells or pauses over the part.
 
-| Stage | Physical layers | Model Z | Nozzle / bed | K | Source deposition speeds |
-|---|---|---|---|---|---|
-| Existing platform | 1–10 | 0.06–0.60 mm | 255°C / 70°C | 0.55 | 5 mm/s first; 25 mm/s afterward |
-| Left + right channels | 11–139 | 0.66–8.34 mm nominal | 245°C / 85°C | 0.05 | 3 mm/s source first layer; 5 mm/s afterward |
+- Deposition speed: 2 mm/s.
+- Part fan: PWM255 (100%) during the new bands, then restore the normal PWM229 state.
+- Deposition acceleration: 2500 mm/s², as in the working references.
+- Nominal wave width: 0.217056 mm, retained from the removed source overhang feature.
+- Layer height: 0.06 mm; flow ratio 0.98 included in E once. E is calculated for actual path length and this bead area; the 0.4 mm references' much larger absolute extrusion is not copied.
+- Lateral spacing: approximately 0.163795 mm, below the calculated road width. The first road overlaps the already printed wall, each next road overlaps the preceding road, and the last overlaps the opposite printed wall.
+- The current supporting wall also overlaps the previous layer, giving a continuous support chain from earlier material rather than a free-standing central start.
 
-The platform startup and all ten executable printing layers are copied verbatim. The original platform file is not modified. Its source geometry, E, speed, cooling, pressure advance and mesh remain unchanged.
+For the left channel in its original source coordinate frame, the supporting wall is X127.840 and the opposite wall X128.535. New band centers are X128.003795, X128.167590 and X128.331386, each spanning Y119.946–132.256. The right member uses the corresponding opposite direction from its printed wall, at source X127.996205, X127.832410 and X127.668614. Assembly translations are then applied unchanged.
 
-After the platform, the head lifts and changes to the uploaded channels' temperature and pressure settings. It does not repeat homing, calibration, nozzle cleaning, purging or a separate startup. Each source Z coordinate is raised by exactly 0.60 mm; this includes the sources' scarf-seam Z ramps, which intentionally start slightly below a nominal layer height. Relative E values are preserved exactly, as are inline F values, variable line-width metadata, acceleration commands and deposition fan states.
+Using the same rounded-rectangle bead-volume model as the extrusion calculation, the estimated contact overlaps are approximately 0.0898 mm against the starting wall, 0.0492 mm between adjacent roads and 0.0500 mm against the far wall. These are geometric/volume-model checks, not measurements or guarantees of physical bonding. The roof adds material to connect the formerly detached island to the walls; it is a deliberate local change to the roof generation, not an unchanged copy of that source island.
 
-The channels use their original flow ratio 0.98 already baked into their E commands; the platform's 1.4 multiplier is not applied to them. M221 stays at the uploaded files' 100% flow override. The full pressure command is `M900 K0.05 L1000 M10`. Chamber fan and auxiliary/part fan states are restored from each source's modal state, including any fan changes within source model bodies or before their wipes.
+Each new roof finishes with a 0.4 mm retraction over a 2 mm wipe along the printed final band. Original normal-contour wipes are retained before the wave. The source extruder retracted/unretracted state remains balanced across channel changes. No arbitrary internal segmentation is added: each approximately 12.31 mm band is one deposition move.
 
-Each source's original priming/unretraction and wipe moves are retained. The initial startup retraction from the uploaded files is not repeated because the completed platform has already retracted; repeating it would double-retract before the first channel. Subsequent layer transfers lift vertically to 0.4 mm above the nominal current channel height before moving between the two members. Source deposition and internal scarf/travel moves remain translated copies. Layer-entry travel is adapted to interleave two parts safely instead of executing an unlifted cross-part wipe or printing a full-height channel beside a short one.
+All other source channel layers retain their deposited paths, E values, F values, acceleration, variable-width/scarf behavior and fan states. The only global source-profile override is the requested 70°C bed temperature. Normal channel printing remains 245°C nozzle, K0.05, source flow 0.98, 3 mm/s on source layer 1 and 5 mm/s on ordinary later paths. The existing platform settings remain 255°C/70°C/K0.55 with its original flow and speeds.
 
-Stale source time estimates, duplicate progress/object markers, layer-entry timelapse wrappers, and the uploaded startup/shutdown blocks are not inserted between parts. One final shutdown is used after both complete channels, with final parking Z positions raised by the platform thickness. Physical global layer progress is 1–139.
+## Unchanged alignment
 
-## Validation
+The lower-left inlet center remains 1.84000 mm right of the bottom inlet platform's outer left vertical centerline and 1.96165 mm above its lowest horizontal centerline. Those reference lines are X124.420016 and Y114.710299.
 
-Final replay compares all 11,732 left and 11,749 right channel deposition moves against the originals after translation and the +0.60 mm Z offset. It verifies E, F, acceleration, all fan states, nozzle/bed/K and source scarf heights. The complete platform executable prefix is independently compared byte-for-byte. Checks also cover all 129 layers from each upload, total physical height 8.34 mm, safe initial side transfers, relative extrusion state, one balanced object block and no repeated channel startup/calibration.
+- Left inlet center: X126.260016, Y116.671949.
+- Right inlet center: X129.739984, Y116.671949, mirrored about X128.
 
-All model points remain within the original platform startup's mesh envelope and well inside the plate. The SVG/PNG show the complete top-view projection, a dimensioned bottom-left inlet detail using the stated reference lines, and the layer stack with distinct platform/channel settings. The CSV gives each source layer's settings and scarf Z range. The JSON includes provenance and fitted center/translation values.
+Centers are fitted to the supplied rounded first-layer ring toolpaths, not supplied analytic CAD circles. The original circle-fit reference and rigid XY translations are retained. No scaling is applied to either channel.
 
-Static validation passed; this newly assembled job has not been physically printed.
+## Schematic and verification
+
+The updated SVG/PNG retains the full assembly, inlet alignment detail and Z stack. It adds a large before/after wave panel showing previous walls and detached roads, followed by printed walls and numbered bands with direction arrows. The band footprints use the calculated extrusion model and are explicitly labeled as unmeasured material.
+
+Final replay checks all output deposition XYZ/E/F, bed/nozzle/K, acceleration and fan states. Platform startup and the first ten printing layers are independently compared verbatim. Every unmodified channel layer is checked against its uploaded source; supported normal contours of the repaired layer retain their original deposition commands before the new wave. Tests verify supporting-wall coverage, positive band overlaps, the single off-part nozzle-temperature wait, no post-platform bed wait, no heating above 70°C before shutdown, layer count, alignment and mesh coverage.
+
+The CSV records the revised layer-7 speed/fan ranges and wave-band count. The validation JSON records the repair coordinates and overlap calculations. Static checks passed; the revised overhang has not been physically printed and needs a test to establish bonding, dimensional quality and channel clearance.

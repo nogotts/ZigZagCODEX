@@ -61,26 +61,251 @@
   "source_channel_height_mm": 7.74,
   "total_height_mm": 8.34,
   "interleaved_left_right_each_height": true,
+  "transition_wait_park_XYZ_mm": [
+    20,
+    220,
+    5
+  ],
+  "wave_reference_files": [
+    "cantilver_PETG_9m25s.gcode",
+    "LongOVERHANG2_PETG_16m19s.gcode"
+  ],
+  "wave_repair_coordinates": "source XY before rigid alignment; output Z is 0.60 mm above source",
+  "wave_repair": {
+    "left": {
+      "anchor_to_previous_layer_overlap_mm": 0.10196627220392429,
+      "source_layer": 7,
+      "global_layer": 17,
+      "Z_mm": 1.02,
+      "old_floating_moves": 11,
+      "normal_moves_retained": 92,
+      "generated_band_moves": 3,
+      "anchor_wall": {
+        "command": "G1",
+        "a": [
+          127.84,
+          132.438
+        ],
+        "b": [
+          127.84,
+          119.798
+        ],
+        "z": 0.42,
+        "E": 0.08873,
+        "feed": 180.0,
+        "acc": 2000.0,
+        "fan": {
+          "1": 158.0,
+          "2": 0.0,
+          "3": 255.0
+        },
+        "width": 0.299999
+      },
+      "opposite_wall": {
+        "command": "G1",
+        "a": [
+          128.535,
+          123.976
+        ],
+        "b": [
+          128.535,
+          132.525
+        ],
+        "z": 0.42,
+        "E": 0.06001,
+        "feed": 180.0,
+        "acc": 2000.0,
+        "fan": {
+          "1": 158.0,
+          "2": 0.0,
+          "3": 255.0
+        },
+        "width": 0.299999
+      },
+      "previous_wall_centers": [
+        127.686,
+        128.69
+      ],
+      "old_island_bounds": [
+        128.086,
+        128.29,
+        119.946,
+        132.256
+      ],
+      "old_wave_width": 0.217056,
+      "calculated_wave_width": 0.21297240220392305,
+      "max_step_mm": 0.17,
+      "actual_step_mm": 0.16379517593202308,
+      "first_wall_overlap_mm": 0.0898192962719,
+      "adjacent_band_overlap_mm": 0.049177226271899965,
+      "final_wall_overlap_mm": 0.05000047220393555,
+      "bands": [
+        {
+          "index": 1,
+          "start": [
+            128.003795,
+            119.946
+          ],
+          "end": [
+            128.003795,
+            132.256
+          ]
+        },
+        {
+          "index": 2,
+          "start": [
+            128.16759,
+            132.256
+          ],
+          "end": [
+            128.16759,
+            119.946
+          ]
+        },
+        {
+          "index": 3,
+          "start": [
+            128.331386,
+            119.946
+          ],
+          "end": [
+            128.331386,
+            132.256
+          ]
+        }
+      ]
+    },
+    "right": {
+      "anchor_to_previous_layer_overlap_mm": 0.10196627220391008,
+      "source_layer": 7,
+      "global_layer": 17,
+      "Z_mm": 1.02,
+      "old_floating_moves": 9,
+      "normal_moves_retained": 92,
+      "generated_band_moves": 3,
+      "anchor_wall": {
+        "command": "G1",
+        "a": [
+          128.16,
+          122.463
+        ],
+        "b": [
+          128.16,
+          132.404
+        ],
+        "z": 0.42,
+        "E": 0.06977,
+        "feed": 180.0,
+        "acc": 2000.0,
+        "fan": {
+          "1": 158.0,
+          "2": 0.0,
+          "3": 255.0
+        },
+        "width": 0.299999
+      },
+      "opposite_wall": {
+        "command": "G1",
+        "a": [
+          127.465,
+          132.525
+        ],
+        "b": [
+          127.465,
+          119.676
+        ],
+        "z": 0.42,
+        "E": 0.09019,
+        "feed": 180.0,
+        "acc": 2000.0,
+        "fan": {
+          "1": 158.0,
+          "2": 0.0,
+          "3": 255.0
+        },
+        "width": 0.299999
+      },
+      "previous_wall_centers": [
+        127.31,
+        128.314
+      ],
+      "old_island_bounds": [
+        127.71,
+        127.914,
+        119.946,
+        132.253
+      ],
+      "old_wave_width": 0.217056,
+      "calculated_wave_width": 0.21297240220392305,
+      "max_step_mm": 0.17,
+      "actual_step_mm": 0.16379517593202308,
+      "first_wall_overlap_mm": 0.0898192962719,
+      "adjacent_band_overlap_mm": 0.049177226271899965,
+      "final_wall_overlap_mm": 0.05000047220392134,
+      "bands": [
+        {
+          "index": 1,
+          "start": [
+            127.996205,
+            119.946
+          ],
+          "end": [
+            127.996205,
+            132.253
+          ]
+        },
+        {
+          "index": 2,
+          "start": [
+            127.83241,
+            132.253
+          ],
+          "end": [
+            127.83241,
+            119.946
+          ]
+        },
+        {
+          "index": 3,
+          "start": [
+            127.668614,
+            119.946
+          ],
+          "end": [
+            127.668614,
+            132.253
+          ]
+        }
+      ]
+    }
+  },
   "channel_nozzle_C": 245,
-  "channel_bed_C": 85,
+  "channel_bed_C": 70,
   "channel_K": 0.05,
   "channel_source_flow_ratio": 0.98,
   "channel_first_source_layer_speed_mm_s": 3,
   "channel_upper_speed_mm_s": 5,
-  "source_model_moves_left": 11732,
-  "source_model_moves_right": 11749,
+  "assembled_channel_moves_left": 11724,
+  "assembled_channel_moves_right": 11743,
   "tests": {
     "platform_startup_and_first_10_executable_layers_verbatim": true,
-    "all_source_model_E_F_XY_Z_and_acceleration_preserved_after_translation": true,
-    "all_source_deposition_fan_states_preserved": true,
+    "all_unmodified_layers_preserve_source_deposition": true,
+    "supported_normal_layer7_contours_retained_before_wave": true,
+    "wave_starts_from_printed_wall_and_each_band_overlaps_previous": true,
+    "bed_stays_70_C_until_shutdown": true,
+    "transition_wait_is_parked_far_from_model": true,
+    "normal_deposition_fan_states_retained_wave_fan_is_255": true,
     "source_scarf_seam_Z_ramps_preserved_plus_0p6": true,
-    "source_wipe_moves_retained": true,
+    "normal_contour_wipes_retained_and_wave_retraction_balanced": true,
     "no_channel_startup_homing_calibration_or_purge": true,
     "139_physical_layers": true,
     "all_channel_model_points_inside_existing_platform_mesh": true,
     "platform_original_file_not_modified": true,
     "circle_alignment_centers_are_mirror_placed": true,
     "physical_print_verified": false,
-    "every_source_E_token_including_primes_and_wipes_preserved": true
+    "all_256_unmodified_channel_layer_E_sequences_including_wipes_preserved": true,
+    "both_repaired_units_keep_identical_retraction_balance": true,
+    "both_repaired_roofs_walls_before_three_supported_bands": true,
+    "all_post_platform_thermal_waits_at_safe_park": true
   }
 }
