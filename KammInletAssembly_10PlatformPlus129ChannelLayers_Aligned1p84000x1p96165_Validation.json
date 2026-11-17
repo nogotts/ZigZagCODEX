@@ -1,0 +1,86 @@
+{
+  "name": "KammInletAssembly_10PlatformPlus129ChannelLayers_Aligned1p84000x1p96165",
+  "platform_file": "KammInletPlatform_Mirrored_10Layers_Start2mm_End1p5mm_Gap2p09904mm.gcode",
+  "platform_file_sha256": "c40e5790ef64f149fbd8a4c1a717223f0227ce5737f5a249ef3574fa360a8945",
+  "preserved_platform_executable_sha256": "443c94517f1cfd0353327b2a3f087033675b74ece4b89bed69ebdf0261f5bc1a",
+  "reference_corner_mm": [
+    124.420016,
+    114.710299
+  ],
+  "reference_definition": "outer left vertical and lowest horizontal centerlines of the bottom inlet platform",
+  "circle_center_offsets_mm": [
+    1.84,
+    1.96165
+  ],
+  "channel_sources": {
+    "left": {
+      "source": "KammInletChannel1Try1.gcode",
+      "sha256": "269555ade0b31d5714773b92de36e0902804746867887bc53386f4308d1a90cb",
+      "source_circle_center_fit": [
+        128.00243513228088,
+        114.67191241172848
+      ],
+      "source_circle_fit_radius": 1.5358809370438447,
+      "target_circle_center": [
+        126.26001600000001,
+        116.67194900000001
+      ],
+      "translation_XY_mm": [
+        -1.7424191322808724,
+        2.000036588271527
+      ],
+      "source_layers": 129,
+      "source_model_deposition_moves": 11732,
+      "nominal_model_height_mm": 7.74
+    },
+    "right": {
+      "source": "KammInletChannel1Try1Right.gcode",
+      "sha256": "e22d062dc3488165f56d790a31b5dae67bb03c86a939aabda65cb1c5497e1e53",
+      "source_circle_center_fit": [
+        128.00251079163704,
+        114.67186089394234
+      ],
+      "source_circle_fit_radius": 1.5359924745714784,
+      "target_circle_center": [
+        129.739984,
+        116.67194900000001
+      ],
+      "translation_XY_mm": [
+        1.7374732083629567,
+        2.0000881060576745
+      ],
+      "source_layers": 129,
+      "source_model_deposition_moves": 11749,
+      "nominal_model_height_mm": 7.74
+    }
+  },
+  "platform_layers": 10,
+  "source_channel_layers_per_side": 129,
+  "total_physical_layers": 139,
+  "platform_height_mm": 0.6,
+  "source_channel_height_mm": 7.74,
+  "total_height_mm": 8.34,
+  "interleaved_left_right_each_height": true,
+  "channel_nozzle_C": 245,
+  "channel_bed_C": 85,
+  "channel_K": 0.05,
+  "channel_source_flow_ratio": 0.98,
+  "channel_first_source_layer_speed_mm_s": 3,
+  "channel_upper_speed_mm_s": 5,
+  "source_model_moves_left": 11732,
+  "source_model_moves_right": 11749,
+  "tests": {
+    "platform_startup_and_first_10_executable_layers_verbatim": true,
+    "all_source_model_E_F_XY_Z_and_acceleration_preserved_after_translation": true,
+    "all_source_deposition_fan_states_preserved": true,
+    "source_scarf_seam_Z_ramps_preserved_plus_0p6": true,
+    "source_wipe_moves_retained": true,
+    "no_channel_startup_homing_calibration_or_purge": true,
+    "139_physical_layers": true,
+    "all_channel_model_points_inside_existing_platform_mesh": true,
+    "platform_original_file_not_modified": true,
+    "circle_alignment_centers_are_mirror_placed": true,
+    "physical_print_verified": false,
+    "every_source_E_token_including_primes_and_wipes_preserved": true
+  }
+}
