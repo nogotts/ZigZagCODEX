@@ -1,0 +1,176 @@
+{
+  "name": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers",
+  "previous_name": "KammHorizontal_10mmInletLines_0p5mmGap_10PlatformPlus129ChannelLayers",
+  "base_source": "KammHorizontal_10mmInletLines_0p5mmGap_10PlatformPlus129ChannelLayers.gcode",
+  "base_source_sha256": "3583ff6551359c7ede6d50240ffdb2f5c968a71a0763fe2491394121a300dc4e",
+  "preserved_first_ten_layers_sha256": "a9402a2ca3a0bffe76b5fde73972b7d518e363e6eb600b3a56d2708e22b50a38",
+  "gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
+  "platform_layers": 10,
+  "inlet_layers_per_side": 6,
+  "total_physical_layers": 16,
+  "platform_height_mm": 0.6,
+  "inlet_height_mm": 0.36,
+  "final_printed_height_mm": 0.96,
+  "channel_sources": {
+    "left": {
+      "source": "KammInletChannel1_Left.gcode",
+      "source_sha256": "8ed8ef285a29de2eeea27247811e9c5bdf662eb70bd9058d2bd9b58f253c421d",
+      "source_circle_fits": {
+        "lower": {
+          "center": [
+            128.00240638248377,
+            114.67181675836375
+          ],
+          "radius": 1.535922930627118,
+          "points": 19,
+          "residual": 0.0020428087557273766
+        },
+        "upper": {
+          "center": [
+            127.9995448399661,
+            137.3266867638531
+          ],
+          "radius": 1.5346976136304071,
+          "points": 19,
+          "residual": 0.002718332219385333
+        }
+      },
+      "existing_circle_fits": {
+        "lower": {
+          "center": [
+            126.26001613228088,
+            116.67194941172849
+          ],
+          "radius": 1.5358809370438462,
+          "points": 19,
+          "residual": 0.002180846840150741
+        },
+        "upper": {
+          "center": [
+            126.25712583996611,
+            139.32672376385312
+          ],
+          "radius": 1.5346976136304071,
+          "points": 19,
+          "residual": 0.00271833221940021
+        }
+      },
+      "translation_XY_mm": [
+        -1.742390250202888,
+        2.0001326533647443
+      ],
+      "Z_offset_mm": 0.6,
+      "lower_center_target": [
+        126.26001613228088,
+        116.67194941172849
+      ],
+      "upper_center_after_translation": [
+        126.25715458976322,
+        139.32681941721785
+      ],
+      "upper_center_fit_difference_mm": 9.988051369964613e-05,
+      "included_source_layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "no_scaling_or_rotation": true
+    },
+    "right": {
+      "source": "ChannelRightNEw.gcode",
+      "source_sha256": "dc568fb800fc53600b00820a17e4f7a5cd84165342a49d2d41c111dc277173fb",
+      "source_circle_fits": {
+        "lower": {
+          "center": [
+            128.00250040168967,
+            114.671828680359
+          ],
+          "radius": 1.5359753207676172,
+          "points": 19,
+          "residual": 0.0020036509376257783
+        },
+        "upper": {
+          "center": [
+            127.99947528730341,
+            137.32668506246068
+          ],
+          "radius": 1.5347357691652739,
+          "points": 19,
+          "residual": 0.0026201288479983376
+        }
+      },
+      "existing_circle_fits": {
+        "lower": {
+          "center": [
+            129.73998379163703,
+            116.67194889394234
+          ],
+          "radius": 1.5359924745714764,
+          "points": 19,
+          "residual": 0.0020188528490914237
+        },
+        "upper": {
+          "center": [
+            129.73694828730342,
+            139.3267730624607
+          ],
+          "radius": 1.5347357691652757,
+          "points": 19,
+          "residual": 0.002620128847996561
+        }
+      },
+      "translation_XY_mm": [
+        1.7374833899473572,
+        2.000120213583344
+      ],
+      "Z_offset_mm": 0.6,
+      "lower_center_target": [
+        129.73998379163703,
+        116.67194889394234
+      ],
+      "upper_center_after_translation": [
+        129.73695867725075,
+        139.326805276044
+      ],
+      "upper_center_fit_difference_mm": 3.384768760507844e-05,
+      "included_source_layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "no_scaling_or_rotation": true
+    }
+  },
+  "tests": {
+    "base_startup_and_first_ten_layers_verbatim": true,
+    "all_40_horizontal_roads_retained": true,
+    "total_layer_count_16": true,
+    "only_source_layers_1_through_6": true,
+    "one_balanced_object_scope": true,
+    "nozzle_source_245_bed_override_70_K_0p05": true,
+    "shutdown_height_rebased": true,
+    "replayed_channel_deposition_moves": 994,
+    "all_channel_E_F_XYZ_width_fan_acceleration_verified": true,
+    "original_source_scarf_Z_ramps_preserved": true,
+    "only_thermal_wait_parked_off_part": true,
+    "measured_max_deposition_Z_mm": 0.96,
+    "all_source_body_and_wipe_motion_tokens_checked": true,
+    "all_source_E_F_I_J_tokens_identical": true,
+    "all_source_XYZ_only_rigid_translated": true,
+    "all_12_channel_prime_wipe_balances_checked": true,
+    "no_source_layer_7_or_later": true,
+    "no_roof_or_wave_stage": true,
+    "final_shutdown_Z_parks_mm": [
+      1.46,
+      100.96,
+      98.96
+    ],
+    "bed_commands_only_70_and_shutdown_0": true
+  }
+}
