@@ -1,4 +1,4 @@
-# KammInletH: eight paired horizontal lines on all sixteen layers
+# KammInletH: paired horizontal lines and mirrored angled lines
 
 This updates the existing G-code, SVG, PNG and validation JSON in place, without changing their filenames. The assembly remains ten platform layers followed by the first six layers of the uploaded left and right inlet files, for sixteen physical layers and a final printed height of 0.960 mm.
 
@@ -19,9 +19,22 @@ Each layer prints in this order:
 4. Complete the existing right structure or inlet.
 5. Print the mirrored right bottom pair consecutively.
 6. Print the mirrored right top pair consecutively.
-7. Continue to the next layer, through layer 16.
+7. On layers 1–10 only, print the new left angled line, then its right-side mirror, after all eight horizontal lines are complete.
+8. Continue to the next layer, through layer 16.
 
 Left lines run left to right, from X113.920016 to X123.920016. Right lines run right to left, from X142.079984 to X132.079984. Each remains exactly 10 mm long. The gap from the inner horizontal endpoint to the platform outer vertical reference remains 0.500 mm centerline to centerline. Adjacent paired paths are 0.150 mm apart center to center.
+
+## Added angled strokes on layers 1–10
+
+The clarified highlighted-point construction is: up 0.37793 mm, left 0.49614 mm, then up another 0.06202 mm. The highlighted point is the lower endpoint of the longest outer left vertical platform segment, X124.035909/Y121.492244. This continuous reference sequence locates the inner/right endpoint of the left printed stroke at X123.539769/Y121.932194. The offset sequence is shown as dashed construction geometry in the SVG; the solid red line is the actual added deposition path.
+
+Each new printed stroke is 10.000 mm long. For the left stroke, the outward endpoint is X113.616990/Y123.172541, and deposition travels inward to X123.539769/Y121.932194. Its direction from left to right is 7.125016° clockwise from horizontal. The right stroke is the exact reflection about X128: from X142.383010/Y123.172541 inward to X132.460231/Y121.932194. The mirrored highlighted point is X131.964091/Y121.492244.
+
+The explicit supplied offsets put the inner endpoint 0.49614 mm horizontally from the long vertical centerline, rather than exactly 0.50000 mm. The explicit dimensions are retained without a further shift. Coordinate output is rounded to six decimals, giving less than 0.000002 mm length error and less than 0.00001° angle error.
+
+There is one added stroke per side on each of the first ten layers: twenty new deposition moves total. They use nominal width 0.30 mm, layer height 0.06 mm, flow ratio 1.4 baked into E, and E0.10027268 per 10 mm stroke. Layer 1 runs at 5 mm/s and acceleration 500 mm/s²; layers 2–10 run at 25 mm/s and acceleration 2000 mm/s². These strokes inherit the base's 255°C nozzle, 70°C bed, K0.55 and layer-specific fan state. No angled strokes are added to layers 11–16.
+
+Each pair runs after both structures and all eight horizontal lines have completed for that layer. Retracted, lifted approaches use corridors outside the existing feature footprint: above the model to reach the left stroke, below the model to switch to the right stroke, and outside the right-hand lines to return. Each stroke is one uninterrupted deposition move, followed by a 0.4 mm retract during a 2 mm backward wipe. The nozzle stays at Z1.00 during these transfers on layers 1–10, at least 0.40 mm above the current nominal layer. The added block restores the original XYZ, feedrate, acceleration and width state before the next original command. No new heater, K, fan or dwell commands are added.
 
 ## Horizontal extrusion settings
 
@@ -45,8 +58,8 @@ The inlet source files remain `KammInletChannel1_Left.gcode` and `ChannelRightNE
 
 ## Diagram and validation
 
-The SVG and PNG show all eight horizontal nozzle paths, their paired spacing and updated print order. Light shading indicates a nominal 0.30 mm footprint; orange and green centerlines identify the two mirrored sides. Blue/purple show the platform and magenta shows the top inlet contours.
+The same SVG and PNG show all eight horizontal paths and the two mirrored angled paths. The enlarged lower panel shows the highlighted point, the three up/left/up reference legs and the new inner endpoint. Light shading on printed strokes indicates the nominal 0.30 mm width. Blue/purple show the platform and magenta shows the top inlet contours. The diagram key lists the first-ten-layer angled-line step after the original eight-line sequence.
 
-Independent replay verified all 9354 original structure/inlet deposition moves retain their original XYZ, E, arc I/J, F, width, acceleration, fan, heater and K state. Stripping the old horizontal blocks from the prior file and the new blocks from the updated file leaves identical executable text. All 128 horizontal moves are exactly 10 mm, follow the required eight-line order on every layer, use the recalculated E and declared 0.30 mm width, and mirror correctly. Checks also verify pair spacing, balanced retract/prime amounts, safe travel heights, mesh coverage, the off-part wait, sixteen physical layers, and final deposition height 0.96 mm.
+Independent replay verifies that all 9482 previously existing deposition moves, including all 128 horizontal roads, retain identical XYZ, E, arc I/J, F, width, acceleration, fan, heater and K state. Removing the new angled blocks reproduces the previous executable text exactly. Each new block restores its original modal and XYZ exit state, balances its primes/retractions, and adds only two 10 mm deposition strokes. Checks verify the twenty new strokes' explicit endpoint offsets, length, clockwise angle, nominal 0.30 mm width, E amount, mirror symmetry, first-ten-layer restriction, travel lift heights and mesh coverage. Sixteen physical layers, the unchanged inlet stage and final 0.96 mm printed height are retained.
 
 These are static G-code checks; physical print quality has not been tested.
