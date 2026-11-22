@@ -1,46 +1,64 @@
-# KammInletH: corrected circular-region clearance
+# KammInletH: seventeen-layer assembly with continuous roofs
 
-This updates the existing filenames in place, reducing the horizontal endpoint clearance on layers 11–16 from 0.500 mm to 0.300 mm. The reference remains the nominal outer boundary of each Ø3.29 mm circular inlet region. All other geometry and settings are retained.
+The existing filenames are retained. They are legacy names containing `16Layers`; the actual updated print has **17 physical layers**, ending at **Z1.020 mm**. The first sixteen executable printing layers are preserved verbatim. One roof layer is added after the sixth channel layer, before the single final shutdown.
 
-## Correct clearance reference
+## Roof: one continuous path per side
 
-The horizontal endpoints on layers 11–16 now lie **0.300 mm from the nominal outer circumferences of the circular inlet regions**, using the previously specified **3.29 mm outer diameter** and the existing registered inlet centers. Clearance is the shortest XY distance from the horizontal nozzle-centerline endpoint to that nominal circle circumference. It is not measured to a channel-wall nozzle path, circle center, scaffold edge, or assumed measured printed-bead tip.
+Each roof starts at its bottom outer horizontal endpoint, extrudes once along the bottom arm, follows the supplied curved/vertical/connecting path continuously upward, then follows the top arm outward to its endpoint. There are no travels, primes, retractions or pauses inside either roof path. The left roof completes before the right roof begins.
 
-The endpoint calculation is `distance(endpoint, circle center) = 3.29/2 + 0.300 = 1.945 mm`. For a horizontal line at Y, left endpoint X is `circle center X − sqrt(1.945² − (Y − circle center Y)²)`. The right endpoint uses the positive root. Coordinates are rounded to six decimals; independently checked clearances differ from 0.300 mm by less than 0.000001 mm.
+The uploaded FullControl files contained overlapping extrusion passes on the horizontal arms. Those duplicate passes are removed. Their geometric union becomes one **10.800 mm horizontal extrusion move** on each bottom and top arm. Each complete side uses **15 deposition moves**, including **two true circular arcs**, instead of the source file's 934 sampled deposition moves. Original curved and connecting features are retained, including the supplied left/right differences.
 
-The nominal circle dimensions and registered centers are reference geometry only. No channel contour is rescaled or otherwise modified. They do not claim a measured physical extrusion boundary.
+Roof endpoints touch the starting points of the inner horizontal lines in the existing channel layers:
 
-## Horizontal paths
+| Side | Bottom roof start, mm | Top roof end, mm |
+|---|---|---|
+| Left | X113.920016, Y116.671949 | X113.920016, Y139.326724 |
+| Right | X142.079984, Y116.671949 | X142.079984, Y139.326724 |
 
-Original outer starting points remain fixed: left X113.920016, right X142.079984. Original Y values remain 116.521949, 116.671949, 139.326724 and 139.476724 mm on each side. Each pair retains its 0.150 mm vertical spacing. The eight base-layer roads on layers 1–10 remain exactly 10 mm, with the entire first-ten-layer executable prefix unchanged.
+Left bottom deposition travels inward to the right and its top arm finishes outward to the left. The right side travels inward to the left at the bottom and outward to the right at the top. Both start at the bottom and finish at the top.
 
-On layers 11–16, all eight roads extend inward to the corrected circular boundary reference. They are approximately **10.392139–10.403812 mm** long. Each remains a single uninterrupted deposition move from its original outer start. The geometry is repeated identically through the six channel layers.
+## Correct scale and circle dimensions
 
-| Side | Y, mm | Correct inner X, mm | Full length, mm |
-|---|---:|---:|---:|
-| left | 116.521949 | 124.320809 | 10.400793 |
-| left | 116.671949 | 124.315016 | 10.395000 |
-| left | 139.326724 | 124.312155 | 10.392139 |
-| left | 139.476724 | 124.317940 | 10.397924 |
-| right | 116.521949 | 131.679191 | 10.400793 |
-| right | 116.671949 | 131.684984 | 10.395000 |
-| right | 139.326724 | 131.681959 | 10.398025 |
-| right | 139.476724 | 131.676172 | 10.403812 |
+The complete horizontal span formed by overlapping source passes is **7.566055 source units**. Scaling that span by **1.427428164347206** gives **10.800 mm**. Measuring an individual source pass instead would give the wrong scale. The radius of each fitted roof curve at the corrected scale is **1.540000 mm** within export/fit tolerance; the existing channel circular regions retain their **1.645 mm nominal outer radius** (3.29 mm diameter).
 
-Extended horizontal settings remain nominal width 0.30 mm, layer height 0.06 mm, flow ratio 1.4 baked into E, speed 25 mm/s and acceleration 2000 mm/s². Filament diameter remains 1.75 mm and M221 remains 100%. E is recalculated from the full new line length using `(width−height)×height + π×(height/2)²`, divided by filament cross-sectional area and multiplied by flow 1.4. Two-millimeter backward wipes are repositioned relative to the corrected endpoints; prime/retraction amounts remain ±0.4 mm.
+The uniformly scaled roof source has nominal lower-to-upper center spacing **22.656152671 mm**, consistent with the user's 22.65612 mm CAD dimension within approximately 0.000033 mm export rounding. The existing horizontal anchor lines in the assembly are **22.654775 mm** apart. To touch both existing starts exactly without changing any old layer or distorting the curves, only the long straight roof connector is shortened by **0.001377671 mm**. The entire upper roof region is translated by that amount; its curves, angles and horizontal arm lengths are preserved. There is no anisotropic scaling of either circular region.
 
-## Retained order and settings
+Quarter-circle fits have radial residuals below 0.000005 mm. Collinear cleanup is bounded by 0.000003 mm, and the fitted arc-to-original-chord deviation is below 0.0005 mm. The two 10.8 mm arms on each side are each represented by one deposition move.
 
-Base layers 1–10 are unchanged, including both scaffolds, horizontal pairs and the earlier angled lines. On channel layers 11–16 the sequence remains complete left channel loop → left diagonal intro → complete right channel loop → right diagonal intro → left bottom/top horizontal pairs → right bottom/top horizontal pairs.
+## Roof extrusion and motion settings
 
-All twelve channel-stage diagonal intros remain unchanged: 10 mm long and collinear with the earlier scaffold diagonals, crossing the scaffold toward their own channel-wall paths. The supplied source channel loops retain their original E, F, variable widths, acceleration, scarf Z ramps, fans and registered positions. Only source channel layers 1–6 are included; no roof stage is printed. The total remains sixteen layers and 0.960 mm printed height.
+The roof inherits the existing assembly's extrusion and motion settings except for the requested 4 mm/s deposition speed and explicit nominal width 0.30 mm:
 
-The existing startup, purge, leveling area, off-part temperature wait, travel lifts and final shutdown remain unchanged. Base temperature/K remain 255°C nozzle, 70°C bed and K0.55; channel stage remains 245°C nozzle, 70°C bed and K0.05. Original channel flow 0.98 remains baked into its own E values, while added lines retain flow 1.4. There are no new heater, fan, K or dwell commands.
+| Setting | Roof value |
+|---|---|
+| Printed layer | 17, at Z1.020 mm |
+| Layer height | 0.060 mm |
+| Nominal width | 0.300 mm |
+| Flow ratio | 1.4, included in E once |
+| Filament diameter | 1.75 mm |
+| Deposition speed | 4 mm/s (F240) |
+| Deposition acceleration | 2000 mm/s² |
+| Nozzle / bed | 245°C / 70°C |
+| Pressure advance | K0.05 |
+| Part fan | Existing final-channel PWM158, about 62%; unchanged |
+| Auxiliary / chamber fan | Existing PWM0 / PWM255; unchanged |
 
-## Clear diagram and validation
+E is recalculated using actual line/arc length, rounded-rectangle bead area `(width−height)×height + π×(height/2)²`, the filament area and flow 1.4. M221 remains 100%. Arc E uses the replayed I/J radius and sweep. Nominal width and calculated volume are not measurements of physical printed width.
 
-The new SVG/PNG includes a full assembly overview plus four enlarged circle details. Solid purple circumferences show the nominal **3.29 mm circular-region outer boundaries**. Gray dots mark former 10 mm line endpoints; blue segments and dots show the corrected inward extensions and endpoints. Each detail explicitly dimensions **0.300 mm** between the endpoint and the circle boundary. The table gives all eight corrected endpoint coordinates and lengths.
+Each side is approached while retracted at Z1.420, then lowered to Z1.020 and primed by 0.4 mm. Transfers use the outside and above-part corridors where practical. After the complete continuous path, a 0.4 mm retraction occurs during a 2 mm backward wipe along the final horizontal arm, followed by a lift. No extra source startup, calibration, purge, homing, heating wait, fan changes or source shutdown is inserted.
 
-Independent replay verified all 9386 non-horizontal deposition moves against the restored baseline, including every channel loop and diagonal intro. All eighty base horizontal roads and the complete first-ten-layer executable prefix are unchanged. Each of the forty-eight corrected channel horizontal roads retains its outer start, Y, width, speed, fan, temperature and K state; E matches full length; the endpoint has the required circle-boundary clearance; and each backward wipe remains 2 mm. Workflow, sixteen-layer count and no added horizontal segmentation are verified. Validation details are recorded in the JSON.
+The original single shutdown is retained with its height-dependent parks raised by 0.06 mm: Z1.52, Z101.02 and Z99.02. Its machine parking coordinates and heater/fan shutdown commands remain unchanged.
 
-These are static G-code and nominal-geometry checks; physical print quality has not been tested.
+## Existing sixteen-layer assembly retained
+
+Layers 1–10 retain both original scaffolds, eight horizontal lines per layer and both earlier angled strokes. Layers 11–16 retain the uploaded six-layer channel contours, each followed by its diagonal intro, then the eight extended horizontal roads. Those roads keep their fixed outer starts and 0.300 mm endpoint clearance from the nominal 3.29 mm circular-region outer circumferences. Widths, E values, F values, acceleration, scarf ramps, fans, heaters, K and geometry of all sixteen layers are unchanged.
+
+The original startup, purge and adaptive leveling region are retained. The base remains 255°C nozzle/70°C bed/K0.55, the channel stage 245°C/70°C/K0.05, and its nozzle-temperature wait remains parked off the print at X20/Y220/Z5. The roof repeats no startup or calibration. The original channel source flow 0.98 and added-line flow 1.4 remain included in their respective E values once.
+
+## Diagram and checks
+
+The same SVG/PNG overlays the new roof on the complete assembly and adds a large roof-only panel with bottom START and top END markers, direction arrows and both 10.800 mm arm dimensions. Existing circle-clearance detail panels still describe layers 11–16, not the added roof.
+
+Independent replay verifies the complete sixteen-layer executable prefix is unchanged, there are exactly 17 layer-change records, and every one of the 30 new roof deposition moves has the expected XYZ, speed, width, E, acceleration, K, temperatures and inherited fans. Checks verify continuous paths, exact anchor endpoints, single 10.8 mm arms without duplicated passes, 1.54 mm arc radii, balanced primes/retractions, mesh coverage, one object scope and shutdown, and the rebased final parking heights.
+
+These are static geometry/G-code checks. The roof has not been physically printed.

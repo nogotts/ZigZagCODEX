@@ -5,10 +5,10 @@
   "base_source_sha256": "3583ff6551359c7ede6d50240ffdb2f5c968a71a0763fe2491394121a300dc4e",
   "platform_layers": 10,
   "inlet_layers_per_side": 6,
-  "total_physical_layers": 16,
+  "total_physical_layers": 17,
   "platform_height_mm": 0.6,
   "inlet_height_mm": 0.36,
-  "final_printed_height_mm": 0.96,
+  "final_printed_height_mm": 1.02,
   "channel_sources": {
     "left": {
       "source": "KammInletChannel1_Left.gcode",
@@ -145,7 +145,7 @@
       "no_scaling_or_rotation": true
     }
   },
-  "gcode_sha256": "db5bf0f706edf3126d121b5f8d8114ce24306089278dcea111a13d3c72cc1b85",
+  "gcode_sha256": "180e46e063f33d2eea96c2e8a4f2b75c084793dbd01d58a3078171c471ec282a",
   "previous_gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
   "horizontal_roads": [
     {
@@ -4333,7 +4333,6 @@
   },
   "tests": {
     "all_original_structure_geometry_preserved": true,
-    "total_physical_layers": 16,
     "only_source_inlet_layers_1_through_6": true,
     "horizontal_roads": 128,
     "side_blocks": 32,
@@ -4347,7 +4346,6 @@
     "all_transfers_lift_at_least_0p4mm": true,
     "all_roads_within_existing_mesh": true,
     "off_part_thermal_wait_preserved": true,
-    "final_print_height_mm": 0.96,
     "angled_lines_added": 20,
     "angled_lines_on_first_ten_layers_only": true,
     "angled_lengths_and_angles_checked": true,
@@ -4359,7 +4357,6 @@
     "angled_travels_lifted": true,
     "angled_roads_inside_existing_mesh": true,
     "only_layers_1_to_10_have_angled_lines": true,
-    "total_layers_still_16": true,
     "channel_intro_count": 12,
     "first_ten_executable_layers_unchanged": true,
     "new_channel_workflow_left_loop_intro_right_loop_intro": true,
@@ -4383,7 +4380,25 @@
     "no_extra_horizontal_segmentation": true,
     "all_horizontal_2mm_wipes_preserved": true,
     "first_ten_layers_byte_identical": true,
-    "extended_horizontals_follow_both_channel_intro_pairs": true
+    "extended_horizontals_follow_both_channel_intro_pairs": true,
+    "total_physical_layers": 17,
+    "first_sixteen_executable_layers_preserved": true,
+    "one_continuous_roof_path_per_side": true,
+    "roof_horizontals_10p8mm_single_pass": true,
+    "roof_source_duplicate_overlap_passes_removed": true,
+    "roof_source_934_moves_to_15_per_side": true,
+    "roof_layer_Z_1p02_mm": true,
+    "shutdown_height_rebased_to_1p52_101p02_99p02": true,
+    "all_30_roof_deposition_moves_independently_replayed": true,
+    "roof_width_flow_E_speed_acceleration_fans_heaters_K_verified": true,
+    "roof_single_pass_bottom_and_top_10p8mm": true,
+    "no_travel_retractions_inside_continuous_roof_paths": true,
+    "roof_anchor_endpoints_match_existing_inner_horizontal_starts": true,
+    "roof_radius_1p54mm_verified": true,
+    "roof_retractions_balanced": true,
+    "roof_inside_existing_mesh": true,
+    "total_layers_verified_17": true,
+    "final_model_height_mm": 1.02
   },
   "before_angled_sha256": "ea931ad309d75b5a66b3bcc0d7d6c67276baad2c2c6d3f886c5afb2359472371",
   "angled_lines": [
@@ -6798,5 +6813,909 @@
     }
   },
   "previous_circle_clearance_mm": 0.5,
-  "changed_from_commit": "4b094ddf0982d64652f8ccead6bdbeb320be0efd"
+  "changed_from_commit": "4b094ddf0982d64652f8ccead6bdbeb320be0efd",
+  "before_roof_gcode_sha256": "db5bf0f706edf3126d121b5f8d8114ce24306089278dcea111a13d3c72cc1b85",
+  "roof_layers": 1,
+  "roof_layer_Z_mm": 1.02,
+  "roof_geometry": {
+    "left": {
+      "source": "/workspace/attachments/1d1d7aca-f431-420d-8ade-aacaafdb31a3/LeftRoofLoop.gcode",
+      "scale": 1.427428164347206,
+      "source_horizontal_union_span": 7.566055,
+      "source_individual_horizontal_lengths": [
+        7.005622,
+        7.005601,
+        7.005601,
+        7.005622
+      ],
+      "uniform_scaled_source_center_spacing_mm": 22.656152671372332,
+      "existing_anchor_spacing_mm": 22.654775000000015,
+      "straight_connector_registration_trim_mm": 0.0013776713723174794,
+      "anchor_bottom": [
+        113.920016,
+        116.671949
+      ],
+      "anchor_top": [
+        113.920016,
+        139.326724
+      ],
+      "raw_source_deposition_moves": 934,
+      "raw_main_run_moves": 652,
+      "source_overlap_passes_removed": true,
+      "commands": [
+        {
+          "kind": "line",
+          "start": [
+            113.920016,
+            116.671949
+          ],
+          "end": [
+            124.720016,
+            116.671949
+          ],
+          "length": 10.799999999999997
+        },
+        {
+          "kind": "arc",
+          "start": [
+            124.720016,
+            116.671949
+          ],
+          "end": [
+            126.26003113338193,
+            118.21196413338193
+          ],
+          "center": [
+            126.26001538292054,
+            116.67196471406697
+          ],
+          "radius": 1.5399998184608361,
+          "sweep": -1.5708167583147645,
+          "length": 2.4190575226399766,
+          "fit_radial_error_mm": 1.122956799992636e-06,
+          "source_chords": 34
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.26003113338193,
+            118.21196413338193
+          ],
+          "end": [
+            126.26003113338193,
+            121.58712088283723
+          ],
+          "length": 3.3751567494553
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.26003113338193,
+            121.58712088283723
+          ],
+          "end": [
+            126.32722303193408,
+            121.5787261778027
+          ],
+          "length": 0.06771426957192717
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.32722303193408,
+            121.5787261778027
+          ],
+          "end": [
+            126.885244669366,
+            121.50894635198858
+          ],
+          "length": 0.5623676483696847
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.885244669366,
+            121.50894635198858
+          ],
+          "end": [
+            126.9448840455006,
+            121.50151373353683
+          ],
+          "length": 0.060100740451124825
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.9448840455006,
+            121.50151373353683
+          ],
+          "end": [
+            126.95051096732445,
+            121.50647832869242
+          ],
+          "length": 0.00750396257124726
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.95051096732445,
+            121.50647832869242
+          ],
+          "end": [
+            126.95051096732445,
+            134.69396021490988
+          ],
+          "length": 13.187481886217455
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.95051096732445,
+            134.69396021490988
+          ],
+          "end": [
+            126.9448840455006,
+            134.69892623749365
+          ],
+          "length": 0.007504907029019416
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.9448840455006,
+            134.69892623749365
+          ],
+          "end": [
+            126.52666044020035,
+            134.64665952782792
+          ],
+          "length": 0.42147691866770787
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.52666044020035,
+            134.64665952782792
+          ],
+          "end": [
+            126.4100309946042,
+            134.63206550227562
+          ],
+          "length": 0.11753898571063814
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.4100309946042,
+            134.63206550227562
+          ],
+          "end": [
+            126.26003113338193,
+            134.61331908819326
+          ],
+          "length": 0.15116675033765659
+        },
+        {
+          "kind": "line",
+          "start": [
+            126.26003113338193,
+            134.61331908819326
+          ],
+          "end": [
+            126.26003113338193,
+            137.7867231408997
+          ],
+          "length": 3.173404052706445
+        },
+        {
+          "kind": "arc",
+          "start": [
+            126.26003113338193,
+            137.7867231408997
+          ],
+          "end": [
+            124.720016,
+            139.326724
+          ],
+          "center": [
+            126.26001564191762,
+            139.32672313434438
+          ],
+          "radius": 1.5399997305851658,
+          "sweep": -1.5708069483015294,
+          "length": 2.4190422771856617,
+          "fit_radial_error_mm": 8.957328065939407e-07,
+          "source_chords": 34
+        },
+        {
+          "kind": "line",
+          "start": [
+            124.720016,
+            139.326724
+          ],
+          "end": [
+            113.920016,
+            139.326724
+          ],
+          "length": 10.799999999999997
+        }
+      ],
+      "max_RDP_error_mm": 3e-06,
+      "max_arc_chord_sagitta_bound_mm": 0.0005
+    },
+    "right": {
+      "source": "/workspace/attachments/99878a40-8974-46c5-bbca-fa01dfc34b62/RightRoofLoop.gcode",
+      "scale": 1.427428164347206,
+      "source_horizontal_union_span": 7.566055,
+      "source_individual_horizontal_lengths": [
+        7.005622000000001,
+        7.005601,
+        7.005601,
+        7.005622000000001
+      ],
+      "uniform_scaled_source_center_spacing_mm": 22.656152671372332,
+      "existing_anchor_spacing_mm": 22.654775000000015,
+      "straight_connector_registration_trim_mm": 0.0013776713723174794,
+      "anchor_bottom": [
+        142.079984,
+        116.671949
+      ],
+      "anchor_top": [
+        142.079984,
+        139.326724
+      ],
+      "raw_source_deposition_moves": 934,
+      "raw_main_run_moves": 652,
+      "source_overlap_passes_removed": true,
+      "commands": [
+        {
+          "kind": "line",
+          "start": [
+            142.079984,
+            116.671949
+          ],
+          "end": [
+            131.279984,
+            116.671949
+          ],
+          "length": 10.799999999999983
+        },
+        {
+          "kind": "arc",
+          "start": [
+            131.279984,
+            116.671949
+          ],
+          "end": [
+            129.73996886661809,
+            118.21196413338193
+          ],
+          "center": [
+            129.73998428552068,
+            116.67196473480655
+          ],
+          "radius": 1.5399998516377544,
+          "sweep": 1.5708165564819632,
+          "length": 2.4190572639323515,
+          "fit_radial_error_mm": 9.363513360227671e-07,
+          "source_chords": 34
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.73996886661809,
+            118.21196413338193
+          ],
+          "end": [
+            129.73996886661809,
+            121.38536533123207
+          ],
+          "length": 3.17340119785014
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.73996886661809,
+            121.38536533123207
+          ],
+          "end": [
+            129.5899690053958,
+            121.36662034457785
+          ],
+          "length": 0.15116657332681402
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.5899690053958,
+            121.36662034457785
+          ],
+          "end": [
+            129.47333955979965,
+            121.35202631902557
+          ],
+          "length": 0.11753898571063638
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.47333955979965,
+            121.35202631902557
+          ],
+          "end": [
+            129.0551159544994,
+            121.29975960935982
+          ],
+          "length": 0.4214769186677096
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.0551159544994,
+            121.29975960935982
+          ],
+          "end": [
+            129.04948903267555,
+            121.30472420451542
+          ],
+          "length": 0.00750396257124726
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.04948903267555,
+            121.30472420451542
+          ],
+          "end": [
+            129.04948903267555,
+            134.4922060907329
+          ],
+          "length": 13.187481886217483
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.04948903267555,
+            134.4922060907329
+          ],
+          "end": [
+            129.0551159544994,
+            134.49717068588848
+          ],
+          "length": 0.007503962571228456
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.0551159544994,
+            134.49717068588848
+          ],
+          "end": [
+            129.114755330634,
+            134.48973806743675
+          ],
+          "length": 0.06010074045113541
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.114755330634,
+            134.48973806743675
+          ],
+          "end": [
+            129.67277696806593,
+            134.4199596690508
+          ],
+          "length": 0.5623674712530146
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.67277696806593,
+            134.4199596690508
+          ],
+          "end": [
+            129.73996886661809,
+            134.41156496401626
+          ],
+          "length": 0.06771426957192717
+        },
+        {
+          "kind": "line",
+          "start": [
+            129.73996886661809,
+            134.41156496401626
+          ],
+          "end": [
+            129.73996886661809,
+            137.7867231408997
+          ],
+          "length": 3.3751581768834455
+        },
+        {
+          "kind": "arc",
+          "start": [
+            129.73996886661809,
+            137.7867231408997
+          ],
+          "end": [
+            131.279984,
+            139.326724
+          ],
+          "center": [
+            129.73998394894463,
+            139.326723579083
+          ],
+          "radius": 1.540000212096837,
+          "sweep": 1.5708063938333734,
+          "length": 2.4190421796664627,
+          "fit_radial_error_mm": 6.024519740854828e-07,
+          "source_chords": 34
+        },
+        {
+          "kind": "line",
+          "start": [
+            131.279984,
+            139.326724
+          ],
+          "end": [
+            142.079984,
+            139.326724
+          ],
+          "length": 10.799999999999983
+        }
+      ],
+      "max_RDP_error_mm": 3e-06,
+      "max_arc_chord_sagitta_bound_mm": 0.0005
+    }
+  },
+  "roof_deposition_moves": {
+    "left": [
+      {
+        "command": "G1",
+        "start": [
+          113.920016,
+          116.671949
+        ],
+        "end": [
+          124.720016,
+          116.671949
+        ],
+        "IJ": null,
+        "length_mm": 10.799999999999997,
+        "E": 0.1082945
+      },
+      {
+        "command": "G2",
+        "start": [
+          124.720016,
+          116.671949
+        ],
+        "end": [
+          126.260031,
+          118.211964
+        ],
+        "IJ": [
+          1.539999,
+          1.6e-05
+        ],
+        "length_mm": 2.419056772598379,
+        "E": 0.02425653
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.260031,
+          118.211964
+        ],
+        "end": [
+          126.260031,
+          121.587121
+        ],
+        "IJ": null,
+        "length_mm": 3.3751570000000015,
+        "E": 0.0338436
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.260031,
+          121.587121
+        ],
+        "end": [
+          126.327223,
+          121.578726
+        ],
+        "IJ": null,
+        "length_mm": 0.06771440680535161,
+        "E": 0.00067899
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.327223,
+          121.578726
+        ],
+        "end": [
+          126.885245,
+          121.508946
+        ],
+        "IJ": null,
+        "length_mm": 0.5623680297491978,
+        "E": 0.00563902
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.885245,
+          121.508946
+        ],
+        "end": [
+          126.944884,
+          121.501514
+        ],
+        "IJ": null,
+        "length_mm": 0.060100290723094,
+        "E": 0.00060264
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.944884,
+          121.501514
+        ],
+        "end": [
+          126.950511,
+          121.506478
+        ],
+        "IJ": null,
+        "length_mm": 0.007503627456107895,
+        "E": 7.524e-05
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.950511,
+          121.506478
+        ],
+        "end": [
+          126.950511,
+          134.69396
+        ],
+        "IJ": null,
+        "length_mm": 13.187482000000003,
+        "E": 0.13223442
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.950511,
+          134.69396
+        ],
+        "end": [
+          126.944884,
+          134.698926
+        ],
+        "IJ": null,
+        "length_mm": 0.007504950699372121,
+        "E": 7.525e-05
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.944884,
+          134.698926
+        ],
+        "end": [
+          126.52666,
+          134.64666
+        ],
+        "IJ": null,
+        "length_mm": 0.4214772223169316,
+        "E": 0.00422627
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.52666,
+          134.64666
+        ],
+        "end": [
+          126.410031,
+          134.632066
+        ],
+        "IJ": null,
+        "length_mm": 0.11753854038995211,
+        "E": 0.00117859
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.410031,
+          134.632066
+        ],
+        "end": [
+          126.260031,
+          134.613319
+        ],
+        "IJ": null,
+        "length_mm": 0.15116696070571245,
+        "E": 0.00151579
+      },
+      {
+        "command": "G1",
+        "start": [
+          126.260031,
+          134.613319
+        ],
+        "end": [
+          126.260031,
+          137.786723
+        ],
+        "IJ": null,
+        "length_mm": 3.173404000000005,
+        "E": 0.03182057
+      },
+      {
+        "command": "G2",
+        "start": [
+          126.260031,
+          137.786723
+        ],
+        "end": [
+          124.720016,
+          139.326724
+        ],
+        "IJ": [
+          -1.5e-05,
+          1.54
+        ],
+        "length_mm": 2.419042343378922,
+        "E": 0.02425639
+      },
+      {
+        "command": "G1",
+        "start": [
+          124.720016,
+          139.326724
+        ],
+        "end": [
+          113.920016,
+          139.326724
+        ],
+        "IJ": null,
+        "length_mm": 10.799999999999997,
+        "E": 0.1082945
+      }
+    ],
+    "right": [
+      {
+        "command": "G1",
+        "start": [
+          142.079984,
+          116.671949
+        ],
+        "end": [
+          131.279984,
+          116.671949
+        ],
+        "IJ": null,
+        "length_mm": 10.799999999999983,
+        "E": 0.1082945
+      },
+      {
+        "command": "G3",
+        "start": [
+          131.279984,
+          116.671949
+        ],
+        "end": [
+          129.739969,
+          118.211964
+        ],
+        "IJ": [
+          -1.54,
+          1.6e-05
+        ],
+        "length_mm": 2.4190573434044342,
+        "E": 0.02425654
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.739969,
+          118.211964
+        ],
+        "end": [
+          129.739969,
+          121.385365
+        ],
+        "IJ": null,
+        "length_mm": 3.1734009999999984,
+        "E": 0.03182054
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.739969,
+          121.385365
+        ],
+        "end": [
+          129.589969,
+          121.36662
+        ],
+        "IJ": null,
+        "length_mm": 0.15116671268834797,
+        "E": 0.00151579
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.589969,
+          121.36662
+        ],
+        "end": [
+          129.47334,
+          121.352026
+        ],
+        "IJ": null,
+        "length_mm": 0.11753854038993977,
+        "E": 0.00117859
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.47334,
+          121.352026
+        ],
+        "end": [
+          129.055116,
+          121.29976
+        ],
+        "IJ": null,
+        "length_mm": 0.4214772223169439,
+        "E": 0.00422627
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.055116,
+          121.29976
+        ],
+        "end": [
+          129.049489,
+          121.304724
+        ],
+        "IJ": null,
+        "length_mm": 0.007503627456098494,
+        "E": 7.524e-05
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.049489,
+          121.304724
+        ],
+        "end": [
+          129.049489,
+          134.492206
+        ],
+        "IJ": null,
+        "length_mm": 13.187482000000017,
+        "E": 0.13223442
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.049489,
+          134.492206
+        ],
+        "end": [
+          129.055116,
+          134.497171
+        ],
+        "IJ": null,
+        "length_mm": 0.007504289040277644,
+        "E": 7.525e-05
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.055116,
+          134.497171
+        ],
+        "end": [
+          129.114755,
+          134.489738
+        ],
+        "IJ": null,
+        "length_mm": 0.060100414391256934,
+        "E": 0.00060264
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.114755,
+          134.489738
+        ],
+        "end": [
+          129.672777,
+          134.41996
+        ],
+        "IJ": null,
+        "length_mm": 0.5623677815878069,
+        "E": 0.00563901
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.672777,
+          134.41996
+        ],
+        "end": [
+          129.739969,
+          134.411565
+        ],
+        "IJ": null,
+        "length_mm": 0.06771440680535337,
+        "E": 0.00067899
+      },
+      {
+        "command": "G1",
+        "start": [
+          129.739969,
+          134.411565
+        ],
+        "end": [
+          129.739969,
+          137.786723
+        ],
+        "IJ": null,
+        "length_mm": 3.375157999999999,
+        "E": 0.03384361
+      },
+      {
+        "command": "G3",
+        "start": [
+          129.739969,
+          137.786723
+        ],
+        "end": [
+          131.279984,
+          139.326724
+        ],
+        "IJ": [
+          1.5e-05,
+          1.540001
+        ],
+        "length_mm": 2.419042914175208,
+        "E": 0.02425639
+      },
+      {
+        "command": "G1",
+        "start": [
+          131.279984,
+          139.326724
+        ],
+        "end": [
+          142.079984,
+          139.326724
+        ],
+        "IJ": null,
+        "length_mm": 10.799999999999983,
+        "E": 0.1082945
+      }
+    ]
+  },
+  "roof_settings": {
+    "width_mm": 0.3,
+    "height_mm": 0.06,
+    "flow_ratio": 1.4,
+    "speed_mm_s": 4,
+    "acceleration_mm_s2": 2000,
+    "nozzle_C": 245,
+    "bed_C": 70,
+    "K": 0.05,
+    "fan": "inherited unchanged from end of channel stage"
+  }
 }
