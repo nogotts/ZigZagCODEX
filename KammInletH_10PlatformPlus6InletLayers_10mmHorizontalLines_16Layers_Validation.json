@@ -145,7 +145,7 @@
       "no_scaling_or_rotation": true
     }
   },
-  "gcode_sha256": "797f001a366f40ed1ff7b14d553af33d4742fedbc1e00d605d7d67d8bf2169d9",
+  "gcode_sha256": "df17879b0b437e187f064d5663f5fa68e474880fb017a615d50944b5ab62c88e",
   "previous_gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
   "horizontal_roads": [
     {
@@ -3749,7 +3749,6 @@
     "layers_2_through_16_speed_mm_s": 25
   },
   "tests": {
-    "structure_inlet_startup_shutdown_lines_verbatim_after_removing_horizontal_blocks": true,
     "all_original_structure_geometry_preserved": true,
     "total_physical_layers": 16,
     "only_source_inlet_layers_1_through_6": true,
@@ -3781,7 +3780,21 @@
     "angled_travels_lifted": true,
     "angled_roads_inside_existing_mesh": true,
     "only_layers_1_to_10_have_angled_lines": true,
-    "total_layers_still_16": true
+    "total_layers_still_16": true,
+    "channel_intro_count": 12,
+    "first_ten_executable_layers_unchanged": true,
+    "new_channel_workflow_left_loop_intro_right_loop_intro": true,
+    "retained_channel_horizontal_groups_follow_both_intros": true,
+    "original_nonhorizontal_deposition_moves_preserved": 9374,
+    "all_128_original_horizontal_road_deposition_states_identical": true,
+    "new_channel_intro_deposition_moves_verified": 12,
+    "new_intro_length_10mm_collinearity_width_E_F_verified": true,
+    "new_intro_gap_0p5mm_to_actual_wall_segment_verified": true,
+    "new_intro_crosses_scaffold_outer_rail": true,
+    "channel_workflow_loop_intro_per_side_verified": true,
+    "original_channel_E_F_width_acceleration_fans_heaters_K_preserved": true,
+    "new_intro_retractions_balanced": true,
+    "off_part_thermal_wait_unchanged": true
   },
   "before_angled_sha256": "ea931ad309d75b5a66b3bcc0d7d6c67276baad2c2c6d3f886c5afb2359472371",
   "angled_lines": [
@@ -4258,5 +4271,518 @@
       142.88300977468975
     ],
     "construction_sequence_is_endpoint_reference": true
+  },
+  "before_channel_intro_sha256": "797f001a366f40ed1ff7b14d553af33d4742fedbc1e00d605d7d67d8bf2169d9",
+  "channel_diagonal_intros": [
+    {
+      "layer": 11,
+      "source_layer": 1,
+      "side": "left",
+      "Z": 0.66,
+      "safe_Z": 1.06,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 11,
+      "source_layer": 1,
+      "side": "right",
+      "Z": 0.66,
+      "safe_Z": 1.06,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 12,
+      "source_layer": 2,
+      "side": "left",
+      "Z": 0.72,
+      "safe_Z": 1.12,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 12,
+      "source_layer": 2,
+      "side": "right",
+      "Z": 0.72,
+      "safe_Z": 1.12,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 13,
+      "source_layer": 3,
+      "side": "left",
+      "Z": 0.78,
+      "safe_Z": 1.18,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 13,
+      "source_layer": 3,
+      "side": "right",
+      "Z": 0.78,
+      "safe_Z": 1.18,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 14,
+      "source_layer": 4,
+      "side": "left",
+      "Z": 0.84,
+      "safe_Z": 1.24,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 14,
+      "source_layer": 4,
+      "side": "right",
+      "Z": 0.84,
+      "safe_Z": 1.24,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 15,
+      "source_layer": 5,
+      "side": "left",
+      "Z": 0.9,
+      "safe_Z": 1.3,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 15,
+      "source_layer": 5,
+      "side": "right",
+      "Z": 0.9,
+      "safe_Z": 1.3,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 16,
+      "source_layer": 6,
+      "side": "left",
+      "Z": 0.96,
+      "safe_Z": 1.36,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 16,
+      "source_layer": 6,
+      "side": "right",
+      "Z": 0.96,
+      "safe_Z": 1.36,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    }
+  ],
+  "channel_intro_geometry": {
+    "left": {
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        115.520825,
+        122.934562
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    },
+    "right": {
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        140.474884,
+        122.934026
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.10027268,
+      "speed_mm_s": 25
+    }
   }
 }
