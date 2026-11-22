@@ -1,6 +1,6 @@
 # KammInletH: seventeen-layer assembly with continuous roofs
 
-The existing filenames are retained. They are legacy names containing `16Layers`; the actual updated print has **17 physical layers**, ending at **Z1.020 mm**. The first sixteen executable printing layers are preserved verbatim. One roof layer is added after the sixth channel layer, before the single final shutdown. That same layer 17 now contains the two original continuous roof paths followed by four mirrored `HalfCircleFinish.gcode` paths; no eighteenth layer is added.
+The existing filenames are retained. They are legacy names containing `16Layers`; the actual updated print has **17 physical layers**, ending at **Z1.020 mm**. The first sixteen executable printing layers are preserved verbatim. One roof layer is added after the sixth channel layer, before the single final shutdown. That same layer 17 contains the two original continuous roof paths, then four mirrored `HalfCircleFinish.gcode` paths, then two full-roof overhang fill paths. No eighteenth layer is added.
 
 ## Roof: one continuous path per side
 
@@ -39,6 +39,28 @@ Each finish is approached retracted at Z1.42, lowered to Z1.02, and primed 0.4 m
 The previous complete executable prefix, including both roof paths, is unchanged. The original single final shutdown is also unchanged. The SVG/PNG overlays all four new paths on the assembly and adds a separate magenta finish panel, with green starts and red ends. All displayed curves are calculated from the actual arc centers and directions.
 
 Independent checks verify all four anchor coordinates, X/Y mirror geometry and E values, 10.80732 mm horizontal lengths, the full original arc sweep, width/flow/E/speed/temperature/fan/K state, balanced primes/retractions, reverse arc wipes, mesh coverage, unchanged preceding code and shutdown, and exactly 17 physical layers. There are only 8 new positive-XY deposition moves total.
+
+## Full-roof overhang fills on layer 17
+
+After both roof outlines and all four circular finishes complete, the new left full-roof fill prints, followed by its exact right-side reflection. All eight layer 17 components start at their outer endpoints and initially extrude inward: left components move left-to-right, right components move right-to-left. The existing continuous paths and their earlier deposition directions/settings are retained; no existing path is redrawn or double-printed.
+
+The longest straight diagonal in the uploaded `LeftFullRoof.gcode` is 14.942085922 source units. The uniform scale **0.831810904108054** makes that diagonal **12.428990 mm**. Its outer endpoint is registered to the existing outer left diagonal endpoint **X113.616990/Y123.172541**. The right fill starts at its exact reflection **X142.383010/Y123.172541** about X128. This positions the first fill track at approximately X125.950002 on the left and X130.049998 on the right, at the existing outer channel walls.
+
+The provided right file describes the same mirrored pattern in reverse order. It is reversed to start at its outer diagonal endpoint, and the emitted geometry uses an exact reflection of the left. The supplied reversed-right geometry differs from that exact mirror by less than 0.000002 mm due to source coordinate rounding.
+
+Each drawn pattern contains the long diagonal, eight long parallel passes and seven short connecting segments. The full path is extruded continuously in 16 straight deposition moves per side, reduced from 2848 sampled moves in each upload. All source model vertices lie within 0.000002 mm of the emitted path. Short connectors remain extruded because they are part of the user's drawn continuous path; no arbitrary travel gaps or stops are introduced between bands.
+
+The adjacent path-centerline spacing is nominally **0.150 mm** (actual rounded coordinates 0.149990–0.150009 mm). With **0.300 mm nominal width**, this is **0.150 mm nominal overlap**. The supplied geometry is retained rather than generating a different fill pattern. Actual material width/overlap still depends on deposition and the retained flow ratio.
+
+### Orca reference motion and cooling
+
+The working `cantilver_PETG_9m25s.gcode` and `LongOVERHANG2_PETG_16m19s.gcode` wave-overhang sections use 2 mm/s deposition (F120), part fan 100% (PWM255) and acceleration 2500 mm/s². Those settings are applied to the **two new full-roof fills**, with 40 mm/s retracted transfer speed. The earlier layer 17 outline and finish paths retain their existing 4 mm/s settings and inherited PWM158 fan state. Fan 255 is enabled before the new fill approaches, held across both fills, and the former fan/acceleration/feed state is restored before the unchanged original shutdown. No cooling/heating dwell is added.
+
+The new fill E values are calculated for the requested nominal width 0.30 mm, the existing layer height 0.06 mm, 1.75 mm filament and retained flow 1.4, rather than copying absolute extrusion from 0.4 mm-nozzle/0.2 mm-layer references. The geometry-derived bead area and actual segment length determine E. Temperatures remain 245°C nozzle/70°C bed, K remains 0.05, and M221 remains 100%. The references' unrelated startup, bed/nozzle profile, homing and calibration are not inserted.
+
+Each side is approached retracted at Z1.42, lowered to Z1.02, primed 0.4 mm, and extruded continuously. It ends with a 0.4 mm retraction during a 2 mm backward wipe on the final vertical fill pass, then lifts again. No added layer change occurs. All old executable commands before the new fills and the entire old final shutdown are unchanged.
+
+Independent replay verifies the scaled 12.42899 mm diagonal, exact anchors and mirror symmetry, nominal 0.15 mm pitch/overlap, sixteen uninterrupted moves per side, source shape preservation, actual E, 2 mm/s speed, fan 255, acceleration 2500, temperatures/K, balanced retract/prime amounts, mesh coverage and unchanged seventeen-layer count. Every prior layer 17 component's first deposition direction is checked against its outside-to-inside requirement. The SVG/PNG overlays the full fills in green and adds a dedicated full-roof panel.
 
 ## Correct scale and circle dimensions
 
