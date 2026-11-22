@@ -5,10 +5,10 @@
   "base_source_sha256": "3583ff6551359c7ede6d50240ffdb2f5c968a71a0763fe2491394121a300dc4e",
   "platform_layers": 10,
   "inlet_layers_per_side": 6,
-  "total_physical_layers": 17,
+  "total_physical_layers": 139,
   "platform_height_mm": 0.6,
   "inlet_height_mm": 0.36,
-  "final_printed_height_mm": 1.02,
+  "final_printed_height_mm": 8.34,
   "channel_sources": {
     "left": {
       "source": "KammInletChannel1_Left.gcode",
@@ -145,7 +145,7 @@
       "no_scaling_or_rotation": true
     }
   },
-  "gcode_sha256": "9c8aee0c1c59b55d9bd1d6ecc3211e2cb7e73e7a44b1c98747e4897811206dd7",
+  "gcode_sha256": "0dba49d913e828cc3e155f7f104ee06c3284040e64142ca6266678dcfd37051d",
   "previous_gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
   "horizontal_roads": [
     {
@@ -4381,7 +4381,6 @@
     "all_horizontal_2mm_wipes_preserved": true,
     "first_ten_layers_byte_identical": true,
     "extended_horizontals_follow_both_channel_intro_pairs": true,
-    "total_physical_layers": 17,
     "first_sixteen_executable_layers_preserved": true,
     "one_continuous_roof_path_per_side": true,
     "roof_horizontals_10p8mm_single_pass": true,
@@ -4397,8 +4396,6 @@
     "roof_radius_1p54mm_verified": true,
     "roof_retractions_balanced": true,
     "roof_inside_existing_mesh": true,
-    "total_layers_verified_17": true,
-    "final_model_height_mm": 1.02,
     "right_roof_exact_mirror_of_left_about_X128": true,
     "right_mirrored_X_Y_E_I_J_G2_G3_checked": true,
     "left_roof_executable_block_unchanged": true,
@@ -4419,7 +4416,6 @@
     "finish_wipes_reverse_along_same_curve_2mm": true,
     "finish_primes_retractions_balanced": true,
     "finish_inside_existing_mesh": true,
-    "no_extra_layer_added": true,
     "all_prior_layer17_paths_preserved": true,
     "all_eight_layer17_components_start_outward_and_initially_extrude_inward": true,
     "new_full_roof_scale_long_diagonal_12p42899_verified": true,
@@ -4432,8 +4428,26 @@
     "new_full_roof_priming_retractions_balanced": true,
     "new_full_roof_continuous_drawn_connectors_preserved": true,
     "new_full_roof_inside_existing_mesh": true,
-    "new_full_roof_same_layer17_no_added_height": true,
-    "original_shutdown_unchanged_after_full_roof_fill": true
+    "original_shutdown_unchanged_after_full_roof_fill": true,
+    "base_first_seventeen_print_layers_preserved": true,
+    "total_physical_layers": 139,
+    "first_appended_global_layer": 18,
+    "first_appended_Z_mm": 1.08,
+    "final_model_height_mm": 8.34,
+    "all_prior_17_layer_executable_print_code_byte_identical": true,
+    "all_20596_appended_deposition_moves_XYZ_E_F_width_acceleration_fans_verified": true,
+    "all_122_source_body_wipe_E_F_I_J_tokens_identical": true,
+    "all_source_scarf_Z_ramps_offset_by_1p02_only": true,
+    "all_source_circle_paths_rigid_translated_without_scaling": true,
+    "all_four_fitted_centers_match_roof_circle_centers": true,
+    "all_122_prime_wipe_balances_preserved": true,
+    "no_appended_homing_calibration_purge_heating_or_thermal_wait": true,
+    "source_bed85_not_copied_existing70_preserved": true,
+    "first_new_layer_global18_Z1p08_verified": true,
+    "last_new_layer_global139_Z8p34_verified": true,
+    "all_new_deposition_inside_existing_mesh": true,
+    "one_balanced_object_scope_and_final_shutdown": true,
+    "shutdown_Z_rebased_verified": true
   },
   "before_angled_sha256": "ea931ad309d75b5a66b3bcc0d7d6c67276baad2c2c6d3f886c5afb2359472371",
   "angled_lines": [
@@ -8501,5 +8515,92 @@
     0.1499900000000025,
     0.15000899999999717
   ],
-  "right_uploaded_reverse_to_exact_mirror_max_error_mm": 1.2208530553931549e-06
+  "right_uploaded_reverse_to_exact_mirror_max_error_mm": 1.2208530553931549e-06,
+  "before_four_inlet_append_sha256": "9c8aee0c1c59b55d9bd1d6ecc3211e2cb7e73e7a44b1c98747e4897811206dd7",
+  "four_inlet_append": {
+    "source": "/workspace/attachments/16225b29-1a31-4d96-9ad4-d648602750b9/4InletKamm0.3First_PETG_44m1s.gcode",
+    "source_sha256": "de25154b210371dea6e545ffe0c20090d2a321f452666bb342dcd4413df4b3ca",
+    "source_layers": 122,
+    "first_global_layer": 18,
+    "last_global_layer": 139,
+    "Z_offset_mm": 1.02,
+    "first_layer_Z_mm": 1.08,
+    "last_layer_Z_mm": 8.34,
+    "circle_alignment": {
+      "left_bottom": {
+        "center": [
+          126.26040153674685,
+          114.67148079153039
+        ],
+        "radius": 1.5304009972769737,
+        "all_vertices": 22,
+        "fit_vertices": 21,
+        "max_inlier_radial_residual": 0.001261596865236081,
+        "target_center": [
+          126.260012,
+          116.671945
+        ],
+        "translation_XY_mm": [
+          -0.0003895367468516042,
+          2.0004642084696087
+        ]
+      },
+      "left_top": {
+        "center": [
+          126.26047859145662,
+          137.327715928327
+        ],
+        "radius": 1.5302663845535371,
+        "all_vertices": 22,
+        "fit_vertices": 20,
+        "max_inlier_radial_residual": 0.0010024720738657233,
+        "target_center": [
+          126.260012,
+          139.326728
+        ],
+        "translation_XY_mm": [
+          -0.0004665914566146512,
+          1.9990120716730075
+        ]
+      },
+      "right_bottom": {
+        "center": [
+          129.74040263911448,
+          114.67162526034177
+        ],
+        "radius": 1.530330260721756,
+        "all_vertices": 22,
+        "fit_vertices": 20,
+        "max_inlier_radial_residual": 0.0009596303185148702,
+        "target_center": [
+          129.739988,
+          116.671945
+        ],
+        "translation_XY_mm": [
+          -0.0004146391144672634,
+          2.0003197396582237
+        ]
+      },
+      "right_top": {
+        "center": [
+          129.74047859145662,
+          137.327715928327
+        ],
+        "radius": 1.5302663845535367,
+        "all_vertices": 22,
+        "fit_vertices": 20,
+        "max_inlier_radial_residual": 0.0010024720738652793,
+        "target_center": [
+          129.739988,
+          139.326728
+        ],
+        "translation_XY_mm": [
+          -0.0004905914566109004,
+          1.9990120716730075
+        ]
+      }
+    },
+    "settings": "Source E/F/width/acceleration/fan profiles and scarf Z ramps retained; existing 245C/70C/K0.05 inherited; no heat/calibration commands",
+    "total_source_deposition_moves": 20596
+  }
 }
