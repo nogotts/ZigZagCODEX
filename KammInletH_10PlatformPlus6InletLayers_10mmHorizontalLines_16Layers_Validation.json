@@ -145,7 +145,7 @@
       "no_scaling_or_rotation": true
     }
   },
-  "gcode_sha256": "5de5eda290b7824b30ddbccffca04eebd797948a636e89f4851869b405f58ce9",
+  "gcode_sha256": "ef69fe78845906ed0b8239866a1ff5b7a9eaca9d7f50da15cabc866d2979fcfc",
   "previous_gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
   "horizontal_roads": [
     {
@@ -4404,7 +4404,22 @@
     "left_roof_executable_block_unchanged": true,
     "first_sixteen_executable_layers_unchanged_after_mirror_fix": true,
     "svg_roof_curves_sampled_from_actual_gcode_IJ": true,
-    "actual_arc_trace_to_original_source_max_error_mm": 0.0004111748111473178
+    "actual_arc_trace_to_original_source_max_error_mm": 0.0004111748111473178,
+    "all_existing_executable_paths_preserved_before_finish_additions": true,
+    "original_shutdown_unchanged": true,
+    "four_finish_copies_same_layer_17_verified": true,
+    "finish_order_after_both_roofs_verified": true,
+    "finish_anchors_outward_horizontal_startpoints_verified": true,
+    "finish_two_deposition_moves_per_copy": true,
+    "finish_horizontal_10p80732mm_verified": true,
+    "finish_entire_source_sweep_verified": true,
+    "finish_X_and_Y_mirrors_verified": true,
+    "finish_geometry_to_source_max_error_mm": 8.69419905179298e-05,
+    "finish_E_F_width_acceleration_fan_heaters_K_verified": true,
+    "finish_wipes_reverse_along_same_curve_2mm": true,
+    "finish_primes_retractions_balanced": true,
+    "finish_inside_existing_mesh": true,
+    "no_extra_layer_added": true
   },
   "before_angled_sha256": "ea931ad309d75b5a66b3bcc0d7d6c67276baad2c2c6d3f886c5afb2359472371",
   "angled_lines": [
@@ -7727,5 +7742,176 @@
     "bed_C": 70,
     "K": 0.05,
     "fan": "inherited unchanged from end of channel stage"
+  },
+  "before_circle_finishes_sha256": "5de5eda290b7824b30ddbccffca04eebd797948a636e89f4851869b405f58ce9",
+  "circle_finish_source": {
+    "file": "/workspace/attachments/9e8809f4-ada0-4d14-a1f5-1362ef8fb17c/HalfCircleFinish.gcode",
+    "sha256": "d34ad734ff7fb0eb67ef0c8a243e19412ca2aa4933ae0a555fc65c43a9e9b5a0",
+    "scale": 0.6558719740858436,
+    "source_horizontal_span": 16.477789,
+    "target_horizontal_length_mm": 10.80732,
+    "source_deposition_moves": 548,
+    "curve_fit_error_mm": 3.657433596732368e-07,
+    "mirrored_about_X_mm": 128,
+    "mirrored_about_Y_mm": 127.9993365
+  },
+  "circle_finish_paths": {
+    "left_top": {
+      "start": [
+        113.920016,
+        139.476724
+      ],
+      "arc_start": [
+        124.727336,
+        139.476724
+      ],
+      "end": [
+        126.260021,
+        137.78673
+      ],
+      "center": [
+        126.260012,
+        139.326728
+      ],
+      "radius": 1.539998454935866,
+      "sweep": -4.6148286306959925,
+      "mirror_X": 1,
+      "mirror_Y": 1,
+      "command": "G2",
+      "I": 1.532676,
+      "J": -0.149996,
+      "actual_radius_mm": 1.5399982211002712,
+      "arc_sweep_radians": 4.614828360260163,
+      "straight_length_mm": 10.80731999999999,
+      "arc_length_mm": 7.1068274654837325,
+      "straight_E": 0.1083679,
+      "arc_E": 0.07126207,
+      "wipe_command": "G3",
+      "wipe_endpoint": [
+        127.743357,
+        138.912865
+      ]
+    },
+    "left_bottom": {
+      "start": [
+        113.920016,
+        116.521949
+      ],
+      "arc_start": [
+        124.727336,
+        116.521949
+      ],
+      "end": [
+        126.260021,
+        118.211943
+      ],
+      "center": [
+        126.260012,
+        116.671945
+      ],
+      "radius": 1.539998454935866,
+      "sweep": 4.6148286306959925,
+      "mirror_X": 1,
+      "mirror_Y": -1,
+      "command": "G3",
+      "I": 1.532676,
+      "J": 0.149996,
+      "actual_radius_mm": 1.5399982211002712,
+      "arc_sweep_radians": 4.614828360260163,
+      "straight_length_mm": 10.80731999999999,
+      "arc_length_mm": 7.1068274654837325,
+      "straight_E": 0.1083679,
+      "arc_E": 0.07126207,
+      "wipe_command": "G2",
+      "wipe_endpoint": [
+        127.743357,
+        117.085808
+      ]
+    },
+    "right_top": {
+      "start": [
+        142.079984,
+        139.476724
+      ],
+      "arc_start": [
+        131.272664,
+        139.476724
+      ],
+      "end": [
+        129.739979,
+        137.78673
+      ],
+      "center": [
+        129.739988,
+        139.326728
+      ],
+      "radius": 1.539998454935866,
+      "sweep": 4.6148286306959925,
+      "mirror_X": -1,
+      "mirror_Y": 1,
+      "command": "G3",
+      "I": -1.532676,
+      "J": -0.149996,
+      "actual_radius_mm": 1.5399982211002712,
+      "arc_sweep_radians": 4.614828360260152,
+      "straight_length_mm": 10.807320000000004,
+      "arc_length_mm": 7.106827465483715,
+      "straight_E": 0.1083679,
+      "arc_E": 0.07126207,
+      "wipe_command": "G2",
+      "wipe_endpoint": [
+        128.256643,
+        138.912865
+      ]
+    },
+    "right_bottom": {
+      "start": [
+        142.079984,
+        116.521949
+      ],
+      "arc_start": [
+        131.272664,
+        116.521949
+      ],
+      "end": [
+        129.739979,
+        118.211943
+      ],
+      "center": [
+        129.739988,
+        116.671945
+      ],
+      "radius": 1.539998454935866,
+      "sweep": -4.6148286306959925,
+      "mirror_X": -1,
+      "mirror_Y": -1,
+      "command": "G2",
+      "I": -1.532676,
+      "J": 0.149996,
+      "actual_radius_mm": 1.5399982211002712,
+      "arc_sweep_radians": 4.614828360260152,
+      "straight_length_mm": 10.807320000000004,
+      "arc_length_mm": 7.106827465483715,
+      "straight_E": 0.1083679,
+      "arc_E": 0.07126207,
+      "wipe_command": "G3",
+      "wipe_endpoint": [
+        128.256643,
+        117.085808
+      ]
+    }
+  },
+  "circle_finish_settings": {
+    "layer": 17,
+    "Z_mm": 1.02,
+    "width_mm": 0.3,
+    "height_mm": 0.06,
+    "flow_ratio": 1.4,
+    "speed_mm_s": 4,
+    "acceleration_mm_s2": 2000,
+    "nozzle_C": 245,
+    "bed_C": 70,
+    "K": 0.05,
+    "fan_PWM": 158
   }
 }

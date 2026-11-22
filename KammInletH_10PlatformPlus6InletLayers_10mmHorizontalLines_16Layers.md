@@ -1,6 +1,6 @@
 # KammInletH: seventeen-layer assembly with continuous roofs
 
-The existing filenames are retained. They are legacy names containing `16Layers`; the actual updated print has **17 physical layers**, ending at **Z1.020 mm**. The first sixteen executable printing layers are preserved verbatim. One roof layer is added after the sixth channel layer, before the single final shutdown.
+The existing filenames are retained. They are legacy names containing `16Layers`; the actual updated print has **17 physical layers**, ending at **Z1.020 mm**. The first sixteen executable printing layers are preserved verbatim. One roof layer is added after the sixth channel layer, before the single final shutdown. That same layer 17 now contains the two original continuous roof paths followed by four mirrored `HalfCircleFinish.gcode` paths; no eighteenth layer is added.
 
 ## Roof: one continuous path per side
 
@@ -16,6 +16,29 @@ Roof endpoints touch the starting points of the inner horizontal lines in the ex
 | Right | X142.079984, Y116.671949 | X142.079984, Y139.326724 |
 
 Left bottom deposition travels inward to the right and its top arm finishes outward to the left. The right side travels inward to the left at the bottom and outward to the right at the top. Both start at the bottom and finish at the top.
+
+## Four circle finishes after both roofs, on the same layer 17
+
+The uploaded `HalfCircleFinish.gcode` is scaled uniformly by **0.655871974085844**, using its long horizontal source run of 16.477789 units as the **10.807320 mm** scale reference. The complete uploaded model geometry is retained, excluding its standalone startup, primer and shutdown. The resulting curve radius is approximately 1.539998 mm. Its full circular sweep is 264.410204°, as in the source; the filename does not mean the source contains only a 180° arc.
+
+Print order after both existing roof paths: **left top → left bottom → right top → right bottom**. Every finish remains at **Z1.020 mm on layer 17**. Each is one 10.80732 mm horizontal deposition move followed immediately by one true circular arc, with no travel or retraction between them. The source path's curve fit residual is below 0.000001 mm after scaling; the actual fitted-arc path deviates from the original uploaded chordal path by at most 0.000087 mm.
+
+| Copy | Starting endpoint, mm | Mirror reference |
+|---|---|---|
+| Left top | X113.920016, Y139.476724 | Original aligned source |
+| Left bottom | X113.920016, Y116.521949 | Left top reflected about Y127.9993365 |
+| Right top | X142.079984, Y139.476724 | Left top reflected about X128 |
+| Right bottom | X142.079984, Y116.521949 | Both reflections |
+
+These are the original outer starting endpoints of the **topmost and bottommost horizontal lines**, the outward member of each 0.15 mm-spaced pair. They differ from the inner-pair anchors used by the preceding 10.8 mm roof paths. The source offsets naturally place the new circular curves on the same inlet centers.
+
+The finish paths inherit the layer 17 settings: nominal width 0.30 mm, layer height 0.06 mm, flow 1.4 baked into E once, 4 mm/s, 2000 mm/s² acceleration, 245°C nozzle, 70°C bed, K0.05 and unchanged part-fan PWM158. E is recomputed for each full line and actual G2/G3 arc length. Only the mathematical model path is taken from the new FullControl file; none of its generic homing, heating, purge or shutdown commands is copied.
+
+Each finish is approached retracted at Z1.42, lowered to Z1.02, and primed 0.4 mm before its uninterrupted extrusion. At the end, the 0.4 mm retraction follows the just-printed arc backward for 2 mm, rather than wiping across an unprinted shortcut. It then lifts to Z1.42 for the next mirrored copy. There are no additional thermal waits, fan/K changes or layer changes.
+
+The previous complete executable prefix, including both roof paths, is unchanged. The original single final shutdown is also unchanged. The SVG/PNG overlays all four new paths on the assembly and adds a separate magenta finish panel, with green starts and red ends. All displayed curves are calculated from the actual arc centers and directions.
+
+Independent checks verify all four anchor coordinates, X/Y mirror geometry and E values, 10.80732 mm horizontal lengths, the full original arc sweep, width/flow/E/speed/temperature/fan/K state, balanced primes/retractions, reverse arc wipes, mesh coverage, unchanged preceding code and shutdown, and exactly 17 physical layers. There are only 8 new positive-XY deposition moves total.
 
 ## Correct scale and circle dimensions
 
