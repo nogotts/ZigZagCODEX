@@ -1,6 +1,6 @@
 {
   "gcode_file": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "c38e2738d44407faef2beb713416db3cb27c7bf21fcd635710cc421aa39eec3f",
+  "gcode_sha256": "60699b1332ca94102495aa6b5df04b15b8ac98475ddf64a9a732d7f9d699bd0c",
   "layers": 139,
   "counts": {
     "travel": 2722,
@@ -871,20 +871,7 @@
   "interactive_html_self_contained": true,
   "interactive_trace_count": 556,
   "display_only_exploded_gap_available": true,
-  "channel_intro_outer_extension_verified_move_ids": [
-    9381,
-    9455,
-    9618,
-    9724,
-    9887,
-    9993,
-    10156,
-    10262,
-    10425,
-    10531,
-    10694,
-    10800
-  ],
   "diagram_generation_does_not_change_gcode": true,
-  "all_12_extended_intros_match_updated_gcode": true
+  "post_first_layer_5_to_4_revision_verified_extrusion_moves": 21388,
+  "model_move_counts_unchanged": true
 }

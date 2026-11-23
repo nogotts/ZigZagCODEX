@@ -38,7 +38,7 @@ The translations are held constant across all 122 source layers. The circles ret
 
 All **20,596 positive-XY source deposition moves** retain their original E, F, variable width, acceleration, fan state and relative scarf Z behavior. Filament flow 0.98 is already included in the source E values; it is not multiplied again by the earlier custom-line flow 1.4. M221 remains 100%.
 
-The uploaded stage uses a 0.2 mm nozzle and 0.06 mm layers. Its first layer runs at 3 mm/s and its later layers at 5 mm/s, with source acceleration 500 mm/s² on the first layer and 2000 mm/s² on deposition afterwards. Its original part-fan schedule is restored: source layers 1–3 fan off, then PWM229 on subsequent source deposition. Auxiliary/chamber fan states and any within-body settings remain source-preserved. Variable widths, including Arachne and scarf segments, are copied without recalculating E.
+The uploaded stage uses a 0.2 mm nozzle and 0.06 mm layers. Its first layer runs at 3 mm/s and its later layers now run at 4 mm/s (revised from 5 mm/s), with source acceleration 500 mm/s² on the first layer and 2000 mm/s² on deposition afterwards. Its original part-fan schedule is restored: source layers 1–3 fan off, then PWM229 on subsequent source deposition. Auxiliary/chamber fan states and any within-body settings remain source-preserved. Variable widths, including Arachne and scarf segments, are copied without recalculating E.
 
 Safe approach wrappers lift to 0.40 mm above each new nominal layer before entering the source body. The source's original inter-ring travels and Z moves are translated intact. Prime/wipe amounts, including the source's small decimal rounding residuals, are preserved exactly. All new deposition remains inside the existing adaptive leveling rectangle; no startup/leveling change is needed.
 
@@ -70,3 +70,7 @@ Each channel diagonal now starts at the same outer XY endpoint as its correspond
 - Right: length 11.922975673 mm; deposition E0.11955488.
 
 Only the 12 diagonal intro blocks and their descriptive header were edited. Other extrusion paths, including the existing layer 17 roof overlap, are unchanged. The 2D and 3D diagrams were regenerated for this revision.
+
+## Post-first-layer 5 → 4 mm/s revision
+
+All 21,388 model extrusion moves after global layer 1 that previously ran at 5 mm/s now run at 4 mm/s. This affects the channel loops on layers 12–16 and four-inlet continuation on layers 19–139. Global layer 1, the 3 mm/s source first layers, 25 mm/s added roads/base paths, existing 2 and 4 mm/s roof paths, purge, travel, wipe and prime speeds remain unchanged. XYZ, E, nominal widths, flow ratios, pressure advance, acceleration, temperatures and fans remain unchanged. At the lower speed the same E per millimetre maintains nominal deposited volume per length; instantaneous flow is 20% lower. No extra movement segments were introduced.

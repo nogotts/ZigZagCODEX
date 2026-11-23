@@ -13,3 +13,5 @@ For the interactive viewer, open `KammInletH_All139Layers_3D.html` on GitHub, ch
 All **30,180 model extrusion moves** are represented at actual XYZ coordinates, including scarf Z ramps. Arcs are sampled for display with a maximum chord error of 0.0002 mm. No extrusion moves are dropped or coalesced. Lines represent nozzle centerlines, not measured polymer widths. Startup/calibration/purge and final machine parking are excluded from the model diagrams.
 
 This viewer reflects the revised layers 11–16 diagonal lead-ins: their outer endpoints now match layers 1–10, while inward endpoints remain fixed. Generating the viewer does not modify G-code. The validation JSON records the current G-code SHA-256, per-layer counts and bounds.
+
+The viewer now reflects the 5 → 4 mm/s revision for post-first-layer model extrusion previously at 5 mm/s; hover to inspect the updated speed. Geometry and E per unit path length are unchanged.
