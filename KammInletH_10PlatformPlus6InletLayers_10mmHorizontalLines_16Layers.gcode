@@ -21,7 +21,7 @@
 ; Horizontal flow 1.4 baked into E once; layer 1 at 5 mm/s, layers 2-16 at 25 mm/s.
 ; Structural and inlet paths/settings retained; inlet source layers 1-6 only, no roof.
 ; Layers 11-16: left channel loop, left diagonal intro, right loop, right diagonal intro; then retained horizontal groups.
-; New channel intros: 10 mm, nominal width 0.3, flow 1.4, 25 mm/s; collinear with the existing diagonal lines.
+; Channel intros: shared layer 1-10 outer endpoints, fixed inner endpoints, nominal width 0.3, flow 1.4, 25 mm/s.
 ; Base: 255 C nozzle / 70 C bed / K0.55. Inlet stage: 245 C / 70 C / K0.05.
 ; Retracted transfers outside the structure; lifts >=0.400 mm above current nominal layer.
 ; One startup/shutdown; thermal transition wait parked at X20 Y220 Z5.
@@ -10990,18 +10990,18 @@ G1 F600
 G1 X125.942610 Y125.979133 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=11 side=left
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.918651202 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.060000 F1200
 G1 X113.116990 F12000
-G1 Y122.934562 F12000
-G1 X115.520825 Y122.934562 F12000
+G1 Y123.172541 F12000
+G1 X113.616990 Y123.172541 F12000
 G1 Z0.660000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.10027268 F1500
+G1 X125.443604 Y121.694215 E0.11951151 F1500
 ; WIPE_START
 G1 F600
 G1 X123.459048 Y121.942284 E-0.4
@@ -11104,18 +11104,18 @@ G1 F600
 G1 X130.052483 Y128.932120 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=11 side=right
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.922975673 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.060000 F1200
 G1 X142.883010 F12000
-G1 Y122.934026 F12000
-G1 X140.474884 Y122.934026 F12000
+G1 Y123.172541 F12000
+G1 X142.383010 Y123.172541 F12000
 G1 Z0.660000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.10027268 F1500
+G1 X130.552105 Y121.693678 E0.11955488 F1500
 ; WIPE_START
 G1 F600
 G1 X132.536661 Y121.941747 E-0.4
@@ -11388,18 +11388,18 @@ G1 F600
 G1 X125.943610 Y124.556133 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=12 side=left
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.918651202 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.120000 F1200
 G1 X113.116990 F12000
-G1 Y122.934562 F12000
-G1 X115.520825 Y122.934562 F12000
+G1 Y123.172541 F12000
+G1 X113.616990 Y123.172541 F12000
 G1 Z0.720000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.10027268 F1500
+G1 X125.443604 Y121.694215 E0.11951151 F1500
 ; WIPE_START
 G1 F600
 G1 X123.459048 Y121.942284 E-0.4
@@ -11533,18 +11533,18 @@ G1 F600
 G1 X130.052483 Y130.452120 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=12 side=right
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.922975673 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.120000 F1200
 G1 X142.883010 F12000
-G1 Y122.934026 F12000
-G1 X140.474884 Y122.934026 F12000
+G1 Y123.172541 F12000
+G1 X142.383010 Y123.172541 F12000
 G1 Z0.720000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.10027268 F1500
+G1 X130.552105 Y121.693678 E0.11955488 F1500
 ; WIPE_START
 G1 F600
 G1 X132.536661 Y121.941747 E-0.4
@@ -11818,18 +11818,18 @@ G1 F600
 G1 X125.943610 Y124.553133 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=13 side=left
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.918651202 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.180000 F1200
 G1 X113.116990 F12000
-G1 Y122.934562 F12000
-G1 X115.520825 Y122.934562 F12000
+G1 Y123.172541 F12000
+G1 X113.616990 Y123.172541 F12000
 G1 Z0.780000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.10027268 F1500
+G1 X125.443604 Y121.694215 E0.11951151 F1500
 ; WIPE_START
 G1 F600
 G1 X123.459048 Y121.942284 E-0.4
@@ -11965,18 +11965,18 @@ G1 F600
 G1 X130.052483 Y130.557120 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=13 side=right
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.922975673 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.180000 F1200
 G1 X142.883010 F12000
-G1 Y122.934026 F12000
-G1 X140.474884 Y122.934026 F12000
+G1 Y123.172541 F12000
+G1 X142.383010 Y123.172541 F12000
 G1 Z0.780000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.10027268 F1500
+G1 X130.552105 Y121.693678 E0.11955488 F1500
 ; WIPE_START
 G1 F600
 G1 X132.536661 Y121.941747 E-0.4
@@ -12254,18 +12254,18 @@ G1 F600
 G1 X125.943610 Y124.550133 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=14 side=left
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.918651202 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.240000 F1200
 G1 X113.116990 F12000
-G1 Y122.934562 F12000
-G1 X115.520825 Y122.934562 F12000
+G1 Y123.172541 F12000
+G1 X113.616990 Y123.172541 F12000
 G1 Z0.840000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.10027268 F1500
+G1 X125.443604 Y121.694215 E0.11951151 F1500
 ; WIPE_START
 G1 F600
 G1 X123.459048 Y121.942284 E-0.4
@@ -12403,18 +12403,18 @@ G1 F600
 G1 X130.052483 Y130.583120 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=14 side=right
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.922975673 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.240000 F1200
 G1 X142.883010 F12000
-G1 Y122.934026 F12000
-G1 X140.474884 Y122.934026 F12000
+G1 Y123.172541 F12000
+G1 X142.383010 Y123.172541 F12000
 G1 Z0.840000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.10027268 F1500
+G1 X130.552105 Y121.693678 E0.11955488 F1500
 ; WIPE_START
 G1 F600
 G1 X132.536661 Y121.941747 E-0.4
@@ -12692,18 +12692,18 @@ G1 F600
 G1 X125.943610 Y124.546133 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=15 side=left
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.918651202 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.300000 F1200
 G1 X113.116990 F12000
-G1 Y122.934562 F12000
-G1 X115.520825 Y122.934562 F12000
+G1 Y123.172541 F12000
+G1 X113.616990 Y123.172541 F12000
 G1 Z0.900000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.10027268 F1500
+G1 X125.443604 Y121.694215 E0.11951151 F1500
 ; WIPE_START
 G1 F600
 G1 X123.459048 Y121.942284 E-0.4
@@ -12839,18 +12839,18 @@ G1 F600
 G1 X130.052483 Y130.610120 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=15 side=right
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.922975673 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.300000 F1200
 G1 X142.883010 F12000
-G1 Y122.934026 F12000
-G1 X140.474884 Y122.934026 F12000
+G1 Y123.172541 F12000
+G1 X142.383010 Y123.172541 F12000
 G1 Z0.900000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.10027268 F1500
+G1 X130.552105 Y121.693678 E0.11955488 F1500
 ; WIPE_START
 G1 F600
 G1 X132.536661 Y121.941747 E-0.4
@@ -13129,18 +13129,18 @@ G1 F600
 G1 X125.943610 Y124.543133 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=16 side=left
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.918651202 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.360000 F1200
 G1 X113.116990 F12000
-G1 Y122.934562 F12000
-G1 X115.520825 Y122.934562 F12000
+G1 Y123.172541 F12000
+G1 X113.616990 Y123.172541 F12000
 G1 Z0.960000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.10027268 F1500
+G1 X125.443604 Y121.694215 E0.11951151 F1500
 ; WIPE_START
 G1 F600
 G1 X123.459048 Y121.942284 E-0.4
@@ -13280,18 +13280,18 @@ G1 F600
 G1 X130.051483 Y130.634120 E-.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=16 side=right
-; Collinear with existing diagonal intro; 10 mm length; 0.5 mm shortest XY centerline gap to own outer channel wall segment.
+; Starts at layer 1-10 diagonal outer endpoint; length 11.922975673 mm; existing inner endpoint and wall clearance unchanged.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 M204 S10000
 G1 Z1.360000 F1200
 G1 X142.883010 F12000
-G1 Y122.934026 F12000
-G1 X140.474884 Y122.934026 F12000
+G1 Y123.172541 F12000
+G1 X142.383010 Y123.172541 F12000
 G1 Z0.960000 F1200
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.10027268 F1500
+G1 X130.552105 Y121.693678 E0.11955488 F1500
 ; WIPE_START
 G1 F600
 G1 X132.536661 Y121.941747 E-0.4

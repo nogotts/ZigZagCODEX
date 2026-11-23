@@ -61,3 +61,12 @@ The updated SVG/PNG retains the existing geometry/path details, overlays the new
 Independent replay checks all 122 source bodies against the upload: all 20,596 deposition moves have exactly the source E/F/width/acceleration/fan state and the documented XY translations and +1.02 mm Z offset. Every source body/wipe motion token, including primes, retractions and travels, is compared. Checks confirm all four center registrations, unchanged first seventeen printing layers, no appended startup/heating/calibration, source bed 85°C not copied, first new Z1.08, final Z8.34, exactly 139 physical layers, mesh coverage, one balanced object scope and one rebased final shutdown.
 
 These are static alignment/G-code checks; the combined print has not been physically tested.
+
+## Extended diagonal lead-ins on layers 11–16
+
+Each channel diagonal now starts at the same outer XY endpoint as its corresponding layer 1–10 diagonal: left **X113.616990 Y123.172541**, right **X142.383010 Y123.172541**. Existing inward endpoints remain unchanged. Nominal width 0.30 mm, flow ratio 1.4, speed 25 mm/s, layer heights, priming and wipe commands remain unchanged; deposition E increases in proportion to the longer road. The right source registration differs slightly, so the extended lengths are not identical.
+
+- Left: length 11.918651202 mm; deposition E0.11951151.
+- Right: length 11.922975673 mm; deposition E0.11955488.
+
+Only the 12 diagonal intro blocks and their descriptive header were edited. Other extrusion paths, including the existing layer 17 roof overlap, are unchanged. The 2D and 3D diagrams were regenerated for this revision.

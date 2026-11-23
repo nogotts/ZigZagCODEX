@@ -1,6 +1,6 @@
 {
   "gcode_file": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "0dba49d913e828cc3e155f7f104ee06c3284040e64142ca6266678dcfd37051d",
+  "gcode_sha256": "c38e2738d44407faef2beb713416db3cb27c7bf21fcd635710cc421aa39eec3f",
   "layers": 139,
   "counts": {
     "travel": 2722,
@@ -25,9 +25,9 @@
     ]
   ],
   "lengths_mm": {
-    "travel": 13287.862822815116,
+    "travel": 13262.132092815118,
     "prime": 0.0,
-    "extrusion": 14623.169685957468,
+    "extrusion": 14646.219444201588,
     "retraction": 1375.9752293198646
   },
   "layer_stats": {
@@ -870,13 +870,21 @@
   "omitted_extrusion_moves": 0,
   "interactive_html_self_contained": true,
   "interactive_trace_count": 556,
-  "Gcode_unchanged": true,
   "display_only_exploded_gap_available": true,
-  "browser_validation": {
-    "all_layers_visible_extrusion_moves": 30180,
-    "isolated_layer_17_extrusion_moves": 70,
-    "layer_selection_passed": true,
-    "display_separation_and_travel_toggle_passed": true,
-    "javascript_errors_reported": ""
-  }
+  "channel_intro_outer_extension_verified_move_ids": [
+    9381,
+    9455,
+    9618,
+    9724,
+    9887,
+    9993,
+    10156,
+    10262,
+    10425,
+    10531,
+    10694,
+    10800
+  ],
+  "diagram_generation_does_not_change_gcode": true,
+  "all_12_extended_intros_match_updated_gcode": true
 }

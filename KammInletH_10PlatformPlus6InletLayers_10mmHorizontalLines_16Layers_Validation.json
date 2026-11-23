@@ -145,7 +145,7 @@
       "no_scaling_or_rotation": true
     }
   },
-  "gcode_sha256": "0dba49d913e828cc3e155f7f104ee06c3284040e64142ca6266678dcfd37051d",
+  "gcode_sha256": "c38e2738d44407faef2beb713416db3cb27c7bf21fcd635710cc421aa39eec3f",
   "previous_gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
   "horizontal_roads": [
     {
@@ -4363,7 +4363,6 @@
     "retained_channel_horizontal_groups_follow_both_intros": true,
     "original_nonhorizontal_deposition_moves_preserved": 9374,
     "new_channel_intro_deposition_moves_verified": 12,
-    "new_intro_length_10mm_collinearity_width_E_F_verified": true,
     "new_intro_gap_0p5mm_to_actual_wall_segment_verified": true,
     "new_intro_crosses_scaffold_outer_rail": true,
     "channel_workflow_loop_intro_per_side_verified": true,
@@ -4447,7 +4446,11 @@
     "last_new_layer_global139_Z8p34_verified": true,
     "all_new_deposition_inside_existing_mesh": true,
     "one_balanced_object_scope_and_final_shutdown": true,
-    "shutdown_Z_rebased_verified": true
+    "shutdown_Z_rebased_verified": true,
+    "all_12_channel_intros_share_original_diagonal_outer_endpoints": true,
+    "channel_intro_inner_endpoints_unchanged": true,
+    "channel_intro_extended_length_E_proportional_verified": true,
+    "all_code_outside_channel_intro_blocks_unchanged": true
   },
   "before_angled_sha256": "ea931ad309d75b5a66b3bcc0d7d6c67276baad2c2c6d3f886c5afb2359472371",
   "angled_lines": [
@@ -4955,14 +4958,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 11,
@@ -4992,14 +4997,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 12,
@@ -5029,14 +5036,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 12,
@@ -5066,14 +5075,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 13,
@@ -5103,14 +5114,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 13,
@@ -5140,14 +5153,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 14,
@@ -5177,14 +5192,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 14,
@@ -5214,14 +5231,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 15,
@@ -5251,14 +5270,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 15,
@@ -5288,14 +5309,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 16,
@@ -5325,14 +5348,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     {
       "layer": 16,
@@ -5362,14 +5387,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     }
   ],
   "channel_intro_geometry": {
@@ -5396,14 +5423,16 @@
         121.694215
       ],
       "outer": [
-        115.520825,
-        122.934562
+        113.61699,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     },
     "right": {
       "wall_reference_X": 130.052483,
@@ -5428,14 +5457,16 @@
         121.693678
       ],
       "outer": [
-        140.474884,
-        122.934026
+        142.38301,
+        123.172541
       ],
       "angle_degrees": 7.125016,
       "width_mm": 0.3,
       "flow_ratio": 1.4,
-      "E": 0.10027268,
-      "speed_mm_s": 25
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     }
   },
   "restored_from_commit": "ec863ddf3680f737805474567ada4ef695fae35f",
@@ -8602,5 +8633,181 @@
     },
     "settings": "Source E/F/width/acceleration/fan profiles and scarf Z ramps retained; existing 245C/70C/K0.05 inherited; no heat/calibration commands",
     "total_source_deposition_moves": 20596
+  },
+  "channel_intro_outer_extension": {
+    "updates": [
+      {
+        "layer": 11,
+        "side": "left",
+        "outer": [
+          113.61699,
+          123.172541
+        ],
+        "inner": [
+          125.443604,
+          121.694215
+        ],
+        "length_mm": 11.918651201678477,
+        "E": 0.11951151
+      },
+      {
+        "layer": 11,
+        "side": "right",
+        "outer": [
+          142.38301,
+          123.172541
+        ],
+        "inner": [
+          130.552105,
+          121.693678
+        ],
+        "length_mm": 11.922975672699916,
+        "E": 0.11955488
+      },
+      {
+        "layer": 12,
+        "side": "left",
+        "outer": [
+          113.61699,
+          123.172541
+        ],
+        "inner": [
+          125.443604,
+          121.694215
+        ],
+        "length_mm": 11.918651201678477,
+        "E": 0.11951151
+      },
+      {
+        "layer": 12,
+        "side": "right",
+        "outer": [
+          142.38301,
+          123.172541
+        ],
+        "inner": [
+          130.552105,
+          121.693678
+        ],
+        "length_mm": 11.922975672699916,
+        "E": 0.11955488
+      },
+      {
+        "layer": 13,
+        "side": "left",
+        "outer": [
+          113.61699,
+          123.172541
+        ],
+        "inner": [
+          125.443604,
+          121.694215
+        ],
+        "length_mm": 11.918651201678477,
+        "E": 0.11951151
+      },
+      {
+        "layer": 13,
+        "side": "right",
+        "outer": [
+          142.38301,
+          123.172541
+        ],
+        "inner": [
+          130.552105,
+          121.693678
+        ],
+        "length_mm": 11.922975672699916,
+        "E": 0.11955488
+      },
+      {
+        "layer": 14,
+        "side": "left",
+        "outer": [
+          113.61699,
+          123.172541
+        ],
+        "inner": [
+          125.443604,
+          121.694215
+        ],
+        "length_mm": 11.918651201678477,
+        "E": 0.11951151
+      },
+      {
+        "layer": 14,
+        "side": "right",
+        "outer": [
+          142.38301,
+          123.172541
+        ],
+        "inner": [
+          130.552105,
+          121.693678
+        ],
+        "length_mm": 11.922975672699916,
+        "E": 0.11955488
+      },
+      {
+        "layer": 15,
+        "side": "left",
+        "outer": [
+          113.61699,
+          123.172541
+        ],
+        "inner": [
+          125.443604,
+          121.694215
+        ],
+        "length_mm": 11.918651201678477,
+        "E": 0.11951151
+      },
+      {
+        "layer": 15,
+        "side": "right",
+        "outer": [
+          142.38301,
+          123.172541
+        ],
+        "inner": [
+          130.552105,
+          121.693678
+        ],
+        "length_mm": 11.922975672699916,
+        "E": 0.11955488
+      },
+      {
+        "layer": 16,
+        "side": "left",
+        "outer": [
+          113.61699,
+          123.172541
+        ],
+        "inner": [
+          125.443604,
+          121.694215
+        ],
+        "length_mm": 11.918651201678477,
+        "E": 0.11951151
+      },
+      {
+        "layer": 16,
+        "side": "right",
+        "outer": [
+          142.38301,
+          123.172541
+        ],
+        "inner": [
+          130.552105,
+          121.693678
+        ],
+        "length_mm": 11.922975672699916,
+        "E": 0.11955488
+      }
+    ],
+    "unchanged_inner_endpoints": true,
+    "unchanged_code_outside_12_intro_blocks": true,
+    "E_per_mm": 0.010027268317342328,
+    "prior_gcode_sha256": "0dba49d913e828cc3e155f7f104ee06c3284040e64142ca6266678dcfd37051d"
   }
 }
