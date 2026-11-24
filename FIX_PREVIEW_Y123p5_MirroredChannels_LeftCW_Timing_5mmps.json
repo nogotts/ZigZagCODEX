@@ -1,6 +1,6 @@
 {
-  "source_gcode": "PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode",
-  "source_gcode_sha256": "e01c9d102224f190bea8e1139dfeacd33f323aef401eb174f9b60252a00d1451",
+  "source_gcode": "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode",
+  "source_gcode_sha256": "05283809c776ca7eb63b48f622f4b666dea984576999a96726595c7b061ad09a",
   "representative_global_layer": 12,
   "source_channel_layer": 2,
   "speed_mm_s": 5,
@@ -101,9 +101,12 @@
       "nominal_gap_at_Y120_mm": 0.0991515905200458
     }
   },
-  "canonical_gcode_modified": false,
-  "preview_gcode_created": true,
+  "name": "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_Timing_5mmps",
+  "approved_and_applied": true,
+  "source_layer": 12,
   "left_direction": "clockwise",
   "right_direction": "counterclockwise",
-  "all_channel_layers_start_Y_mm": 123.5
+  "post10_intro_K": 0.05,
+  "post10_intro_flow": 0.98,
+  "extra_slow_start": false
 }
