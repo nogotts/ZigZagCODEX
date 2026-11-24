@@ -1,76 +1,51 @@
-# KammInletH: 139-layer assembly with aligned four-inlet continuation
+# Kamm assembly: 10 platform + 8 replacement channel + 1 roof + 122 upper inlet layers
 
-Existing filenames are retained. The legacy filename contains `16Layers`, but the actual current print has **139 physical layers** and a final printed height of **8.340 mm**. All printing commands for the previous first seventeen layers are preserved verbatim. The uploaded `4InletKamm0.3First_PETG_44m1s.gcode` is appended immediately afterwards, with its original 122 print layers becoming global **layers 18–139**.
+Updated in place. Legacy filenames are retained, including the `6InletLayers`, `16Layers` and `All139Layers` text. The actual print now contains **141 layers**, each nominally 0.06 mm, and ends at **Z8.460 mm**.
 
-## Print stages
-
-| Global layers | Nominal Z range, mm | Printed geometry |
-|---|---:|---|
-| 1–10 | 0.06–0.60 | Original mirrored scaffold, horizontal pairs and diagonal leads |
-| 11–16 | 0.66–0.96 | Six source channel layers per side, diagonal intros and extended horizontal pairs |
-| 17 | 1.02 | Two continuous roof outlines, four circular finishes, then both full-roof overhang fills |
-| 18–139 | 1.08–8.34 | All 122 layers of the four-inlet source print, with circular centers registered above layer 17 |
-
-The continuation's first layer prints at **Z1.080 mm**, exactly one 0.060 mm layer above the completed roof. Every source Z coordinate, including scarf ramps and source travel heights, receives a **+1.020 mm offset**. Source maximum deposition height 7.320 mm therefore becomes 8.340 mm. No scaling or layer-height conversion is applied.
-
-## No repeated startup, calibration or warm-up
-
-The original full file still has its one initial P1S startup before layer 1. Between layer 17 and layer 18, the new stage only restores coordinate modes and the source's print feedrate, acceleration, fans and width state. It then begins the first ring immediately after a safe lifted approach.
-
-No appended homing, mesh probing, vibration or flow calibration, purge, temperature-setting/wait sequence, or source startup is inserted. In particular, there are **no M109/M190 waits or new heater setpoints** during the continuation. The source's standalone 85°C bed request is not copied; the existing **245°C nozzle / 70°C bed / K0.05** state is retained. The uploaded first-layer retract is not duplicated: the prior roof's final wipe already leaves the extruder retracted, and the source's original first prime is kept.
-
-All 122 source body sections, their internal travel/retract/prime commands and their final wipes are retained. Metadata/object wrappers and obsolete layer/time progress messages are replaced by the combined file's global 18–139 numbering. There is one object scope and one normal final shutdown after layer 139.
-
-## Circular-center registration
-
-Four disconnected circular regions are each rigidly translated to the matching actual layer 17 finish-circle center. Source ring centers are fitted to the dominant first-layer polygon vertices; intermediate seam points on polygon chords are excluded from the center fit only. **No printed vertex, perimeter, scarf segment or E value is removed or reshaped.** The fit uses 20–21 of 22 unique vertices per ring; maximum inlier radial residual is below 0.0013 mm. This estimates the circle centers from the supplied G-code rather than an unavailable CAD model.
-
-| Region | Target center X, Y, mm | Source XY translation, mm |
+| Global layers | Nominal Z (mm) | Printed paths and speeds |
 |---|---|---|
-| left_bottom | 126.260012, 116.671945 | -0.000389537, +2.000464208 |
-| left_top | 126.260012, 139.326728 | -0.000466591, +1.999012072 |
-| right_bottom | 129.739988, 116.671945 | -0.000414639, +2.000319740 |
-| right_top | 129.739988, 139.326728 | -0.000490591, +1.999012072 |
+| 1–10 | 0.06–0.60 | Original platform/scaffold and lead-ins; executable code unchanged |
+| 11–18 | 0.66–1.08 | All eight layers from each new left/right channel file; first channel layer 3 mm/s, next seven 5 mm/s |
+| 19 | 1.14 | Existing roof loops, circular finishes and full-roof fills; original 4 and 2 mm/s settings retained |
+| 20–141 | 1.20–8.46 | Existing 122-layer upper inlet continuation; first inlet layer 3 mm/s, remaining layers 4 mm/s |
 
-The translations are held constant across all 122 source layers. The circles retain the source geometry and dimensions. Each fitted center coincides with its target before coordinate rounding; after six-decimal output rounding, registration differs by less than 0.000001 mm. The separate translations absorb the source polygon/rounding differences while matching the four existing roof centers.
+## Channel geometry and alignment
 
-## Source settings preserved
+`LEFTinletKamm8.gcode` replaces the left channel and `RIGHTinletKamm8.gcode` replaces the right channel. Each complete eight-layer model is rigidly translated in XY and receives a +0.600 mm Z offset. No scaling, reflection, path simplification or rotation is applied: each uploaded file already has its corresponding orientation.
 
-All **20,596 positive-XY source deposition moves** retain their original E, F, variable width, acceleration, fan state and relative scarf Z behavior. Filament flow 0.98 is already included in the source E values; it is not multiplied again by the earlier custom-line flow 1.4. M221 remains 100%.
+The same lower circular-center targets used by the previous assembly define the placement. The uploaded circles are polygonal, and their fitted upper/lower center separations differ slightly from the previous file. Lower fitted centers match their targets before coordinate rounding; upper fitted-center residuals are 0.00467 mm left and 0.00541 mm right. The entire side remains a single rigid translation so none of its shapes are distorted. Full fitted centers, radii, translations, source hashes and residuals are in the validation JSON.
 
-The uploaded stage uses a 0.2 mm nozzle and 0.06 mm layers. Its first layer runs at 3 mm/s and its later layers now run at 4 mm/s (revised from 5 mm/s), with source acceleration 500 mm/s² on the first layer and 2000 mm/s² on deposition afterwards. Its original part-fan schedule is restored: source layers 1–3 fan off, then PWM229 on subsequent source deposition. Auxiliary/chamber fan states and any within-body settings remain source-preserved. Variable widths, including Arachne and scarf segments, are copied without recalculating E.
+## Per-layer order and retained lead-ins
 
-Safe approach wrappers lift to 0.40 mm above each new nominal layer before entering the source body. The source's original inter-ring travels and Z moves are translated intact. Prime/wipe amounts, including the source's small decimal rounding residuals, are preserved exactly. All new deposition remains inside the existing adaptive leveling rectangle; no startup/leveling change is needed.
+For each layer 11–18:
 
-## Existing seventeen-layer base retained
+1. Complete left channel loop, including its original scarf seam and wipe.
+2. Left diagonal lead-in from its established outer endpoint to its established inward endpoint.
+3. Complete right channel loop, including its original scarf seam and wipe.
+4. Right diagonal lead-in.
+5. Left bottom horizontal pair, then left top pair.
+6. Right bottom horizontal pair, then right top pair.
 
-The original base, channel geometry, 0.15 mm-spaced horizontal pairs, 0.30 mm nominal added roads, 0.300 mm circle-boundary endpoint clearances, diagonal intros, continuous roof paths, circular finish paths and full-roof fills remain unchanged.
+The two diagonal roads and eight horizontal roads retain their exact XY coordinates, E amounts, nominal 0.30 mm widths, flow ratio 1.4, 25 mm/s speed, acceleration and cooling states. Layers 17 and 18 repeat the prior layer16 lead-ins at increased Z. The last-layer scaffold cooling PWM158 is explicitly retained while the uploaded channel loops use their own source fan schedule.
 
-Layer17 still prints both continuous roofs and four circle finishes at 4 mm/s, followed by full-roof fills at 2 mm/s, 100% part cooling and 2500 mm/s² acceleration. Each full fill retains its 12.42899 mm diagonal and 0.15 mm nominal overlap for 0.30 mm nominal width. Every layer 17 component retains its outer-start/inward-first direction. The current first seventeen executable printing layers match the previous version byte-for-byte.
+There are now **144 horizontal roads** across layers 1–18 and **16 channel-stage diagonal lead-ins**. The separate platform diagonal roads on layers 1–10 remain unchanged.
 
-The original initial startup, purge, temperatures, calibrated K values, adaptive mesh and off-part transition wait between the scaffold and channel stage are unchanged. No earlier source settings are transferred into the newly uploaded source's E values.
+## Machine and extrusion settings
 
-## Final shutdown and diagram
+One original startup and calibration sequence is retained before the platform. No uploaded startup, timelapse, purge, homing or shutdown blocks are inserted into the channel stage. The prior off-part temperature transition remains parked at X20 Y220 Z5; no extra thermal waits were added. Bed remains **70°C**. Channel/roof/upper inlet nozzle remains **245°C**, with K0.05; original platform settings remain unchanged.
 
-The uploaded file's normal P1S shutdown is used once after the entire continuation. Its height-relative parking coordinates receive the same 1.02 mm offset: initial shutdown Z8.84, final bed presentation Z108.34 then Z106.34. Heater/fan shutdown and AMS unloading remain in the final footer only.
+New channel deposition retains the uploads’ **3 then 5 mm/s**, variable widths, E values, flow already baked into E, acceleration, fans and scarf Z ramps. Their standalone 85°C bed request is excluded in favor of the established 70°C assembly setting. Both source first-layer retractions are omitted because the preceding paths already finish retracted; source primes and final wipes are retained.
 
-The updated SVG/PNG retains the existing geometry/path details, overlays the new first-layer inlet contours, and adds a registration table and a schematic height stack for layers 18–139. It explicitly states that the new stage begins at layer 18 without warm-up or calibration. The height stack is schematic; the source prints ring walls, not solid rectangular columns.
+The upper inlet stage keeps its previously requested **3 then 4 mm/s**, independent of the new lower channel files’ speeds.
 
-## Verification
+## Shifted roof and upper stage
 
-Independent replay checks all 122 source bodies against the upload: all 20,596 deposition moves have exactly the source E/F/width/acceleration/fan state and the documented XY translations and +1.02 mm Z offset. Every source body/wipe motion token, including primes, retractions and travels, is compared. Checks confirm all four center registrations, unchanged first seventeen printing layers, no appended startup/heating/calibration, source bed 85°C not copied, first new Z1.08, final Z8.34, exactly 139 physical layers, mesh coverage, one balanced object scope and one rebased final shutdown.
+Every existing roof/upper-stage XY coordinate, E/F/I/J value, fan/temperature/K/acceleration state and path order is retained. All absolute motion Z values and nominal layer-height comments in that portion are increased by exactly **0.120 mm**, including scarf ramps, travel lifts and height-relative shutdown parks. Global layer progress is increased by two.
 
-These are static alignment/G-code checks; the combined print has not been physically tested.
+The existing roof-to-RoofLoop overlap is unchanged by this revision.
 
-## Extended diagonal lead-ins on layers 11–16
+## Validation and diagrams
 
-Each channel diagonal now starts at the same outer XY endpoint as its corresponding layer 1–10 diagonal: left **X113.616990 Y123.172541**, right **X142.383010 Y123.172541**. Existing inward endpoints remain unchanged. Nominal width 0.30 mm, flow ratio 1.4, speed 25 mm/s, layer heights, priming and wipe commands remain unchanged; deposition E increases in proportion to the longer road. The right source registration differs slightly, so the extended lengths are not identical.
+Independent replay checks all **1,370 uploaded channel deposition moves** against source XYZ/E/F/width/acceleration/fan/K/nozzle settings, all 80 channel-stage lead-in roads against their previous settings, and all **20,666 existing roof/upper deposition moves** against their prior settings with the required Z offset. The first ten executable layers are byte-identical. No movement segments were added to the uploaded geometry.
 
-- Left: length 11.918651202 mm; deposition E0.11951151.
-- Right: length 11.922975673 mm; deposition E0.11955488.
-
-Only the 12 diagonal intro blocks and their descriptive header were edited. Other extrusion paths, including the existing layer 17 roof overlap, are unchanged. The 2D and 3D diagrams were regenerated for this revision.
-
-## Post-first-layer 5 → 4 mm/s revision
-
-All 21,388 model extrusion moves after global layer 1 that previously ran at 5 mm/s now run at 4 mm/s. This affects the channel loops on layers 12–16 and four-inlet continuation on layers 19–139. Global layer 1, the 3 mm/s source first layers, 25 mm/s added roads/base paths, existing 2 and 4 mm/s roof paths, purge, travel, wipe and prime speeds remain unchanged. XYZ, E, nominal widths, flow ratios, pressure advance, acceleration, temperatures and fans remain unchanged. At the lower speed the same E per millimetre maintains nominal deposited volume per length; instantaneous flow is 20% lower. No extra movement segments were introduced.
+The SVG/PNG top-view schematic shows the new channel paths. The self-contained `KammInletH_All139Layers_3D.html` viewer now displays **141 layers and all 30,576 model extrusion moves**. Download the HTML with GitHub’s **Download raw file**, then open it in a browser to rotate, isolate layers and inspect actual commands. Curves in the 3D view are sampled only for display; that does not segment the print G-code.

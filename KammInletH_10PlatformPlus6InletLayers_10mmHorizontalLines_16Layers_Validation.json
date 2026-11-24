@@ -4,33 +4,33 @@
   "base_source": "KammHorizontal_10mmInletLines_0p5mmGap_10PlatformPlus129ChannelLayers.gcode",
   "base_source_sha256": "3583ff6551359c7ede6d50240ffdb2f5c968a71a0763fe2491394121a300dc4e",
   "platform_layers": 10,
-  "inlet_layers_per_side": 6,
-  "total_physical_layers": 139,
+  "inlet_layers_per_side": 8,
+  "total_physical_layers": 141,
   "platform_height_mm": 0.6,
-  "inlet_height_mm": 0.36,
-  "final_printed_height_mm": 8.34,
+  "inlet_height_mm": 0.48,
+  "final_printed_height_mm": 8.46,
   "channel_sources": {
     "left": {
-      "source": "KammInletChannel1_Left.gcode",
-      "source_sha256": "8ed8ef285a29de2eeea27247811e9c5bdf662eb70bd9058d2bd9b58f253c421d",
+      "source": "LEFTinletKamm8.gcode",
+      "source_sha256": "2cd59e4c6a7aea8b064a7c3815bce9782a8819610bce8f66e9449a019c7d710f",
       "source_circle_fits": {
         "lower": {
           "center": [
-            128.00240638248377,
-            114.67181675836375
+            170.79688355785038,
+            114.67251904898244
           ],
-          "radius": 1.535922930627118,
+          "radius": 1.5337088015408313,
           "points": 19,
-          "residual": 0.0020428087557273766
+          "max_radial_residual_mm": 0.0030240807205692555
         },
         "upper": {
           "center": [
-            127.9995448399661,
-            137.3266867638531
+            170.79865663894586,
+            137.32747860190946
           ],
-          "radius": 1.5346976136304071,
+          "radius": 1.5333217758463835,
           "points": 19,
-          "residual": 0.002718332219385333
+          "max_radial_residual_mm": 0.0036405191709976137
         }
       },
       "existing_circle_fits": {
@@ -54,8 +54,8 @@
         }
       },
       "translation_XY_mm": [
-        -1.742390250202888,
-        2.0001326533647443
+        -44.5368674255695,
+        1.999430362746054
       ],
       "Z_offset_mm": 0.6,
       "lower_center_target": [
@@ -63,41 +63,44 @@
         116.67194941172849
       ],
       "upper_center_after_translation": [
-        126.25715458976322,
-        139.32681941721785
+        126.26178921337636,
+        139.3269089646555
       ],
-      "upper_center_fit_difference_mm": 9.988051369964613e-05,
+      "upper_center_fit_difference_mm": 0.004667049485558742,
       "included_source_layers": [
         1,
         2,
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8
       ],
-      "no_scaling_or_rotation": true
+      "no_scaling_or_rotation": true,
+      "later_layer_speed_mm_s": 5
     },
     "right": {
-      "source": "ChannelRightNEw.gcode",
-      "source_sha256": "dc568fb800fc53600b00820a17e4f7a5cd84165342a49d2d41c111dc277173fb",
+      "source": "RIGHTinletKamm8.gcode",
+      "source_sha256": "4b6a45f4a8099a62038b9140cf7c4b138beb42609a244d293f6d150fb80e6ae7",
       "source_circle_fits": {
         "lower": {
           "center": [
-            128.00250040168967,
-            114.671828680359
+            182.3891057693,
+            114.67226249741358
           ],
-          "radius": 1.5359753207676172,
+          "radius": 1.5328233237546427,
           "points": 19,
-          "residual": 0.0020036509376257783
+          "max_radial_residual_mm": 0.0026726920234809715
         },
         "upper": {
           "center": [
-            127.99947528730341,
-            137.32668506246068
+            182.39144205866458,
+            137.32770942905162
           ],
-          "radius": 1.5347357691652739,
+          "radius": 1.5315731174623737,
           "points": 19,
-          "residual": 0.0026201288479983376
+          "max_radial_residual_mm": 0.0008483279442590419
         }
       },
       "existing_circle_fits": {
@@ -121,8 +124,8 @@
         }
       },
       "translation_XY_mm": [
-        1.7374833899473572,
-        2.000120213583344
+        -52.64912197766296,
+        1.9996863965287588
       ],
       "Z_offset_mm": 0.6,
       "lower_center_target": [
@@ -130,29 +133,30 @@
         116.67194889394234
       ],
       "upper_center_after_translation": [
-        129.73695867725075,
-        139.326805276044
+        129.74232008100162,
+        139.32739582558037
       ],
-      "upper_center_fit_difference_mm": 3.384768760507844e-05,
+      "upper_center_fit_difference_mm": 0.005407772317625895,
       "included_source_layers": [
         1,
         2,
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8
       ],
-      "no_scaling_or_rotation": true
+      "no_scaling_or_rotation": true,
+      "later_layer_speed_mm_s": 5
     }
   },
-  "gcode_sha256": "60699b1332ca94102495aa6b5df04b15b8ac98475ddf64a9a732d7f9d699bd0c",
-  "previous_gcode_sha256": "00c59c7e4f35a93b62af6331a975968f53575570a034a9592764a7189086f686",
+  "gcode_sha256": "35d358656c25cc5d3088e8defafc0e0b2438814581d40851095cbafdc8dce543",
+  "previous_gcode_sha256": "60699b1332ca94102495aa6b5df04b15b8ac98475ddf64a9a732d7f9d699bd0c",
   "horizontal_roads": [
     {
       "layer": 1,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -162,11 +166,9 @@
         116.521949
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -179,8 +181,6 @@
     {
       "layer": 1,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -190,11 +190,9 @@
         116.671949
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -207,8 +205,6 @@
     {
       "layer": 1,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -218,11 +214,9 @@
         139.326724
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -235,8 +229,6 @@
     {
       "layer": 1,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -246,11 +238,9 @@
         139.476724
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -263,8 +253,6 @@
     {
       "layer": 1,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -274,11 +262,9 @@
         116.521949
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -291,8 +277,6 @@
     {
       "layer": 1,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -302,11 +286,9 @@
         116.671949
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -319,8 +301,6 @@
     {
       "layer": 1,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -330,11 +310,9 @@
         139.326724
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -347,8 +325,6 @@
     {
       "layer": 1,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -358,11 +334,9 @@
         139.476724
       ],
       "Z": 0.06,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 5,
+      "speed_mm_s": 5.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -375,8 +349,6 @@
     {
       "layer": 2,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -386,11 +358,9 @@
         116.521949
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -403,8 +373,6 @@
     {
       "layer": 2,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -414,11 +382,9 @@
         116.671949
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -431,8 +397,6 @@
     {
       "layer": 2,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -442,11 +406,9 @@
         139.326724
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -459,8 +421,6 @@
     {
       "layer": 2,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -470,11 +430,9 @@
         139.476724
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -487,8 +445,6 @@
     {
       "layer": 2,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -498,11 +454,9 @@
         116.521949
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -515,8 +469,6 @@
     {
       "layer": 2,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -526,11 +478,9 @@
         116.671949
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -543,8 +493,6 @@
     {
       "layer": 2,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -554,11 +502,9 @@
         139.326724
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -571,8 +517,6 @@
     {
       "layer": 2,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -582,11 +526,9 @@
         139.476724
       ],
       "Z": 0.12,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -599,8 +541,6 @@
     {
       "layer": 3,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -610,11 +550,9 @@
         116.521949
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -627,8 +565,6 @@
     {
       "layer": 3,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -638,11 +574,9 @@
         116.671949
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -655,8 +589,6 @@
     {
       "layer": 3,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -666,11 +598,9 @@
         139.326724
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -683,8 +613,6 @@
     {
       "layer": 3,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -694,11 +622,9 @@
         139.476724
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -711,8 +637,6 @@
     {
       "layer": 3,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -722,11 +646,9 @@
         116.521949
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -739,8 +661,6 @@
     {
       "layer": 3,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -750,11 +670,9 @@
         116.671949
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -767,8 +685,6 @@
     {
       "layer": 3,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -778,11 +694,9 @@
         139.326724
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -795,8 +709,6 @@
     {
       "layer": 3,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -806,11 +718,9 @@
         139.476724
       ],
       "Z": 0.18,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -823,8 +733,6 @@
     {
       "layer": 4,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -834,11 +742,9 @@
         116.521949
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -851,8 +757,6 @@
     {
       "layer": 4,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -862,11 +766,9 @@
         116.671949
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -879,8 +781,6 @@
     {
       "layer": 4,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -890,11 +790,9 @@
         139.326724
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -907,8 +805,6 @@
     {
       "layer": 4,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -918,11 +814,9 @@
         139.476724
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -935,8 +829,6 @@
     {
       "layer": 4,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -946,11 +838,9 @@
         116.521949
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -963,8 +853,6 @@
     {
       "layer": 4,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -974,11 +862,9 @@
         116.671949
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -991,8 +877,6 @@
     {
       "layer": 4,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -1002,11 +886,9 @@
         139.326724
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1019,8 +901,6 @@
     {
       "layer": 4,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -1030,11 +910,9 @@
         139.476724
       ],
       "Z": 0.24,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1047,8 +925,6 @@
     {
       "layer": 5,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -1058,11 +934,9 @@
         116.521949
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1075,8 +949,6 @@
     {
       "layer": 5,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -1086,11 +958,9 @@
         116.671949
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1103,8 +973,6 @@
     {
       "layer": 5,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -1114,11 +982,9 @@
         139.326724
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1131,8 +997,6 @@
     {
       "layer": 5,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -1142,11 +1006,9 @@
         139.476724
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1159,8 +1021,6 @@
     {
       "layer": 5,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -1170,11 +1030,9 @@
         116.521949
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1187,8 +1045,6 @@
     {
       "layer": 5,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -1198,11 +1054,9 @@
         116.671949
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1215,8 +1069,6 @@
     {
       "layer": 5,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -1226,11 +1078,9 @@
         139.326724
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1243,8 +1093,6 @@
     {
       "layer": 5,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -1254,11 +1102,9 @@
         139.476724
       ],
       "Z": 0.3,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1271,8 +1117,6 @@
     {
       "layer": 6,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -1282,11 +1126,9 @@
         116.521949
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1299,8 +1141,6 @@
     {
       "layer": 6,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -1310,11 +1150,9 @@
         116.671949
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1327,8 +1165,6 @@
     {
       "layer": 6,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -1338,11 +1174,9 @@
         139.326724
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1355,8 +1189,6 @@
     {
       "layer": 6,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -1366,11 +1198,9 @@
         139.476724
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1383,8 +1213,6 @@
     {
       "layer": 6,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -1394,11 +1222,9 @@
         116.521949
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1411,8 +1237,6 @@
     {
       "layer": 6,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -1422,11 +1246,9 @@
         116.671949
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1439,8 +1261,6 @@
     {
       "layer": 6,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -1450,11 +1270,9 @@
         139.326724
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1467,8 +1285,6 @@
     {
       "layer": 6,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -1478,11 +1294,9 @@
         139.476724
       ],
       "Z": 0.36,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 226.0,
         "2": 0.0,
@@ -1495,8 +1309,6 @@
     {
       "layer": 7,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -1506,11 +1318,9 @@
         116.521949
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1523,8 +1333,6 @@
     {
       "layer": 7,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -1534,11 +1342,9 @@
         116.671949
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1551,8 +1357,6 @@
     {
       "layer": 7,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -1562,11 +1366,9 @@
         139.326724
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1579,8 +1381,6 @@
     {
       "layer": 7,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -1590,11 +1390,9 @@
         139.476724
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1607,8 +1405,6 @@
     {
       "layer": 7,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -1618,11 +1414,9 @@
         116.521949
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1635,8 +1429,6 @@
     {
       "layer": 7,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -1646,11 +1438,9 @@
         116.671949
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1663,8 +1453,6 @@
     {
       "layer": 7,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -1674,11 +1462,9 @@
         139.326724
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1691,8 +1477,6 @@
     {
       "layer": 7,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -1702,11 +1486,9 @@
         139.476724
       ],
       "Z": 0.42,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1719,8 +1501,6 @@
     {
       "layer": 8,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -1730,11 +1510,9 @@
         116.521949
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1747,8 +1525,6 @@
     {
       "layer": 8,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -1758,11 +1534,9 @@
         116.671949
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1775,8 +1549,6 @@
     {
       "layer": 8,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -1786,11 +1558,9 @@
         139.326724
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1803,8 +1573,6 @@
     {
       "layer": 8,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -1814,11 +1582,9 @@
         139.476724
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1831,8 +1597,6 @@
     {
       "layer": 8,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -1842,11 +1606,9 @@
         116.521949
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1859,8 +1621,6 @@
     {
       "layer": 8,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -1870,11 +1630,9 @@
         116.671949
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1887,8 +1645,6 @@
     {
       "layer": 8,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -1898,11 +1654,9 @@
         139.326724
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1915,8 +1669,6 @@
     {
       "layer": 8,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -1926,11 +1678,9 @@
         139.476724
       ],
       "Z": 0.48,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1943,8 +1693,6 @@
     {
       "layer": 9,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -1954,11 +1702,9 @@
         116.521949
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1971,8 +1717,6 @@
     {
       "layer": 9,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -1982,11 +1726,9 @@
         116.671949
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -1999,8 +1741,6 @@
     {
       "layer": 9,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -2010,11 +1750,9 @@
         139.326724
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2027,8 +1765,6 @@
     {
       "layer": 9,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -2038,11 +1774,9 @@
         139.476724
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2055,8 +1789,6 @@
     {
       "layer": 9,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -2066,11 +1798,9 @@
         116.521949
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2083,8 +1813,6 @@
     {
       "layer": 9,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -2094,11 +1822,9 @@
         116.671949
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2111,8 +1837,6 @@
     {
       "layer": 9,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -2122,11 +1846,9 @@
         139.326724
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2139,8 +1861,6 @@
     {
       "layer": 9,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -2150,11 +1870,9 @@
         139.476724
       ],
       "Z": 0.54,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2167,8 +1885,6 @@
     {
       "layer": 10,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -2178,11 +1894,9 @@
         116.521949
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2195,8 +1909,6 @@
     {
       "layer": 10,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -2206,11 +1918,9 @@
         116.671949
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2223,8 +1933,6 @@
     {
       "layer": 10,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -2234,11 +1942,9 @@
         139.326724
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2251,8 +1957,6 @@
     {
       "layer": 10,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -2262,11 +1966,9 @@
         139.476724
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2279,8 +1981,6 @@
     {
       "layer": 10,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -2290,11 +1990,9 @@
         116.521949
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2307,8 +2005,6 @@
     {
       "layer": 10,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -2318,11 +2014,9 @@
         116.671949
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2335,8 +2029,6 @@
     {
       "layer": 10,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -2346,11 +2038,9 @@
         139.326724
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2363,8 +2053,6 @@
     {
       "layer": 10,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -2374,11 +2062,9 @@
         139.476724
       ],
       "Z": 0.6,
-      "safe_Z": 1.0,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10027268,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -2391,8 +2077,6 @@
     {
       "layer": 11,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -2402,11 +2086,9 @@
         116.521949
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2414,25 +2096,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998522899088
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -2442,11 +2110,9 @@
         116.671949
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2454,25 +2120,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.671949
-      ],
-      "length_mm": 10.394999999999996,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.30000013228092515
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -2482,11 +2134,9 @@
         139.326724
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10420477,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2494,25 +2144,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.326724
-      ],
-      "length_mm": 10.392139,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999959210368843
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -2522,11 +2158,9 @@
         139.476724
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426277,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2534,25 +2168,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.476724
-      ],
-      "length_mm": 10.397923999999989,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999989950890216
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -2562,11 +2182,9 @@
         116.521949
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2574,25 +2192,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998882132684
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -2602,11 +2206,9 @@
         116.671949
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2614,25 +2216,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.671949
-      ],
-      "length_mm": 10.39500000000001,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000002083629585
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -2642,11 +2230,9 @@
         139.326724
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426379,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2654,25 +2240,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.326724
-      ],
-      "length_mm": 10.39802499999999,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000003244473992
+      "bed_C": 70.0
     },
     {
       "layer": 11,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -2682,11 +2254,9 @@
         139.476724
       ],
       "Z": 0.66,
-      "safe_Z": 1.06,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10432181,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2694,25 +2264,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.476724
-      ],
-      "length_mm": 10.403811999999988,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999997262006977
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -2722,11 +2278,9 @@
         116.521949
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2734,25 +2288,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998522899088
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -2762,11 +2302,9 @@
         116.671949
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2774,25 +2312,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.671949
-      ],
-      "length_mm": 10.394999999999996,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.30000013228092515
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -2802,11 +2326,9 @@
         139.326724
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10420477,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2814,25 +2336,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.326724
-      ],
-      "length_mm": 10.392139,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999959210368843
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -2842,11 +2350,9 @@
         139.476724
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426277,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2854,25 +2360,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.476724
-      ],
-      "length_mm": 10.397923999999989,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999989950890216
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -2882,11 +2374,9 @@
         116.521949
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2894,25 +2384,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998882132684
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -2922,11 +2398,9 @@
         116.671949
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2934,25 +2408,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.671949
-      ],
-      "length_mm": 10.39500000000001,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000002083629585
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -2962,11 +2422,9 @@
         139.326724
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426379,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -2974,25 +2432,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.326724
-      ],
-      "length_mm": 10.39802499999999,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000003244473992
+      "bed_C": 70.0
     },
     {
       "layer": 12,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -3002,11 +2446,9 @@
         139.476724
       ],
       "Z": 0.72,
-      "safe_Z": 1.12,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10432181,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 0.0,
         "2": 0.0,
@@ -3014,25 +2456,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.476724
-      ],
-      "length_mm": 10.403811999999988,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999997262006977
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -3042,11 +2470,9 @@
         116.521949
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3054,25 +2480,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998522899088
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -3082,11 +2494,9 @@
         116.671949
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3094,25 +2504,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.671949
-      ],
-      "length_mm": 10.394999999999996,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.30000013228092515
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -3122,11 +2518,9 @@
         139.326724
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10420477,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3134,25 +2528,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.326724
-      ],
-      "length_mm": 10.392139,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999959210368843
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -3162,11 +2542,9 @@
         139.476724
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426277,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3174,25 +2552,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.476724
-      ],
-      "length_mm": 10.397923999999989,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999989950890216
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -3202,11 +2566,9 @@
         116.521949
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3214,25 +2576,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998882132684
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -3242,11 +2590,9 @@
         116.671949
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3254,25 +2600,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.671949
-      ],
-      "length_mm": 10.39500000000001,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000002083629585
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -3282,11 +2614,9 @@
         139.326724
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426379,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3294,25 +2624,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.326724
-      ],
-      "length_mm": 10.39802499999999,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000003244473992
+      "bed_C": 70.0
     },
     {
       "layer": 13,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -3322,11 +2638,9 @@
         139.476724
       ],
       "Z": 0.78,
-      "safe_Z": 1.18,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10432181,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3334,25 +2648,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.476724
-      ],
-      "length_mm": 10.403811999999988,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999997262006977
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -3362,11 +2662,9 @@
         116.521949
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3374,25 +2672,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998522899088
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -3402,11 +2686,9 @@
         116.671949
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3414,25 +2696,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.671949
-      ],
-      "length_mm": 10.394999999999996,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.30000013228092515
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -3442,11 +2710,9 @@
         139.326724
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10420477,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3454,25 +2720,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.326724
-      ],
-      "length_mm": 10.392139,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999959210368843
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -3482,11 +2734,9 @@
         139.476724
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426277,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3494,25 +2744,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.476724
-      ],
-      "length_mm": 10.397923999999989,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999989950890216
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -3522,11 +2758,9 @@
         116.521949
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3534,25 +2768,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998882132684
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -3562,11 +2782,9 @@
         116.671949
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3574,25 +2792,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.671949
-      ],
-      "length_mm": 10.39500000000001,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000002083629585
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -3602,11 +2806,9 @@
         139.326724
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426379,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3614,25 +2816,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.326724
-      ],
-      "length_mm": 10.39802499999999,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000003244473992
+      "bed_C": 70.0
     },
     {
       "layer": 14,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -3642,11 +2830,9 @@
         139.476724
       ],
       "Z": 0.84,
-      "safe_Z": 1.24,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10432181,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3654,25 +2840,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.476724
-      ],
-      "length_mm": 10.403811999999988,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999997262006977
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -3682,11 +2854,9 @@
         116.521949
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3694,25 +2864,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998522899088
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -3722,11 +2878,9 @@
         116.671949
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3734,25 +2888,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.671949
-      ],
-      "length_mm": 10.394999999999996,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.30000013228092515
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -3762,11 +2902,9 @@
         139.326724
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10420477,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3774,25 +2912,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.326724
-      ],
-      "length_mm": 10.392139,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999959210368843
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -3802,11 +2926,9 @@
         139.476724
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426277,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3814,25 +2936,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.476724
-      ],
-      "length_mm": 10.397923999999989,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999989950890216
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -3842,11 +2950,9 @@
         116.521949
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3854,25 +2960,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998882132684
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -3882,11 +2974,9 @@
         116.671949
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3894,25 +2984,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.671949
-      ],
-      "length_mm": 10.39500000000001,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000002083629585
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -3922,11 +2998,9 @@
         139.326724
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426379,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3934,25 +3008,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.326724
-      ],
-      "length_mm": 10.39802499999999,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000003244473992
+      "bed_C": 70.0
     },
     {
       "layer": 15,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -3962,11 +3022,9 @@
         139.476724
       ],
       "Z": 0.9,
-      "safe_Z": 1.3,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10432181,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 227.0,
         "2": 0.0,
@@ -3974,25 +3032,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.476724
-      ],
-      "length_mm": 10.403811999999988,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999997262006977
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "left",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.521949
@@ -4002,11 +3046,9 @@
         116.521949
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4014,25 +3056,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998522899088
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "left",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         113.920016,
         116.671949
@@ -4042,11 +3070,9 @@
         116.671949
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4054,25 +3080,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        123.920016,
-        116.671949
-      ],
-      "length_mm": 10.394999999999996,
-      "circle_center": [
-        126.26001613228088,
-        116.67194941172849
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.30000013228092515
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "left",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         113.920016,
         139.326724
@@ -4082,11 +3094,9 @@
         139.326724
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10420477,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4094,25 +3104,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.326724
-      ],
-      "length_mm": 10.392139,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999959210368843
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "left",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         113.920016,
         139.476724
@@ -4122,11 +3118,9 @@
         139.476724
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426277,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4134,25 +3128,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        123.920016,
-        139.476724
-      ],
-      "length_mm": 10.397923999999989,
-      "circle_center": [
-        126.25715458976322,
-        139.32681941721785
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.29999989950890216
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "right",
-      "line_in_side": 1,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.521949
@@ -4162,11 +3142,9 @@
         116.521949
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10429154,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4174,25 +3152,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.521949
-      ],
-      "length_mm": 10.400792999999993,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999998882132684
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "right",
-      "line_in_side": 2,
-      "pair": "bottom",
       "start": [
         142.079984,
         116.671949
@@ -4202,11 +3166,9 @@
         116.671949
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10423345,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4214,25 +3176,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "bottom",
-      "old_end": [
-        132.079984,
-        116.671949
-      ],
-      "length_mm": 10.39500000000001,
-      "circle_center": [
-        129.73998379163703,
-        116.67194889394234
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000002083629585
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "right",
-      "line_in_side": 3,
-      "pair": "top",
       "start": [
         142.079984,
         139.326724
@@ -4242,11 +3190,9 @@
         139.326724
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10426379,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4254,25 +3200,11 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
-        139.326724
-      ],
-      "length_mm": 10.39802499999999,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
-      ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.3000003244473992
+      "bed_C": 70.0
     },
     {
       "layer": 16,
       "side": "right",
-      "line_in_side": 4,
-      "pair": "top",
       "start": [
         142.079984,
         139.476724
@@ -4282,11 +3214,9 @@
         139.476724
       ],
       "Z": 0.96,
-      "safe_Z": 1.36,
       "width_mm": 0.3,
-      "flow_ratio": 1.4,
       "E": 0.10432181,
-      "speed_mm_s": 25,
+      "speed_mm_s": 25.0,
       "fan": {
         "1": 158.0,
         "2": 0.0,
@@ -4294,25 +3224,397 @@
       },
       "K": 0.05,
       "nozzle_C": 245.0,
-      "bed_C": 70.0,
-      "circle": "top",
-      "old_end": [
-        132.079984,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "start": [
+        113.920016,
+        116.521949
+      ],
+      "end": [
+        124.320809,
+        116.521949
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10429154,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "start": [
+        113.920016,
+        116.671949
+      ],
+      "end": [
+        124.315016,
+        116.671949
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10423345,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "start": [
+        113.920016,
+        139.326724
+      ],
+      "end": [
+        124.312155,
+        139.326724
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10420477,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "start": [
+        113.920016,
         139.476724
       ],
-      "length_mm": 10.403811999999988,
-      "circle_center": [
-        129.73695867725075,
-        139.326805276044
+      "end": [
+        124.31794,
+        139.476724
       ],
-      "circle_outer_diameter_mm": 3.29,
-      "clearance_mm": 0.2999997262006977
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10426277,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "start": [
+        142.079984,
+        116.521949
+      ],
+      "end": [
+        131.679191,
+        116.521949
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10429154,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "start": [
+        142.079984,
+        116.671949
+      ],
+      "end": [
+        131.684984,
+        116.671949
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10423345,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "start": [
+        142.079984,
+        139.326724
+      ],
+      "end": [
+        131.681959,
+        139.326724
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10426379,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "start": [
+        142.079984,
+        139.476724
+      ],
+      "end": [
+        131.676172,
+        139.476724
+      ],
+      "Z": 1.02,
+      "width_mm": 0.3,
+      "E": 0.10432181,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "start": [
+        113.920016,
+        116.521949
+      ],
+      "end": [
+        124.320809,
+        116.521949
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10429154,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "start": [
+        113.920016,
+        116.671949
+      ],
+      "end": [
+        124.315016,
+        116.671949
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10423345,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "start": [
+        113.920016,
+        139.326724
+      ],
+      "end": [
+        124.312155,
+        139.326724
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10420477,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "start": [
+        113.920016,
+        139.476724
+      ],
+      "end": [
+        124.31794,
+        139.476724
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10426277,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "start": [
+        142.079984,
+        116.521949
+      ],
+      "end": [
+        131.679191,
+        116.521949
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10429154,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "start": [
+        142.079984,
+        116.671949
+      ],
+      "end": [
+        131.684984,
+        116.671949
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10423345,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "start": [
+        142.079984,
+        139.326724
+      ],
+      "end": [
+        131.681959,
+        139.326724
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10426379,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "start": [
+        142.079984,
+        139.476724
+      ],
+      "end": [
+        131.676172,
+        139.476724
+      ],
+      "Z": 1.08,
+      "width_mm": 0.3,
+      "E": 0.10432181,
+      "speed_mm_s": 25.0,
+      "fan": {
+        "1": 158.0,
+        "2": 0.0,
+        "3": 255.0
+      },
+      "K": 0.05,
+      "nozzle_C": 245.0,
+      "bed_C": 70.0
     }
   ],
   "horizontal_settings": {
-    "layers": 16,
+    "layers": 18,
     "lines_per_layer": 8,
-    "total_lines": 128,
+    "total_lines": 144,
     "pair_centerline_pitch_mm": 0.15,
     "width_mm": 0.3,
     "height_mm": 0.06,
@@ -4320,143 +3622,17 @@
     "filament_diameter_mm": 1.75,
     "extrusion_mm_per_path_mm": 0.010027268317342328,
     "extrusion_per_10mm_line_mm": 0.10027268,
-    "total_horizontal_path_length_mm": 1299.1009159999999,
+    "total_horizontal_path_length_mm": 1465.4678879999997,
     "layer_1_speed_mm_s": 5,
-    "layers_2_through_16_speed_mm_s": 25,
     "base_layers_1_to_10_length_mm": 10,
-    "channel_layers_11_to_16_length_range_mm": [
+    "channel_clearance_reference": "nominal 3.29 mm circle outer circumference",
+    "channel_clearance_mm": 0.3,
+    "layers_2_through_18_speed_mm_s": 25,
+    "channel_layers_11_to_18_length_range_mm": [
       10.392139,
       10.403811999999988
-    ],
-    "channel_clearance_reference": "nominal 3.29 mm circle outer circumference",
-    "channel_clearance_mm": 0.3
+    ]
   },
-  "tests": {
-    "all_original_structure_geometry_preserved": true,
-    "only_source_inlet_layers_1_through_6": true,
-    "horizontal_roads": 128,
-    "side_blocks": 32,
-    "original_structure_inlet_deposition_moves_verified": 9354,
-    "original_structure_inlet_E_F_XYZ_I_J_width_fans_acceleration_heaters_K_preserved": true,
-    "eight_roads_on_each_of_all_16_layers": true,
-    "all_roads_nominal_0p3mm_width_with_flow_1p4_E": true,
-    "bottom_then_top_pairs_before_switching_sides": true,
-    "pair_pitch_0p15mm": true,
-    "all_new_retractions_balanced": true,
-    "all_transfers_lift_at_least_0p4mm": true,
-    "all_roads_within_existing_mesh": true,
-    "off_part_thermal_wait_preserved": true,
-    "angled_lines_added": 20,
-    "angled_lines_on_first_ten_layers_only": true,
-    "angled_lengths_and_angles_checked": true,
-    "angled_exact_up_left_up_reference_offsets_checked": true,
-    "angled_mirror_checked": true,
-    "angled_width_0p3_flow_1p4_E_verified": true,
-    "angled_blocks_restore_original_XYZ_feed_width_acceleration": true,
-    "angled_retractions_balanced": true,
-    "angled_travels_lifted": true,
-    "angled_roads_inside_existing_mesh": true,
-    "only_layers_1_to_10_have_angled_lines": true,
-    "channel_intro_count": 12,
-    "first_ten_executable_layers_unchanged": true,
-    "new_channel_workflow_left_loop_intro_right_loop_intro": true,
-    "retained_channel_horizontal_groups_follow_both_intros": true,
-    "original_nonhorizontal_deposition_moves_preserved": 9374,
-    "new_channel_intro_deposition_moves_verified": 12,
-    "new_intro_gap_0p5mm_to_actual_wall_segment_verified": true,
-    "new_intro_crosses_scaffold_outer_rail": true,
-    "channel_workflow_loop_intro_per_side_verified": true,
-    "original_channel_E_F_width_acceleration_fans_heaters_K_preserved": true,
-    "new_intro_retractions_balanced": true,
-    "off_part_thermal_wait_unchanged": true,
-    "unchanged_nonhorizontal_deposition_moves_verified": 9386,
-    "all_channel_loops_and_diagonal_intros_XYZ_E_F_width_acceleration_fans_heaters_K_unchanged": true,
-    "all_80_base_horizontal_roads_unchanged": true,
-    "all_48_channel_horizontal_roads_extended_and_checked": true,
-    "all_horizontal_outer_starting_points_and_Y_preserved": true,
-    "all_48_endpoints_0p3mm_from_nominal_circle_outer_boundary_verified": true,
-    "all_48_extended_E_values_match_new_length": true,
-    "no_extra_horizontal_segmentation": true,
-    "all_horizontal_2mm_wipes_preserved": true,
-    "first_ten_layers_byte_identical": true,
-    "extended_horizontals_follow_both_channel_intro_pairs": true,
-    "first_sixteen_executable_layers_preserved": true,
-    "one_continuous_roof_path_per_side": true,
-    "roof_horizontals_10p8mm_single_pass": true,
-    "roof_source_duplicate_overlap_passes_removed": true,
-    "roof_source_934_moves_to_15_per_side": true,
-    "roof_layer_Z_1p02_mm": true,
-    "shutdown_height_rebased_to_1p52_101p02_99p02": true,
-    "all_30_roof_deposition_moves_independently_replayed": true,
-    "roof_width_flow_E_speed_acceleration_fans_heaters_K_verified": true,
-    "roof_single_pass_bottom_and_top_10p8mm": true,
-    "no_travel_retractions_inside_continuous_roof_paths": true,
-    "roof_anchor_endpoints_match_existing_inner_horizontal_starts": true,
-    "roof_radius_1p54mm_verified": true,
-    "roof_retractions_balanced": true,
-    "roof_inside_existing_mesh": true,
-    "right_roof_exact_mirror_of_left_about_X128": true,
-    "right_mirrored_X_Y_E_I_J_G2_G3_checked": true,
-    "left_roof_executable_block_unchanged": true,
-    "first_sixteen_executable_layers_unchanged_after_mirror_fix": true,
-    "svg_roof_curves_sampled_from_actual_gcode_IJ": true,
-    "actual_arc_trace_to_original_source_max_error_mm": 0.0004111748111473178,
-    "all_existing_executable_paths_preserved_before_finish_additions": true,
-    "original_shutdown_unchanged": true,
-    "four_finish_copies_same_layer_17_verified": true,
-    "finish_order_after_both_roofs_verified": true,
-    "finish_anchors_outward_horizontal_startpoints_verified": true,
-    "finish_two_deposition_moves_per_copy": true,
-    "finish_horizontal_10p80732mm_verified": true,
-    "finish_entire_source_sweep_verified": true,
-    "finish_X_and_Y_mirrors_verified": true,
-    "finish_geometry_to_source_max_error_mm": 8.69419905179298e-05,
-    "finish_E_F_width_acceleration_fan_heaters_K_verified": true,
-    "finish_wipes_reverse_along_same_curve_2mm": true,
-    "finish_primes_retractions_balanced": true,
-    "finish_inside_existing_mesh": true,
-    "all_prior_layer17_paths_preserved": true,
-    "all_eight_layer17_components_start_outward_and_initially_extrude_inward": true,
-    "new_full_roof_scale_long_diagonal_12p42899_verified": true,
-    "new_full_roof_16_moves_per_side_verified": true,
-    "new_full_roof_exact_mirror_verified": true,
-    "new_full_roof_pitch_0p15_nominal_overlap_0p15_verified": true,
-    "new_full_roof_Orca_speed_2mm_s_fan255_acc2500_verified": true,
-    "new_full_roof_width_0p3_height_0p06_flow1p4_E_verified": true,
-    "new_full_roof_source_to_emitted_max_deviation_mm": 1.4480986612458435e-06,
-    "new_full_roof_priming_retractions_balanced": true,
-    "new_full_roof_continuous_drawn_connectors_preserved": true,
-    "new_full_roof_inside_existing_mesh": true,
-    "original_shutdown_unchanged_after_full_roof_fill": true,
-    "base_first_seventeen_print_layers_preserved": true,
-    "total_physical_layers": 139,
-    "first_appended_global_layer": 18,
-    "first_appended_Z_mm": 1.08,
-    "final_model_height_mm": 8.34,
-    "all_prior_17_layer_executable_print_code_byte_identical": true,
-    "all_20596_appended_deposition_moves_XYZ_E_F_width_acceleration_fans_verified": true,
-    "all_122_source_body_wipe_E_F_I_J_tokens_identical": true,
-    "all_source_scarf_Z_ramps_offset_by_1p02_only": true,
-    "all_source_circle_paths_rigid_translated_without_scaling": true,
-    "all_four_fitted_centers_match_roof_circle_centers": true,
-    "all_122_prime_wipe_balances_preserved": true,
-    "no_appended_homing_calibration_purge_heating_or_thermal_wait": true,
-    "source_bed85_not_copied_existing70_preserved": true,
-    "first_new_layer_global18_Z1p08_verified": true,
-    "last_new_layer_global139_Z8p34_verified": true,
-    "all_new_deposition_inside_existing_mesh": true,
-    "one_balanced_object_scope_and_final_shutdown": true,
-    "shutdown_Z_rebased_verified": true,
-    "all_12_channel_intros_share_original_diagonal_outer_endpoints": true,
-    "channel_intro_inner_endpoints_unchanged": true,
-    "channel_intro_extended_length_E_proportional_verified": true,
-    "all_code_outside_channel_intro_blocks_unchanged": true,
-    "post_first_layer_5_to_4_verified_moves": 21388,
-    "all_command_counts_and_nonfeed_arguments_unchanged": true,
-    "all_non_target_motion_feeds_unchanged": true,
-    "all_XYZ_E_arc_priming_retraction_and_machine_commands_unchanged": true
-  },
-  "before_angled_sha256": "ea931ad309d75b5a66b3bcc0d7d6c67276baad2c2c6d3f886c5afb2359472371",
   "angled_lines": [
     {
       "layer": 1,
@@ -4932,7 +4108,6 @@
     ],
     "construction_sequence_is_endpoint_reference": true
   },
-  "before_channel_intro_sha256": "797f001a366f40ed1ff7b14d553af33d4742fedbc1e00d605d7d67d8bf2169d9",
   "channel_diagonal_intros": [
     {
       "layer": 11,
@@ -5401,6 +4576,162 @@
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
       "outer_endpoint_shared_with_layers_1_to_10": true
+    },
+    {
+      "layer": 17,
+      "source_layer": 7,
+      "side": "left",
+      "Z": 1.02,
+      "safe_Z": 1.42,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        113.61699,
+        123.172541
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
+    },
+    {
+      "layer": 17,
+      "source_layer": 7,
+      "side": "right",
+      "Z": 1.02,
+      "safe_Z": 1.42,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        142.38301,
+        123.172541
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
+    },
+    {
+      "layer": 18,
+      "source_layer": 8,
+      "side": "left",
+      "Z": 1.08,
+      "safe_Z": 1.48,
+      "wall_reference_X": 125.94360366297555,
+      "wall_Y_extent": [
+        121.654133,
+        127.979133
+      ],
+      "wall_segment_XY": [
+        [
+          125.94261,
+          127.979133
+        ],
+        [
+          125.94361,
+          121.654133
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        125.443604,
+        121.694215
+      ],
+      "outer": [
+        113.61699,
+        123.172541
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.11951151,
+      "speed_mm_s": 25,
+      "length_mm": 11.918651201678477,
+      "outer_endpoint_shared_with_layers_1_to_10": true
+    },
+    {
+      "layer": 18,
+      "source_layer": 8,
+      "side": "right",
+      "Z": 1.08,
+      "safe_Z": 1.48,
+      "wall_reference_X": 130.052483,
+      "wall_Y_extent": [
+        121.71312,
+        126.93212
+      ],
+      "wall_segment_XY": [
+        [
+          130.052483,
+          121.71312
+        ],
+        [
+          130.052483,
+          126.93212
+        ]
+      ],
+      "gap_mm": 0.5,
+      "gap_definition": "shortest XY distance to actual outer wall segment",
+      "inner": [
+        130.552105,
+        121.693678
+      ],
+      "outer": [
+        142.38301,
+        123.172541
+      ],
+      "angle_degrees": 7.125016,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "E": 0.11955488,
+      "speed_mm_s": 25,
+      "length_mm": 11.922975672699916,
+      "outer_endpoint_shared_with_layers_1_to_10": true
     }
   ],
   "channel_intro_geometry": {
@@ -5473,8 +4804,6 @@
       "outer_endpoint_shared_with_layers_1_to_10": true
     }
   },
-  "restored_from_commit": "ec863ddf3680f737805474567ada4ef695fae35f",
-  "replaces_incorrect_commit": "e0e7bef9e5a56b2113425c28b0a0ed394b170ffc",
   "circle_boundary_horizontal_roads": [
     {
       "layer": 11,
@@ -6867,6 +6196,470 @@
       "width_mm": 0.3,
       "flow_ratio": 1.4,
       "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "circle": "bottom",
+      "line_in_side": 1,
+      "start": [
+        113.920016,
+        116.521949
+      ],
+      "old_end": [
+        123.920016,
+        116.521949
+      ],
+      "end": [
+        124.320809,
+        116.521949
+      ],
+      "length_mm": 10.400792999999993,
+      "E": 0.10429154,
+      "circle_center": [
+        126.26001613228088,
+        116.67194941172849
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.2999998522899088,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "circle": "bottom",
+      "line_in_side": 2,
+      "start": [
+        113.920016,
+        116.671949
+      ],
+      "old_end": [
+        123.920016,
+        116.671949
+      ],
+      "end": [
+        124.315016,
+        116.671949
+      ],
+      "length_mm": 10.394999999999996,
+      "E": 0.10423345,
+      "circle_center": [
+        126.26001613228088,
+        116.67194941172849
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.30000013228092515,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "circle": "top",
+      "line_in_side": 3,
+      "start": [
+        113.920016,
+        139.326724
+      ],
+      "old_end": [
+        123.920016,
+        139.326724
+      ],
+      "end": [
+        124.312155,
+        139.326724
+      ],
+      "length_mm": 10.392139,
+      "E": 0.10420477,
+      "circle_center": [
+        126.25715458976322,
+        139.32681941721785
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.29999959210368843,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "left",
+      "circle": "top",
+      "line_in_side": 4,
+      "start": [
+        113.920016,
+        139.476724
+      ],
+      "old_end": [
+        123.920016,
+        139.476724
+      ],
+      "end": [
+        124.31794,
+        139.476724
+      ],
+      "length_mm": 10.397923999999989,
+      "E": 0.10426277,
+      "circle_center": [
+        126.25715458976322,
+        139.32681941721785
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.29999989950890216,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "circle": "bottom",
+      "line_in_side": 1,
+      "start": [
+        142.079984,
+        116.521949
+      ],
+      "old_end": [
+        132.079984,
+        116.521949
+      ],
+      "end": [
+        131.679191,
+        116.521949
+      ],
+      "length_mm": 10.400792999999993,
+      "E": 0.10429154,
+      "circle_center": [
+        129.73998379163703,
+        116.67194889394234
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.2999998882132684,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "circle": "bottom",
+      "line_in_side": 2,
+      "start": [
+        142.079984,
+        116.671949
+      ],
+      "old_end": [
+        132.079984,
+        116.671949
+      ],
+      "end": [
+        131.684984,
+        116.671949
+      ],
+      "length_mm": 10.39500000000001,
+      "E": 0.10423345,
+      "circle_center": [
+        129.73998379163703,
+        116.67194889394234
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.3000002083629585,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "circle": "top",
+      "line_in_side": 3,
+      "start": [
+        142.079984,
+        139.326724
+      ],
+      "old_end": [
+        132.079984,
+        139.326724
+      ],
+      "end": [
+        131.681959,
+        139.326724
+      ],
+      "length_mm": 10.39802499999999,
+      "E": 0.10426379,
+      "circle_center": [
+        129.73695867725075,
+        139.326805276044
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.3000003244473992,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 17,
+      "side": "right",
+      "circle": "top",
+      "line_in_side": 4,
+      "start": [
+        142.079984,
+        139.476724
+      ],
+      "old_end": [
+        132.079984,
+        139.476724
+      ],
+      "end": [
+        131.676172,
+        139.476724
+      ],
+      "length_mm": 10.403811999999988,
+      "E": 0.10432181,
+      "circle_center": [
+        129.73695867725075,
+        139.326805276044
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.2999997262006977,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "circle": "bottom",
+      "line_in_side": 1,
+      "start": [
+        113.920016,
+        116.521949
+      ],
+      "old_end": [
+        123.920016,
+        116.521949
+      ],
+      "end": [
+        124.320809,
+        116.521949
+      ],
+      "length_mm": 10.400792999999993,
+      "E": 0.10429154,
+      "circle_center": [
+        126.26001613228088,
+        116.67194941172849
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.2999998522899088,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "circle": "bottom",
+      "line_in_side": 2,
+      "start": [
+        113.920016,
+        116.671949
+      ],
+      "old_end": [
+        123.920016,
+        116.671949
+      ],
+      "end": [
+        124.315016,
+        116.671949
+      ],
+      "length_mm": 10.394999999999996,
+      "E": 0.10423345,
+      "circle_center": [
+        126.26001613228088,
+        116.67194941172849
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.30000013228092515,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "circle": "top",
+      "line_in_side": 3,
+      "start": [
+        113.920016,
+        139.326724
+      ],
+      "old_end": [
+        123.920016,
+        139.326724
+      ],
+      "end": [
+        124.312155,
+        139.326724
+      ],
+      "length_mm": 10.392139,
+      "E": 0.10420477,
+      "circle_center": [
+        126.25715458976322,
+        139.32681941721785
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.29999959210368843,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "left",
+      "circle": "top",
+      "line_in_side": 4,
+      "start": [
+        113.920016,
+        139.476724
+      ],
+      "old_end": [
+        123.920016,
+        139.476724
+      ],
+      "end": [
+        124.31794,
+        139.476724
+      ],
+      "length_mm": 10.397923999999989,
+      "E": 0.10426277,
+      "circle_center": [
+        126.25715458976322,
+        139.32681941721785
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.29999989950890216,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "circle": "bottom",
+      "line_in_side": 1,
+      "start": [
+        142.079984,
+        116.521949
+      ],
+      "old_end": [
+        132.079984,
+        116.521949
+      ],
+      "end": [
+        131.679191,
+        116.521949
+      ],
+      "length_mm": 10.400792999999993,
+      "E": 0.10429154,
+      "circle_center": [
+        129.73998379163703,
+        116.67194889394234
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.2999998882132684,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "circle": "bottom",
+      "line_in_side": 2,
+      "start": [
+        142.079984,
+        116.671949
+      ],
+      "old_end": [
+        132.079984,
+        116.671949
+      ],
+      "end": [
+        131.684984,
+        116.671949
+      ],
+      "length_mm": 10.39500000000001,
+      "E": 0.10423345,
+      "circle_center": [
+        129.73998379163703,
+        116.67194889394234
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.3000002083629585,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "circle": "top",
+      "line_in_side": 3,
+      "start": [
+        142.079984,
+        139.326724
+      ],
+      "old_end": [
+        132.079984,
+        139.326724
+      ],
+      "end": [
+        131.681959,
+        139.326724
+      ],
+      "length_mm": 10.39802499999999,
+      "E": 0.10426379,
+      "circle_center": [
+        129.73695867725075,
+        139.326805276044
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.3000003244473992,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
+    },
+    {
+      "layer": 18,
+      "side": "right",
+      "circle": "top",
+      "line_in_side": 4,
+      "start": [
+        142.079984,
+        139.476724
+      ],
+      "old_end": [
+        132.079984,
+        139.476724
+      ],
+      "end": [
+        131.676172,
+        139.476724
+      ],
+      "length_mm": 10.403811999999988,
+      "E": 0.10432181,
+      "circle_center": [
+        129.73695867725075,
+        139.326805276044
+      ],
+      "circle_outer_diameter_mm": 3.29,
+      "clearance_mm": 0.2999997262006977,
+      "width_mm": 0.3,
+      "flow_ratio": 1.4,
+      "speed_mm_s": 25
     }
   ],
   "circular_clearance_reference": {
@@ -6897,10 +6690,8 @@
     }
   },
   "previous_circle_clearance_mm": 0.5,
-  "changed_from_commit": "4b094ddf0982d64652f8ccead6bdbeb320be0efd",
-  "before_roof_gcode_sha256": "db5bf0f706edf3126d121b5f8d8114ce24306089278dcea111a13d3c72cc1b85",
   "roof_layers": 1,
-  "roof_layer_Z_mm": 1.02,
+  "roof_layer_Z_mm": 1.14,
   "roof_geometry": {
     "left": {
       "source": "/workspace/attachments/1d1d7aca-f431-420d-8ade-aacaafdb31a3/LeftRoofLoop.gcode",
@@ -7806,7 +7597,6 @@
     "K": 0.05,
     "fan": "inherited unchanged from end of channel stage"
   },
-  "before_circle_finishes_sha256": "5de5eda290b7824b30ddbccffca04eebd797948a636e89f4851869b405f58ce9",
   "circle_finish_source": {
     "file": "/workspace/attachments/9e8809f4-ada0-4d14-a1f5-1362ef8fb17c/HalfCircleFinish.gcode",
     "sha256": "d34ad734ff7fb0eb67ef0c8a243e19412ca2aa4933ae0a555fc65c43a9e9b5a0",
@@ -7965,8 +7755,8 @@
     }
   },
   "circle_finish_settings": {
-    "layer": 17,
-    "Z_mm": 1.02,
+    "layer": 19,
+    "Z_mm": 1.14,
     "width_mm": 0.3,
     "height_mm": 0.06,
     "flow_ratio": 1.4,
@@ -7977,7 +7767,6 @@
     "K": 0.05,
     "fan_PWM": 158
   },
-  "before_full_roof_fill_sha256": "ef69fe78845906ed0b8239866a1ff5b7a9eaca9d7f50da15cabc866d2979fcfc",
   "full_roof_fill_source": {
     "left": {
       "file": "/workspace/attachments/295e71a7-74ba-40ff-803e-e764d8f5af60/LeftFullRoof.gcode",
@@ -8526,8 +8315,8 @@
     ]
   },
   "full_roof_fill_settings": {
-    "layer": 17,
-    "Z_mm": 1.02,
+    "layer": 19,
+    "Z_mm": 1.14,
     "width_mm": 0.3,
     "height_mm": 0.06,
     "flow_ratio": 1.4,
@@ -8551,16 +8340,15 @@
     0.15000899999999717
   ],
   "right_uploaded_reverse_to_exact_mirror_max_error_mm": 1.2208530553931549e-06,
-  "before_four_inlet_append_sha256": "9c8aee0c1c59b55d9bd1d6ecc3211e2cb7e73e7a44b1c98747e4897811206dd7",
   "four_inlet_append": {
     "source": "/workspace/attachments/16225b29-1a31-4d96-9ad4-d648602750b9/4InletKamm0.3First_PETG_44m1s.gcode",
     "source_sha256": "de25154b210371dea6e545ffe0c20090d2a321f452666bb342dcd4413df4b3ca",
     "source_layers": 122,
-    "first_global_layer": 18,
-    "last_global_layer": 139,
-    "Z_offset_mm": 1.02,
-    "first_layer_Z_mm": 1.08,
-    "last_layer_Z_mm": 8.34,
+    "first_global_layer": 20,
+    "last_global_layer": 141,
+    "Z_offset_mm": 1.14,
+    "first_layer_Z_mm": 1.2,
+    "last_layer_Z_mm": 8.46,
     "circle_alignment": {
       "left_bottom": {
         "center": [
@@ -8635,321 +8423,58 @@
         ]
       }
     },
-    "settings": "Source E/F/width/acceleration/fan profiles and scarf Z ramps retained; existing 245C/70C/K0.05 inherited; no heat/calibration commands",
+    "settings": "Existing continuation E/F/width/acceleration/fan profiles and scarf Z ramps retained, including prior 4mm/s override; all Z raised 0.12mm; 245C/70C/K0.05 inherited",
     "total_source_deposition_moves": 20596
   },
-  "channel_intro_outer_extension": {
-    "updates": [
-      {
-        "layer": 11,
-        "side": "left",
-        "outer": [
-          113.61699,
-          123.172541
-        ],
-        "inner": [
-          125.443604,
-          121.694215
-        ],
-        "length_mm": 11.918651201678477,
-        "E": 0.11951151
-      },
-      {
-        "layer": 11,
-        "side": "right",
-        "outer": [
-          142.38301,
-          123.172541
-        ],
-        "inner": [
-          130.552105,
-          121.693678
-        ],
-        "length_mm": 11.922975672699916,
-        "E": 0.11955488
-      },
-      {
-        "layer": 12,
-        "side": "left",
-        "outer": [
-          113.61699,
-          123.172541
-        ],
-        "inner": [
-          125.443604,
-          121.694215
-        ],
-        "length_mm": 11.918651201678477,
-        "E": 0.11951151
-      },
-      {
-        "layer": 12,
-        "side": "right",
-        "outer": [
-          142.38301,
-          123.172541
-        ],
-        "inner": [
-          130.552105,
-          121.693678
-        ],
-        "length_mm": 11.922975672699916,
-        "E": 0.11955488
-      },
-      {
-        "layer": 13,
-        "side": "left",
-        "outer": [
-          113.61699,
-          123.172541
-        ],
-        "inner": [
-          125.443604,
-          121.694215
-        ],
-        "length_mm": 11.918651201678477,
-        "E": 0.11951151
-      },
-      {
-        "layer": 13,
-        "side": "right",
-        "outer": [
-          142.38301,
-          123.172541
-        ],
-        "inner": [
-          130.552105,
-          121.693678
-        ],
-        "length_mm": 11.922975672699916,
-        "E": 0.11955488
-      },
-      {
-        "layer": 14,
-        "side": "left",
-        "outer": [
-          113.61699,
-          123.172541
-        ],
-        "inner": [
-          125.443604,
-          121.694215
-        ],
-        "length_mm": 11.918651201678477,
-        "E": 0.11951151
-      },
-      {
-        "layer": 14,
-        "side": "right",
-        "outer": [
-          142.38301,
-          123.172541
-        ],
-        "inner": [
-          130.552105,
-          121.693678
-        ],
-        "length_mm": 11.922975672699916,
-        "E": 0.11955488
-      },
-      {
-        "layer": 15,
-        "side": "left",
-        "outer": [
-          113.61699,
-          123.172541
-        ],
-        "inner": [
-          125.443604,
-          121.694215
-        ],
-        "length_mm": 11.918651201678477,
-        "E": 0.11951151
-      },
-      {
-        "layer": 15,
-        "side": "right",
-        "outer": [
-          142.38301,
-          123.172541
-        ],
-        "inner": [
-          130.552105,
-          121.693678
-        ],
-        "length_mm": 11.922975672699916,
-        "E": 0.11955488
-      },
-      {
-        "layer": 16,
-        "side": "left",
-        "outer": [
-          113.61699,
-          123.172541
-        ],
-        "inner": [
-          125.443604,
-          121.694215
-        ],
-        "length_mm": 11.918651201678477,
-        "E": 0.11951151
-      },
-      {
-        "layer": 16,
-        "side": "right",
-        "outer": [
-          142.38301,
-          123.172541
-        ],
-        "inner": [
-          130.552105,
-          121.693678
-        ],
-        "length_mm": 11.922975672699916,
-        "E": 0.11955488
-      }
+  "revision_eight_layer_channels": {
+    "source_local_layers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
     ],
-    "unchanged_inner_endpoints": true,
-    "unchanged_code_outside_12_intro_blocks": true,
-    "E_per_mm": 0.010027268317342328,
-    "prior_gcode_sha256": "0dba49d913e828cc3e155f7f104ee06c3284040e64142ca6266678dcfd37051d"
+    "new_channel_global_layers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "repeated_scaffold_global_layers": [
+      17,
+      18
+    ],
+    "roof_global_layer": 19,
+    "all_later_Z_shift_mm": 0.12,
+    "channel_later_speed_mm_s": 5,
+    "bed_override_C": 70,
+    "first_ten_layers_executable_sha256": "44ed63139c58e1899c35539fa8e34b58f2062d816fb6fc29ec4c6696bce616c6",
+    "source_units_total": 16,
+    "source_deposition_moves": 1370
   },
-  "post_first_layer_speed_revision": {
-    "from_mm_s": 5,
-    "to_mm_s": 4,
-    "scope": "Positive-XY extrusion moves after global layer 1 originally at F300 only",
-    "changed_extrusion_moves": 21388,
-    "per_layer": {
-      "12": 176,
-      "13": 176,
-      "14": 176,
-      "15": 176,
-      "16": 176,
-      "19": 179,
-      "20": 180,
-      "21": 179,
-      "22": 179,
-      "23": 179,
-      "24": 179,
-      "25": 182,
-      "26": 182,
-      "27": 184,
-      "28": 190,
-      "29": 172,
-      "30": 180,
-      "31": 184,
-      "32": 186,
-      "33": 181,
-      "34": 184,
-      "35": 181,
-      "36": 180,
-      "37": 170,
-      "38": 176,
-      "39": 180,
-      "40": 180,
-      "41": 177,
-      "42": 176,
-      "43": 170,
-      "44": 182,
-      "45": 185,
-      "46": 177,
-      "47": 147,
-      "48": 147,
-      "49": 165,
-      "50": 146,
-      "51": 154,
-      "52": 161,
-      "53": 172,
-      "54": 165,
-      "55": 147,
-      "56": 147,
-      "57": 147,
-      "58": 147,
-      "59": 147,
-      "60": 147,
-      "61": 147,
-      "62": 147,
-      "63": 147,
-      "64": 147,
-      "65": 147,
-      "66": 147,
-      "67": 147,
-      "68": 145,
-      "69": 145,
-      "70": 145,
-      "71": 145,
-      "72": 145,
-      "73": 145,
-      "74": 145,
-      "75": 145,
-      "76": 145,
-      "77": 145,
-      "78": 145,
-      "79": 145,
-      "80": 145,
-      "81": 154,
-      "82": 145,
-      "83": 149,
-      "84": 149,
-      "85": 149,
-      "86": 149,
-      "87": 149,
-      "88": 165,
-      "89": 184,
-      "90": 174,
-      "91": 182,
-      "92": 188,
-      "93": 188,
-      "94": 190,
-      "95": 191,
-      "96": 182,
-      "97": 182,
-      "98": 184,
-      "99": 182,
-      "100": 184,
-      "101": 184,
-      "102": 182,
-      "103": 176,
-      "104": 172,
-      "105": 182,
-      "106": 182,
-      "107": 182,
-      "108": 182,
-      "109": 182,
-      "110": 182,
-      "111": 180,
-      "112": 180,
-      "113": 180,
-      "114": 180,
-      "115": 180,
-      "116": 180,
-      "117": 182,
-      "118": 184,
-      "119": 182,
-      "120": 180,
-      "121": 181,
-      "122": 176,
-      "123": 178,
-      "124": 176,
-      "125": 176,
-      "126": 176,
-      "127": 176,
-      "128": 172,
-      "129": 174,
-      "130": 176,
-      "131": 178,
-      "132": 182,
-      "133": 181,
-      "134": 181,
-      "135": 181,
-      "136": 181,
-      "137": 181,
-      "138": 181,
-      "139": 180
-    },
-    "E_unchanged": true,
-    "geometry_unchanged": true,
-    "all_other_motion_speeds_unchanged": true,
-    "prior_gcode_sha256": "c38e2738d44407faef2beb713416db3cb27c7bf21fcd635710cc421aa39eec3f"
+  "tests": {
+    "first_ten_layers_byte_identical": true,
+    "total_141_layer_markers": true,
+    "channel_16_source_units": true,
+    "channel_16_diagonal_intros": true,
+    "horizontal_roads_144": true,
+    "new_upload_deposition_XYZ_E_F_width_acceleration_fans_K_and_temperatures_verified": 1370,
+    "old_scaffold_deposition_XY_E_F_width_acceleration_fans_K_and_temperatures_verified": 80,
+    "all_roof_and_upper_deposition_moves_preserved_with_Z_shift": 20666,
+    "all_roof_continuation_and_footer_commands_verified": true,
+    "no_new_startup_calibration_or_thermal_wait_commands": true,
+    "source_channel_3_then_5mm_s_verified": true,
+    "upper_inlets_3_then_4mm_s_verified": true,
+    "workflow_left_loop_intro_right_loop_intro_then_horizontals_verified_all_8_layers": true,
+    "one_balanced_object_scope": true,
+    "total_deposition_moves": 30576,
+    "final_deposition_Z_mm": 8.46
   }
 }

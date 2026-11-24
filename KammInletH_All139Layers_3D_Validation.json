@@ -1,12 +1,12 @@
 {
   "gcode_file": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "60699b1332ca94102495aa6b5df04b15b8ac98475ddf64a9a732d7f9d699bd0c",
-  "layers": 139,
+  "gcode_sha256": "35d358656c25cc5d3088e8defafc0e0b2438814581d40851095cbafdc8dce543",
+  "layers": 141,
   "counts": {
-    "travel": 2722,
-    "prime": 688,
-    "extrusion": 30180,
-    "retraction": 3360
+    "travel": 2840,
+    "prime": 712,
+    "extrusion": 30576,
+    "retraction": 3384
   },
   "arc_move_count": 812,
   "arc_display_chord_error_bound_mm": 0.0002,
@@ -21,14 +21,14 @@
     ],
     [
       0.06,
-      8.34
+      8.46
     ]
   ],
   "lengths_mm": {
-    "travel": 13262.132092815118,
+    "travel": 13994.503601081595,
     "prime": 0.0,
-    "extrusion": 14646.219444201588,
-    "retraction": 1375.9752293198646
+    "extrusion": 15096.837568599798,
+    "retraction": 1423.9752308157642
   },
   "layer_stats": {
     "1": {
@@ -94,62 +94,62 @@
     "11": {
       "travel": 57,
       "prime": 12,
-      "extrusion": 124,
+      "extrusion": 127,
       "retraction": 12
     },
     "12": {
       "travel": 59,
       "prime": 12,
-      "extrusion": 186,
+      "extrusion": 189,
       "retraction": 12
     },
     "13": {
       "travel": 59,
       "prime": 12,
-      "extrusion": 186,
+      "extrusion": 189,
       "retraction": 12
     },
     "14": {
       "travel": 59,
       "prime": 12,
-      "extrusion": 186,
+      "extrusion": 189,
       "retraction": 12
     },
     "15": {
       "travel": 59,
       "prime": 12,
-      "extrusion": 186,
+      "extrusion": 189,
       "retraction": 12
     },
     "16": {
       "travel": 59,
       "prime": 12,
-      "extrusion": 186,
+      "extrusion": 189,
       "retraction": 12
     },
     "17": {
+      "travel": 59,
+      "prime": 12,
+      "extrusion": 189,
+      "retraction": 12
+    },
+    "18": {
+      "travel": 59,
+      "prime": 12,
+      "extrusion": 189,
+      "retraction": 12
+    },
+    "19": {
       "travel": 53,
       "prime": 8,
       "extrusion": 70,
       "retraction": 8
     },
-    "18": {
+    "20": {
       "travel": 10,
       "prime": 4,
       "extrusion": 88,
       "retraction": 22
-    },
-    "19": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 179,
-      "retraction": 22
-    },
-    "20": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 180,
-      "retraction": 21
     },
     "21": {
       "travel": 14,
@@ -160,8 +160,8 @@
     "22": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 179,
-      "retraction": 22
+      "extrusion": 180,
+      "retraction": 21
     },
     "23": {
       "travel": 14,
@@ -170,201 +170,201 @@
       "retraction": 22
     },
     "24": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 179,
+      "retraction": 22
+    },
+    "25": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 179,
+      "retraction": 22
+    },
+    "26": {
       "travel": 15,
       "prime": 4,
       "extrusion": 179,
       "retraction": 21
     },
-    "25": {
+    "27": {
       "travel": 14,
       "prime": 4,
       "extrusion": 182,
       "retraction": 22
     },
-    "26": {
+    "28": {
       "travel": 14,
       "prime": 4,
       "extrusion": 182,
       "retraction": 23
     },
-    "27": {
+    "29": {
       "travel": 14,
       "prime": 4,
       "extrusion": 184,
       "retraction": 23
     },
-    "28": {
+    "30": {
       "travel": 14,
       "prime": 4,
       "extrusion": 190,
       "retraction": 24
     },
-    "29": {
+    "31": {
       "travel": 14,
       "prime": 4,
       "extrusion": 172,
       "retraction": 22
     },
-    "30": {
+    "32": {
       "travel": 14,
       "prime": 4,
       "extrusion": 180,
       "retraction": 23
     },
-    "31": {
+    "33": {
       "travel": 15,
       "prime": 4,
       "extrusion": 184,
       "retraction": 23
     },
-    "32": {
+    "34": {
       "travel": 14,
       "prime": 4,
       "extrusion": 186,
       "retraction": 25
     },
-    "33": {
+    "35": {
       "travel": 14,
       "prime": 4,
       "extrusion": 181,
       "retraction": 26
     },
-    "34": {
+    "36": {
       "travel": 14,
       "prime": 4,
       "extrusion": 184,
       "retraction": 27
     },
-    "35": {
+    "37": {
       "travel": 16,
       "prime": 4,
       "extrusion": 181,
       "retraction": 24
     },
-    "36": {
+    "38": {
       "travel": 14,
       "prime": 4,
       "extrusion": 180,
       "retraction": 26
     },
-    "37": {
+    "39": {
       "travel": 16,
       "prime": 4,
       "extrusion": 170,
       "retraction": 24
     },
-    "38": {
+    "40": {
       "travel": 14,
       "prime": 4,
       "extrusion": 176,
       "retraction": 25
     },
-    "39": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 180,
-      "retraction": 26
-    },
-    "40": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 180,
-      "retraction": 26
-    },
     "41": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 180,
+      "retraction": 26
+    },
+    "42": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 180,
+      "retraction": 26
+    },
+    "43": {
       "travel": 15,
       "prime": 4,
       "extrusion": 177,
       "retraction": 25
     },
-    "42": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 176,
-      "retraction": 28
-    },
-    "43": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 170,
-      "retraction": 27
-    },
     "44": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 182,
+      "extrusion": 176,
       "retraction": 28
     },
     "45": {
       "travel": 14,
       "prime": 4,
+      "extrusion": 170,
+      "retraction": 27
+    },
+    "46": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 182,
+      "retraction": 28
+    },
+    "47": {
+      "travel": 14,
+      "prime": 4,
       "extrusion": 185,
       "retraction": 28
     },
-    "46": {
+    "48": {
       "travel": 14,
       "prime": 4,
       "extrusion": 177,
       "retraction": 29
     },
-    "47": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 147,
-      "retraction": 27
-    },
-    "48": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 147,
-      "retraction": 27
-    },
     "49": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 147,
+      "retraction": 27
+    },
+    "50": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 147,
+      "retraction": 27
+    },
+    "51": {
       "travel": 14,
       "prime": 4,
       "extrusion": 165,
       "retraction": 26
     },
-    "50": {
+    "52": {
       "travel": 14,
       "prime": 4,
       "extrusion": 146,
       "retraction": 26
     },
-    "51": {
+    "53": {
       "travel": 15,
       "prime": 4,
       "extrusion": 154,
       "retraction": 25
     },
-    "52": {
+    "54": {
       "travel": 14,
       "prime": 4,
       "extrusion": 161,
       "retraction": 27
     },
-    "53": {
+    "55": {
       "travel": 14,
       "prime": 4,
       "extrusion": 172,
       "retraction": 29
     },
-    "54": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 165,
-      "retraction": 27
-    },
-    "55": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 147,
-      "retraction": 27
-    },
     "56": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 147,
+      "extrusion": 165,
       "retraction": 27
     },
     "57": {
@@ -436,13 +436,13 @@
     "68": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 145,
+      "extrusion": 147,
       "retraction": 27
     },
     "69": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 145,
+      "extrusion": 147,
       "retraction": 27
     },
     "70": {
@@ -512,9 +512,9 @@
       "retraction": 27
     },
     "81": {
-      "travel": 15,
+      "travel": 14,
       "prime": 4,
-      "extrusion": 154,
+      "extrusion": 145,
       "retraction": 27
     },
     "82": {
@@ -524,15 +524,15 @@
       "retraction": 27
     },
     "83": {
-      "travel": 14,
+      "travel": 15,
       "prime": 4,
-      "extrusion": 149,
+      "extrusion": 154,
       "retraction": 27
     },
     "84": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 149,
+      "extrusion": 145,
       "retraction": 27
     },
     "85": {
@@ -556,74 +556,74 @@
     "88": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 165,
+      "extrusion": 149,
       "retraction": 27
     },
     "89": {
       "travel": 14,
       "prime": 4,
+      "extrusion": 149,
+      "retraction": 27
+    },
+    "90": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 165,
+      "retraction": 27
+    },
+    "91": {
+      "travel": 14,
+      "prime": 4,
       "extrusion": 184,
       "retraction": 26
     },
-    "90": {
+    "92": {
       "travel": 14,
       "prime": 4,
       "extrusion": 174,
       "retraction": 25
     },
-    "91": {
+    "93": {
       "travel": 14,
       "prime": 4,
       "extrusion": 182,
       "retraction": 24
     },
-    "92": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 188,
-      "retraction": 24
-    },
-    "93": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 188,
-      "retraction": 24
-    },
     "94": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 188,
+      "retraction": 24
+    },
+    "95": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 188,
+      "retraction": 24
+    },
+    "96": {
       "travel": 15,
       "prime": 4,
       "extrusion": 190,
       "retraction": 23
     },
-    "95": {
+    "97": {
       "travel": 14,
       "prime": 4,
       "extrusion": 191,
       "retraction": 25
     },
-    "96": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 182,
-      "retraction": 24
-    },
-    "97": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 182,
-      "retraction": 24
-    },
     "98": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 184,
-      "retraction": 26
+      "extrusion": 182,
+      "retraction": 24
     },
     "99": {
       "travel": 14,
       "prime": 4,
       "extrusion": 182,
-      "retraction": 26
+      "retraction": 24
     },
     "100": {
       "travel": 14,
@@ -634,37 +634,37 @@
     "101": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 184,
+      "extrusion": 182,
       "retraction": 26
     },
     "102": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 182,
+      "extrusion": 184,
       "retraction": 26
     },
     "103": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 184,
+      "retraction": 26
+    },
+    "104": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 182,
+      "retraction": 26
+    },
+    "105": {
       "travel": 16,
       "prime": 4,
       "extrusion": 176,
       "retraction": 24
     },
-    "104": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 172,
-      "retraction": 24
-    },
-    "105": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 182,
-      "retraction": 24
-    },
     "106": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 182,
+      "extrusion": 172,
       "retraction": 24
     },
     "107": {
@@ -689,31 +689,31 @@
       "travel": 14,
       "prime": 4,
       "extrusion": 182,
-      "retraction": 25
+      "retraction": 24
     },
     "111": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 180,
+      "extrusion": 182,
       "retraction": 24
     },
     "112": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 180,
-      "retraction": 24
+      "extrusion": 182,
+      "retraction": 25
     },
     "113": {
       "travel": 14,
       "prime": 4,
       "extrusion": 180,
-      "retraction": 26
+      "retraction": 24
     },
     "114": {
       "travel": 14,
       "prime": 4,
       "extrusion": 180,
-      "retraction": 26
+      "retraction": 24
     },
     "115": {
       "travel": 14,
@@ -728,58 +728,58 @@
       "retraction": 26
     },
     "117": {
-      "travel": 15,
-      "prime": 4,
-      "extrusion": 182,
-      "retraction": 25
-    },
-    "118": {
-      "travel": 16,
-      "prime": 4,
-      "extrusion": 184,
-      "retraction": 24
-    },
-    "119": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 182,
-      "retraction": 24
-    },
-    "120": {
       "travel": 14,
       "prime": 4,
       "extrusion": 180,
       "retraction": 26
     },
+    "118": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 180,
+      "retraction": 26
+    },
+    "119": {
+      "travel": 15,
+      "prime": 4,
+      "extrusion": 182,
+      "retraction": 25
+    },
+    "120": {
+      "travel": 16,
+      "prime": 4,
+      "extrusion": 184,
+      "retraction": 24
+    },
     "121": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 181,
-      "retraction": 26
+      "extrusion": 182,
+      "retraction": 24
     },
     "122": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 176,
+      "extrusion": 180,
       "retraction": 26
     },
     "123": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 178,
+      "extrusion": 181,
       "retraction": 26
     },
     "124": {
       "travel": 14,
       "prime": 4,
       "extrusion": 176,
-      "retraction": 28
+      "retraction": 26
     },
     "125": {
       "travel": 14,
       "prime": 4,
-      "extrusion": 176,
-      "retraction": 28
+      "extrusion": 178,
+      "retraction": 26
     },
     "126": {
       "travel": 14,
@@ -796,56 +796,56 @@
     "128": {
       "travel": 14,
       "prime": 4,
+      "extrusion": 176,
+      "retraction": 28
+    },
+    "129": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 176,
+      "retraction": 28
+    },
+    "130": {
+      "travel": 14,
+      "prime": 4,
       "extrusion": 172,
       "retraction": 26
     },
-    "129": {
+    "131": {
       "travel": 14,
       "prime": 4,
       "extrusion": 174,
       "retraction": 26
     },
-    "130": {
+    "132": {
       "travel": 16,
       "prime": 4,
       "extrusion": 176,
       "retraction": 24
     },
-    "131": {
+    "133": {
       "travel": 16,
       "prime": 4,
       "extrusion": 178,
       "retraction": 25
     },
-    "132": {
+    "134": {
       "travel": 14,
       "prime": 4,
       "extrusion": 182,
       "retraction": 26
     },
-    "133": {
+    "135": {
       "travel": 15,
       "prime": 4,
       "extrusion": 181,
       "retraction": 26
     },
-    "134": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 181,
-      "retraction": 26
-    },
-    "135": {
-      "travel": 14,
-      "prime": 4,
-      "extrusion": 181,
-      "retraction": 28
-    },
     "136": {
       "travel": 14,
       "prime": 4,
       "extrusion": 181,
-      "retraction": 28
+      "retraction": 26
     },
     "137": {
       "travel": 14,
@@ -862,16 +862,34 @@
     "139": {
       "travel": 14,
       "prime": 4,
+      "extrusion": 181,
+      "retraction": 28
+    },
+    "140": {
+      "travel": 14,
+      "prime": 4,
+      "extrusion": 181,
+      "retraction": 28
+    },
+    "141": {
+      "travel": 14,
+      "prime": 4,
       "extrusion": 180,
       "retraction": 28
     }
   },
-  "extrusion_moves_represented": 30180,
+  "extrusion_moves_represented": 30576,
   "omitted_extrusion_moves": 0,
   "interactive_html_self_contained": true,
-  "interactive_trace_count": 556,
+  "interactive_trace_count": 564,
   "display_only_exploded_gap_available": true,
   "diagram_generation_does_not_change_gcode": true,
-  "post_first_layer_5_to_4_revision_verified_extrusion_moves": 21388,
-  "model_move_counts_unchanged": true
+  "browser_validation": {
+    "all_layers_visible_extrusion_moves": 30576,
+    "isolated_roof_layer": 19,
+    "isolated_roof_extrusion_moves": 70,
+    "layer_selection_passed": true,
+    "display_separation_and_travel_toggle_passed": true,
+    "javascript_errors_reported": ""
+  }
 }
