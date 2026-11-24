@@ -1,0 +1,39 @@
+{
+  "name": "18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel",
+  "gcode_sha256": "276cdd045c18417b4380d681eaf22eda2a628f02aa6652253150be11c83e56df",
+  "full_file": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
+  "shared_model_prefix_sha256": "9e4c9a3c0ae564a356200ffa07079a86bbd94e978e944f15f2a7c22650a05481",
+  "total_physical_layers": 18,
+  "final_printed_height_mm": 1.08,
+  "total_deposition_moves": 9910,
+  "lead_in_settings": {
+    "K": 0.55,
+    "retraction_mm": 0.4,
+    "Z_clearance_mm": 1.0,
+    "custom_shake_added": false,
+    "original_wipe_retraction_preserved": true,
+    "exterior_travel_mm_s": 40,
+    "short_approach_return_mm_s": 20,
+    "Z_speed_mm_s": 10,
+    "travel_acceleration_mm_s2": 1000
+  },
+  "tests": {
+    "all_30576_deposition_XYZ_E_F_width_acceleration_fans_temperature_unchanged": true,
+    "leadins_K0p55_source_K_unchanged": true,
+    "original_180_leadin_wipes_retained": true,
+    "no_custom_shake_added": true,
+    "retractions_and_primes_preserved": true,
+    "planned_travel_segments_verified": 1044,
+    "perimeter_routes_outside_model_bounds": true,
+    "center_corridor_approaches_raised_1mm": true,
+    "all_16_channel_diagonal_outer_starts_match_base": true,
+    "test_prefix_identical_through_layer18": true,
+    "test_layers": 18,
+    "test_deposition_moves": 9910,
+    "test_max_deposition_Z_mm": 1.08,
+    "full_layers": 141,
+    "full_max_deposition_Z_mm": 8.46,
+    "all_roof_and_upper_code_after_initial_approach_unchanged": true,
+    "no_extra_startup_calibration_or_thermal_wait": true
+  }
+}

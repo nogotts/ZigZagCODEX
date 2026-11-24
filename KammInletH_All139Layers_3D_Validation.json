@@ -1,9 +1,9 @@
 {
   "gcode_file": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "35d358656c25cc5d3088e8defafc0e0b2438814581d40851095cbafdc8dce543",
+  "gcode_sha256": "6434afba212368f17c259ac183dcd7a2ec113cf729cd8a7303a12b247ccdde7e",
   "layers": 141,
   "counts": {
-    "travel": 2840,
+    "travel": 3306,
     "prime": 712,
     "extrusion": 30576,
     "retraction": 3384
@@ -25,116 +25,116 @@
     ]
   ],
   "lengths_mm": {
-    "travel": 13994.503601081595,
+    "travel": 15502.467039361845,
     "prime": 0.0,
     "extrusion": 15096.837568599798,
     "retraction": 1423.9752308157642
   },
   "layer_stats": {
     "1": {
-      "travel": 60,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "2": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "3": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "4": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "5": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "6": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "7": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "8": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "9": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "10": {
-      "travel": 61,
+      "travel": 87,
       "prime": 12,
       "extrusion": 846,
       "retraction": 14
     },
     "11": {
-      "travel": 57,
+      "travel": 82,
       "prime": 12,
       "extrusion": 127,
       "retraction": 12
     },
     "12": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
     },
     "13": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
     },
     "14": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
     },
     "15": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
     },
     "16": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
     },
     "17": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
     },
     "18": {
-      "travel": 59,
+      "travel": 85,
       "prime": 12,
       "extrusion": 189,
       "retraction": 12
@@ -884,12 +884,34 @@
   "interactive_trace_count": 564,
   "display_only_exploded_gap_available": true,
   "diagram_generation_does_not_change_gcode": true,
+  "lead_in_travel_revision": {
+    "lead_in_count": 180,
+    "lead_in_settings": {
+      "K": 0.55,
+      "retraction_mm": 0.4,
+      "Z_clearance_mm": 1.0,
+      "custom_shake_added": false,
+      "original_wipe_retraction_preserved": true,
+      "exterior_travel_mm_s": 40,
+      "short_approach_return_mm_s": 20,
+      "Z_speed_mm_s": 10,
+      "travel_acceleration_mm_s2": 1000
+    },
+    "corridors_mm": {
+      "left_X": 112.61699,
+      "right_X": 143.38301,
+      "bottom_Y": 113.710299,
+      "top_Y": 142.289701,
+      "center_X": 128.0
+    }
+  },
+  "verified_unchanged_deposition_geometry_and_E": true,
   "browser_validation": {
-    "all_layers_visible_extrusion_moves": 30576,
-    "isolated_roof_layer": 19,
-    "isolated_roof_extrusion_moves": 70,
-    "layer_selection_passed": true,
-    "display_separation_and_travel_toggle_passed": true,
+    "full_layers": 141,
+    "full_extrusion_moves": 30576,
+    "layer_range_1_to_18_extrusion_moves": 9910,
+    "visible_travel_traces_for_test_range": 18,
+    "pressure_advance_hover_verified": true,
     "javascript_errors_reported": ""
   }
 }

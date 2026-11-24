@@ -15,3 +15,5 @@ Layers 1–10 are the retained platform. Layers 11–18 contain the new left/rig
 Every model extrusion move is represented at its actual XYZ coordinates, including scarf ramps. No extrusion moves are dropped or simplified. Arcs are sampled for display with a maximum chord error of 0.0002 mm. These are nozzle centerlines, not measured polymer widths. Startup/calibration/purge and final machine parking are excluded from model diagrams.
 
 The viewer does not modify the G-code. Its validation JSON records the current G-code SHA-256, bounds, counts and layer statistics.
+
+The current revision includes slower outside lead-in transfers, a 1 mm Z clearance, and the unchanged original wipe/retraction commands. No custom shake is added. Lead-ins use K0.55; channel paths retain K0.05. Toggle **Travel** to inspect the actual new routes.

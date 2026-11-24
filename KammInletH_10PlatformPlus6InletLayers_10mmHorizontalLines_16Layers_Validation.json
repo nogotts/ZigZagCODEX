@@ -151,8 +151,8 @@
       "later_layer_speed_mm_s": 5
     }
   },
-  "gcode_sha256": "35d358656c25cc5d3088e8defafc0e0b2438814581d40851095cbafdc8dce543",
-  "previous_gcode_sha256": "60699b1332ca94102495aa6b5df04b15b8ac98475ddf64a9a732d7f9d699bd0c",
+  "gcode_sha256": "6434afba212368f17c259ac183dcd7a2ec113cf729cd8a7303a12b247ccdde7e",
+  "previous_gcode_sha256": "35d358656c25cc5d3088e8defafc0e0b2438814581d40851095cbafdc8dce543",
   "horizontal_roads": [
     {
       "layer": 1,
@@ -2094,7 +2094,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2118,7 +2118,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2142,7 +2142,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2166,7 +2166,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2190,7 +2190,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2214,7 +2214,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2238,7 +2238,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2262,7 +2262,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2286,7 +2286,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2310,7 +2310,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2334,7 +2334,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2358,7 +2358,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2382,7 +2382,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2406,7 +2406,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2430,7 +2430,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2454,7 +2454,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2478,7 +2478,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2502,7 +2502,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2526,7 +2526,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2550,7 +2550,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2574,7 +2574,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2598,7 +2598,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2622,7 +2622,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2646,7 +2646,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2670,7 +2670,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2694,7 +2694,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2718,7 +2718,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2742,7 +2742,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2766,7 +2766,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2790,7 +2790,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2814,7 +2814,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2838,7 +2838,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2862,7 +2862,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2886,7 +2886,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2910,7 +2910,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2934,7 +2934,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2958,7 +2958,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -2982,7 +2982,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3006,7 +3006,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3030,7 +3030,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3054,7 +3054,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3078,7 +3078,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3102,7 +3102,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3126,7 +3126,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3150,7 +3150,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3174,7 +3174,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3198,7 +3198,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3222,7 +3222,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3246,7 +3246,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3270,7 +3270,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3294,7 +3294,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3318,7 +3318,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3342,7 +3342,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3366,7 +3366,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3390,7 +3390,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3414,7 +3414,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3438,7 +3438,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3462,7 +3462,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3486,7 +3486,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3510,7 +3510,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3534,7 +3534,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3558,7 +3558,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3582,7 +3582,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     },
@@ -3606,7 +3606,7 @@
         "2": 0.0,
         "3": 255.0
       },
-      "K": 0.05,
+      "K": 0.55,
       "nozzle_C": 245.0,
       "bed_C": 70.0
     }
@@ -3631,7 +3631,8 @@
     "channel_layers_11_to_18_length_range_mm": [
       10.392139,
       10.403811999999988
-    ]
+    ],
+    "K": 0.55
   },
   "angled_lines": [
     {
@@ -4106,7 +4107,8 @@
       113.11699022531025,
       142.88300977468975
     ],
-    "construction_sequence_is_endpoint_reference": true
+    "construction_sequence_is_endpoint_reference": true,
+    "K": 0.55
   },
   "channel_diagonal_intros": [
     {
@@ -4146,7 +4148,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 11,
@@ -4185,7 +4188,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 12,
@@ -4224,7 +4228,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 12,
@@ -4263,7 +4268,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 13,
@@ -4302,7 +4308,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 13,
@@ -4341,7 +4348,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 14,
@@ -4380,7 +4388,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 14,
@@ -4419,7 +4428,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 15,
@@ -4458,7 +4468,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 15,
@@ -4497,7 +4508,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 16,
@@ -4536,7 +4548,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 16,
@@ -4575,7 +4588,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 17,
@@ -4614,7 +4628,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 17,
@@ -4653,7 +4668,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 18,
@@ -4692,7 +4708,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     {
       "layer": 18,
@@ -4731,7 +4748,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     }
   ],
   "channel_intro_geometry": {
@@ -4767,7 +4785,8 @@
       "E": 0.11951151,
       "speed_mm_s": 25,
       "length_mm": 11.918651201678477,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     },
     "right": {
       "wall_reference_X": 130.052483,
@@ -4801,7 +4820,8 @@
       "E": 0.11955488,
       "speed_mm_s": 25,
       "length_mm": 11.922975672699916,
-      "outer_endpoint_shared_with_layers_1_to_10": true
+      "outer_endpoint_shared_with_layers_1_to_10": true,
+      "K": 0.55
     }
   },
   "circle_boundary_horizontal_roads": [
@@ -8460,21 +8480,45 @@
     "source_deposition_moves": 1370
   },
   "tests": {
-    "first_ten_layers_byte_identical": true,
-    "total_141_layer_markers": true,
-    "channel_16_source_units": true,
-    "channel_16_diagonal_intros": true,
-    "horizontal_roads_144": true,
-    "new_upload_deposition_XYZ_E_F_width_acceleration_fans_K_and_temperatures_verified": 1370,
-    "old_scaffold_deposition_XY_E_F_width_acceleration_fans_K_and_temperatures_verified": 80,
-    "all_roof_and_upper_deposition_moves_preserved_with_Z_shift": 20666,
-    "all_roof_continuation_and_footer_commands_verified": true,
-    "no_new_startup_calibration_or_thermal_wait_commands": true,
-    "source_channel_3_then_5mm_s_verified": true,
-    "upper_inlets_3_then_4mm_s_verified": true,
-    "workflow_left_loop_intro_right_loop_intro_then_horizontals_verified_all_8_layers": true,
-    "one_balanced_object_scope": true,
-    "total_deposition_moves": 30576,
-    "final_deposition_Z_mm": 8.46
+    "all_30576_deposition_XYZ_E_F_width_acceleration_fans_temperature_unchanged": true,
+    "leadins_K0p55_source_K_unchanged": true,
+    "original_180_leadin_wipes_retained": true,
+    "no_custom_shake_added": true,
+    "retractions_and_primes_preserved": true,
+    "planned_travel_segments_verified": 1044,
+    "perimeter_routes_outside_model_bounds": true,
+    "center_corridor_approaches_raised_1mm": true,
+    "all_16_channel_diagonal_outer_starts_match_base": true,
+    "test_prefix_identical_through_layer18": true,
+    "test_layers": 18,
+    "test_deposition_moves": 9910,
+    "test_max_deposition_Z_mm": 1.08,
+    "full_layers": 141,
+    "full_max_deposition_Z_mm": 8.46,
+    "all_roof_and_upper_code_after_initial_approach_unchanged": true,
+    "no_extra_startup_calibration_or_thermal_wait": true
+  },
+  "lead_in_travel_revision": {
+    "lead_in_count": 180,
+    "lead_in_settings": {
+      "K": 0.55,
+      "retraction_mm": 0.4,
+      "Z_clearance_mm": 1.0,
+      "custom_shake_added": false,
+      "original_wipe_retraction_preserved": true,
+      "exterior_travel_mm_s": 40,
+      "short_approach_return_mm_s": 20,
+      "Z_speed_mm_s": 10,
+      "travel_acceleration_mm_s2": 1000
+    },
+    "corridors_mm": {
+      "left_X": 112.61699,
+      "right_X": 143.38301,
+      "bottom_Y": 113.710299,
+      "top_Y": 142.289701,
+      "center_X": 128.0
+    },
+    "full_prefix_through_layer18_sha256": "9e4c9a3c0ae564a356200ffa07079a86bbd94e978e944f15f2a7c22650a05481",
+    "description": "Original wipe/retraction retained; no new shake; 1mm travel clearance; outside routing with short raised entry/exit to center gap; lead-in K0.55 and source K restored."
   }
 }
