@@ -13,3 +13,5 @@ Timing excludes travel, stationary priming and acceleration. Complete-loop overv
 The full and18-layer files now use this approved mirror. Lead-ins11–18 and channels useK0.05; lead-in flow0.98. Custom reverse wipes are removed, with stationary endpoint retraction then lift. Source slicer-authored loop wipes remain. Lead-ins after layer10 keep25mm/s and their endpoints, with flow0.98 baked into E. No additional slow-start is added.
 
 Source: `FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode`. The legacyPREVIEW basename, where present, is retained after theFIX prefix; approval has been applied.
+
+The40mm conditioning-line placement overview is now the first panel in the existing SVG/PNG. It showsX90,Y95→X130,Y95 at actualZ0.060, after layer10. The offline3D viewer highlights that line in green and provides a **40mm line(after10)** top-view button. Channel-loop distance/time labels still start from each channel’s own extrusion start and exclude conditioning/travel. This visual update does not change any G-code.
