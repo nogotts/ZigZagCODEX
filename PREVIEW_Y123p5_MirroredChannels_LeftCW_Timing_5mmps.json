@@ -1,0 +1,109 @@
+{
+  "source_gcode": "PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode",
+  "source_gcode_sha256": "e01c9d102224f190bea8e1139dfeacd33f323aef401eb174f9b60252a00d1451",
+  "representative_global_layer": 12,
+  "source_channel_layer": 2,
+  "speed_mm_s": 5,
+  "time_definition": "Cumulative positive-XY deposition path length / 5 mm/s from first extrusion in each separate channel loop; travel, stationary prime and acceleration excluded",
+  "channels": {
+    "left": {
+      "start_XY": [
+        125.943398,
+        123.5
+      ],
+      "walls": [
+        {
+          "order": 1,
+          "move_index": 50,
+          "distance_from_loop_start_mm": 40.80588967949319,
+          "time_at_5mm_s": 8.161177935898639,
+          "start": [
+            126.415122,
+            121.455686
+          ],
+          "end": [
+            126.413122,
+            118.264686
+          ],
+          "direction": "down",
+          "relative_wall": "inner",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004888748648045955
+        },
+        {
+          "order": 2,
+          "move_index": 72,
+          "distance_from_loop_start_mm": 53.34939459609474,
+          "time_at_5mm_s": 10.669878919218949,
+          "start": [
+            126.101122,
+            118.290686
+          ],
+          "end": [
+            126.103122,
+            121.515686
+          ],
+          "direction": "up",
+          "relative_wall": "outer",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004889921540307215
+        }
+      ],
+      "top_first_wall_distance_mm": 11.237457716382826,
+      "top_first_wall_time_s": 2.247491543276565,
+      "nominal_gap_at_Y120_mm": 0.0991515905200458
+    },
+    "right": {
+      "start_XY": [
+        130.056602,
+        123.5
+      ],
+      "walls": [
+        {
+          "order": 1,
+          "move_index": 50,
+          "distance_from_loop_start_mm": 40.8058896794932,
+          "time_at_5mm_s": 8.161177935898639,
+          "start": [
+            129.584878,
+            121.455686
+          ],
+          "end": [
+            129.586878,
+            118.264686
+          ],
+          "direction": "down",
+          "relative_wall": "inner",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004888748648045955
+        },
+        {
+          "order": 2,
+          "move_index": 72,
+          "distance_from_loop_start_mm": 53.34939459609476,
+          "time_at_5mm_s": 10.669878919218952,
+          "start": [
+            129.898878,
+            118.290686
+          ],
+          "end": [
+            129.896878,
+            121.515686
+          ],
+          "direction": "up",
+          "relative_wall": "outer",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004889921540307215
+        }
+      ],
+      "top_first_wall_distance_mm": 11.237457716382826,
+      "top_first_wall_time_s": 2.247491543276565,
+      "nominal_gap_at_Y120_mm": 0.0991515905200458
+    }
+  },
+  "canonical_gcode_modified": false,
+  "preview_gcode_created": true,
+  "left_direction": "clockwise",
+  "right_direction": "counterclockwise",
+  "all_channel_layers_start_Y_mm": 123.5
+}
