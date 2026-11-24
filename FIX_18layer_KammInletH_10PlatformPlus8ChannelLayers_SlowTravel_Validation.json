@@ -1,931 +1,3558 @@
 {
-  "name": "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel",
-  "gcode_sha256": "f226700a5020db6c35e38ddbf889318d3313cb019af32433ec391b10d58f894b",
-  "full_file": "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "shared_full_prefix_sha256": "606fc58799d4af80e5cd28d2896dca5983745346903c1c0ad5d7fb9f4465ccb8",
-  "total_physical_layers": 18,
-  "final_printed_height_mm": 1.08,
-  "total_deposition_moves": 9933,
-  "endpoint_policy": {
-    "custom_reverse_wipes_removed": 188,
-    "custom_paths": "180 lead-ins +2roof outlines +4circle finishes +2roof fills",
-    "retract_at_endpoint_mm": 0.4,
-    "retract_feed_mm_s": 30,
-    "source_loop_wipes_preserved": true,
-    "no_custom_shake": true,
-    "raised_nonextruding_return_clearance_mm": 1
-  },
-  "tests": {
-    "all_8_approved_channel_layers_exactly_applied": true,
-    "all_8_left_CW_right_CCW_exact_mirrors": true,
-    "all_source_scarf_E_Z_profiles_unchanged": true,
-    "all_platform_roof_upper_deposition_XYZ_E_F_K_width_fans_unchanged": true,
-    "all_180_leadin_outer_starts_inner_ends_unchanged": true,
-    "post_layer10_leadins_K0p05_flow0p98_verified": 80,
-    "post_layer10_leadin_E_scaled_once_by_0p7": true,
-    "post_layer10_printing_K0p05_verified": true,
-    "all_leadin_print_speeds_unchanged": true,
-    "no_additional_slow_start_or_extra_priming": true,
-    "custom_reverse_wipes_removed": 188,
-    "all_original_slicer_loop_wipes_preserved": true,
-    "no_extra_priming_or_deposited_volume_added": true,
-    "no_new_startup_calibration_thermal_wait": true,
-    "full_layers": 141,
-    "full_deposition_moves": 30599,
-    "test_layers": 18,
-    "test_deposition_moves": 9933,
-    "test_prefix_identical_to_full_through_layer18": true,
-    "all_25_related_deliverables_renamed_with_FIX_prefix": true,
-    "exactly_one_40mm_line_after_completed_layer10": true,
-    "line_on_buildplate_Z0p06": true,
-    "line_K0p05_flow0p98_F180_E_verified": true,
-    "all_XY_approach_return_travel_Z5": true,
-    "all_prior_model_commands_byte_identical_except_mesh_area": true,
-    "mesh_covers_new_line_and_original_model": true,
-    "no_scarf_or_channel_changes": true,
-    "no_added_layer_marker": true,
-    "full_and_diagnostic_shared_prefix_verified": true
-  },
-  "applied_to_main": true,
-  "post10_intro_policy": {
-    "K": 0.05,
-    "flow_ratio": 0.98,
-    "E_multiplier_relative_to_flow1p4": 0.7,
-    "affected_layers": [
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18
-    ],
-    "roads": 80,
-    "diagonals": 16,
-    "horizontals": 64,
-    "print_speed_mm_s": 25,
-    "extra_slow_start_removed": true,
-    "scarf_profiles_unchanged": true,
-    "no_M221_flow_override": true,
-    "details": [
-      {
-        "layer": 11,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 11,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 12,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 13,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 14,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 15,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 16,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 17,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "diagonal",
-        "previous_total_E": 0.11951151,
-        "new_total_E": 0.08365806,
-        "end": [
-          125.443604,
-          121.694215
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "diagonal",
-        "previous_total_E": 0.11955488,
-        "new_total_E": 0.08368842,
-        "end": [
-          130.552105,
-          121.693678
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          124.320809,
-          116.521949
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          124.315016,
-          116.671949
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10420477,
-        "new_total_E": 0.07294334,
-        "end": [
-          124.312155,
-          139.326724
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426277,
-        "new_total_E": 0.07298394,
-        "end": [
-          124.31794,
-          139.476724
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10429154,
-        "new_total_E": 0.07300408,
-        "end": [
-          131.679191,
-          116.521949
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10423345,
-        "new_total_E": 0.07296342,
-        "end": [
-          131.684984,
-          116.671949
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10426379,
-        "new_total_E": 0.07298465,
-        "end": [
-          131.681959,
-          139.326724
-        ]
-      },
-      {
-        "layer": 18,
-        "kind": "horizontal",
-        "previous_total_E": 0.10432181,
-        "new_total_E": 0.07302527,
-        "end": [
-          131.676172,
-          139.476724
-        ]
-      }
-    ]
-  },
-  "conditioning_line": {
-    "printed_after_layer": 10,
-    "physical_Z_mm": 0.06,
-    "line_start_XY_mm": [
-      90,
-      95
-    ],
-    "line_end_XY_mm": [
-      130,
-      95
-    ],
-    "length_mm": 40,
-    "travel_clearance_Z_mm": 5,
-    "K": 0.05,
-    "width_mm": 0.212876,
-    "layer_height_mm": 0.06,
-    "flow_ratio": 0.98,
-    "speed_mm_s": 3,
-    "E_per_mm": 0.004889237157905908,
-    "E_line_mm": 0.19556949,
-    "no_reverse_wipe": true,
-    "nozzle_C": 245,
-    "bed_C": 70,
-    "existing_mesh_area_expanded": {
-      "X": 89,
-      "Y": 94,
-      "I": 55.154984,
-      "J": 49.439701
+  "source": "5mmRIGHTinletKamm8.gcode",
+  "source_sha256": "32739e86d251e4f0baee9185b2a68abd19f4d14a87eb19b6e206f3de33d24383",
+  "translation_right_XY": [
+    -52.64912197766296,
+    1.9996863965287588
+  ],
+  "mirror_axis_X": 128,
+  "requested_nominal_width": 0.21,
+  "actual_source_widths": [
+    0.212876,
+    0.215626,
+    0.222212,
+    0.222306
+  ],
+  "channel_speeds": [
+    3,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "conditioning": [
+    {
+      "pass_number": 1,
+      "Z": 0.06,
+      "speed": 10,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
     },
-    "stage11_entry_state_restored": true,
-    "added_CHANGE_LAYER_markers": 0,
-    "files": {
-      "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode": {
-        "sha256": "3574638446dcdfe3707ce95843abfdbe4858ef3ffec0f1c1041160c8f088ea3a",
-        "old_sha256": "ac7f5c2c2e38d0e8037d65b6776a4afaf9b290a296f1593e234f13ab994bc49e"
-      },
-      "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode": {
-        "sha256": "f226700a5020db6c35e38ddbf889318d3313cb019af32433ec391b10d58f894b",
-        "old_sha256": "05283809c776ca7eb63b48f622f4b666dea984576999a96726595c7b061ad09a"
-      },
-      "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode": {
-        "sha256": "d3695f45ab0d22234030482bb2b4fb72794c089c372db6adde7171fd02fcec2a",
-        "old_sha256": "8312569e342c1ba7fd586db50a02fa0d35e6025d647af8d99b7c2408ac73b0d0"
-      }
+    {
+      "pass_number": 2,
+      "Z": 0.12,
+      "speed": 10,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
     },
-    "tests": {
-      "exactly_one_40mm_line_after_completed_layer10": true,
-      "line_on_buildplate_Z0p06": true,
-      "line_K0p05_flow0p98_F180_E_verified": true,
-      "all_XY_approach_return_travel_Z5": true,
-      "all_prior_model_commands_byte_identical_except_mesh_area": true,
-      "mesh_covers_new_line_and_original_model": true,
-      "no_scarf_or_channel_changes": true,
-      "no_added_layer_marker": true,
-      "full_and_diagnostic_shared_prefix_verified": true
+    {
+      "pass_number": 3,
+      "Z": 0.18,
+      "speed": 10,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 4,
+      "Z": 0.24,
+      "speed": 10,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 5,
+      "Z": 0.3,
+      "speed": 10,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 6,
+      "Z": 0.36,
+      "speed": 5,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 7,
+      "Z": 0.42,
+      "speed": 5,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 8,
+      "Z": 0.48,
+      "speed": 5,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 9,
+      "Z": 0.54,
+      "speed": 5,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
+    },
+    {
+      "pass_number": 10,
+      "Z": 0.6,
+      "speed": 5,
+      "width": 0.212876,
+      "flow": 0.98,
+      "K": 0.05,
+      "E": 0.19556949,
+      "start": [
+        90,
+        95
+      ],
+      "end": [
+        130,
+        95
+      ]
     }
-  }
+  ],
+  "leadins": [
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        0.06
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        0.06
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        0.06
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        0.06
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        0.06
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        0.06
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        0.06
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        0.06
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        0.06
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 1,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        0.06
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.06
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.12
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.12
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.12
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.12
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.12
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.12
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.12
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.12
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.12
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 2,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.12
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.12
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.18
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.18
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.18
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.18
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.18
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.18
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.18
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.18
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.18
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 3,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.18
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.18
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.24
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.24
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.24
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.24
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.24
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.24
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.24
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.24
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.24
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 4,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.24
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.24
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.3
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.3
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.3
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.3
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.3
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.3
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.3
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.3
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.3
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 5,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.3
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.3
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.36
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.36
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.36
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.36
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.36
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.36
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.36
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.36
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.36
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 6,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.36
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.36
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.42
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.42
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.42
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.42
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.42
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.42
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.42
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.42
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.42
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 7,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.42
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.42
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.48
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.48
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.48
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.48
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.48
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.48
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.48
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.48
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.48
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 8,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.48
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.48
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.54
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.54
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.54
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.54
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.54
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.54
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.54
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.54
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.54
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 9,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.54
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.54
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.521949,
+        0.6
+      ],
+      "end": [
+        123.920016,
+        116.521949,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        116.671949,
+        0.6
+      ],
+      "end": [
+        123.920016,
+        116.671949,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.326724,
+        0.6
+      ],
+      "end": [
+        123.920016,
+        139.326724,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.920016,
+        139.476724,
+        0.6
+      ],
+      "end": [
+        123.920016,
+        139.476724,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.521949,
+        0.6
+      ],
+      "end": [
+        132.079984,
+        116.521949,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        116.671949,
+        0.6
+      ],
+      "end": [
+        132.079984,
+        116.671949,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.326724,
+        0.6
+      ],
+      "end": [
+        132.079984,
+        139.326724,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "horizontal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.079984,
+        139.476724,
+        0.6
+      ],
+      "end": [
+        132.079984,
+        139.476724,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        113.61699,
+        123.172541,
+        0.6
+      ],
+      "end": [
+        123.539769,
+        121.932194,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 10,
+      "kind": "diagonal",
+      "width": 0.15,
+      "flow": 1.4,
+      "speed": 25,
+      "start": [
+        142.38301,
+        123.172541,
+        0.6
+      ],
+      "end": [
+        132.460231,
+        121.932194,
+        0.6
+      ],
+      "E": 0.04788797
+    },
+    {
+      "layer": 11,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        113.61699,
+        123.172541,
+        0.66
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        0.66
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 11,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        142.38301,
+        123.172541,
+        0.66
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        0.66
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        113.920016,
+        116.521949,
+        0.66
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        0.66
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        113.920016,
+        116.671949,
+        0.66
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        0.66
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        113.920016,
+        139.326724,
+        0.66
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        0.66
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        113.920016,
+        139.476724,
+        0.66
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        0.66
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        142.079984,
+        116.521949,
+        0.66
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        0.66
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        142.079984,
+        116.671949,
+        0.66
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        0.66
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        142.079984,
+        139.326724,
+        0.66
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        0.66
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 11,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 3,
+      "start": [
+        142.079984,
+        139.476724,
+        0.66
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        0.66
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 12,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        0.72
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        0.72
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 12,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        0.72
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        0.72
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        0.72
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        0.72
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        0.72
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        0.72
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        0.72
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        0.72
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        0.72
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        0.72
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        0.72
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        0.72
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        0.72
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        0.72
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        0.72
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        0.72
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 12,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        0.72
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        0.72
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 13,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        0.78
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        0.78
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 13,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        0.78
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        0.78
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        0.78
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        0.78
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        0.78
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        0.78
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        0.78
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        0.78
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        0.78
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        0.78
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        0.78
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        0.78
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        0.78
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        0.78
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        0.78
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        0.78
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 13,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        0.78
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        0.78
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 14,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        0.84
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        0.84
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 14,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        0.84
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        0.84
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        0.84
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        0.84
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        0.84
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        0.84
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        0.84
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        0.84
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        0.84
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        0.84
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        0.84
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        0.84
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        0.84
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        0.84
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        0.84
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        0.84
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 14,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        0.84
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        0.84
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 15,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        0.9
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        0.9
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 15,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        0.9
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        0.9
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        0.9
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        0.9
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        0.9
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        0.9
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        0.9
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        0.9
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        0.9
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        0.9
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        0.9
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        0.9
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        0.9
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        0.9
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        0.9
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        0.9
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 15,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        0.9
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        0.9
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 16,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        0.96
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        0.96
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 16,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        0.96
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        0.96
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        0.96
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        0.96
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        0.96
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        0.96
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        0.96
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        0.96
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        0.96
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        0.96
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        0.96
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        0.96
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        0.96
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        0.96
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        0.96
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        0.96
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 16,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        0.96
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        0.96
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 17,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        1.02
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        1.02
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 17,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        1.02
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        1.02
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        1.02
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        1.02
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        1.02
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        1.02
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        1.02
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        1.02
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        1.02
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        1.02
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        1.02
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        1.02
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        1.02
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        1.02
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        1.02
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        1.02
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 17,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        1.02
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        1.02
+      ],
+      "E": 0.0508667
+    },
+    {
+      "layer": 18,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.61699,
+        123.172541,
+        1.08
+      ],
+      "end": [
+        125.443604,
+        121.694215,
+        1.08
+      ],
+      "E": 0.05827311
+    },
+    {
+      "layer": 18,
+      "kind": "diagonal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.38301,
+        123.172541,
+        1.08
+      ],
+      "end": [
+        130.552105,
+        121.693678,
+        1.08
+      ],
+      "E": 0.05829426
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.521949,
+        1.08
+      ],
+      "end": [
+        124.320809,
+        116.521949,
+        1.08
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        116.671949,
+        1.08
+      ],
+      "end": [
+        124.315016,
+        116.671949,
+        1.08
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.326724,
+        1.08
+      ],
+      "end": [
+        124.312155,
+        139.326724,
+        1.08
+      ],
+      "E": 0.05080963
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        113.920016,
+        139.476724,
+        1.08
+      ],
+      "end": [
+        124.31794,
+        139.476724,
+        1.08
+      ],
+      "E": 0.05083792
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.521949,
+        1.08
+      ],
+      "end": [
+        131.679191,
+        116.521949,
+        1.08
+      ],
+      "E": 0.05085194
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        116.671949,
+        1.08
+      ],
+      "end": [
+        131.684984,
+        116.671949,
+        1.08
+      ],
+      "E": 0.05082362
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.326724,
+        1.08
+      ],
+      "end": [
+        131.681959,
+        139.326724,
+        1.08
+      ],
+      "E": 0.05083841
+    },
+    {
+      "layer": 18,
+      "kind": "horizontal",
+      "width": 0.212876,
+      "flow": 0.98,
+      "speed": 5,
+      "start": [
+        142.079984,
+        139.476724,
+        1.08
+      ],
+      "end": [
+        131.676172,
+        139.476724,
+        1.08
+      ],
+      "E": 0.0508667
+    }
+  ],
+  "checks": {
+    "source_paths_have_8_layers": true,
+    "leadins_recomputed": 180,
+    "roof_moves_rescaled": 0,
+    "main_layer_markers_full": 141,
+    "main_layer_markers_test": 18,
+    "independent_source_motion_comparisons": 1376,
+    "all_16_loops_exact_uploaded_paths_E_Z_width": true,
+    "left_clockwise_right_counterclockwise": true,
+    "all_14_scarfs_5mm": true,
+    "all_180_leadins_width_flow_speed_verified": true,
+    "first10_non_leadin_executable_commands_unchanged": true,
+    "upper_continuation_executable_commands_unchanged": true,
+    "roof_all_executable_commands_unchanged": true,
+    "all_10_conditioning_layers_verified": true,
+    "all_post10_K_commands_0p05": true,
+    "post10_flow0p98_except_unchanged_roof1p4": true,
+    "no_added_startup_or_mesh_sequence": true,
+    "full_and_18layer_prefix_identical": true
+  },
+  "roof_deposition_moves_rescaled": 0,
+  "files": {
+    "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode": "36e8c7f04a3404def11b6cbf4ee4ae90b77c32b5efb4f30fdaece5a18ebae9ef",
+    "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode": "79102cc594d4dbf7bc7f03540899966f5c6e8629c40bff8f753b884694460c7a",
+    "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode": "d6ee14b4ebb6d92be895f0478cac5c9dd7f5f9b8c3c658a9454f7bfc935d59e3"
+  },
+  "scarf_checks": [
+    {
+      "side": "left",
+      "local": 2,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 2,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "left",
+      "local": 3,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 3,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "left",
+      "local": 4,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 4,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "left",
+      "local": 5,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 5,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "left",
+      "local": 6,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 6,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "left",
+      "local": 7,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 7,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "left",
+      "local": 8,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    },
+    {
+      "side": "right",
+      "local": 8,
+      "scarf_length": 5.000000099999999,
+      "ramp_segments": 16
+    }
+  ],
+  "deposition_count": 30578,
+  "gcode_file": "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode",
+  "gcode_sha256": "79102cc594d4dbf7bc7f03540899966f5c6e8629c40bff8f753b884694460c7a",
+  "main_part_layers": 18,
+  "conditioning_layers": 10,
+  "final_main_Z": 1.08
 }

@@ -1,6 +1,6 @@
 {
-  "source_gcode": "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode",
-  "source_gcode_sha256": "f226700a5020db6c35e38ddbf889318d3313cb019af32433ec391b10d58f894b",
+  "source_gcode": "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode",
+  "source_gcode_sha256": "d6ee14b4ebb6d92be895f0478cac5c9dd7f5f9b8c3c658a9454f7bfc935d59e3",
   "representative_global_layer": 12,
   "source_channel_layer": 2,
   "speed_mm_s": 5,
@@ -8,15 +8,15 @@
   "channels": {
     "left": {
       "start_XY": [
-        125.943398,
-        123.5
+        125.944122,
+        128.130686
       ],
       "walls": [
         {
           "order": 1,
-          "move_index": 50,
-          "distance_from_loop_start_mm": 40.80588967949319,
-          "time_at_5mm_s": 8.161177935898639,
+          "move_index": 48,
+          "distance_from_loop_start_mm": 36.17477923554946,
+          "time_at_5mm_s": 7.234955847109892,
           "start": [
             126.415122,
             121.455686
@@ -32,9 +32,9 @@
         },
         {
           "order": 2,
-          "move_index": 72,
-          "distance_from_loop_start_mm": 53.34939459609474,
-          "time_at_5mm_s": 10.669878919218949,
+          "move_index": 70,
+          "distance_from_loop_start_mm": 48.71828415215101,
+          "time_at_5mm_s": 9.7436568304302,
           "start": [
             126.101122,
             118.290686
@@ -49,21 +49,21 @@
           "E_per_mm": 0.004889921540307215
         }
       ],
-      "top_first_wall_distance_mm": 11.237457716382826,
-      "top_first_wall_time_s": 2.247491543276565,
+      "top_first_wall_distance_mm": 6.606347272439094,
+      "top_first_wall_time_s": 1.3212694544878187,
       "nominal_gap_at_Y120_mm": 0.0991515905200458
     },
     "right": {
       "start_XY": [
-        130.056602,
-        123.5
+        130.055878,
+        128.130686
       ],
       "walls": [
         {
           "order": 1,
-          "move_index": 50,
-          "distance_from_loop_start_mm": 40.8058896794932,
-          "time_at_5mm_s": 8.161177935898639,
+          "move_index": 48,
+          "distance_from_loop_start_mm": 36.174779235549465,
+          "time_at_5mm_s": 7.234955847109893,
           "start": [
             129.584878,
             121.455686
@@ -79,9 +79,9 @@
         },
         {
           "order": 2,
-          "move_index": 72,
-          "distance_from_loop_start_mm": 53.34939459609476,
-          "time_at_5mm_s": 10.669878919218952,
+          "move_index": 70,
+          "distance_from_loop_start_mm": 48.71828415215103,
+          "time_at_5mm_s": 9.743656830430206,
           "start": [
             129.898878,
             118.290686
@@ -96,18 +96,12 @@
           "E_per_mm": 0.004889921540307215
         }
       ],
-      "top_first_wall_distance_mm": 11.237457716382826,
-      "top_first_wall_time_s": 2.247491543276565,
+      "top_first_wall_distance_mm": 6.606347272439094,
+      "top_first_wall_time_s": 1.3212694544878187,
       "nominal_gap_at_Y120_mm": 0.0991515905200458
     }
   },
-  "name": "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_Timing_5mmps",
-  "approved_and_applied": true,
-  "source_layer": 12,
-  "left_direction": "clockwise",
-  "right_direction": "counterclockwise",
-  "post10_intro_K": 0.05,
-  "post10_intro_flow": 0.98,
-  "extra_slow_start": false,
-  "conditioning_line_added_before_channel_stage": true
+  "gcode_modified": false,
+  "conditioning_layers_before_channel_stage": 10,
+  "scarf_length_mm": 5
 }

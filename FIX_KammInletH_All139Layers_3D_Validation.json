@@ -1,12 +1,12 @@
 {
   "gcode_file": "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "3574638446dcdfe3707ce95843abfdbe4858ef3ffec0f1c1041160c8f088ea3a",
+  "gcode_sha256": "36e8c7f04a3404def11b6cbf4ee4ae90b77c32b5efb4f30fdaece5a18ebae9ef",
   "layers": 141,
   "counts": {
-    "travel": 3328,
-    "prime": 713,
-    "extrusion": 30599,
-    "retraction": 3196
+    "travel": 3373,
+    "prime": 722,
+    "extrusion": 30578,
+    "retraction": 3224
   },
   "arc_move_count": 808,
   "arc_display_chord_error_bound_mm": 0.0002,
@@ -25,10 +25,10 @@
     ]
   ],
   "lengths_mm": {
-    "travel": 16200.030275199117,
+    "travel": 16856.733373182382,
     "prime": 0.0,
-    "extrusion": 15136.725886302851,
-    "retraction": 1047.97522437825
+    "extrusion": 15542.648050931231,
+    "retraction": 1047.977506416314
   },
   "layer_stats": {
     "1": {
@@ -86,58 +86,58 @@
       "retraction": 4
     },
     "10": {
-      "travel": 96,
-      "prime": 13,
-      "extrusion": 847,
+      "travel": 141,
+      "prime": 22,
+      "extrusion": 856,
       "retraction": 4
     },
     "11": {
       "travel": 82,
       "prime": 12,
-      "extrusion": 128,
+      "extrusion": 126,
       "retraction": 2
     },
     "12": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "13": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "14": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "15": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "16": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "17": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "18": {
       "travel": 85,
       "prime": 12,
-      "extrusion": 192,
-      "retraction": 2
+      "extrusion": 188,
+      "retraction": 6
     },
     "19": {
       "travel": 63,
@@ -877,28 +877,10 @@
       "retraction": 28
     }
   },
-  "extrusion_moves_represented": 30599,
+  "extrusion_moves_represented": 30578,
   "omitted_extrusion_moves": 0,
   "interactive_html_self_contained": true,
-  "interactive_trace_count": 564,
-  "display_only_exploded_gap_available": true,
-  "diagram_generation_does_not_change_gcode": true,
-  "conditioning_overview_first_panel": true,
-  "conditioning_highlight_source_id": 9477,
-  "conditioning_visual_checks": {
-    "one_highlight_trace": true,
-    "actual_Z_mm": 0.06,
-    "start_XY": [
-      90,
-      95
-    ],
-    "end_XY": [
-      130,
-      95
-    ],
-    "unique_source_extrusion_moves": 30599,
-    "conditioning_preset_selects_completed_layer10": true,
-    "javascript_errors_reported": "",
-    "all_gcode_files_unchanged": true
-  }
+  "interactive_trace_count": 573,
+  "Gcode_unchanged": true,
+  "display_only_exploded_gap_available": true
 }

@@ -1,20 +1,13 @@
-; FIX — approved Y123.500 mirrored channels; left clockwise / right counterclockwise; scarf profiles preserved.
-; FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers
-; P1S / 0.2 mm nozzle / PETG. Legacy filenames retained; actual total 141 layers, final height 8.460 mm.
-; Layers 1-10: original platform and scaffold lead-in paths unchanged, with one original startup.
-; Layers11-18: approved right-source path atY123.500 and exact left reflection aboutX128; all8scarf profiles preserved.
-; Each channel layer: left loop, left diagonal intro, right loop, right diagonal intro, eight horizontal lines.
-; Added layer17/18 lead-ins duplicate former layer16 XY/E/F/settings at the corresponding increased Z.
-; Channel stage: 245 C nozzle, 70 C bed retained, K0.05; source widths/E/fans/scarf geometry preserved.
-; First channel layer 3 mm/s; subsequent channel layers 5 mm/s, as uploaded.
-; Layer19: prior roof paths at Z1.140, unchanged XY/E/F/I/J; existing roof overlap unchanged.
-; Layers20-141: 122-layer continuation, every absolute Z and final height-relative park raised by 0.120 mm.
-; No uploaded startup, purge, calibration, homing, warm-up or shutdown embedded between stages.
-; Source first-layer retractions omitted because prior stage ends retracted; original primes/wipes retained.
-; One initial startup, parked existing temperature transition, one final shutdown.
-; Lead-in travel revision: 40mm/s max exterior travel, 20mm/s short approaches/returns, 10mm/s Z.
-; FIX: lead-ins1-10 retainK0.55/flow1.4; all lead-ins11-18 useK0.05/flow0.98, with unchanged endpoints and print speed.
-; FIX: custom reverse wipes removed. Stop at endpoint, stationary retract0.4mm, lift1mm, then raised travel. Uploaded slicer-loop wipes retained.
+; FIX Kamm assembly: updated uploaded 5mm scarf channels and matched lead-ins
+; Legacy filenames retained. Main part141 layers /8.460mm plus remote10-layer conditioning line.
+; Main layers1-10: original scaffold, flow1.4/K0.55; added lead-ins now match0.15mm and5 then25mm/s.
+; After main layer10:245C/70C/K0.05, ten40mm conditioning layers atZ0.06..0.60, five10mm/s then five5mm/s.
+; Main layers11-18: uploaded5mm scarf, right original start / exact mirrored clockwise left;3 then5mm/s.
+; Channel nominal profile width0.21; Arachne actual widths retained, mostly0.212876mm; matching lead-ins0.212876mm.
+; After main layer10:K0.05 and flow0.98; roof19 is explicitly unchanged atflow1.4, including its lead-ins.
+; Roof remains main layer19, upper-inlet continuation20-141; Z heights and XY alignment retained.
+; Source startup/calibration omitted. Original source scarf E/Z and native retracting wipes retained.
+; Added lead-ins finish at endpoints with stationary retract, no invented wipe or shake.
 ; EXECUTABLE_BLOCK_START
 M201 X20000 Y20000 Z500 E5000
 M203 X500 Y500 Z20 E30
@@ -747,10 +740,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=1 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.060000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -761,7 +757,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X123.920016 Y116.521949 E0.10027268 F300
+G1 X123.920016 Y116.521949 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -772,13 +768,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X123.920016 Y116.671949 E0.10027268 F300
+G1 X123.920016 Y116.671949 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -789,13 +788,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X123.920016 Y139.326724 E0.10027268 F300
+G1 X123.920016 Y139.326724 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -806,13 +808,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X123.920016 Y139.476724 E0.10027268 F300
+G1 X123.920016 Y139.476724 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1264,10 +1269,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=1 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.060000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -1278,7 +1286,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X132.079984 Y116.521949 E0.10027268 F300
+G1 X132.079984 Y116.521949 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1289,13 +1297,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X132.079984 Y116.671949 E0.10027268 F300
+G1 X132.079984 Y116.671949 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1306,13 +1317,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X132.079984 Y139.326724 E0.10027268 F300
+G1 X132.079984 Y139.326724 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1323,13 +1337,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X132.079984 Y139.476724 E0.10027268 F300
+G1 X132.079984 Y139.476724 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1344,10 +1361,13 @@ M204 S500
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=1
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=1 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -1356,7 +1376,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X123.539769 Y121.932194 E0.10027268 F300
+G1 X123.539769 Y121.932194 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1367,6 +1387,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=1 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -1375,7 +1398,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X132.460231 Y121.932194 E0.10027268 F300
+G1 X132.460231 Y121.932194 E0.04788797 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1839,10 +1862,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=2 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.120000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -1853,7 +1879,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1864,13 +1890,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1881,13 +1910,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -1898,13 +1930,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2356,10 +2391,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=2 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.120000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -2370,7 +2408,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2381,13 +2419,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2398,13 +2439,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2415,13 +2459,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2436,10 +2483,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=2
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=2 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -2448,7 +2498,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2459,6 +2509,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=2 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -2467,7 +2520,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.120000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2931,10 +2984,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=3 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.180000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -2945,7 +3001,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2956,13 +3012,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2973,13 +3032,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -2990,13 +3052,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -3448,10 +3513,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=3 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.180000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -3462,7 +3530,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -3473,13 +3541,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -3490,13 +3561,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -3507,13 +3581,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -3528,10 +3605,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=3
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=3 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -3540,7 +3620,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -3551,6 +3631,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=3 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -3559,7 +3642,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.180000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4023,10 +4106,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=4 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.240000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -4037,7 +4123,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4048,13 +4134,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4065,13 +4154,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4082,13 +4174,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4540,10 +4635,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=4 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.240000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -4554,7 +4652,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4565,13 +4663,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4582,13 +4683,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4599,13 +4703,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4620,10 +4727,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=4
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=4 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -4632,7 +4742,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -4643,6 +4753,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=4 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -4651,7 +4764,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.240000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5115,10 +5228,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=5 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.300000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -5129,7 +5245,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5140,13 +5256,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5157,13 +5276,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5174,13 +5296,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5632,10 +5757,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=5 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.300000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -5646,7 +5774,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5657,13 +5785,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5674,13 +5805,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5691,13 +5825,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5712,10 +5849,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=5
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=5 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -5724,7 +5864,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -5735,6 +5875,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=5 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -5743,7 +5886,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.300000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6207,10 +6350,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=6 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.360000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -6221,7 +6367,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6232,13 +6378,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6249,13 +6398,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6266,13 +6418,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6724,10 +6879,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=6 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.360000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -6738,7 +6896,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6749,13 +6907,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6766,13 +6927,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6783,13 +6947,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6804,10 +6971,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=6
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=6 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -6816,7 +6986,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -6827,6 +6997,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=6 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -6835,7 +7008,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.360000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7299,10 +7472,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=7 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.420000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -7313,7 +7489,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7324,13 +7500,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7341,13 +7520,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7358,13 +7540,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7816,10 +8001,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=7 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.420000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -7830,7 +8018,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7841,13 +8029,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7858,13 +8049,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7875,13 +8069,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7896,10 +8093,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=7
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=7 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -7908,7 +8108,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -7919,6 +8119,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=7 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -7927,7 +8130,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.420000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8391,10 +8594,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=8 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.480000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -8405,7 +8611,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8416,13 +8622,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8433,13 +8642,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8450,13 +8662,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8908,10 +9123,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=8 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.480000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -8922,7 +9140,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8933,13 +9151,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8950,13 +9171,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8967,13 +9191,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -8988,10 +9215,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=8
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=8 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -9000,7 +9230,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -9011,6 +9241,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=8 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -9019,7 +9252,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.480000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -9483,10 +9716,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=9 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.540000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -9497,7 +9733,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -9508,13 +9744,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -9525,13 +9764,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -9542,13 +9784,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10000,10 +10245,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=9 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.540000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -10014,7 +10262,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10025,13 +10273,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10042,13 +10293,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10059,13 +10313,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10080,10 +10337,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=9
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=9 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -10092,7 +10352,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10103,6 +10363,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=9 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -10111,7 +10374,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.540000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10575,10 +10838,13 @@ G1 X125.744995 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=10 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.600000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -10589,7 +10855,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.521949 E0.10027268 F1500
+G1 X123.920016 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10600,13 +10866,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y116.671949 E0.10027268 F1500
+G1 X123.920016 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10617,13 +10886,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.326724 E0.10027268 F1500
+G1 X123.920016 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -10634,13 +10906,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.920016 Y139.476724 E0.10027268 F1500
+G1 X123.920016 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11092,10 +11367,13 @@ G1 X130.255005 Y120.345257 E-0.09999870
 ; WIPE_END
 G1 Z1.00 F600
 ; KAMM_HORIZONTAL_START layer=10 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 Z1.600000 F600
 G1 X128.000000 Y120.345257 F1200
@@ -11106,7 +11384,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.521949 E0.10027268 F1500
+G1 X132.079984 Y116.521949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11117,13 +11395,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y116.671949 E0.10027268 F1500
+G1 X132.079984 Y116.671949 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11134,13 +11415,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=3
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.326724 E0.10027268 F1500
+G1 X132.079984 Y139.326724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11151,13 +11435,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=horizontal index=4
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.079984 Y139.476724 E0.10027268 F1500
+G1 X132.079984 Y139.476724 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11172,10 +11459,13 @@ M204 S2000
 G1 F1200
 ; KAMM_HORIZONTAL_END
 ; KAMM_ANGLED_START layer=10
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 1.4 baked into E once
 ; LEADIN_ROAD_START layer=10 kind=diagonal index=1
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X143.383010 Y142.289701 F2400
 G1 X112.616990 Y142.289701 F2400
@@ -11184,7 +11474,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X123.539769 Y121.932194 E0.10027268 F1500
+G1 X123.539769 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11195,6 +11485,9 @@ G1 X112.616990 Y123.172541 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=10 kind=diagonal index=2
+; LINE_WIDTH: 0.15
+; FILAMENT_FLOW_RATIO: 1.4 baked into E once
+M900 K0.55 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -11203,7 +11496,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.600000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X132.460231 Y121.932194 E0.10027268 F1500
+G1 X132.460231 Y121.932194 E0.04788797 F1500
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11236,12 +11529,13 @@ M106 P2 S0
 M106 P3 S255
 G17
 ; CONDITIONING_LINE_START after_completed_layer=10
-; 40mm on the build plate at first-layer Z0.060, not on top of the 0.600mm scaffold.
-; K0.05 is already active; conditioning line matches the first channel road: width0.212876/flow0.98/speed3mm_s.
+; Ten separate conditioning layers, Z0.060..0.600; main part next layer remains11.
 ; LINE_WIDTH: 0.212876
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once
 M900 K0.05 L1000 M10
 M106 P1 S0
+M204 S1000
+; CONDITIONING_PASS 1/10 Z0.060 speed10mm_s
 M204 S1000
 G1 Z5.000000 F600
 G1 X20.000000 Y90.000000 F2400
@@ -11250,8 +11544,106 @@ G1 X90.000000 Y95.000000 F1200
 G1 Z0.060000 F600
 G1 E0.4 F1800
 M204 S500
-G1 X130.000000 Y95.000000 E0.19556949 F180
-; ENDPOINT_RETRACT: no reverse wipe
+G1 X130.000000 Y95.000000 E0.19556949 F600
+G1 E-0.4 F1800
+; CONDITIONING_PASS 2/10 Z0.120 speed10mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.120000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F600
+G1 E-0.4 F1800
+; CONDITIONING_PASS 3/10 Z0.180 speed10mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.180000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F600
+G1 E-0.4 F1800
+; CONDITIONING_PASS 4/10 Z0.240 speed10mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.240000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F600
+G1 E-0.4 F1800
+; CONDITIONING_PASS 5/10 Z0.300 speed10mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.300000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F600
+G1 E-0.4 F1800
+; CONDITIONING_PASS 6/10 Z0.360 speed5mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.360000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F300
+G1 E-0.4 F1800
+; CONDITIONING_PASS 7/10 Z0.420 speed5mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.420000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F300
+G1 E-0.4 F1800
+; CONDITIONING_PASS 8/10 Z0.480 speed5mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.480000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F300
+G1 E-0.4 F1800
+; CONDITIONING_PASS 9/10 Z0.540 speed5mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.540000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F300
+G1 E-0.4 F1800
+; CONDITIONING_PASS 10/10 Z0.600 speed5mm_s
+M204 S1000
+G1 Z5.000000 F600
+G1 X130.000000 Y90.000000 F1200
+G1 X90.000000 Y90.000000 F2400
+G1 X90.000000 Y95.000000 F1200
+G1 Z0.600000 F600
+G1 E0.4 F1800
+M204 S500
+G1 X130.000000 Y95.000000 E0.19556949 F300
 G1 E-0.4 F1800
 M204 S1000
 G1 Z5.000000 F600
@@ -11259,7 +11651,6 @@ G1 X130.000000 Y90.000000 F1200
 G1 X89.000000 Y90.000000 F2400
 G1 X89.000000 Y220.000000 F2400
 G1 X20.000000 Y220.000000 F2400
-; Restore the exact existing layer11 entry state after leaving the conditioning line.
 ; LINE_WIDTH: 0.15
 M204 S10000
 G1 F2400
@@ -11279,18 +11670,18 @@ M204 S500
 M204 S1000
 G1 X20.000000 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.660000 F600
 M204 S500
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S500
 G1 F180
 ; LINE_WIDTH: 0.212876
-G1 X125.944122 Y128.130686 Z0.660000 E0.02263971
 G1 X125.945122 Y134.488686 Z0.660000 E0.03109000
 G1 X126.101122 Y134.681686 Z0.660000 E0.00121000
 G1 X126.103122 Y137.736686 Z0.660000 E0.01494000
@@ -11350,20 +11741,23 @@ G1 X126.101122 Y118.290686 Z0.660000 E0.00057000
 G1 X126.103122 Y121.515686 Z0.660000 E0.01577000
 G1 X125.989122 Y121.640686 Z0.660000 E0.00083000
 G1 X125.943122 Y121.730686 Z0.660000 E0.00049000
-G1 X125.943398 Y123.500000 Z0.660000 E0.00865029
+G1 X125.944122 Y128.130686 Z0.660000 E0.03129000
 ; WIPE_START
 G1 F600
-G1 X125.944398 Y125.500000 E-0.4
+G1 X125.945122 Y130.130686 E-0.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=11 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=11 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.660000 F600
-G1 X128.000000 Y125.500000 F1200
+G1 X128.000000 Y130.130686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -11371,7 +11765,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11396,18 +11790,18 @@ M204 S500
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.660000 F600
 M204 S500
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S500
 G1 F180
 ; LINE_WIDTH: 0.212876
-G1 X130.055878 Y128.130686 Z0.660000 E0.02263971
 G1 X130.054878 Y134.488686 Z0.660000 E0.03109000
 G1 X129.898878 Y134.681686 Z0.660000 E0.00121000
 G1 X129.896878 Y137.736686 Z0.660000 E0.01494000
@@ -11467,20 +11861,23 @@ G1 X129.898878 Y118.290686 Z0.660000 E0.00057000
 G1 X129.896878 Y121.515686 Z0.660000 E0.01577000
 G1 X130.010878 Y121.640686 Z0.660000 E0.00083000
 G1 X130.056878 Y121.730686 Z0.660000 E0.00049000
-G1 X130.056602 Y123.500000 Z0.660000 E0.00865029
+G1 X130.055878 Y128.130686 Z0.660000 E0.03129000
 ; WIPE_START
 G1 F600
-G1 X130.055602 Y125.500000 E-0.4
+G1 X130.054878 Y130.130686 E-0.4
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=11 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=11 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.660000 F600
-G1 X128.000000 Y125.500000 F1200
+G1 X128.000000 Y130.130686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -11488,7 +11885,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11506,11 +11903,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 1
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=11 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -11519,7 +11919,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11530,13 +11930,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11547,13 +11950,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11564,13 +11970,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11586,11 +11995,14 @@ M204 S500
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=11 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -11599,7 +12011,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11610,13 +12022,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11627,13 +12042,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11644,13 +12062,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=11 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.660000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F180
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11682,36 +12103,35 @@ M204 S1000
 G1 Z1.720000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.678000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z0.681000 E0.00016000
-G1 X125.943428 Y123.687000 Z0.683000 E0.00018000
-G1 X125.943442 Y123.781000 Z0.686000 E0.00020000
-G1 X125.943457 Y123.875000 Z0.688000 E0.00022000
-G1 X125.943472 Y123.968000 Z0.691000 E0.00024000
-G1 X125.943486 Y124.062000 Z0.694000 E0.00026000
-G1 X125.943501 Y124.156000 Z0.696000 E0.00028000
-G1 X125.943516 Y124.250000 Z0.699000 E0.00030000
-G1 X125.943530 Y124.343000 Z0.702000 E0.00032000
-G1 X125.943545 Y124.437000 Z0.704000 E0.00034000
-G1 X125.943560 Y124.531000 Z0.707000 E0.00036000
-G1 X125.943574 Y124.625000 Z0.709000 E0.00038000
-G1 X125.943589 Y124.718000 Z0.712000 E0.00040000
-G1 X125.943603 Y124.812000 Z0.715000 E0.00042000
-G1 X125.943618 Y124.906000 Z0.717000 E0.00044000
-G1 X125.943633 Y125.000000 Z0.720000 E0.00046000
-G1 X125.944122 Y128.130686 Z0.720000 E0.01528925
-G1 X125.944122 Y129.630686 Z0.720000 E0.00736000
-G1 X125.945122 Y134.488686 Z0.720000 E0.02375000
+G1 X125.944122 Y128.442686 Z0.681000 E0.00053000
+G1 X125.944122 Y128.755686 Z0.683000 E0.00059000
+G1 X125.944122 Y129.067686 Z0.686000 E0.00066000
+G1 X125.944122 Y129.380686 Z0.688000 E0.00073000
+G1 X125.944122 Y129.692686 Z0.691000 E0.00079000
+G1 X125.945122 Y130.005686 Z0.694000 E0.00086000
+G1 X125.945122 Y130.317686 Z0.696000 E0.00093000
+G1 X125.945122 Y130.630686 Z0.699000 E0.00099000
+G1 X125.945122 Y130.942686 Z0.702000 E0.00106000
+G1 X125.945122 Y131.255686 Z0.704000 E0.00113000
+G1 X125.945122 Y131.567686 Z0.707000 E0.00119000
+G1 X125.945122 Y131.880686 Z0.709000 E0.00126000
+G1 X125.945122 Y132.192686 Z0.712000 E0.00133000
+G1 X125.945122 Y132.505686 Z0.715000 E0.00139000
+G1 X125.945122 Y132.817686 Z0.717000 E0.00146000
+G1 X125.945122 Y133.130686 Z0.720000 E0.00153000
+G1 X125.945122 Y134.488686 Z0.720000 E0.00664000
 G1 X126.101122 Y134.681686 Z0.720000 E0.00121000
 G1 X126.103122 Y137.736686 Z0.720000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -11771,36 +12191,41 @@ G1 X126.101122 Y118.290686 Z0.720000 E0.00057000
 G1 X126.103122 Y121.515686 Z0.720000 E0.01577000
 G1 X125.989122 Y121.640686 Z0.720000 E0.00083000
 G1 X125.943122 Y121.730686 Z0.720000 E0.00049000
-G1 X125.943398 Y123.500000 Z0.720000 E0.00864075
-G1 X125.943413 Y123.593000 Z0.720000 E0.00030000
-G1 X125.943428 Y123.687000 Z0.720000 E0.00028000
-G1 X125.943442 Y123.781000 Z0.720000 E0.00026000
-G1 X125.943457 Y123.875000 Z0.720000 E0.00024000
-G1 X125.943472 Y123.968000 Z0.720000 E0.00022000
-G1 X125.943486 Y124.062000 Z0.720000 E0.00020000
-G1 X125.943501 Y124.156000 Z0.720000 E0.00018000
-G1 X125.943516 Y124.250000 Z0.720000 E0.00016000
-G1 X125.943530 Y124.343000 Z0.720000 E0.00014000
-G1 X125.943545 Y124.437000 Z0.720000 E0.00012000
-G1 X125.943560 Y124.531000 Z0.720000 E0.00010000
-G1 X125.943574 Y124.625000 Z0.720000 E0.00008000
-G1 X125.943589 Y124.718000 Z0.720000 E0.00006000
-G1 X125.943603 Y124.812000 Z0.720000 E0.00004000
-G1 X125.943618 Y124.906000 Z0.720000 E0.00002000
-G1 X125.943633 Y125.000000 Z0.720000 E0.00000000
+G1 X125.944122 Y128.130686 Z0.720000 E0.03129000
+G1 X125.944122 Y128.442686 Z0.720000 E0.00100000
+G1 X125.944122 Y128.755686 Z0.720000 E0.00094000
+G1 X125.944122 Y129.067686 Z0.720000 E0.00087000
+G1 X125.944122 Y129.380686 Z0.720000 E0.00080000
+G1 X125.944122 Y129.692686 Z0.720000 E0.00074000
+G1 X125.945122 Y130.005686 Z0.720000 E0.00067000
+G1 X125.945122 Y130.317686 Z0.720000 E0.00060000
+G1 X125.945122 Y130.630686 Z0.720000 E0.00053000
+G1 X125.945122 Y130.942686 Z0.720000 E0.00047000
+G1 X125.945122 Y131.255686 Z0.720000 E0.00040000
+G1 X125.945122 Y131.567686 Z0.720000 E0.00033000
+G1 X125.945122 Y131.880686 Z0.720000 E0.00027000
+G1 X125.945122 Y132.192686 Z0.720000 E0.00020000
+G1 X125.945122 Y132.505686 Z0.720000 E0.00013000
+G1 X125.945122 Y132.817686 Z0.720000 E0.00007000
+G1 X125.945122 Y133.130686 Z0.720000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=12 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=12 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.720000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -11808,7 +12233,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11834,36 +12259,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.678000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z0.681000 E0.00016000
-G1 X130.056572 Y123.687000 Z0.683000 E0.00018000
-G1 X130.056558 Y123.781000 Z0.686000 E0.00020000
-G1 X130.056543 Y123.875000 Z0.688000 E0.00022000
-G1 X130.056528 Y123.968000 Z0.691000 E0.00024000
-G1 X130.056514 Y124.062000 Z0.694000 E0.00026000
-G1 X130.056499 Y124.156000 Z0.696000 E0.00028000
-G1 X130.056484 Y124.250000 Z0.699000 E0.00030000
-G1 X130.056470 Y124.343000 Z0.702000 E0.00032000
-G1 X130.056455 Y124.437000 Z0.704000 E0.00034000
-G1 X130.056440 Y124.531000 Z0.707000 E0.00036000
-G1 X130.056426 Y124.625000 Z0.709000 E0.00038000
-G1 X130.056411 Y124.718000 Z0.712000 E0.00040000
-G1 X130.056397 Y124.812000 Z0.715000 E0.00042000
-G1 X130.056382 Y124.906000 Z0.717000 E0.00044000
-G1 X130.056367 Y125.000000 Z0.720000 E0.00046000
-G1 X130.055878 Y128.130686 Z0.720000 E0.01528925
-G1 X130.055878 Y129.630686 Z0.720000 E0.00736000
-G1 X130.054878 Y134.488686 Z0.720000 E0.02375000
+G1 X130.055878 Y128.442686 Z0.681000 E0.00053000
+G1 X130.055878 Y128.755686 Z0.683000 E0.00059000
+G1 X130.055878 Y129.067686 Z0.686000 E0.00066000
+G1 X130.055878 Y129.380686 Z0.688000 E0.00073000
+G1 X130.055878 Y129.692686 Z0.691000 E0.00079000
+G1 X130.054878 Y130.005686 Z0.694000 E0.00086000
+G1 X130.054878 Y130.317686 Z0.696000 E0.00093000
+G1 X130.054878 Y130.630686 Z0.699000 E0.00099000
+G1 X130.054878 Y130.942686 Z0.702000 E0.00106000
+G1 X130.054878 Y131.255686 Z0.704000 E0.00113000
+G1 X130.054878 Y131.567686 Z0.707000 E0.00119000
+G1 X130.054878 Y131.880686 Z0.709000 E0.00126000
+G1 X130.054878 Y132.192686 Z0.712000 E0.00133000
+G1 X130.054878 Y132.505686 Z0.715000 E0.00139000
+G1 X130.054878 Y132.817686 Z0.717000 E0.00146000
+G1 X130.054878 Y133.130686 Z0.720000 E0.00153000
+G1 X130.054878 Y134.488686 Z0.720000 E0.00664000
 G1 X129.898878 Y134.681686 Z0.720000 E0.00121000
 G1 X129.896878 Y137.736686 Z0.720000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -11923,36 +12347,41 @@ G1 X129.898878 Y118.290686 Z0.720000 E0.00057000
 G1 X129.896878 Y121.515686 Z0.720000 E0.01577000
 G1 X130.010878 Y121.640686 Z0.720000 E0.00083000
 G1 X130.056878 Y121.730686 Z0.720000 E0.00049000
-G1 X130.056602 Y123.500000 Z0.720000 E0.00864075
-G1 X130.056587 Y123.593000 Z0.720000 E0.00030000
-G1 X130.056572 Y123.687000 Z0.720000 E0.00028000
-G1 X130.056558 Y123.781000 Z0.720000 E0.00026000
-G1 X130.056543 Y123.875000 Z0.720000 E0.00024000
-G1 X130.056528 Y123.968000 Z0.720000 E0.00022000
-G1 X130.056514 Y124.062000 Z0.720000 E0.00020000
-G1 X130.056499 Y124.156000 Z0.720000 E0.00018000
-G1 X130.056484 Y124.250000 Z0.720000 E0.00016000
-G1 X130.056470 Y124.343000 Z0.720000 E0.00014000
-G1 X130.056455 Y124.437000 Z0.720000 E0.00012000
-G1 X130.056440 Y124.531000 Z0.720000 E0.00010000
-G1 X130.056426 Y124.625000 Z0.720000 E0.00008000
-G1 X130.056411 Y124.718000 Z0.720000 E0.00006000
-G1 X130.056397 Y124.812000 Z0.720000 E0.00004000
-G1 X130.056382 Y124.906000 Z0.720000 E0.00002000
-G1 X130.056367 Y125.000000 Z0.720000 E0.00000000
+G1 X130.055878 Y128.130686 Z0.720000 E0.03129000
+G1 X130.055878 Y128.442686 Z0.720000 E0.00100000
+G1 X130.055878 Y128.755686 Z0.720000 E0.00094000
+G1 X130.055878 Y129.067686 Z0.720000 E0.00087000
+G1 X130.055878 Y129.380686 Z0.720000 E0.00080000
+G1 X130.055878 Y129.692686 Z0.720000 E0.00074000
+G1 X130.054878 Y130.005686 Z0.720000 E0.00067000
+G1 X130.054878 Y130.317686 Z0.720000 E0.00060000
+G1 X130.054878 Y130.630686 Z0.720000 E0.00053000
+G1 X130.054878 Y130.942686 Z0.720000 E0.00047000
+G1 X130.054878 Y131.255686 Z0.720000 E0.00040000
+G1 X130.054878 Y131.567686 Z0.720000 E0.00033000
+G1 X130.054878 Y131.880686 Z0.720000 E0.00027000
+G1 X130.054878 Y132.192686 Z0.720000 E0.00020000
+G1 X130.054878 Y132.505686 Z0.720000 E0.00013000
+G1 X130.054878 Y132.817686 Z0.720000 E0.00007000
+G1 X130.054878 Y133.130686 Z0.720000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=12 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=12 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.720000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -11960,7 +12389,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -11978,11 +12407,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 2
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=12 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -11991,7 +12423,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12002,13 +12434,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12019,13 +12454,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12036,13 +12474,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12058,11 +12499,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=12 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -12071,7 +12515,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12082,13 +12526,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12099,13 +12546,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12116,13 +12566,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=12 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.720000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12154,36 +12607,35 @@ M204 S1000
 G1 Z1.780000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.738000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z0.741000 E0.00016000
-G1 X125.943428 Y123.687000 Z0.743000 E0.00018000
-G1 X125.943442 Y123.781000 Z0.746000 E0.00020000
-G1 X125.943457 Y123.875000 Z0.748000 E0.00022000
-G1 X125.943472 Y123.968000 Z0.751000 E0.00024000
-G1 X125.943486 Y124.062000 Z0.754000 E0.00026000
-G1 X125.943501 Y124.156000 Z0.756000 E0.00028000
-G1 X125.943516 Y124.250000 Z0.759000 E0.00030000
-G1 X125.943530 Y124.343000 Z0.762000 E0.00032000
-G1 X125.943545 Y124.437000 Z0.764000 E0.00034000
-G1 X125.943560 Y124.531000 Z0.767000 E0.00036000
-G1 X125.943574 Y124.625000 Z0.769000 E0.00038000
-G1 X125.943589 Y124.718000 Z0.772000 E0.00040000
-G1 X125.943603 Y124.812000 Z0.775000 E0.00042000
-G1 X125.943618 Y124.906000 Z0.777000 E0.00044000
-G1 X125.943633 Y125.000000 Z0.780000 E0.00046000
-G1 X125.944122 Y128.130686 Z0.780000 E0.01528925
-G1 X125.944122 Y129.630686 Z0.780000 E0.00736000
-G1 X125.945122 Y134.488686 Z0.780000 E0.02375000
+G1 X125.944122 Y128.442686 Z0.741000 E0.00053000
+G1 X125.944122 Y128.755686 Z0.743000 E0.00059000
+G1 X125.944122 Y129.067686 Z0.746000 E0.00066000
+G1 X125.944122 Y129.380686 Z0.748000 E0.00073000
+G1 X125.944122 Y129.692686 Z0.751000 E0.00079000
+G1 X125.945122 Y130.005686 Z0.754000 E0.00086000
+G1 X125.945122 Y130.317686 Z0.756000 E0.00093000
+G1 X125.945122 Y130.630686 Z0.759000 E0.00099000
+G1 X125.945122 Y130.942686 Z0.762000 E0.00106000
+G1 X125.945122 Y131.255686 Z0.764000 E0.00113000
+G1 X125.945122 Y131.567686 Z0.767000 E0.00119000
+G1 X125.945122 Y131.880686 Z0.769000 E0.00126000
+G1 X125.945122 Y132.192686 Z0.772000 E0.00133000
+G1 X125.945122 Y132.505686 Z0.775000 E0.00139000
+G1 X125.945122 Y132.817686 Z0.777000 E0.00146000
+G1 X125.945122 Y133.130686 Z0.780000 E0.00153000
+G1 X125.945122 Y134.488686 Z0.780000 E0.00664000
 G1 X126.101122 Y134.681686 Z0.780000 E0.00121000
 G1 X126.103122 Y137.736686 Z0.780000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -12216,8 +12668,8 @@ G1 X126.880122 Y134.676686 Z0.780000 E0.00210000
 G1 X126.949122 Y134.570686 Z0.780000 E0.00062000
 G1 X126.946122 Y121.611686 Z0.780000 E0.06336000
 G1 X126.897122 Y121.531686 Z0.780000 E0.00046000
-G1 X126.494122 Y121.546686 Z0.780000 E0.00198000
-G1 X126.415122 Y121.455686 Z0.780000 E0.00059000
+G1 X126.491122 Y121.544686 Z0.780000 E0.00199000
+G1 X126.415122 Y121.455686 Z0.780000 E0.00057000
 G1 X126.413122 Y118.264686 Z0.780000 E0.01560000
 G1 X126.830122 Y118.097686 Z0.780000 E0.00220000
 G1 X127.222122 Y117.865686 Z0.780000 E0.00222000
@@ -12243,37 +12695,42 @@ G1 X126.101122 Y118.290686 Z0.780000 E0.00057000
 G1 X126.103122 Y121.515686 Z0.780000 E0.01577000
 G1 X125.989122 Y121.640686 Z0.780000 E0.00083000
 G1 X125.943122 Y121.730686 Z0.780000 E0.00049000
-G1 X125.943398 Y123.500000 Z0.780000 E0.00864075
-G1 X125.943413 Y123.593000 Z0.780000 E0.00030000
-G1 X125.943428 Y123.687000 Z0.780000 E0.00028000
-G1 X125.943442 Y123.781000 Z0.780000 E0.00026000
-G1 X125.943457 Y123.875000 Z0.780000 E0.00024000
-G1 X125.943472 Y123.968000 Z0.780000 E0.00022000
-G1 X125.943486 Y124.062000 Z0.780000 E0.00020000
-G1 X125.943501 Y124.156000 Z0.780000 E0.00018000
-G1 X125.943516 Y124.250000 Z0.780000 E0.00016000
-G1 X125.943530 Y124.343000 Z0.780000 E0.00014000
-G1 X125.943545 Y124.437000 Z0.780000 E0.00012000
-G1 X125.943560 Y124.531000 Z0.780000 E0.00010000
-G1 X125.943574 Y124.625000 Z0.780000 E0.00008000
-G1 X125.943589 Y124.718000 Z0.780000 E0.00006000
-G1 X125.943603 Y124.812000 Z0.780000 E0.00004000
-G1 X125.943618 Y124.906000 Z0.780000 E0.00002000
-G1 X125.943633 Y125.000000 Z0.780000 E0.00000000
-M106 S227
+G1 X125.944122 Y128.130686 Z0.780000 E0.03129000
+G1 X125.944122 Y128.442686 Z0.780000 E0.00100000
+G1 X125.944122 Y128.755686 Z0.780000 E0.00094000
+G1 X125.944122 Y129.067686 Z0.780000 E0.00087000
+G1 X125.944122 Y129.380686 Z0.780000 E0.00080000
+G1 X125.944122 Y129.692686 Z0.780000 E0.00074000
+G1 X125.945122 Y130.005686 Z0.780000 E0.00067000
+G1 X125.945122 Y130.317686 Z0.780000 E0.00060000
+G1 X125.945122 Y130.630686 Z0.780000 E0.00053000
+G1 X125.945122 Y130.942686 Z0.780000 E0.00047000
+G1 X125.945122 Y131.255686 Z0.780000 E0.00040000
+G1 X125.945122 Y131.567686 Z0.780000 E0.00033000
+G1 X125.945122 Y131.880686 Z0.780000 E0.00027000
+G1 X125.945122 Y132.192686 Z0.780000 E0.00020000
+G1 X125.945122 Y132.505686 Z0.780000 E0.00013000
+G1 X125.945122 Y132.817686 Z0.780000 E0.00007000
+G1 X125.945122 Y133.130686 Z0.780000 E0.00000000
+M106 S222
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=13 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=13 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.780000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -12281,7 +12738,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12307,36 +12764,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.738000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z0.741000 E0.00016000
-G1 X130.056572 Y123.687000 Z0.743000 E0.00018000
-G1 X130.056558 Y123.781000 Z0.746000 E0.00020000
-G1 X130.056543 Y123.875000 Z0.748000 E0.00022000
-G1 X130.056528 Y123.968000 Z0.751000 E0.00024000
-G1 X130.056514 Y124.062000 Z0.754000 E0.00026000
-G1 X130.056499 Y124.156000 Z0.756000 E0.00028000
-G1 X130.056484 Y124.250000 Z0.759000 E0.00030000
-G1 X130.056470 Y124.343000 Z0.762000 E0.00032000
-G1 X130.056455 Y124.437000 Z0.764000 E0.00034000
-G1 X130.056440 Y124.531000 Z0.767000 E0.00036000
-G1 X130.056426 Y124.625000 Z0.769000 E0.00038000
-G1 X130.056411 Y124.718000 Z0.772000 E0.00040000
-G1 X130.056397 Y124.812000 Z0.775000 E0.00042000
-G1 X130.056382 Y124.906000 Z0.777000 E0.00044000
-G1 X130.056367 Y125.000000 Z0.780000 E0.00046000
-G1 X130.055878 Y128.130686 Z0.780000 E0.01528925
-G1 X130.055878 Y129.630686 Z0.780000 E0.00736000
-G1 X130.054878 Y134.488686 Z0.780000 E0.02375000
+G1 X130.055878 Y128.442686 Z0.741000 E0.00053000
+G1 X130.055878 Y128.755686 Z0.743000 E0.00059000
+G1 X130.055878 Y129.067686 Z0.746000 E0.00066000
+G1 X130.055878 Y129.380686 Z0.748000 E0.00073000
+G1 X130.055878 Y129.692686 Z0.751000 E0.00079000
+G1 X130.054878 Y130.005686 Z0.754000 E0.00086000
+G1 X130.054878 Y130.317686 Z0.756000 E0.00093000
+G1 X130.054878 Y130.630686 Z0.759000 E0.00099000
+G1 X130.054878 Y130.942686 Z0.762000 E0.00106000
+G1 X130.054878 Y131.255686 Z0.764000 E0.00113000
+G1 X130.054878 Y131.567686 Z0.767000 E0.00119000
+G1 X130.054878 Y131.880686 Z0.769000 E0.00126000
+G1 X130.054878 Y132.192686 Z0.772000 E0.00133000
+G1 X130.054878 Y132.505686 Z0.775000 E0.00139000
+G1 X130.054878 Y132.817686 Z0.777000 E0.00146000
+G1 X130.054878 Y133.130686 Z0.780000 E0.00153000
+G1 X130.054878 Y134.488686 Z0.780000 E0.00664000
 G1 X129.898878 Y134.681686 Z0.780000 E0.00121000
 G1 X129.896878 Y137.736686 Z0.780000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -12369,8 +12825,8 @@ G1 X129.119878 Y134.676686 Z0.780000 E0.00210000
 G1 X129.050878 Y134.570686 Z0.780000 E0.00062000
 G1 X129.053878 Y121.611686 Z0.780000 E0.06336000
 G1 X129.102878 Y121.531686 Z0.780000 E0.00046000
-G1 X129.505878 Y121.546686 Z0.780000 E0.00198000
-G1 X129.584878 Y121.455686 Z0.780000 E0.00059000
+G1 X129.508878 Y121.544686 Z0.780000 E0.00199000
+G1 X129.584878 Y121.455686 Z0.780000 E0.00057000
 G1 X129.586878 Y118.264686 Z0.780000 E0.01560000
 G1 X129.169878 Y118.097686 Z0.780000 E0.00220000
 G1 X128.777878 Y117.865686 Z0.780000 E0.00222000
@@ -12396,37 +12852,42 @@ G1 X129.898878 Y118.290686 Z0.780000 E0.00057000
 G1 X129.896878 Y121.515686 Z0.780000 E0.01577000
 G1 X130.010878 Y121.640686 Z0.780000 E0.00083000
 G1 X130.056878 Y121.730686 Z0.780000 E0.00049000
-G1 X130.056602 Y123.500000 Z0.780000 E0.00864075
-G1 X130.056587 Y123.593000 Z0.780000 E0.00030000
-G1 X130.056572 Y123.687000 Z0.780000 E0.00028000
-G1 X130.056558 Y123.781000 Z0.780000 E0.00026000
-G1 X130.056543 Y123.875000 Z0.780000 E0.00024000
-G1 X130.056528 Y123.968000 Z0.780000 E0.00022000
-G1 X130.056514 Y124.062000 Z0.780000 E0.00020000
-G1 X130.056499 Y124.156000 Z0.780000 E0.00018000
-G1 X130.056484 Y124.250000 Z0.780000 E0.00016000
-G1 X130.056470 Y124.343000 Z0.780000 E0.00014000
-G1 X130.056455 Y124.437000 Z0.780000 E0.00012000
-G1 X130.056440 Y124.531000 Z0.780000 E0.00010000
-G1 X130.056426 Y124.625000 Z0.780000 E0.00008000
-G1 X130.056411 Y124.718000 Z0.780000 E0.00006000
-G1 X130.056397 Y124.812000 Z0.780000 E0.00004000
-G1 X130.056382 Y124.906000 Z0.780000 E0.00002000
-G1 X130.056367 Y125.000000 Z0.780000 E0.00000000
-M106 S227
+G1 X130.055878 Y128.130686 Z0.780000 E0.03129000
+G1 X130.055878 Y128.442686 Z0.780000 E0.00100000
+G1 X130.055878 Y128.755686 Z0.780000 E0.00094000
+G1 X130.055878 Y129.067686 Z0.780000 E0.00087000
+G1 X130.055878 Y129.380686 Z0.780000 E0.00080000
+G1 X130.055878 Y129.692686 Z0.780000 E0.00074000
+G1 X130.054878 Y130.005686 Z0.780000 E0.00067000
+G1 X130.054878 Y130.317686 Z0.780000 E0.00060000
+G1 X130.054878 Y130.630686 Z0.780000 E0.00053000
+G1 X130.054878 Y130.942686 Z0.780000 E0.00047000
+G1 X130.054878 Y131.255686 Z0.780000 E0.00040000
+G1 X130.054878 Y131.567686 Z0.780000 E0.00033000
+G1 X130.054878 Y131.880686 Z0.780000 E0.00027000
+G1 X130.054878 Y132.192686 Z0.780000 E0.00020000
+G1 X130.054878 Y132.505686 Z0.780000 E0.00013000
+G1 X130.054878 Y132.817686 Z0.780000 E0.00007000
+G1 X130.054878 Y133.130686 Z0.780000 E0.00000000
+M106 S222
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=13 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=13 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.780000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -12434,7 +12895,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12452,11 +12913,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 3
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=13 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -12465,7 +12929,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12476,13 +12940,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12493,13 +12960,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12510,13 +12980,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12532,11 +13005,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=13 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -12545,7 +13021,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12556,13 +13032,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12573,13 +13052,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12590,13 +13072,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=13 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.780000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12619,7 +13104,7 @@ M73 L14
 M991 S0 P13
 ; CHANNEL SOURCE LEFT LOCAL_LAYER 4 GLOBAL_LAYER 14
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -12628,36 +13113,35 @@ M204 S1000
 G1 Z1.840000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.798000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z0.801000 E0.00016000
-G1 X125.943428 Y123.687000 Z0.803000 E0.00018000
-G1 X125.943442 Y123.781000 Z0.806000 E0.00020000
-G1 X125.943457 Y123.875000 Z0.808000 E0.00022000
-G1 X125.943472 Y123.968000 Z0.811000 E0.00024000
-G1 X125.943486 Y124.062000 Z0.814000 E0.00026000
-G1 X125.943501 Y124.156000 Z0.816000 E0.00028000
-G1 X125.943516 Y124.250000 Z0.819000 E0.00030000
-G1 X125.943530 Y124.343000 Z0.822000 E0.00032000
-G1 X125.943545 Y124.437000 Z0.824000 E0.00034000
-G1 X125.943560 Y124.531000 Z0.827000 E0.00036000
-G1 X125.943574 Y124.625000 Z0.829000 E0.00038000
-G1 X125.943589 Y124.718000 Z0.832000 E0.00040000
-G1 X125.943603 Y124.812000 Z0.835000 E0.00042000
-G1 X125.943618 Y124.906000 Z0.837000 E0.00044000
-G1 X125.943633 Y125.000000 Z0.840000 E0.00046000
-G1 X125.944122 Y128.130686 Z0.840000 E0.01528925
-G1 X125.944122 Y129.630686 Z0.840000 E0.00736000
-G1 X125.945122 Y134.488686 Z0.840000 E0.02375000
+G1 X125.944122 Y128.442686 Z0.801000 E0.00053000
+G1 X125.944122 Y128.755686 Z0.803000 E0.00059000
+G1 X125.944122 Y129.067686 Z0.806000 E0.00066000
+G1 X125.944122 Y129.380686 Z0.808000 E0.00073000
+G1 X125.944122 Y129.692686 Z0.811000 E0.00079000
+G1 X125.945122 Y130.005686 Z0.814000 E0.00086000
+G1 X125.945122 Y130.317686 Z0.816000 E0.00093000
+G1 X125.945122 Y130.630686 Z0.819000 E0.00099000
+G1 X125.945122 Y130.942686 Z0.822000 E0.00106000
+G1 X125.945122 Y131.255686 Z0.824000 E0.00113000
+G1 X125.945122 Y131.567686 Z0.827000 E0.00119000
+G1 X125.945122 Y131.880686 Z0.829000 E0.00126000
+G1 X125.945122 Y132.192686 Z0.832000 E0.00133000
+G1 X125.945122 Y132.505686 Z0.835000 E0.00139000
+G1 X125.945122 Y132.817686 Z0.837000 E0.00146000
+G1 X125.945122 Y133.130686 Z0.840000 E0.00153000
+G1 X125.945122 Y134.488686 Z0.840000 E0.00664000
 G1 X126.101122 Y134.681686 Z0.840000 E0.00121000
 G1 X126.103122 Y137.736686 Z0.840000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -12684,9 +13168,9 @@ G1 X127.332122 Y138.236686 Z0.840000 E0.00227000
 G1 X126.955122 Y137.964686 Z0.840000 E0.00227000
 G1 X126.486122 Y137.801686 Z0.840000 E0.00243000
 G1 X126.415122 Y137.708686 Z0.840000 E0.00057000
-G1 X126.413122 Y134.763686 Z0.840000 E0.01440000
-G1 X126.451122 Y134.679686 Z0.840000 E0.00045000
-G1 X126.880122 Y134.676686 Z0.840000 E0.00210000
+G1 X126.413122 Y134.760686 Z0.840000 E0.01441000
+G1 X126.447122 Y134.684686 Z0.840000 E0.00041000
+G1 X126.880122 Y134.676686 Z0.840000 E0.00212000
 G1 X126.949122 Y134.570686 Z0.840000 E0.00062000
 G1 X126.946122 Y121.611686 Z0.840000 E0.06336000
 G1 X126.897122 Y121.531686 Z0.840000 E0.00046000
@@ -12717,36 +13201,41 @@ G1 X126.101122 Y118.290686 Z0.840000 E0.00057000
 G1 X126.103122 Y121.515686 Z0.840000 E0.01577000
 G1 X125.989122 Y121.640686 Z0.840000 E0.00083000
 G1 X125.943122 Y121.730686 Z0.840000 E0.00049000
-G1 X125.943398 Y123.500000 Z0.840000 E0.00864075
-G1 X125.943413 Y123.593000 Z0.840000 E0.00030000
-G1 X125.943428 Y123.687000 Z0.840000 E0.00028000
-G1 X125.943442 Y123.781000 Z0.840000 E0.00026000
-G1 X125.943457 Y123.875000 Z0.840000 E0.00024000
-G1 X125.943472 Y123.968000 Z0.840000 E0.00022000
-G1 X125.943486 Y124.062000 Z0.840000 E0.00020000
-G1 X125.943501 Y124.156000 Z0.840000 E0.00018000
-G1 X125.943516 Y124.250000 Z0.840000 E0.00016000
-G1 X125.943530 Y124.343000 Z0.840000 E0.00014000
-G1 X125.943545 Y124.437000 Z0.840000 E0.00012000
-G1 X125.943560 Y124.531000 Z0.840000 E0.00010000
-G1 X125.943574 Y124.625000 Z0.840000 E0.00008000
-G1 X125.943589 Y124.718000 Z0.840000 E0.00006000
-G1 X125.943603 Y124.812000 Z0.840000 E0.00004000
-G1 X125.943618 Y124.906000 Z0.840000 E0.00002000
-G1 X125.943633 Y125.000000 Z0.840000 E0.00000000
+G1 X125.944122 Y128.130686 Z0.840000 E0.03129000
+G1 X125.944122 Y128.442686 Z0.840000 E0.00100000
+G1 X125.944122 Y128.755686 Z0.840000 E0.00094000
+G1 X125.944122 Y129.067686 Z0.840000 E0.00087000
+G1 X125.944122 Y129.380686 Z0.840000 E0.00080000
+G1 X125.944122 Y129.692686 Z0.840000 E0.00074000
+G1 X125.945122 Y130.005686 Z0.840000 E0.00067000
+G1 X125.945122 Y130.317686 Z0.840000 E0.00060000
+G1 X125.945122 Y130.630686 Z0.840000 E0.00053000
+G1 X125.945122 Y130.942686 Z0.840000 E0.00047000
+G1 X125.945122 Y131.255686 Z0.840000 E0.00040000
+G1 X125.945122 Y131.567686 Z0.840000 E0.00033000
+G1 X125.945122 Y131.880686 Z0.840000 E0.00027000
+G1 X125.945122 Y132.192686 Z0.840000 E0.00020000
+G1 X125.945122 Y132.505686 Z0.840000 E0.00013000
+G1 X125.945122 Y132.817686 Z0.840000 E0.00007000
+G1 X125.945122 Y133.130686 Z0.840000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=14 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=14 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.840000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -12754,7 +13243,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12772,7 +13261,7 @@ G1 F600
 ; END CHANNEL SOURCE LEFT LOCAL_LAYER 4
 ; CHANNEL SOURCE RIGHT LOCAL_LAYER 4 GLOBAL_LAYER 14
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -12780,36 +13269,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.798000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z0.801000 E0.00016000
-G1 X130.056572 Y123.687000 Z0.803000 E0.00018000
-G1 X130.056558 Y123.781000 Z0.806000 E0.00020000
-G1 X130.056543 Y123.875000 Z0.808000 E0.00022000
-G1 X130.056528 Y123.968000 Z0.811000 E0.00024000
-G1 X130.056514 Y124.062000 Z0.814000 E0.00026000
-G1 X130.056499 Y124.156000 Z0.816000 E0.00028000
-G1 X130.056484 Y124.250000 Z0.819000 E0.00030000
-G1 X130.056470 Y124.343000 Z0.822000 E0.00032000
-G1 X130.056455 Y124.437000 Z0.824000 E0.00034000
-G1 X130.056440 Y124.531000 Z0.827000 E0.00036000
-G1 X130.056426 Y124.625000 Z0.829000 E0.00038000
-G1 X130.056411 Y124.718000 Z0.832000 E0.00040000
-G1 X130.056397 Y124.812000 Z0.835000 E0.00042000
-G1 X130.056382 Y124.906000 Z0.837000 E0.00044000
-G1 X130.056367 Y125.000000 Z0.840000 E0.00046000
-G1 X130.055878 Y128.130686 Z0.840000 E0.01528925
-G1 X130.055878 Y129.630686 Z0.840000 E0.00736000
-G1 X130.054878 Y134.488686 Z0.840000 E0.02375000
+G1 X130.055878 Y128.442686 Z0.801000 E0.00053000
+G1 X130.055878 Y128.755686 Z0.803000 E0.00059000
+G1 X130.055878 Y129.067686 Z0.806000 E0.00066000
+G1 X130.055878 Y129.380686 Z0.808000 E0.00073000
+G1 X130.055878 Y129.692686 Z0.811000 E0.00079000
+G1 X130.054878 Y130.005686 Z0.814000 E0.00086000
+G1 X130.054878 Y130.317686 Z0.816000 E0.00093000
+G1 X130.054878 Y130.630686 Z0.819000 E0.00099000
+G1 X130.054878 Y130.942686 Z0.822000 E0.00106000
+G1 X130.054878 Y131.255686 Z0.824000 E0.00113000
+G1 X130.054878 Y131.567686 Z0.827000 E0.00119000
+G1 X130.054878 Y131.880686 Z0.829000 E0.00126000
+G1 X130.054878 Y132.192686 Z0.832000 E0.00133000
+G1 X130.054878 Y132.505686 Z0.835000 E0.00139000
+G1 X130.054878 Y132.817686 Z0.837000 E0.00146000
+G1 X130.054878 Y133.130686 Z0.840000 E0.00153000
+G1 X130.054878 Y134.488686 Z0.840000 E0.00664000
 G1 X129.898878 Y134.681686 Z0.840000 E0.00121000
 G1 X129.896878 Y137.736686 Z0.840000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -12836,9 +13324,9 @@ G1 X128.667878 Y138.236686 Z0.840000 E0.00227000
 G1 X129.044878 Y137.964686 Z0.840000 E0.00227000
 G1 X129.513878 Y137.801686 Z0.840000 E0.00243000
 G1 X129.584878 Y137.708686 Z0.840000 E0.00057000
-G1 X129.586878 Y134.763686 Z0.840000 E0.01440000
-G1 X129.548878 Y134.679686 Z0.840000 E0.00045000
-G1 X129.119878 Y134.676686 Z0.840000 E0.00210000
+G1 X129.586878 Y134.760686 Z0.840000 E0.01441000
+G1 X129.552878 Y134.684686 Z0.840000 E0.00041000
+G1 X129.119878 Y134.676686 Z0.840000 E0.00212000
 G1 X129.050878 Y134.570686 Z0.840000 E0.00062000
 G1 X129.053878 Y121.611686 Z0.840000 E0.06336000
 G1 X129.102878 Y121.531686 Z0.840000 E0.00046000
@@ -12869,36 +13357,41 @@ G1 X129.898878 Y118.290686 Z0.840000 E0.00057000
 G1 X129.896878 Y121.515686 Z0.840000 E0.01577000
 G1 X130.010878 Y121.640686 Z0.840000 E0.00083000
 G1 X130.056878 Y121.730686 Z0.840000 E0.00049000
-G1 X130.056602 Y123.500000 Z0.840000 E0.00864075
-G1 X130.056587 Y123.593000 Z0.840000 E0.00030000
-G1 X130.056572 Y123.687000 Z0.840000 E0.00028000
-G1 X130.056558 Y123.781000 Z0.840000 E0.00026000
-G1 X130.056543 Y123.875000 Z0.840000 E0.00024000
-G1 X130.056528 Y123.968000 Z0.840000 E0.00022000
-G1 X130.056514 Y124.062000 Z0.840000 E0.00020000
-G1 X130.056499 Y124.156000 Z0.840000 E0.00018000
-G1 X130.056484 Y124.250000 Z0.840000 E0.00016000
-G1 X130.056470 Y124.343000 Z0.840000 E0.00014000
-G1 X130.056455 Y124.437000 Z0.840000 E0.00012000
-G1 X130.056440 Y124.531000 Z0.840000 E0.00010000
-G1 X130.056426 Y124.625000 Z0.840000 E0.00008000
-G1 X130.056411 Y124.718000 Z0.840000 E0.00006000
-G1 X130.056397 Y124.812000 Z0.840000 E0.00004000
-G1 X130.056382 Y124.906000 Z0.840000 E0.00002000
-G1 X130.056367 Y125.000000 Z0.840000 E0.00000000
+G1 X130.055878 Y128.130686 Z0.840000 E0.03129000
+G1 X130.055878 Y128.442686 Z0.840000 E0.00100000
+G1 X130.055878 Y128.755686 Z0.840000 E0.00094000
+G1 X130.055878 Y129.067686 Z0.840000 E0.00087000
+G1 X130.055878 Y129.380686 Z0.840000 E0.00080000
+G1 X130.055878 Y129.692686 Z0.840000 E0.00074000
+G1 X130.054878 Y130.005686 Z0.840000 E0.00067000
+G1 X130.054878 Y130.317686 Z0.840000 E0.00060000
+G1 X130.054878 Y130.630686 Z0.840000 E0.00053000
+G1 X130.054878 Y130.942686 Z0.840000 E0.00047000
+G1 X130.054878 Y131.255686 Z0.840000 E0.00040000
+G1 X130.054878 Y131.567686 Z0.840000 E0.00033000
+G1 X130.054878 Y131.880686 Z0.840000 E0.00027000
+G1 X130.054878 Y132.192686 Z0.840000 E0.00020000
+G1 X130.054878 Y132.505686 Z0.840000 E0.00013000
+G1 X130.054878 Y132.817686 Z0.840000 E0.00007000
+G1 X130.054878 Y133.130686 Z0.840000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=14 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=14 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.840000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -12906,7 +13399,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12924,11 +13417,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 4
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=14 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -12937,7 +13433,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12948,13 +13444,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12965,13 +13464,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -12982,13 +13484,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13004,11 +13509,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=14 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -13017,7 +13525,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13028,13 +13536,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13045,13 +13556,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13062,13 +13576,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=14 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.840000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13091,7 +13608,7 @@ M73 L15
 M991 S0 P14
 ; CHANNEL SOURCE LEFT LOCAL_LAYER 5 GLOBAL_LAYER 15
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -13100,36 +13617,35 @@ M204 S1000
 G1 Z1.900000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.858000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z0.861000 E0.00016000
-G1 X125.943428 Y123.687000 Z0.863000 E0.00018000
-G1 X125.943442 Y123.781000 Z0.866000 E0.00020000
-G1 X125.943457 Y123.875000 Z0.868000 E0.00022000
-G1 X125.943472 Y123.968000 Z0.871000 E0.00024000
-G1 X125.943486 Y124.062000 Z0.874000 E0.00026000
-G1 X125.943501 Y124.156000 Z0.876000 E0.00028000
-G1 X125.943516 Y124.250000 Z0.879000 E0.00030000
-G1 X125.943530 Y124.343000 Z0.882000 E0.00032000
-G1 X125.943545 Y124.437000 Z0.884000 E0.00034000
-G1 X125.943560 Y124.531000 Z0.887000 E0.00036000
-G1 X125.943574 Y124.625000 Z0.889000 E0.00038000
-G1 X125.943589 Y124.718000 Z0.892000 E0.00040000
-G1 X125.943603 Y124.812000 Z0.895000 E0.00042000
-G1 X125.943618 Y124.906000 Z0.897000 E0.00044000
-G1 X125.943633 Y125.000000 Z0.900000 E0.00046000
-G1 X125.944122 Y128.130686 Z0.900000 E0.01528925
-G1 X125.944122 Y129.630686 Z0.900000 E0.00736000
-G1 X125.945122 Y134.488686 Z0.900000 E0.02375000
+G1 X125.944122 Y128.442686 Z0.861000 E0.00053000
+G1 X125.944122 Y128.755686 Z0.863000 E0.00059000
+G1 X125.944122 Y129.067686 Z0.866000 E0.00066000
+G1 X125.944122 Y129.380686 Z0.868000 E0.00073000
+G1 X125.944122 Y129.692686 Z0.871000 E0.00079000
+G1 X125.945122 Y130.005686 Z0.874000 E0.00086000
+G1 X125.945122 Y130.317686 Z0.876000 E0.00093000
+G1 X125.945122 Y130.630686 Z0.879000 E0.00099000
+G1 X125.945122 Y130.942686 Z0.882000 E0.00106000
+G1 X125.945122 Y131.255686 Z0.884000 E0.00113000
+G1 X125.945122 Y131.567686 Z0.887000 E0.00119000
+G1 X125.945122 Y131.880686 Z0.889000 E0.00126000
+G1 X125.945122 Y132.192686 Z0.892000 E0.00133000
+G1 X125.945122 Y132.505686 Z0.895000 E0.00139000
+G1 X125.945122 Y132.817686 Z0.897000 E0.00146000
+G1 X125.945122 Y133.130686 Z0.900000 E0.00153000
+G1 X125.945122 Y134.488686 Z0.900000 E0.00664000
 G1 X126.101122 Y134.681686 Z0.900000 E0.00121000
 G1 X126.103122 Y137.736686 Z0.900000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -13162,8 +13678,8 @@ G1 X126.880122 Y134.676686 Z0.900000 E0.00210000
 G1 X126.949122 Y134.570686 Z0.900000 E0.00062000
 G1 X126.946122 Y121.611686 Z0.900000 E0.06336000
 G1 X126.897122 Y121.531686 Z0.900000 E0.00046000
-G1 X126.493122 Y121.545686 Z0.900000 E0.00198000
-G1 X126.415122 Y121.455686 Z0.900000 E0.00058000
+G1 X126.491122 Y121.544686 Z0.900000 E0.00199000
+G1 X126.415122 Y121.455686 Z0.900000 E0.00057000
 G1 X126.413122 Y118.264686 Z0.900000 E0.01560000
 G1 X126.830122 Y118.097686 Z0.900000 E0.00220000
 G1 X127.222122 Y117.865686 Z0.900000 E0.00222000
@@ -13189,36 +13705,41 @@ G1 X126.101122 Y118.290686 Z0.900000 E0.00057000
 G1 X126.103122 Y121.515686 Z0.900000 E0.01577000
 G1 X125.989122 Y121.640686 Z0.900000 E0.00083000
 G1 X125.943122 Y121.730686 Z0.900000 E0.00049000
-G1 X125.943398 Y123.500000 Z0.900000 E0.00864075
-G1 X125.943413 Y123.593000 Z0.900000 E0.00030000
-G1 X125.943428 Y123.687000 Z0.900000 E0.00028000
-G1 X125.943442 Y123.781000 Z0.900000 E0.00026000
-G1 X125.943457 Y123.875000 Z0.900000 E0.00024000
-G1 X125.943472 Y123.968000 Z0.900000 E0.00022000
-G1 X125.943486 Y124.062000 Z0.900000 E0.00020000
-G1 X125.943501 Y124.156000 Z0.900000 E0.00018000
-G1 X125.943516 Y124.250000 Z0.900000 E0.00016000
-G1 X125.943530 Y124.343000 Z0.900000 E0.00014000
-G1 X125.943545 Y124.437000 Z0.900000 E0.00012000
-G1 X125.943560 Y124.531000 Z0.900000 E0.00010000
-G1 X125.943574 Y124.625000 Z0.900000 E0.00008000
-G1 X125.943589 Y124.718000 Z0.900000 E0.00006000
-G1 X125.943603 Y124.812000 Z0.900000 E0.00004000
-G1 X125.943618 Y124.906000 Z0.900000 E0.00002000
-G1 X125.943633 Y125.000000 Z0.900000 E0.00000000
+G1 X125.944122 Y128.130686 Z0.900000 E0.03129000
+G1 X125.944122 Y128.442686 Z0.900000 E0.00100000
+G1 X125.944122 Y128.755686 Z0.900000 E0.00094000
+G1 X125.944122 Y129.067686 Z0.900000 E0.00087000
+G1 X125.944122 Y129.380686 Z0.900000 E0.00080000
+G1 X125.944122 Y129.692686 Z0.900000 E0.00074000
+G1 X125.945122 Y130.005686 Z0.900000 E0.00067000
+G1 X125.945122 Y130.317686 Z0.900000 E0.00060000
+G1 X125.945122 Y130.630686 Z0.900000 E0.00053000
+G1 X125.945122 Y130.942686 Z0.900000 E0.00047000
+G1 X125.945122 Y131.255686 Z0.900000 E0.00040000
+G1 X125.945122 Y131.567686 Z0.900000 E0.00033000
+G1 X125.945122 Y131.880686 Z0.900000 E0.00027000
+G1 X125.945122 Y132.192686 Z0.900000 E0.00020000
+G1 X125.945122 Y132.505686 Z0.900000 E0.00013000
+G1 X125.945122 Y132.817686 Z0.900000 E0.00007000
+G1 X125.945122 Y133.130686 Z0.900000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=15 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=15 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.900000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -13226,7 +13747,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13244,7 +13765,7 @@ G1 F600
 ; END CHANNEL SOURCE LEFT LOCAL_LAYER 5
 ; CHANNEL SOURCE RIGHT LOCAL_LAYER 5 GLOBAL_LAYER 15
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -13252,36 +13773,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.858000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z0.861000 E0.00016000
-G1 X130.056572 Y123.687000 Z0.863000 E0.00018000
-G1 X130.056558 Y123.781000 Z0.866000 E0.00020000
-G1 X130.056543 Y123.875000 Z0.868000 E0.00022000
-G1 X130.056528 Y123.968000 Z0.871000 E0.00024000
-G1 X130.056514 Y124.062000 Z0.874000 E0.00026000
-G1 X130.056499 Y124.156000 Z0.876000 E0.00028000
-G1 X130.056484 Y124.250000 Z0.879000 E0.00030000
-G1 X130.056470 Y124.343000 Z0.882000 E0.00032000
-G1 X130.056455 Y124.437000 Z0.884000 E0.00034000
-G1 X130.056440 Y124.531000 Z0.887000 E0.00036000
-G1 X130.056426 Y124.625000 Z0.889000 E0.00038000
-G1 X130.056411 Y124.718000 Z0.892000 E0.00040000
-G1 X130.056397 Y124.812000 Z0.895000 E0.00042000
-G1 X130.056382 Y124.906000 Z0.897000 E0.00044000
-G1 X130.056367 Y125.000000 Z0.900000 E0.00046000
-G1 X130.055878 Y128.130686 Z0.900000 E0.01528925
-G1 X130.055878 Y129.630686 Z0.900000 E0.00736000
-G1 X130.054878 Y134.488686 Z0.900000 E0.02375000
+G1 X130.055878 Y128.442686 Z0.861000 E0.00053000
+G1 X130.055878 Y128.755686 Z0.863000 E0.00059000
+G1 X130.055878 Y129.067686 Z0.866000 E0.00066000
+G1 X130.055878 Y129.380686 Z0.868000 E0.00073000
+G1 X130.055878 Y129.692686 Z0.871000 E0.00079000
+G1 X130.054878 Y130.005686 Z0.874000 E0.00086000
+G1 X130.054878 Y130.317686 Z0.876000 E0.00093000
+G1 X130.054878 Y130.630686 Z0.879000 E0.00099000
+G1 X130.054878 Y130.942686 Z0.882000 E0.00106000
+G1 X130.054878 Y131.255686 Z0.884000 E0.00113000
+G1 X130.054878 Y131.567686 Z0.887000 E0.00119000
+G1 X130.054878 Y131.880686 Z0.889000 E0.00126000
+G1 X130.054878 Y132.192686 Z0.892000 E0.00133000
+G1 X130.054878 Y132.505686 Z0.895000 E0.00139000
+G1 X130.054878 Y132.817686 Z0.897000 E0.00146000
+G1 X130.054878 Y133.130686 Z0.900000 E0.00153000
+G1 X130.054878 Y134.488686 Z0.900000 E0.00664000
 G1 X129.898878 Y134.681686 Z0.900000 E0.00121000
 G1 X129.896878 Y137.736686 Z0.900000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -13314,8 +13834,8 @@ G1 X129.119878 Y134.676686 Z0.900000 E0.00210000
 G1 X129.050878 Y134.570686 Z0.900000 E0.00062000
 G1 X129.053878 Y121.611686 Z0.900000 E0.06336000
 G1 X129.102878 Y121.531686 Z0.900000 E0.00046000
-G1 X129.506878 Y121.545686 Z0.900000 E0.00198000
-G1 X129.584878 Y121.455686 Z0.900000 E0.00058000
+G1 X129.508878 Y121.544686 Z0.900000 E0.00199000
+G1 X129.584878 Y121.455686 Z0.900000 E0.00057000
 G1 X129.586878 Y118.264686 Z0.900000 E0.01560000
 G1 X129.169878 Y118.097686 Z0.900000 E0.00220000
 G1 X128.777878 Y117.865686 Z0.900000 E0.00222000
@@ -13341,36 +13861,41 @@ G1 X129.898878 Y118.290686 Z0.900000 E0.00057000
 G1 X129.896878 Y121.515686 Z0.900000 E0.01577000
 G1 X130.010878 Y121.640686 Z0.900000 E0.00083000
 G1 X130.056878 Y121.730686 Z0.900000 E0.00049000
-G1 X130.056602 Y123.500000 Z0.900000 E0.00864075
-G1 X130.056587 Y123.593000 Z0.900000 E0.00030000
-G1 X130.056572 Y123.687000 Z0.900000 E0.00028000
-G1 X130.056558 Y123.781000 Z0.900000 E0.00026000
-G1 X130.056543 Y123.875000 Z0.900000 E0.00024000
-G1 X130.056528 Y123.968000 Z0.900000 E0.00022000
-G1 X130.056514 Y124.062000 Z0.900000 E0.00020000
-G1 X130.056499 Y124.156000 Z0.900000 E0.00018000
-G1 X130.056484 Y124.250000 Z0.900000 E0.00016000
-G1 X130.056470 Y124.343000 Z0.900000 E0.00014000
-G1 X130.056455 Y124.437000 Z0.900000 E0.00012000
-G1 X130.056440 Y124.531000 Z0.900000 E0.00010000
-G1 X130.056426 Y124.625000 Z0.900000 E0.00008000
-G1 X130.056411 Y124.718000 Z0.900000 E0.00006000
-G1 X130.056397 Y124.812000 Z0.900000 E0.00004000
-G1 X130.056382 Y124.906000 Z0.900000 E0.00002000
-G1 X130.056367 Y125.000000 Z0.900000 E0.00000000
+G1 X130.055878 Y128.130686 Z0.900000 E0.03129000
+G1 X130.055878 Y128.442686 Z0.900000 E0.00100000
+G1 X130.055878 Y128.755686 Z0.900000 E0.00094000
+G1 X130.055878 Y129.067686 Z0.900000 E0.00087000
+G1 X130.055878 Y129.380686 Z0.900000 E0.00080000
+G1 X130.055878 Y129.692686 Z0.900000 E0.00074000
+G1 X130.054878 Y130.005686 Z0.900000 E0.00067000
+G1 X130.054878 Y130.317686 Z0.900000 E0.00060000
+G1 X130.054878 Y130.630686 Z0.900000 E0.00053000
+G1 X130.054878 Y130.942686 Z0.900000 E0.00047000
+G1 X130.054878 Y131.255686 Z0.900000 E0.00040000
+G1 X130.054878 Y131.567686 Z0.900000 E0.00033000
+G1 X130.054878 Y131.880686 Z0.900000 E0.00027000
+G1 X130.054878 Y132.192686 Z0.900000 E0.00020000
+G1 X130.054878 Y132.505686 Z0.900000 E0.00013000
+G1 X130.054878 Y132.817686 Z0.900000 E0.00007000
+G1 X130.054878 Y133.130686 Z0.900000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=15 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=15 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 Z1.900000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -13378,7 +13903,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13396,11 +13921,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 5
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=15 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -13409,7 +13937,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13420,13 +13948,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13437,13 +13968,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13454,13 +13988,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13476,11 +14013,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=15 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -13489,7 +14029,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13500,13 +14040,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13517,13 +14060,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13534,13 +14080,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=15 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.900000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13563,7 +14112,7 @@ M73 L16
 M991 S0 P15
 ; CHANNEL SOURCE LEFT LOCAL_LAYER 6 GLOBAL_LAYER 16
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -13572,36 +14121,35 @@ M204 S1000
 G1 Z1.960000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.918000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z0.921000 E0.00016000
-G1 X125.943428 Y123.687000 Z0.923000 E0.00018000
-G1 X125.943442 Y123.781000 Z0.926000 E0.00020000
-G1 X125.943457 Y123.875000 Z0.928000 E0.00022000
-G1 X125.943472 Y123.968000 Z0.931000 E0.00024000
-G1 X125.943486 Y124.062000 Z0.934000 E0.00026000
-G1 X125.943501 Y124.156000 Z0.936000 E0.00028000
-G1 X125.943516 Y124.250000 Z0.939000 E0.00030000
-G1 X125.943530 Y124.343000 Z0.942000 E0.00032000
-G1 X125.943545 Y124.437000 Z0.944000 E0.00034000
-G1 X125.943560 Y124.531000 Z0.947000 E0.00036000
-G1 X125.943574 Y124.625000 Z0.949000 E0.00038000
-G1 X125.943589 Y124.718000 Z0.952000 E0.00040000
-G1 X125.943603 Y124.812000 Z0.955000 E0.00042000
-G1 X125.943618 Y124.906000 Z0.957000 E0.00044000
-G1 X125.943633 Y125.000000 Z0.960000 E0.00046000
-G1 X125.944122 Y128.130686 Z0.960000 E0.01528925
-G1 X125.944122 Y129.630686 Z0.960000 E0.00736000
-G1 X125.945122 Y134.488686 Z0.960000 E0.02375000
+G1 X125.944122 Y128.442686 Z0.921000 E0.00053000
+G1 X125.944122 Y128.755686 Z0.923000 E0.00059000
+G1 X125.944122 Y129.067686 Z0.926000 E0.00066000
+G1 X125.944122 Y129.380686 Z0.928000 E0.00073000
+G1 X125.944122 Y129.692686 Z0.931000 E0.00079000
+G1 X125.945122 Y130.005686 Z0.934000 E0.00086000
+G1 X125.945122 Y130.317686 Z0.936000 E0.00093000
+G1 X125.945122 Y130.630686 Z0.939000 E0.00099000
+G1 X125.945122 Y130.942686 Z0.942000 E0.00106000
+G1 X125.945122 Y131.255686 Z0.944000 E0.00113000
+G1 X125.945122 Y131.567686 Z0.947000 E0.00119000
+G1 X125.945122 Y131.880686 Z0.949000 E0.00126000
+G1 X125.945122 Y132.192686 Z0.952000 E0.00133000
+G1 X125.945122 Y132.505686 Z0.955000 E0.00139000
+G1 X125.945122 Y132.817686 Z0.957000 E0.00146000
+G1 X125.945122 Y133.130686 Z0.960000 E0.00153000
+G1 X125.945122 Y134.488686 Z0.960000 E0.00664000
 G1 X126.101122 Y134.681686 Z0.960000 E0.00121000
 G1 X126.103122 Y137.736686 Z0.960000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -13661,37 +14209,42 @@ G1 X126.101122 Y118.290686 Z0.960000 E0.00057000
 G1 X126.103122 Y121.515686 Z0.960000 E0.01577000
 G1 X125.989122 Y121.640686 Z0.960000 E0.00083000
 G1 X125.943122 Y121.730686 Z0.960000 E0.00049000
-G1 X125.943398 Y123.500000 Z0.960000 E0.00864075
-G1 X125.943413 Y123.593000 Z0.960000 E0.00030000
-G1 X125.943428 Y123.687000 Z0.960000 E0.00028000
-G1 X125.943442 Y123.781000 Z0.960000 E0.00026000
-G1 X125.943457 Y123.875000 Z0.960000 E0.00024000
-G1 X125.943472 Y123.968000 Z0.960000 E0.00022000
-G1 X125.943486 Y124.062000 Z0.960000 E0.00020000
-G1 X125.943501 Y124.156000 Z0.960000 E0.00018000
-G1 X125.943516 Y124.250000 Z0.960000 E0.00016000
-G1 X125.943530 Y124.343000 Z0.960000 E0.00014000
-G1 X125.943545 Y124.437000 Z0.960000 E0.00012000
-G1 X125.943560 Y124.531000 Z0.960000 E0.00010000
-G1 X125.943574 Y124.625000 Z0.960000 E0.00008000
-G1 X125.943589 Y124.718000 Z0.960000 E0.00006000
-G1 X125.943603 Y124.812000 Z0.960000 E0.00004000
-G1 X125.943618 Y124.906000 Z0.960000 E0.00002000
-G1 X125.943633 Y125.000000 Z0.960000 E0.00000000
+G1 X125.944122 Y128.130686 Z0.960000 E0.03129000
+G1 X125.944122 Y128.442686 Z0.960000 E0.00100000
+G1 X125.944122 Y128.755686 Z0.960000 E0.00094000
+G1 X125.944122 Y129.067686 Z0.960000 E0.00087000
+G1 X125.944122 Y129.380686 Z0.960000 E0.00080000
+G1 X125.944122 Y129.692686 Z0.960000 E0.00074000
+G1 X125.945122 Y130.005686 Z0.960000 E0.00067000
+G1 X125.945122 Y130.317686 Z0.960000 E0.00060000
+G1 X125.945122 Y130.630686 Z0.960000 E0.00053000
+G1 X125.945122 Y130.942686 Z0.960000 E0.00047000
+G1 X125.945122 Y131.255686 Z0.960000 E0.00040000
+G1 X125.945122 Y131.567686 Z0.960000 E0.00033000
+G1 X125.945122 Y131.880686 Z0.960000 E0.00027000
+G1 X125.945122 Y132.192686 Z0.960000 E0.00020000
+G1 X125.945122 Y132.505686 Z0.960000 E0.00013000
+G1 X125.945122 Y132.817686 Z0.960000 E0.00007000
+G1 X125.945122 Y133.130686 Z0.960000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=16 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=16 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M106 P1 S158
 M204 S1000
 G1 Z1.960000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -13699,7 +14252,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13717,7 +14270,7 @@ G1 F600
 ; END CHANNEL SOURCE LEFT LOCAL_LAYER 6
 ; CHANNEL SOURCE RIGHT LOCAL_LAYER 6 GLOBAL_LAYER 16
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -13725,36 +14278,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.918000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z0.921000 E0.00016000
-G1 X130.056572 Y123.687000 Z0.923000 E0.00018000
-G1 X130.056558 Y123.781000 Z0.926000 E0.00020000
-G1 X130.056543 Y123.875000 Z0.928000 E0.00022000
-G1 X130.056528 Y123.968000 Z0.931000 E0.00024000
-G1 X130.056514 Y124.062000 Z0.934000 E0.00026000
-G1 X130.056499 Y124.156000 Z0.936000 E0.00028000
-G1 X130.056484 Y124.250000 Z0.939000 E0.00030000
-G1 X130.056470 Y124.343000 Z0.942000 E0.00032000
-G1 X130.056455 Y124.437000 Z0.944000 E0.00034000
-G1 X130.056440 Y124.531000 Z0.947000 E0.00036000
-G1 X130.056426 Y124.625000 Z0.949000 E0.00038000
-G1 X130.056411 Y124.718000 Z0.952000 E0.00040000
-G1 X130.056397 Y124.812000 Z0.955000 E0.00042000
-G1 X130.056382 Y124.906000 Z0.957000 E0.00044000
-G1 X130.056367 Y125.000000 Z0.960000 E0.00046000
-G1 X130.055878 Y128.130686 Z0.960000 E0.01528925
-G1 X130.055878 Y129.630686 Z0.960000 E0.00736000
-G1 X130.054878 Y134.488686 Z0.960000 E0.02375000
+G1 X130.055878 Y128.442686 Z0.921000 E0.00053000
+G1 X130.055878 Y128.755686 Z0.923000 E0.00059000
+G1 X130.055878 Y129.067686 Z0.926000 E0.00066000
+G1 X130.055878 Y129.380686 Z0.928000 E0.00073000
+G1 X130.055878 Y129.692686 Z0.931000 E0.00079000
+G1 X130.054878 Y130.005686 Z0.934000 E0.00086000
+G1 X130.054878 Y130.317686 Z0.936000 E0.00093000
+G1 X130.054878 Y130.630686 Z0.939000 E0.00099000
+G1 X130.054878 Y130.942686 Z0.942000 E0.00106000
+G1 X130.054878 Y131.255686 Z0.944000 E0.00113000
+G1 X130.054878 Y131.567686 Z0.947000 E0.00119000
+G1 X130.054878 Y131.880686 Z0.949000 E0.00126000
+G1 X130.054878 Y132.192686 Z0.952000 E0.00133000
+G1 X130.054878 Y132.505686 Z0.955000 E0.00139000
+G1 X130.054878 Y132.817686 Z0.957000 E0.00146000
+G1 X130.054878 Y133.130686 Z0.960000 E0.00153000
+G1 X130.054878 Y134.488686 Z0.960000 E0.00664000
 G1 X129.898878 Y134.681686 Z0.960000 E0.00121000
 G1 X129.896878 Y137.736686 Z0.960000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -13814,37 +14366,42 @@ G1 X129.898878 Y118.290686 Z0.960000 E0.00057000
 G1 X129.896878 Y121.515686 Z0.960000 E0.01577000
 G1 X130.010878 Y121.640686 Z0.960000 E0.00083000
 G1 X130.056878 Y121.730686 Z0.960000 E0.00049000
-G1 X130.056602 Y123.500000 Z0.960000 E0.00864075
-G1 X130.056587 Y123.593000 Z0.960000 E0.00030000
-G1 X130.056572 Y123.687000 Z0.960000 E0.00028000
-G1 X130.056558 Y123.781000 Z0.960000 E0.00026000
-G1 X130.056543 Y123.875000 Z0.960000 E0.00024000
-G1 X130.056528 Y123.968000 Z0.960000 E0.00022000
-G1 X130.056514 Y124.062000 Z0.960000 E0.00020000
-G1 X130.056499 Y124.156000 Z0.960000 E0.00018000
-G1 X130.056484 Y124.250000 Z0.960000 E0.00016000
-G1 X130.056470 Y124.343000 Z0.960000 E0.00014000
-G1 X130.056455 Y124.437000 Z0.960000 E0.00012000
-G1 X130.056440 Y124.531000 Z0.960000 E0.00010000
-G1 X130.056426 Y124.625000 Z0.960000 E0.00008000
-G1 X130.056411 Y124.718000 Z0.960000 E0.00006000
-G1 X130.056397 Y124.812000 Z0.960000 E0.00004000
-G1 X130.056382 Y124.906000 Z0.960000 E0.00002000
-G1 X130.056367 Y125.000000 Z0.960000 E0.00000000
+G1 X130.055878 Y128.130686 Z0.960000 E0.03129000
+G1 X130.055878 Y128.442686 Z0.960000 E0.00100000
+G1 X130.055878 Y128.755686 Z0.960000 E0.00094000
+G1 X130.055878 Y129.067686 Z0.960000 E0.00087000
+G1 X130.055878 Y129.380686 Z0.960000 E0.00080000
+G1 X130.055878 Y129.692686 Z0.960000 E0.00074000
+G1 X130.054878 Y130.005686 Z0.960000 E0.00067000
+G1 X130.054878 Y130.317686 Z0.960000 E0.00060000
+G1 X130.054878 Y130.630686 Z0.960000 E0.00053000
+G1 X130.054878 Y130.942686 Z0.960000 E0.00047000
+G1 X130.054878 Y131.255686 Z0.960000 E0.00040000
+G1 X130.054878 Y131.567686 Z0.960000 E0.00033000
+G1 X130.054878 Y131.880686 Z0.960000 E0.00027000
+G1 X130.054878 Y132.192686 Z0.960000 E0.00020000
+G1 X130.054878 Y132.505686 Z0.960000 E0.00013000
+G1 X130.054878 Y132.817686 Z0.960000 E0.00007000
+G1 X130.054878 Y133.130686 Z0.960000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=16 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=16 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M106 P1 S158
 M204 S1000
 G1 Z1.960000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -13852,7 +14409,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13870,11 +14427,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 6
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=16 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -13883,7 +14443,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13894,13 +14454,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13911,13 +14474,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13928,13 +14494,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13950,11 +14519,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=16 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -13963,7 +14535,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13974,13 +14546,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -13991,13 +14566,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14008,13 +14586,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=16 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z0.960000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14037,7 +14618,7 @@ M73 L17
 M991 S0 P16
 ; CHANNEL SOURCE LEFT LOCAL_LAYER 7 GLOBAL_LAYER 17
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -14046,36 +14627,35 @@ M204 S1000
 G1 Z2.020000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z0.978000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z0.981000 E0.00016000
-G1 X125.943428 Y123.687000 Z0.983000 E0.00018000
-G1 X125.943442 Y123.781000 Z0.986000 E0.00020000
-G1 X125.943457 Y123.875000 Z0.988000 E0.00022000
-G1 X125.943472 Y123.968000 Z0.991000 E0.00024000
-G1 X125.943486 Y124.062000 Z0.994000 E0.00026000
-G1 X125.943501 Y124.156000 Z0.996000 E0.00028000
-G1 X125.943516 Y124.250000 Z0.999000 E0.00030000
-G1 X125.943530 Y124.343000 Z1.002000 E0.00032000
-G1 X125.943545 Y124.437000 Z1.004000 E0.00034000
-G1 X125.943560 Y124.531000 Z1.007000 E0.00036000
-G1 X125.943574 Y124.625000 Z1.009000 E0.00038000
-G1 X125.943589 Y124.718000 Z1.012000 E0.00040000
-G1 X125.943603 Y124.812000 Z1.015000 E0.00042000
-G1 X125.943618 Y124.906000 Z1.017000 E0.00044000
-G1 X125.943633 Y125.000000 Z1.020000 E0.00046000
-G1 X125.944122 Y128.130686 Z1.020000 E0.01528925
-G1 X125.944122 Y129.630686 Z1.020000 E0.00736000
-G1 X125.945122 Y134.488686 Z1.020000 E0.02375000
+G1 X125.944122 Y128.442686 Z0.981000 E0.00053000
+G1 X125.944122 Y128.755686 Z0.983000 E0.00059000
+G1 X125.944122 Y129.067686 Z0.986000 E0.00066000
+G1 X125.944122 Y129.380686 Z0.988000 E0.00073000
+G1 X125.944122 Y129.692686 Z0.991000 E0.00079000
+G1 X125.945122 Y130.005686 Z0.994000 E0.00086000
+G1 X125.945122 Y130.317686 Z0.996000 E0.00093000
+G1 X125.945122 Y130.630686 Z0.999000 E0.00099000
+G1 X125.945122 Y130.942686 Z1.002000 E0.00106000
+G1 X125.945122 Y131.255686 Z1.004000 E0.00113000
+G1 X125.945122 Y131.567686 Z1.007000 E0.00119000
+G1 X125.945122 Y131.880686 Z1.009000 E0.00126000
+G1 X125.945122 Y132.192686 Z1.012000 E0.00133000
+G1 X125.945122 Y132.505686 Z1.015000 E0.00139000
+G1 X125.945122 Y132.817686 Z1.017000 E0.00146000
+G1 X125.945122 Y133.130686 Z1.020000 E0.00153000
+G1 X125.945122 Y134.488686 Z1.020000 E0.00664000
 G1 X126.101122 Y134.681686 Z1.020000 E0.00121000
 G1 X126.103122 Y137.736686 Z1.020000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -14108,8 +14688,8 @@ G1 X126.880122 Y134.676686 Z1.020000 E0.00210000
 G1 X126.949122 Y134.570686 Z1.020000 E0.00062000
 G1 X126.946122 Y121.611686 Z1.020000 E0.06336000
 G1 X126.897122 Y121.531686 Z1.020000 E0.00046000
-G1 X126.492122 Y121.545686 Z1.020000 E0.00198000
-G1 X126.415122 Y121.455686 Z1.020000 E0.00058000
+G1 X126.491122 Y121.544686 Z1.020000 E0.00199000
+G1 X126.415122 Y121.455686 Z1.020000 E0.00057000
 G1 X126.413122 Y118.264686 Z1.020000 E0.01560000
 G1 X126.830122 Y118.097686 Z1.020000 E0.00220000
 G1 X127.222122 Y117.865686 Z1.020000 E0.00222000
@@ -14135,37 +14715,42 @@ G1 X126.101122 Y118.290686 Z1.020000 E0.00057000
 G1 X126.103122 Y121.515686 Z1.020000 E0.01577000
 G1 X125.989122 Y121.640686 Z1.020000 E0.00083000
 G1 X125.943122 Y121.730686 Z1.020000 E0.00049000
-G1 X125.943398 Y123.500000 Z1.020000 E0.00864075
-G1 X125.943413 Y123.593000 Z1.020000 E0.00030000
-G1 X125.943428 Y123.687000 Z1.020000 E0.00028000
-G1 X125.943442 Y123.781000 Z1.020000 E0.00026000
-G1 X125.943457 Y123.875000 Z1.020000 E0.00024000
-G1 X125.943472 Y123.968000 Z1.020000 E0.00022000
-G1 X125.943486 Y124.062000 Z1.020000 E0.00020000
-G1 X125.943501 Y124.156000 Z1.020000 E0.00018000
-G1 X125.943516 Y124.250000 Z1.020000 E0.00016000
-G1 X125.943530 Y124.343000 Z1.020000 E0.00014000
-G1 X125.943545 Y124.437000 Z1.020000 E0.00012000
-G1 X125.943560 Y124.531000 Z1.020000 E0.00010000
-G1 X125.943574 Y124.625000 Z1.020000 E0.00008000
-G1 X125.943589 Y124.718000 Z1.020000 E0.00006000
-G1 X125.943603 Y124.812000 Z1.020000 E0.00004000
-G1 X125.943618 Y124.906000 Z1.020000 E0.00002000
-G1 X125.943633 Y125.000000 Z1.020000 E0.00000000
+G1 X125.944122 Y128.130686 Z1.020000 E0.03129000
+G1 X125.944122 Y128.442686 Z1.020000 E0.00100000
+G1 X125.944122 Y128.755686 Z1.020000 E0.00094000
+G1 X125.944122 Y129.067686 Z1.020000 E0.00087000
+G1 X125.944122 Y129.380686 Z1.020000 E0.00080000
+G1 X125.944122 Y129.692686 Z1.020000 E0.00074000
+G1 X125.945122 Y130.005686 Z1.020000 E0.00067000
+G1 X125.945122 Y130.317686 Z1.020000 E0.00060000
+G1 X125.945122 Y130.630686 Z1.020000 E0.00053000
+G1 X125.945122 Y130.942686 Z1.020000 E0.00047000
+G1 X125.945122 Y131.255686 Z1.020000 E0.00040000
+G1 X125.945122 Y131.567686 Z1.020000 E0.00033000
+G1 X125.945122 Y131.880686 Z1.020000 E0.00027000
+G1 X125.945122 Y132.192686 Z1.020000 E0.00020000
+G1 X125.945122 Y132.505686 Z1.020000 E0.00013000
+G1 X125.945122 Y132.817686 Z1.020000 E0.00007000
+G1 X125.945122 Y133.130686 Z1.020000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=17 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=17 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M106 P1 S158
 M204 S1000
 G1 Z2.020000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -14173,7 +14758,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14191,7 +14776,7 @@ G1 F600
 ; END CHANNEL SOURCE LEFT LOCAL_LAYER 7
 ; CHANNEL SOURCE RIGHT LOCAL_LAYER 7 GLOBAL_LAYER 17
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -14199,36 +14784,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z0.978000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z0.981000 E0.00016000
-G1 X130.056572 Y123.687000 Z0.983000 E0.00018000
-G1 X130.056558 Y123.781000 Z0.986000 E0.00020000
-G1 X130.056543 Y123.875000 Z0.988000 E0.00022000
-G1 X130.056528 Y123.968000 Z0.991000 E0.00024000
-G1 X130.056514 Y124.062000 Z0.994000 E0.00026000
-G1 X130.056499 Y124.156000 Z0.996000 E0.00028000
-G1 X130.056484 Y124.250000 Z0.999000 E0.00030000
-G1 X130.056470 Y124.343000 Z1.002000 E0.00032000
-G1 X130.056455 Y124.437000 Z1.004000 E0.00034000
-G1 X130.056440 Y124.531000 Z1.007000 E0.00036000
-G1 X130.056426 Y124.625000 Z1.009000 E0.00038000
-G1 X130.056411 Y124.718000 Z1.012000 E0.00040000
-G1 X130.056397 Y124.812000 Z1.015000 E0.00042000
-G1 X130.056382 Y124.906000 Z1.017000 E0.00044000
-G1 X130.056367 Y125.000000 Z1.020000 E0.00046000
-G1 X130.055878 Y128.130686 Z1.020000 E0.01528925
-G1 X130.055878 Y129.630686 Z1.020000 E0.00736000
-G1 X130.054878 Y134.488686 Z1.020000 E0.02375000
+G1 X130.055878 Y128.442686 Z0.981000 E0.00053000
+G1 X130.055878 Y128.755686 Z0.983000 E0.00059000
+G1 X130.055878 Y129.067686 Z0.986000 E0.00066000
+G1 X130.055878 Y129.380686 Z0.988000 E0.00073000
+G1 X130.055878 Y129.692686 Z0.991000 E0.00079000
+G1 X130.054878 Y130.005686 Z0.994000 E0.00086000
+G1 X130.054878 Y130.317686 Z0.996000 E0.00093000
+G1 X130.054878 Y130.630686 Z0.999000 E0.00099000
+G1 X130.054878 Y130.942686 Z1.002000 E0.00106000
+G1 X130.054878 Y131.255686 Z1.004000 E0.00113000
+G1 X130.054878 Y131.567686 Z1.007000 E0.00119000
+G1 X130.054878 Y131.880686 Z1.009000 E0.00126000
+G1 X130.054878 Y132.192686 Z1.012000 E0.00133000
+G1 X130.054878 Y132.505686 Z1.015000 E0.00139000
+G1 X130.054878 Y132.817686 Z1.017000 E0.00146000
+G1 X130.054878 Y133.130686 Z1.020000 E0.00153000
+G1 X130.054878 Y134.488686 Z1.020000 E0.00664000
 G1 X129.898878 Y134.681686 Z1.020000 E0.00121000
 G1 X129.896878 Y137.736686 Z1.020000 E0.01494000
 ; LINE_WIDTH: 0.222306
@@ -14261,8 +14845,8 @@ G1 X129.119878 Y134.676686 Z1.020000 E0.00210000
 G1 X129.050878 Y134.570686 Z1.020000 E0.00062000
 G1 X129.053878 Y121.611686 Z1.020000 E0.06336000
 G1 X129.102878 Y121.531686 Z1.020000 E0.00046000
-G1 X129.507878 Y121.545686 Z1.020000 E0.00198000
-G1 X129.584878 Y121.455686 Z1.020000 E0.00058000
+G1 X129.508878 Y121.544686 Z1.020000 E0.00199000
+G1 X129.584878 Y121.455686 Z1.020000 E0.00057000
 G1 X129.586878 Y118.264686 Z1.020000 E0.01560000
 G1 X129.169878 Y118.097686 Z1.020000 E0.00220000
 G1 X128.777878 Y117.865686 Z1.020000 E0.00222000
@@ -14288,37 +14872,42 @@ G1 X129.898878 Y118.290686 Z1.020000 E0.00057000
 G1 X129.896878 Y121.515686 Z1.020000 E0.01577000
 G1 X130.010878 Y121.640686 Z1.020000 E0.00083000
 G1 X130.056878 Y121.730686 Z1.020000 E0.00049000
-G1 X130.056602 Y123.500000 Z1.020000 E0.00864075
-G1 X130.056587 Y123.593000 Z1.020000 E0.00030000
-G1 X130.056572 Y123.687000 Z1.020000 E0.00028000
-G1 X130.056558 Y123.781000 Z1.020000 E0.00026000
-G1 X130.056543 Y123.875000 Z1.020000 E0.00024000
-G1 X130.056528 Y123.968000 Z1.020000 E0.00022000
-G1 X130.056514 Y124.062000 Z1.020000 E0.00020000
-G1 X130.056499 Y124.156000 Z1.020000 E0.00018000
-G1 X130.056484 Y124.250000 Z1.020000 E0.00016000
-G1 X130.056470 Y124.343000 Z1.020000 E0.00014000
-G1 X130.056455 Y124.437000 Z1.020000 E0.00012000
-G1 X130.056440 Y124.531000 Z1.020000 E0.00010000
-G1 X130.056426 Y124.625000 Z1.020000 E0.00008000
-G1 X130.056411 Y124.718000 Z1.020000 E0.00006000
-G1 X130.056397 Y124.812000 Z1.020000 E0.00004000
-G1 X130.056382 Y124.906000 Z1.020000 E0.00002000
-G1 X130.056367 Y125.000000 Z1.020000 E0.00000000
+G1 X130.055878 Y128.130686 Z1.020000 E0.03129000
+G1 X130.055878 Y128.442686 Z1.020000 E0.00100000
+G1 X130.055878 Y128.755686 Z1.020000 E0.00094000
+G1 X130.055878 Y129.067686 Z1.020000 E0.00087000
+G1 X130.055878 Y129.380686 Z1.020000 E0.00080000
+G1 X130.055878 Y129.692686 Z1.020000 E0.00074000
+G1 X130.054878 Y130.005686 Z1.020000 E0.00067000
+G1 X130.054878 Y130.317686 Z1.020000 E0.00060000
+G1 X130.054878 Y130.630686 Z1.020000 E0.00053000
+G1 X130.054878 Y130.942686 Z1.020000 E0.00047000
+G1 X130.054878 Y131.255686 Z1.020000 E0.00040000
+G1 X130.054878 Y131.567686 Z1.020000 E0.00033000
+G1 X130.054878 Y131.880686 Z1.020000 E0.00027000
+G1 X130.054878 Y132.192686 Z1.020000 E0.00020000
+G1 X130.054878 Y132.505686 Z1.020000 E0.00013000
+G1 X130.054878 Y132.817686 Z1.020000 E0.00007000
+G1 X130.054878 Y133.130686 Z1.020000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=17 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=17 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M106 P1 S158
 M204 S1000
 G1 Z2.020000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -14326,7 +14915,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14344,11 +14933,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 7
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=17 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -14357,7 +14949,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14368,13 +14960,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14385,13 +14980,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14402,13 +15000,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14424,11 +15025,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=17 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -14437,7 +15041,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14448,13 +15052,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14465,13 +15072,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14482,13 +15092,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=17 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z1.020000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14511,7 +15124,7 @@ M73 L18
 M991 S0 P17
 ; CHANNEL SOURCE LEFT LOCAL_LAYER 8 GLOBAL_LAYER 18
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -14520,36 +15133,35 @@ M204 S1000
 G1 Z2.080000 F600
 G1 X143.383010 Y142.289701 F2400
 G1 X128.000000 Y142.289701 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X125.943398 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X125.944122 Y128.130686 F1200
 G1 Z1.038000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; clockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; clockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X125.943413 Y123.593000 Z1.041000 E0.00016000
-G1 X125.943428 Y123.687000 Z1.043000 E0.00018000
-G1 X125.943442 Y123.781000 Z1.046000 E0.00020000
-G1 X125.943457 Y123.875000 Z1.048000 E0.00022000
-G1 X125.943472 Y123.968000 Z1.051000 E0.00024000
-G1 X125.943486 Y124.062000 Z1.054000 E0.00026000
-G1 X125.943501 Y124.156000 Z1.056000 E0.00028000
-G1 X125.943516 Y124.250000 Z1.059000 E0.00030000
-G1 X125.943530 Y124.343000 Z1.062000 E0.00032000
-G1 X125.943545 Y124.437000 Z1.064000 E0.00034000
-G1 X125.943560 Y124.531000 Z1.067000 E0.00036000
-G1 X125.943574 Y124.625000 Z1.069000 E0.00038000
-G1 X125.943589 Y124.718000 Z1.072000 E0.00040000
-G1 X125.943603 Y124.812000 Z1.075000 E0.00042000
-G1 X125.943618 Y124.906000 Z1.077000 E0.00044000
-G1 X125.943633 Y125.000000 Z1.080000 E0.00046000
-G1 X125.944122 Y128.130686 Z1.080000 E0.01528925
-G1 X125.944122 Y129.630686 Z1.080000 E0.00736000
-G1 X125.945122 Y134.488686 Z1.080000 E0.02375000
+G1 X125.944122 Y128.442686 Z1.041000 E0.00053000
+G1 X125.944122 Y128.755686 Z1.043000 E0.00059000
+G1 X125.944122 Y129.067686 Z1.046000 E0.00066000
+G1 X125.944122 Y129.380686 Z1.048000 E0.00073000
+G1 X125.944122 Y129.692686 Z1.051000 E0.00079000
+G1 X125.945122 Y130.005686 Z1.054000 E0.00086000
+G1 X125.945122 Y130.317686 Z1.056000 E0.00093000
+G1 X125.945122 Y130.630686 Z1.059000 E0.00099000
+G1 X125.945122 Y130.942686 Z1.062000 E0.00106000
+G1 X125.945122 Y131.255686 Z1.064000 E0.00113000
+G1 X125.945122 Y131.567686 Z1.067000 E0.00119000
+G1 X125.945122 Y131.880686 Z1.069000 E0.00126000
+G1 X125.945122 Y132.192686 Z1.072000 E0.00133000
+G1 X125.945122 Y132.505686 Z1.075000 E0.00139000
+G1 X125.945122 Y132.817686 Z1.077000 E0.00146000
+G1 X125.945122 Y133.130686 Z1.080000 E0.00153000
+G1 X125.945122 Y134.488686 Z1.080000 E0.00664000
 G1 X126.101122 Y134.681686 Z1.080000 E0.00121000
 G1 X126.103122 Y137.748686 Z1.080000 E0.01500000
 G1 X125.758122 Y137.877686 Z1.080000 E0.00180000
@@ -14590,7 +15202,7 @@ G1 X127.792122 Y116.638686 Z1.080000 E0.00228000
 G1 X127.711122 Y116.180686 Z1.080000 E0.00227000
 G1 X127.497122 Y115.767686 Z1.080000 E0.00227000
 G1 X127.169122 Y115.437686 Z1.080000 E0.00227000
-G1 X126.759122 Y115.216686 Z1.080000 E0.00227000
+G1 X126.759122 Y115.216686 Z1.080000 E0.00228000
 G1 X126.300122 Y115.133686 Z1.080000 E0.00228000
 G1 X125.901122 Y115.179686 Z1.080000 E0.00197000
 G1 X125.472122 Y115.354686 Z1.080000 E0.00226000
@@ -14608,37 +15220,42 @@ G1 X126.101122 Y118.290686 Z1.080000 E0.00056000
 G1 X126.103122 Y121.515686 Z1.080000 E0.01577000
 G1 X125.989122 Y121.640686 Z1.080000 E0.00083000
 G1 X125.943122 Y121.730686 Z1.080000 E0.00049000
-G1 X125.943398 Y123.500000 Z1.080000 E0.00864075
-G1 X125.943413 Y123.593000 Z1.080000 E0.00030000
-G1 X125.943428 Y123.687000 Z1.080000 E0.00028000
-G1 X125.943442 Y123.781000 Z1.080000 E0.00026000
-G1 X125.943457 Y123.875000 Z1.080000 E0.00024000
-G1 X125.943472 Y123.968000 Z1.080000 E0.00022000
-G1 X125.943486 Y124.062000 Z1.080000 E0.00020000
-G1 X125.943501 Y124.156000 Z1.080000 E0.00018000
-G1 X125.943516 Y124.250000 Z1.080000 E0.00016000
-G1 X125.943530 Y124.343000 Z1.080000 E0.00014000
-G1 X125.943545 Y124.437000 Z1.080000 E0.00012000
-G1 X125.943560 Y124.531000 Z1.080000 E0.00010000
-G1 X125.943574 Y124.625000 Z1.080000 E0.00008000
-G1 X125.943589 Y124.718000 Z1.080000 E0.00006000
-G1 X125.943603 Y124.812000 Z1.080000 E0.00004000
-G1 X125.943618 Y124.906000 Z1.080000 E0.00002000
-G1 X125.943633 Y125.000000 Z1.080000 E0.00000000
+G1 X125.944122 Y128.130686 Z1.080000 E0.03129000
+G1 X125.944122 Y128.442686 Z1.080000 E0.00100000
+G1 X125.944122 Y128.755686 Z1.080000 E0.00094000
+G1 X125.944122 Y129.067686 Z1.080000 E0.00087000
+G1 X125.944122 Y129.380686 Z1.080000 E0.00080000
+G1 X125.944122 Y129.692686 Z1.080000 E0.00074000
+G1 X125.945122 Y130.005686 Z1.080000 E0.00067000
+G1 X125.945122 Y130.317686 Z1.080000 E0.00060000
+G1 X125.945122 Y130.630686 Z1.080000 E0.00053000
+G1 X125.945122 Y130.942686 Z1.080000 E0.00047000
+G1 X125.945122 Y131.255686 Z1.080000 E0.00040000
+G1 X125.945122 Y131.567686 Z1.080000 E0.00033000
+G1 X125.945122 Y131.880686 Z1.080000 E0.00027000
+G1 X125.945122 Y132.192686 Z1.080000 E0.00020000
+G1 X125.945122 Y132.505686 Z1.080000 E0.00013000
+G1 X125.945122 Y132.817686 Z1.080000 E0.00007000
+G1 X125.945122 Y133.130686 Z1.080000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X125.944633 Y127.000000 E-0.4
+G1 X125.945122 Y134.488686 E-0.27162
+G1 X126.101122 Y134.681686 E-0.04953
+G1 X126.101122 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=18 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=18 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M106 P1 S158
 M204 S1000
 G1 Z2.080000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
 G1 X112.616990 Y123.172541 F2400
@@ -14646,7 +15263,7 @@ G1 X113.616990 Y123.172541 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X125.443604 Y121.694215 E0.08365806 F1500
+G1 X125.443604 Y121.694215 E0.05827311 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14664,7 +15281,7 @@ G1 F600
 ; END CHANNEL SOURCE LEFT LOCAL_LAYER 8
 ; CHANNEL SOURCE RIGHT LOCAL_LAYER 8 GLOBAL_LAYER 18
 M204 S4000
-M106 P1 S227
+M106 P1 S222
 M106 P2 S0
 M106 P3 S255
 ; LINE_WIDTH: 0.212876
@@ -14672,36 +15289,35 @@ M204 S10000
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X128.000000 Y113.710299 F2400
-G1 X128.000000 Y123.500000 F2400
-G1 X130.056602 Y123.500000 F1200
+G1 X128.000000 Y128.130686 F2400
+G1 X130.055878 Y128.130686 F1200
 G1 Z1.038000 F600
 M204 S10000
 G1 F30000
 G1 E.4 F1800
-; FIX approved: start Y123.500; counterclockwise; exact mirrored pair; scarf seam relocated.
+; Uploaded 5mm scarf: original start preserved; counterclockwise; exact mirror aboutX128.
 M900 K0.05 L1000 M10
+; FILAMENT_FLOW_RATIO: 0.98 baked into source E once
 M204 S2000
 G1 F300
 ; LINE_WIDTH: 0.212876
-G1 X130.056587 Y123.593000 Z1.041000 E0.00016000
-G1 X130.056572 Y123.687000 Z1.043000 E0.00018000
-G1 X130.056558 Y123.781000 Z1.046000 E0.00020000
-G1 X130.056543 Y123.875000 Z1.048000 E0.00022000
-G1 X130.056528 Y123.968000 Z1.051000 E0.00024000
-G1 X130.056514 Y124.062000 Z1.054000 E0.00026000
-G1 X130.056499 Y124.156000 Z1.056000 E0.00028000
-G1 X130.056484 Y124.250000 Z1.059000 E0.00030000
-G1 X130.056470 Y124.343000 Z1.062000 E0.00032000
-G1 X130.056455 Y124.437000 Z1.064000 E0.00034000
-G1 X130.056440 Y124.531000 Z1.067000 E0.00036000
-G1 X130.056426 Y124.625000 Z1.069000 E0.00038000
-G1 X130.056411 Y124.718000 Z1.072000 E0.00040000
-G1 X130.056397 Y124.812000 Z1.075000 E0.00042000
-G1 X130.056382 Y124.906000 Z1.077000 E0.00044000
-G1 X130.056367 Y125.000000 Z1.080000 E0.00046000
-G1 X130.055878 Y128.130686 Z1.080000 E0.01528925
-G1 X130.055878 Y129.630686 Z1.080000 E0.00736000
-G1 X130.054878 Y134.488686 Z1.080000 E0.02375000
+G1 X130.055878 Y128.442686 Z1.041000 E0.00053000
+G1 X130.055878 Y128.755686 Z1.043000 E0.00059000
+G1 X130.055878 Y129.067686 Z1.046000 E0.00066000
+G1 X130.055878 Y129.380686 Z1.048000 E0.00073000
+G1 X130.055878 Y129.692686 Z1.051000 E0.00079000
+G1 X130.054878 Y130.005686 Z1.054000 E0.00086000
+G1 X130.054878 Y130.317686 Z1.056000 E0.00093000
+G1 X130.054878 Y130.630686 Z1.059000 E0.00099000
+G1 X130.054878 Y130.942686 Z1.062000 E0.00106000
+G1 X130.054878 Y131.255686 Z1.064000 E0.00113000
+G1 X130.054878 Y131.567686 Z1.067000 E0.00119000
+G1 X130.054878 Y131.880686 Z1.069000 E0.00126000
+G1 X130.054878 Y132.192686 Z1.072000 E0.00133000
+G1 X130.054878 Y132.505686 Z1.075000 E0.00139000
+G1 X130.054878 Y132.817686 Z1.077000 E0.00146000
+G1 X130.054878 Y133.130686 Z1.080000 E0.00153000
+G1 X130.054878 Y134.488686 Z1.080000 E0.00664000
 G1 X129.898878 Y134.681686 Z1.080000 E0.00121000
 G1 X129.896878 Y137.748686 Z1.080000 E0.01500000
 G1 X130.241878 Y137.877686 Z1.080000 E0.00180000
@@ -14742,7 +15358,7 @@ G1 X128.207878 Y116.638686 Z1.080000 E0.00228000
 G1 X128.288878 Y116.180686 Z1.080000 E0.00227000
 G1 X128.502878 Y115.767686 Z1.080000 E0.00227000
 G1 X128.830878 Y115.437686 Z1.080000 E0.00227000
-G1 X129.240878 Y115.216686 Z1.080000 E0.00227000
+G1 X129.240878 Y115.216686 Z1.080000 E0.00228000
 G1 X129.699878 Y115.133686 Z1.080000 E0.00228000
 G1 X130.098878 Y115.179686 Z1.080000 E0.00197000
 G1 X130.527878 Y115.354686 Z1.080000 E0.00226000
@@ -14760,37 +15376,42 @@ G1 X129.898878 Y118.290686 Z1.080000 E0.00056000
 G1 X129.896878 Y121.515686 Z1.080000 E0.01577000
 G1 X130.010878 Y121.640686 Z1.080000 E0.00083000
 G1 X130.056878 Y121.730686 Z1.080000 E0.00049000
-G1 X130.056602 Y123.500000 Z1.080000 E0.00864075
-G1 X130.056587 Y123.593000 Z1.080000 E0.00030000
-G1 X130.056572 Y123.687000 Z1.080000 E0.00028000
-G1 X130.056558 Y123.781000 Z1.080000 E0.00026000
-G1 X130.056543 Y123.875000 Z1.080000 E0.00024000
-G1 X130.056528 Y123.968000 Z1.080000 E0.00022000
-G1 X130.056514 Y124.062000 Z1.080000 E0.00020000
-G1 X130.056499 Y124.156000 Z1.080000 E0.00018000
-G1 X130.056484 Y124.250000 Z1.080000 E0.00016000
-G1 X130.056470 Y124.343000 Z1.080000 E0.00014000
-G1 X130.056455 Y124.437000 Z1.080000 E0.00012000
-G1 X130.056440 Y124.531000 Z1.080000 E0.00010000
-G1 X130.056426 Y124.625000 Z1.080000 E0.00008000
-G1 X130.056411 Y124.718000 Z1.080000 E0.00006000
-G1 X130.056397 Y124.812000 Z1.080000 E0.00004000
-G1 X130.056382 Y124.906000 Z1.080000 E0.00002000
-G1 X130.056367 Y125.000000 Z1.080000 E0.00000000
+G1 X130.055878 Y128.130686 Z1.080000 E0.03129000
+G1 X130.055878 Y128.442686 Z1.080000 E0.00100000
+G1 X130.055878 Y128.755686 Z1.080000 E0.00094000
+G1 X130.055878 Y129.067686 Z1.080000 E0.00087000
+G1 X130.055878 Y129.380686 Z1.080000 E0.00080000
+G1 X130.055878 Y129.692686 Z1.080000 E0.00074000
+G1 X130.054878 Y130.005686 Z1.080000 E0.00067000
+G1 X130.054878 Y130.317686 Z1.080000 E0.00060000
+G1 X130.054878 Y130.630686 Z1.080000 E0.00053000
+G1 X130.054878 Y130.942686 Z1.080000 E0.00047000
+G1 X130.054878 Y131.255686 Z1.080000 E0.00040000
+G1 X130.054878 Y131.567686 Z1.080000 E0.00033000
+G1 X130.054878 Y131.880686 Z1.080000 E0.00027000
+G1 X130.054878 Y132.192686 Z1.080000 E0.00020000
+G1 X130.054878 Y132.505686 Z1.080000 E0.00013000
+G1 X130.054878 Y132.817686 Z1.080000 E0.00007000
+G1 X130.054878 Y133.130686 Z1.080000 E0.00000000
 ; WIPE_START
 G1 F600
-G1 X130.055367 Y127.000000 E-0.4
+G1 X130.054878 Y134.488686 E-0.27162
+G1 X129.898878 Y134.681686 E-0.04953
+G1 X129.898878 Y135.075686 E-0.07885
 ; WIPE_END
 ; CHANNEL_DIAGONAL_INTRO_START layer=18 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=18 kind=diagonal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M106 P1 S158
 M204 S1000
 G1 Z2.080000 F600
-G1 X128.000000 Y127.000000 F1200
+G1 X128.000000 Y135.075686 F1200
 G1 X128.000000 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
 G1 X143.383010 Y123.172541 F2400
@@ -14798,7 +15419,7 @@ G1 X142.383010 Y123.172541 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X130.552105 Y121.693678 E0.08368842 F1500
+G1 X130.552105 Y121.693678 E0.05829426 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14816,11 +15437,14 @@ G1 F600
 ; END CHANNEL SOURCE RIGHT LOCAL_LAYER 8
 ; RETAINED HORIZONTAL GROUPS AFTER BOTH CHANNEL LOOP/INTRO PAIRS
 ; KAMM_HORIZONTAL_START layer=18 side=left
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y113.710299 F2400
 G1 X112.616990 Y113.710299 F2400
@@ -14829,7 +15453,7 @@ G1 X113.920016 Y116.521949 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.320809 Y116.521949 E0.07300408 F1500
+G1 X124.320809 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14840,13 +15464,16 @@ G1 X112.616990 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y116.671949 F2400
 G1 X113.920016 Y116.671949 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.315016 Y116.671949 E0.07296342 F1500
+G1 X124.315016 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14857,13 +15484,16 @@ G1 X112.616990 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.326724 F2400
 G1 X113.920016 Y139.326724 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.312155 Y139.326724 E0.07294334 F1500
+G1 X124.312155 Y139.326724 E0.05080963 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14874,13 +15504,16 @@ G1 X112.616990 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y139.476724 F2400
 G1 X113.920016 Y139.476724 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X124.317940 Y139.476724 E0.07298394 F1500
+G1 X124.317940 Y139.476724 E0.05083792 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14896,11 +15529,14 @@ M204 S2000
 G1 F600
 ; KAMM_HORIZONTAL_END
 ; KAMM_HORIZONTAL_START layer=18 side=right
-; Updated: slow exterior transfers, established outer starts, K0.55, original wipe/retract followed by lift and outside return.
+; Updated: slow exterior transfers, established outer starts, matched structural K/width/speed, endpoint retract followed by lift and outside return.
 ; LINE_WIDTH: 0.3
 ; FILAMENT_FLOW_RATIO: 0.98 baked into E once; M221 remains100
 M900 K0.05 L1000 M10
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=1
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X112.616990 Y113.710299 F2400
 G1 X143.383010 Y113.710299 F2400
@@ -14909,7 +15545,7 @@ G1 X142.079984 Y116.521949 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.679191 Y116.521949 E0.07300408 F1500
+G1 X131.679191 Y116.521949 E0.05085194 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14920,13 +15556,16 @@ G1 X143.383010 Y116.521949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=2
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y116.671949 F2400
 G1 X142.079984 Y116.671949 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.684984 Y116.671949 E0.07296342 F1500
+G1 X131.684984 Y116.671949 E0.05082362 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14937,13 +15576,16 @@ G1 X143.383010 Y116.671949 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=3
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.326724 F2400
 G1 X142.079984 Y139.326724 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.681959 Y139.326724 E0.07298465 F1500
+G1 X131.681959 Y139.326724 E0.05083841 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -14954,13 +15596,16 @@ G1 X143.383010 Y139.326724 F1200
 ; LEADIN_FINISH_END
 ; LEADIN_ROAD_END
 ; LEADIN_ROAD_START layer=18 kind=horizontal index=4
+; LINE_WIDTH: 0.212876
+; FILAMENT_FLOW_RATIO: 0.98 baked into E once
+M900 K0.05 L1000 M10
 M204 S1000
 G1 X143.383010 Y139.476724 F2400
 G1 X142.079984 Y139.476724 F1200
 G1 Z1.080000 F600
 G1 E0.4 F1800
 M204 S2000
-G1 X131.676172 Y139.476724 E0.07302527 F1500
+G1 X131.676172 Y139.476724 E0.05086670 F300
 ; LEADIN_FINISH_START endpoint-stop-retract-lift
 ; ENDPOINT_RETRACT: stop at endpoint; no backward wiping
 G1 E-0.4 F1800
@@ -15240,7 +15885,7 @@ G1 F1200
 ; Source 4InletKamm0.3First_PETG_44m1s.gcode: all 122 print layers, no source startup/calibration/primer.
 ; Four independent rigid XY translations align source ring centers with actual layer-19 circle centers.
 ; Absolute Z offset +1.140 mm. Source layer1 becomes global layer20. Final global layer141 at Z8.460.
-; Existing 245 C nozzle / 70 C bed / K0.05 inherited. NO heating commands or thermal waits.
+; Existing 245 C nozzle /70 C bed /K0.05 /flow0.98 inherited. NO heating commands or thermal waits.
 G90
 G21
 M83

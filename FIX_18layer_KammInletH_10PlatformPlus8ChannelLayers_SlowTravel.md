@@ -1,19 +1,11 @@
-# FIX — approved mirrored18-layer diagnostic
+# Updated 5 mm scarf assembly
 
-`FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode` matches the full printing prefix through layer18/Z1.080, then parks and shuts down. No roof or upper inlets are printed. All eight channels start upward atY123.500, left clockwise/right counterclockwise, exact mirrors acrossX128. Existing scarf E/Z profiles are unchanged. Channel speed3then5mm/s remains unchanged.
+The uploaded `5mmRIGHTinletKamm8.gcode` supplies all eight channel layers. Its original start point, XY geometry, E, variable Arachne widths, 5mm scarf Z/E ramps and native retracting wipes are preserved. Translation aligns it to the existing assembly. The entire left toolpath is an exact reflection about X128 and runs clockwise; right runs counterclockwise. Starts are leftX125.944122 /rightX130.055878, bothY128.130686. No source startup/calibration is embedded.
 
-All horizontal/diagonal lead-ins on layers11–18 use **K0.05 / flow0.98**, baked into E once; original25mm/s printing speed and endpoints are retained. No additional slow-start or extra priming is added. Layers1–10 retainK0.55/flow1.4.
+The source profile requests0.21mm width; actual Arachne widths are0.212876,0.215626,0.222212 and0.222306mm. Matching straight lead-ins use0.212876mm. Channel layer11 runs3mm/s; layers12–18 run5mm/s. All180 separately added horizontal/diagonal lead-ins were recalculated from their unchanged length, layer height and matched structural width:0.15mm on main layers1–10 and0.212876mm on11–18. Their speeds match the structure:5 then25mm/s for1–10,3 then5mm/s for11–18. Source-native variations around circles remain intact.
 
-Custom backward wipes are removed: stop, stationary retract0.4mm, lift, then travel. Original slicer-authored closed-loop wipes remain. No custom shake. Outside travel≤40mm/s, short raised approach/return20mm/s, Z10mm/s.
+After main layer10, K0.05 and flow0.98 apply, with the explicit exception that the complete roof layer19 is unchanged atflow1.4. All roof lead-ins also stayflow1.4 and match their corresponding roof paths:4mm/s for outlines/circular paths,2mm/s for fill. Every roof executable command is identical to the previous revision. Flow is baked into E once, with M221S100. Upper-inlet continuation already uses the source0.98 profile and its executable commands remain unchanged. Nozzle245°C, bed70°C after10. First-ten structural settings and machine setup are retained.
 
-Full file: `FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode`. The diagnostic has9,933deposition moves. LegacyPREVIEW text in a basename does not mean the mirror is pending; it is approved and applied.
+Before main layer11: ten stacked40mm conditioning lines fromX90,Y95 toX130,Y95, atZ0.06,0.12,...,0.60mm. Passes1–5 run10mm/s;6–10 run5mm/s. Each useswidth0.212876mm, flow0.98, K0.05, E0.19556949mm filament, fanoff. Each prints left-to-right, ends with stationary0.4mm retract, and returns outside the line atZ5mm. These extra ten conditioning layers do not renumber the main part: main channel layers11–18, roof19, upper inlets20–141. No added probing or heating/calibration sequence.
 
-## Conditioning line after layer10
-
-After the tenth scaffold layer and the existing245°C/K0.05 transition, a single40mm conditioning line prints from **X90,Y95 to X130,Y95 at build-plate Z0.060mm**. It uses nominal width0.212876mm, flow0.98 baked into E, speed3mm/s, K0.05 and part fan off, matching the first channel road. The line usesE0.19556949mm of1.75mm filament.
-
-XY transfers to and from the remote line occur at **Z5mm** via the outside corridors. It finishes with a stationary0.4mm retraction and no reverse wipe. The original parked entry state atX20,Y220,Z5 is restored before the unchanged layer11 path. The closest model Y is114.710299, leaving **19.710299mm** clear of the line.
-
-The existing startup mesh rectangle is expanded toX89..144.154984,Y94..143.439701 to cover this added build-plate road. No new probing/calibration sequence, thermal wait or layer marker is added. All prior model commands and scarf profiles remain unchanged; the full/test files still print141/18nominal layers. In the3D viewer, the conditioning line belongs to the completed-layer10 processing interval but its actual Z remains0.060mm.
-
-The40mm conditioning-line placement overview is now the first panel in the existing SVG/PNG. It showsX90,Y95→X130,Y95 at actualZ0.060, after layer10. The offline3D viewer highlights that line in green and provides a **40mm line(after10)** top-view button. Channel-loop distance/time labels still start from each channel’s own extrusion start and exclude conditioning/travel. This visual update does not change any G-code.
+Native channel wipes are retained; no invented shake or reverse lead-in wipe is added. Lead-in endpoints, external travel corridors and structural XY alignment remain unchanged. This is a command-level validation, not a claim of measured printed bead width or passage patency. Legacy filenames are retained even where they contain old layer counts orY123p5.
