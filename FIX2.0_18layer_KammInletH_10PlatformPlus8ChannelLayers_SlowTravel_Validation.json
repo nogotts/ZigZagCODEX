@@ -3459,9 +3459,9 @@
   },
   "roof_deposition_moves_rescaled": 0,
   "files": {
-    "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode": "36e8c7f04a3404def11b6cbf4ee4ae90b77c32b5efb4f30fdaece5a18ebae9ef",
-    "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode": "79102cc594d4dbf7bc7f03540899966f5c6e8629c40bff8f753b884694460c7a",
-    "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode": "d6ee14b4ebb6d92be895f0478cac5c9dd7f5f9b8c3c658a9454f7bfc935d59e3"
+    "FIX2.0_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode": "55b55ac2ece856e571ef05da19094541133ad025da6937c91d190b22646af999",
+    "FIX2.0_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode": "8daf8afd07cf463d2c4ddc30e1e3435af63860587062ea50cfdb203cbd92ce8e",
+    "FIX2.0_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode": "cbfc0055912dcce5f5f8ea7aad8c6de66e62e78075ad062dad19528b86bb6a86"
   },
   "scarf_checks": [
     {
@@ -3550,9 +3550,9 @@
     }
   ],
   "deposition_count": 30578,
-  "gcode_file": "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "36e8c7f04a3404def11b6cbf4ee4ae90b77c32b5efb4f30fdaece5a18ebae9ef",
-  "main_part_layers": 141,
+  "gcode_file": "FIX2.0_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode",
+  "gcode_sha256": "8daf8afd07cf463d2c4ddc30e1e3435af63860587062ea50cfdb203cbd92ce8e",
+  "main_part_layers": 18,
   "conditioning_layers": 10,
-  "final_main_Z": 8.46
+  "final_main_Z": 1.08
 }

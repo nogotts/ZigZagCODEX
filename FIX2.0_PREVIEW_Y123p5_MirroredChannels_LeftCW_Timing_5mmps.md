@@ -1,4 +1,6 @@
-# Updated 5 mm scarf assembly
+# FIX2.0 — uploaded-start mirrored channel timing at 5 mm/s
+
+Times count deposition distance/feed only. First channel layer actually prints at3mm/s; diagram represents later5mm/s layers.
 
 The uploaded `5mmRIGHTinletKamm8.gcode` supplies all eight channel layers. Its original start point, XY geometry, E, variable Arachne widths, 5mm scarf Z/E ramps and native retracting wipes are preserved. Translation aligns it to the existing assembly. The entire left toolpath is an exact reflection about X128 and runs clockwise; right runs counterclockwise. Starts are leftX125.944122 /rightX130.055878, bothY128.130686. No source startup/calibration is embedded.
 

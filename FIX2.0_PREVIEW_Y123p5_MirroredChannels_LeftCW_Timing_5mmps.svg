@@ -2101,7 +2101,7 @@ z
    </g>
   </g>
   <g id="text_54">
-   <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213449" x="511.66125" y="24.676406" transform="rotate(-0 511.66125 24.676406)">FIX: Y128.130686 starts — clockwise left / counterclockwise right</text>
+   <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213449" x="511.66125" y="24.676406" transform="rotate(-0 511.66125 24.676406)">FIX2.0: Y128.130686 starts — clockwise left / counterclockwise right</text>
   </g>
   <g id="text_55">
    <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213449" x="511.66125" y="56.644406" transform="rotate(-0 511.66125 56.644406)">Both bottom passages now print the INNER wall downward first, then the OUTER wall upward — exact mirrors.</text>

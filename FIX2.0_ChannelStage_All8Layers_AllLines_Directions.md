@@ -1,4 +1,4 @@
-# FIX — complete channel stage, every line and direction
+# FIX2.0 — complete channel stage, every line and direction
 
 The atlas includes both channel loops, both diagonal lead-ins and all eight horizontal lead-ins on each of global layers11–18: **1,442 deposited moves**, each drawn once with its actual direction arrow and original source-line tooltip. The enlarged layer12 view provides a readable single-layer example.
 

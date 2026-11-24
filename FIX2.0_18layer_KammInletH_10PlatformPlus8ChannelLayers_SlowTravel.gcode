@@ -1,4 +1,4 @@
-; FIX Kamm assembly: updated uploaded 5mm scarf channels and matched lead-ins
+; FIX2.0 Kamm assembly: updated uploaded 5mm scarf channels and matched lead-ins
 ; Legacy filenames retained. Main part141 layers /8.460mm plus remote10-layer conditioning line.
 ; Main layers1-10: original scaffold, flow1.4/K0.55; added lead-ins now match0.15mm and5 then25mm/s.
 ; After main layer10:245C/70C/K0.05, ten40mm conditioning layers atZ0.06..0.60, five10mm/s then five5mm/s.
