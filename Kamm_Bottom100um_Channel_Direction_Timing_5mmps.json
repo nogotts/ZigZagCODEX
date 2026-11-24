@@ -1,0 +1,101 @@
+{
+  "source_gcode": "KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
+  "source_gcode_sha256": "6434afba212368f17c259ac183dcd7a2ec113cf729cd8a7303a12b247ccdde7e",
+  "representative_global_layer": 12,
+  "source_channel_layer": 2,
+  "speed_mm_s": 5,
+  "time_definition": "Cumulative positive-XY deposition path length / 5 mm/s from first extrusion in each separate channel loop; travel, stationary prime and acceleration excluded",
+  "channels": {
+    "left": {
+      "start_XY": [
+        125.949133,
+        126.86943
+      ],
+      "walls": [
+        {
+          "order": 1,
+          "move_index": 18,
+          "distance_from_loop_start_mm": 5.40655481086913,
+          "time_at_5mm_s": 1.081310962173826,
+          "start": [
+            126.106133,
+            121.51843
+          ],
+          "end": [
+            126.108133,
+            118.31543
+          ],
+          "direction": "down",
+          "relative_wall": "outer",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004889165453366846
+        },
+        {
+          "order": 2,
+          "move_index": 41,
+          "distance_from_loop_start_mm": 18.025203469600864,
+          "time_at_5mm_s": 3.6050406939201727,
+          "start": [
+            126.420133,
+            118.29043
+          ],
+          "end": [
+            126.418133,
+            121.43743
+          ],
+          "direction": "up",
+          "relative_wall": "inner",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.00489037079505656
+        }
+      ],
+      "nominal_gap_at_Y120_mm": 0.09908939411286039
+    },
+    "right": {
+      "start_XY": [
+        130.055878,
+        128.130686
+      ],
+      "walls": [
+        {
+          "order": 1,
+          "move_index": 48,
+          "distance_from_loop_start_mm": 36.175203622883295,
+          "time_at_5mm_s": 7.235040724576659,
+          "start": [
+            129.584878,
+            121.455686
+          ],
+          "end": [
+            129.586878,
+            118.264686
+          ],
+          "direction": "down",
+          "relative_wall": "inner",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004888748648045955
+        },
+        {
+          "order": 2,
+          "move_index": 70,
+          "distance_from_loop_start_mm": 48.71870853948486,
+          "time_at_5mm_s": 9.743741707896971,
+          "start": [
+            129.898878,
+            118.290686
+          ],
+          "end": [
+            129.896878,
+            121.515686
+          ],
+          "direction": "up",
+          "relative_wall": "outer",
+          "nominal_width_mm": 0.212876,
+          "E_per_mm": 0.004889921540307215
+        }
+      ],
+      "nominal_gap_at_Y120_mm": 0.0991515905200458
+    }
+  },
+  "gcode_modified": false
+}
