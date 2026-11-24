@@ -1,22 +1,22 @@
 {
   "gcode_file": "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "ac7f5c2c2e38d0e8037d65b6776a4afaf9b290a296f1593e234f13ab994bc49e",
+  "gcode_sha256": "3574638446dcdfe3707ce95843abfdbe4858ef3ffec0f1c1041160c8f088ea3a",
   "layers": 141,
   "counts": {
-    "travel": 3319,
-    "prime": 712,
-    "extrusion": 30598,
+    "travel": 3328,
+    "prime": 713,
+    "extrusion": 30599,
     "retraction": 3196
   },
   "arc_move_count": 808,
   "arc_display_chord_error_bound_mm": 0.0002,
   "extrusion_bounds_mm": [
     [
-      113.61699,
+      90.0,
       142.38301
     ],
     [
-      114.710299,
+      95.0,
       141.289701
     ],
     [
@@ -25,9 +25,9 @@
     ]
   ],
   "lengths_mm": {
-    "travel": 15740.150275199116,
+    "travel": 16200.030275199117,
     "prime": 0.0,
-    "extrusion": 15096.725886302851,
+    "extrusion": 15136.725886302851,
     "retraction": 1047.97522437825
   },
   "layer_stats": {
@@ -86,9 +86,9 @@
       "retraction": 4
     },
     "10": {
-      "travel": 87,
-      "prime": 12,
-      "extrusion": 846,
+      "travel": 96,
+      "prime": 13,
+      "extrusion": 847,
       "retraction": 4
     },
     "11": {
@@ -877,21 +877,73 @@
       "retraction": 28
     }
   },
-  "extrusion_moves_represented": 30598,
+  "extrusion_moves_represented": 30599,
   "omitted_extrusion_moves": 0,
   "interactive_html_self_contained": true,
   "interactive_trace_count": 563,
   "display_only_exploded_gap_available": true,
-  "name": "FIX_KammInletH_All139Layers_3D",
   "diagram_generation_does_not_change_gcode": true,
-  "post10_intro_K": 0.05,
-  "post10_intro_flow": 0.98,
-  "slow_start_added": false,
-  "scarf_profiles_unchanged": true,
-  "custom_reverse_wipes_removed": 188,
+  "conditioning_line": {
+    "printed_after_layer": 10,
+    "physical_Z_mm": 0.06,
+    "line_start_XY_mm": [
+      90,
+      95
+    ],
+    "line_end_XY_mm": [
+      130,
+      95
+    ],
+    "length_mm": 40,
+    "travel_clearance_Z_mm": 5,
+    "K": 0.05,
+    "width_mm": 0.212876,
+    "layer_height_mm": 0.06,
+    "flow_ratio": 0.98,
+    "speed_mm_s": 3,
+    "E_per_mm": 0.004889237157905908,
+    "E_line_mm": 0.19556949,
+    "no_reverse_wipe": true,
+    "nozzle_C": 245,
+    "bed_C": 70,
+    "existing_mesh_area_expanded": {
+      "X": 89,
+      "Y": 94,
+      "I": 55.154984,
+      "J": 49.439701
+    },
+    "stage11_entry_state_restored": true,
+    "added_CHANGE_LAYER_markers": 0,
+    "files": {
+      "FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode": {
+        "sha256": "3574638446dcdfe3707ce95843abfdbe4858ef3ffec0f1c1041160c8f088ea3a",
+        "old_sha256": "ac7f5c2c2e38d0e8037d65b6776a4afaf9b290a296f1593e234f13ab994bc49e"
+      },
+      "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode": {
+        "sha256": "f226700a5020db6c35e38ddbf889318d3313cb019af32433ec391b10d58f894b",
+        "old_sha256": "05283809c776ca7eb63b48f622f4b666dea984576999a96726595c7b061ad09a"
+      },
+      "FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode": {
+        "sha256": "d3695f45ab0d22234030482bb2b4fb72794c089c372db6adde7171fd02fcec2a",
+        "old_sha256": "8312569e342c1ba7fd586db50a02fa0d35e6025d647af8d99b7c2408ac73b0d0"
+      }
+    },
+    "tests": {
+      "exactly_one_40mm_line_after_completed_layer10": true,
+      "line_on_buildplate_Z0p06": true,
+      "line_K0p05_flow0p98_F180_E_verified": true,
+      "all_XY_approach_return_travel_Z5": true,
+      "all_prior_model_commands_byte_identical_except_mesh_area": true,
+      "mesh_covers_new_line_and_original_model": true,
+      "no_scarf_or_channel_changes": true,
+      "no_added_layer_marker": true,
+      "full_and_diagnostic_shared_prefix_verified": true
+    }
+  },
+  "conditioning_is_at_buildplate_Z0p06_in_processing_layer10": true,
   "browser_validation": {
     "layers": 141,
-    "extrusion_moves": 30598,
+    "extrusion_moves": 30599,
     "viewer_loaded": true,
     "javascript_errors_reported": ""
   }

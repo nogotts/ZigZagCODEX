@@ -1,6 +1,6 @@
 {
   "source_gcode": "FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode",
-  "source_gcode_sha256": "05283809c776ca7eb63b48f622f4b666dea984576999a96726595c7b061ad09a",
+  "source_gcode_sha256": "f226700a5020db6c35e38ddbf889318d3313cb019af32433ec391b10d58f894b",
   "representative_global_layer": 12,
   "source_channel_layer": 2,
   "speed_mm_s": 5,
@@ -108,5 +108,6 @@
   "right_direction": "counterclockwise",
   "post10_intro_K": 0.05,
   "post10_intro_flow": 0.98,
-  "extra_slow_start": false
+  "extra_slow_start": false,
+  "conditioning_line_added_before_channel_stage": true
 }

@@ -30,9 +30,17 @@ Raised travel retains the outside/center corridors and1mm nominal clearance for 
 
 ## Files and verification
 
-- `FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode`:141layers,30,598deposition moves, finalZ8.460.
-- `FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode`:the exact full printing prefix through layer18, then parked shutdown;9,932deposition moves, finalZ1.080. No roof or upper inlets.
+- `FIX_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode`:141layers,30,599deposition moves, finalZ8.460.
+- `FIX_18layer_KammInletH_10PlatformPlus8ChannelLayers_SlowTravel.gcode`:the exact full printing prefix through layer18, then parked shutdown;9,933deposition moves, finalZ1.080. No roof or upper inlets.
 - `FIX_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode`:renamed approved-preview diagnostic copy of the same18-layer print.
 - `FIX_KammInletH_All139Layers_3D.html`:offline rotatable viewer. Download raw HTML and open locally; hover shows E, speed, width, fan and K.
 
 All checks passed for approved mirror/winding and scarf profiles, unchanged non-target deposition, all180lead-in endpoints, all80post-layer10 E reductions, K0.05 on all printing after layer10, unchanged lead-in printing speeds, and the188stationary endpoint retractions. One startup and one shutdown remain; no new thermal waits were added. Bed70°C and channel/roof/inlet nozzle245°C are retained. Existing roof overlap is unchanged.
+
+## Conditioning line after layer10
+
+After the tenth scaffold layer and the existing245°C/K0.05 transition, a single40mm conditioning line prints from **X90,Y95 to X130,Y95 at build-plate Z0.060mm**. It uses nominal width0.212876mm, flow0.98 baked into E, speed3mm/s, K0.05 and part fan off, matching the first channel road. The line usesE0.19556949mm of1.75mm filament.
+
+XY transfers to and from the remote line occur at **Z5mm** via the outside corridors. It finishes with a stationary0.4mm retraction and no reverse wipe. The original parked entry state atX20,Y220,Z5 is restored before the unchanged layer11 path. The closest model Y is114.710299, leaving **19.710299mm** clear of the line.
+
+The existing startup mesh rectangle is expanded toX89..144.154984,Y94..143.439701 to cover this added build-plate road. No new probing/calibration sequence, thermal wait or layer marker is added. All prior model commands and scarf profiles remain unchanged; the full/test files still print141/18nominal layers. In the3D viewer, the conditioning line belongs to the completed-layer10 processing interval but its actual Z remains0.060mm.
