@@ -13,4 +13,3 @@ Per user selection, extrusion is preserved exactly as uploaded: the source profi
 Each ring receives its own rigid XY translation to match the existing ring centre. There is no scaling or rotation. All source Z coordinates are shifted+1.140mm. All upper deposition moves are flat within their layer, confirming there are no upper scarf ramps. The existing final shutdown is retained once.
 
 Validation checks all8278 source deposition moves and13924 body commands, native trailing wipes/fan commands, XY registration, Z offsets, E/F/widths, and unchanged first19-layer executable prefix. The new version contains18260 deposition moves; the original FIX2.0 version remains available separately. The drawings show nozzle centrelines, not measured plastic. Passing G-code checks does not establish a physical seal.
-
