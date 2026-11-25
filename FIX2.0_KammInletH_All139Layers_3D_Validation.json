@@ -1,6 +1,6 @@
 {
   "gcode_file": "FIX2.0_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
-  "gcode_sha256": "55b55ac2ece856e571ef05da19094541133ad025da6937c91d190b22646af999",
+  "gcode_sha256": "1c12320cb6285595bf781b8fc80664be92adfde0b1d35362da5fa9877cfd2e5b",
   "layers": 141,
   "counts": {
     "travel": 3373,
@@ -25,9 +25,9 @@
     ]
   ],
   "lengths_mm": {
-    "travel": 16856.733373182382,
+    "travel": 16861.23208603853,
     "prime": 0.0,
-    "extrusion": 15542.648050931231,
+    "extrusion": 15547.486097259643,
     "retraction": 1047.977506416314
   },
   "layer_stats": {

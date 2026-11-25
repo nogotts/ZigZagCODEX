@@ -1,6 +1,6 @@
 {
   "source_gcode": "FIX2.0_PREVIEW_Y123p5_MirroredChannels_LeftCW_18Layers.gcode",
-  "source_gcode_sha256": "cbfc0055912dcce5f5f8ea7aad8c6de66e62e78075ad062dad19528b86bb6a86",
+  "source_gcode_sha256": "ead84daf6b70dd348cc465874633f9ad5536da2d4c3e41a83e51e825c0cfad40",
   "representative_global_layer": 12,
   "source_channel_layer": 2,
   "speed_mm_s": 5,
@@ -102,6 +102,5 @@
     }
   },
   "gcode_modified": false,
-  "conditioning_layers_before_channel_stage": 10,
-  "scarf_length_mm": 5
+  "first_channel_layer_speed_mm_s": 2
 }
