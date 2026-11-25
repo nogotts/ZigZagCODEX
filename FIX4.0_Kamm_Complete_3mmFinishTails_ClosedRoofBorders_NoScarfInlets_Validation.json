@@ -1,0 +1,882 @@
+{
+  "name": "FIX4.0_Kamm_Complete_3mmFinishTails_ClosedRoofBorders_NoScarfInlets",
+  "base_file": "NOSCARF_FIX2.0_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
+  "base_sha256": "377c5056e478318cadf70aa9ff9a68a40576769e45831056234d4c9b1ee08b90",
+  "finish_paths": {
+    "left_top": {
+      "arc_start": [
+        124.727336,
+        139.476724,
+        1.14
+      ],
+      "center": [
+        126.26001199999999,
+        139.326728
+      ],
+      "radius": 1.5399982211002712,
+      "arc_sweep": -4.614828360260153,
+      "arc_end": [
+        126.260021,
+        137.78673,
+        1.14
+      ],
+      "arc_E": 0.07126207,
+      "tail_end": [
+        126.260021,
+        134.78673,
+        1.14
+      ],
+      "tail_length": 3,
+      "tail_E": 0.0300818
+    },
+    "left_bottom": {
+      "arc_start": [
+        124.727336,
+        116.521949,
+        1.14
+      ],
+      "center": [
+        126.26001199999999,
+        116.67194500000001
+      ],
+      "radius": 1.5399982211002712,
+      "arc_sweep": 4.614828360260144,
+      "arc_end": [
+        126.260021,
+        118.211943,
+        1.14
+      ],
+      "arc_E": 0.07126207,
+      "tail_end": [
+        126.260021,
+        121.211943,
+        1.14
+      ],
+      "tail_length": 3,
+      "tail_E": 0.0300818
+    },
+    "right_top": {
+      "arc_start": [
+        131.272664,
+        139.476724,
+        1.14
+      ],
+      "center": [
+        129.73998799999998,
+        139.326728
+      ],
+      "radius": 1.5399982211002712,
+      "arc_sweep": 4.614828360260172,
+      "arc_end": [
+        129.739979,
+        137.78673,
+        1.14
+      ],
+      "arc_E": 0.07126207,
+      "tail_end": [
+        129.739979,
+        134.78673,
+        1.14
+      ],
+      "tail_length": 3,
+      "tail_E": 0.0300818
+    },
+    "right_bottom": {
+      "arc_start": [
+        131.272664,
+        116.521949,
+        1.14
+      ],
+      "center": [
+        129.73998799999998,
+        116.67194500000001
+      ],
+      "radius": 1.5399982211002712,
+      "arc_sweep": -4.614828360260163,
+      "arc_end": [
+        129.739979,
+        118.211943,
+        1.14
+      ],
+      "arc_E": 0.07126207,
+      "tail_end": [
+        129.739979,
+        121.211943,
+        1.14
+      ],
+      "tail_length": 3,
+      "tail_E": 0.0300818
+    }
+  },
+  "borders": {
+    "left": {
+      "path": [
+        [
+          125.950002,
+          128.100916
+        ],
+        [
+          125.950002,
+          134.570914
+        ],
+        [
+          127.000008,
+          134.702165
+        ],
+        [
+          127.000008,
+          121.499655
+        ],
+        [
+          125.950002,
+          121.630919
+        ],
+        [
+          125.950002,
+          128.100916
+        ]
+      ],
+      "segments": [
+        {
+          "start": [
+            125.950002,
+            128.100916
+          ],
+          "end": [
+            125.950002,
+            134.570914
+          ],
+          "length": 6.4699979999999755,
+          "E": 0.06487641
+        },
+        {
+          "start": [
+            125.950002,
+            134.570914
+          ],
+          "end": [
+            127.000008,
+            134.702165
+          ],
+          "length": 1.0581774071662073,
+          "E": 0.01061063
+        },
+        {
+          "start": [
+            127.000008,
+            134.702165
+          ],
+          "end": [
+            127.000008,
+            121.499655
+          ],
+          "length": 13.202510000000004,
+          "E": 0.13238511
+        },
+        {
+          "start": [
+            127.000008,
+            121.499655
+          ],
+          "end": [
+            125.950002,
+            121.630919
+          ],
+          "length": 1.0581790196994043,
+          "E": 0.01061064
+        },
+        {
+          "start": [
+            125.950002,
+            121.630919
+          ],
+          "end": [
+            125.950002,
+            128.100916
+          ],
+          "length": 6.469997000000006,
+          "E": 0.0648764
+        }
+      ],
+      "signed_area": -13.724893552515823,
+      "closed": true,
+      "start": [
+        125.950002,
+        128.100916
+      ],
+      "total_length": 28.258861426865597,
+      "total_E": 0.28335919
+    },
+    "right": {
+      "path": [
+        [
+          130.049998,
+          128.100916
+        ],
+        [
+          130.049998,
+          134.570914
+        ],
+        [
+          128.999992,
+          134.702165
+        ],
+        [
+          128.999992,
+          121.499655
+        ],
+        [
+          130.049998,
+          121.630919
+        ],
+        [
+          130.049998,
+          128.100916
+        ]
+      ],
+      "segments": [
+        {
+          "start": [
+            130.049998,
+            128.100916
+          ],
+          "end": [
+            130.049998,
+            134.570914
+          ],
+          "length": 6.4699979999999755,
+          "E": 0.06487641
+        },
+        {
+          "start": [
+            130.049998,
+            134.570914
+          ],
+          "end": [
+            128.999992,
+            134.702165
+          ],
+          "length": 1.0581774071662073,
+          "E": 0.01061063
+        },
+        {
+          "start": [
+            128.999992,
+            134.702165
+          ],
+          "end": [
+            128.999992,
+            121.499655
+          ],
+          "length": 13.202510000000004,
+          "E": 0.13238511
+        },
+        {
+          "start": [
+            128.999992,
+            121.499655
+          ],
+          "end": [
+            130.049998,
+            121.630919
+          ],
+          "length": 1.0581790196994043,
+          "E": 0.01061064
+        },
+        {
+          "start": [
+            130.049998,
+            121.630919
+          ],
+          "end": [
+            130.049998,
+            128.100916
+          ],
+          "length": 6.469997000000006,
+          "E": 0.0648764
+        }
+      ],
+      "signed_area": 13.724893552514004,
+      "closed": true,
+      "start": [
+        130.049998,
+        128.100916
+      ],
+      "total_length": 28.258861426865597,
+      "total_E": 0.28335919
+    }
+  },
+  "settings": {
+    "finish_width": 0.3,
+    "finish_flow": 1.4,
+    "finish_speed": 4,
+    "finish_tail_length": 3,
+    "border_width": 0.3,
+    "border_flow": 1.4,
+    "border_height": 0.06,
+    "border_speed": 2,
+    "border_fan_pwm": 255,
+    "border_acceleration": 2500,
+    "K": 0.05,
+    "roof_Z": 1.14
+  },
+  "checks": {
+    "all_other_executable_commands_identical": true,
+    "all_upper_layers_after_first_byte_identical": true,
+    "first_upper_layer_only_width0p3_E_rescaled": true,
+    "all_4_finish_arcs_restored_to_original_endpoints": true,
+    "all_4_vertical_tails_3mm_width0p3_speed4": true,
+    "borders_after_both_roof_fills": true,
+    "two_continuous_closed_borders": true,
+    "no_intermediate_retraction_or_pause": true,
+    "left_clockwise_right_counterclockwise": true,
+    "borders_exact_mirrors": true,
+    "borders_match_full_roof_width_flow_speed_fan_acceleration_K": true,
+    "total_border_moves": 10,
+    "total_deposition_moves": 18274,
+    "main_layers": 141,
+    "final_model_Z": 8.46,
+    "original_versions_unchanged": true
+  },
+  "first_upper_inlet": {
+    "main_layer": 20,
+    "source_layer": 1,
+    "width": 0.3,
+    "flow": 0.98,
+    "speed": 2,
+    "positive_moves_changed": 88,
+    "changes": [
+      {
+        "old_E": 0.0023,
+        "new_E": 0.00311086,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00131,
+        "new_E": 0.00177189,
+        "old_width": 0.225154,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00236,
+        "new_E": 0.00322673,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00330876,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.0002,
+        "new_E": 0.00027051,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00013,
+        "new_E": 0.00017774,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.0025,
+        "new_E": 0.0033814,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00131,
+        "new_E": 0.00177192,
+        "old_width": 0.22515,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00236,
+        "new_E": 0.00322673,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00330876,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00226,
+        "new_E": 0.00309,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00064,
+        "new_E": 0.00087504,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00236,
+        "new_E": 0.00322673,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00330876,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.0025,
+        "new_E": 0.0033814,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327319,
+        "old_width": 0.225158,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00131,
+        "new_E": 0.00177192,
+        "old_width": 0.22515,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00175,
+        "new_E": 0.0023927,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00214,
+        "new_E": 0.00292593,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00236,
+        "new_E": 0.00322673,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00330876,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.0025,
+        "new_E": 0.00338137,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00242,
+        "new_E": 0.00327316,
+        "old_width": 0.22516,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00131,
+        "new_E": 0.00177189,
+        "old_width": 0.225154,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00239,
+        "new_E": 0.00326775,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      },
+      {
+        "old_E": 0.00025,
+        "new_E": 0.00034181,
+        "old_width": 0.222876,
+        "new_width": 0.3
+      }
+    ],
+    "later_layers_unchanged": true
+  },
+  "gcode_file": "FIX4.0_Kamm_Complete_3mmFinishTails_ClosedRoofBorders_NoScarfInlets.gcode",
+  "gcode_sha256": "cf9b11770f289343d0582494f52083c8a36365beaa294a099773b1c66beef76f"
+}
