@@ -1,0 +1,45 @@
+{
+  "name": "NOSCARF_19layer_Kamm_RoofComplete_NoUpperInlets",
+  "source_gcode": "NOSCARF_FIX2.0_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
+  "source_sha256": "377c5056e478318cadf70aa9ff9a68a40576769e45831056234d4c9b1ee08b90",
+  "gcode_file": "NOSCARF_19layer_Kamm_RoofComplete_NoUpperInlets.gcode",
+  "gcode_sha256": "718bfc5544ef4c5d54594f056510f5f1df002e4165c00ccbd11d136c6cafbf3a",
+  "main_layers": 19,
+  "remote_conditioning_layers": 10,
+  "final_model_Z": 1.14,
+  "deposition_moves": 9982,
+  "last_deposition": "G1 X128.999992 Y121.499655 E0.13238511",
+  "last_deposition_endpoint": [
+    128.999992,
+    121.499655,
+    1.14
+  ],
+  "roof_paths": {
+    "outlines": 2,
+    "circle_finishes": 4,
+    "full_fills": 2
+  },
+  "shutdown_park_adjustments": [
+    {
+      "old_Z": 8.96,
+      "new_Z": 1.64
+    },
+    {
+      "old_Z": 108.46,
+      "new_Z": 101.14
+    },
+    {
+      "old_Z": 106.46,
+      "new_Z": 99.14
+    }
+  ],
+  "checks": {
+    "all_retained_executable_prefix_byte_identical": true,
+    "all_roof_sections_complete": true,
+    "no_upper_inlet_stage": true,
+    "no_positive_extrusion_after_roof": true,
+    "normal_shutdown_retained": true,
+    "only_shutdown_Z_parks_adjusted": true,
+    "original_complete_source_unchanged": true
+  }
+}
