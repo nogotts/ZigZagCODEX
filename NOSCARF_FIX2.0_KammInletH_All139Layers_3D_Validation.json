@@ -1,0 +1,886 @@
+{
+  "gcode_file": "NOSCARF_FIX2.0_KammInletH_10PlatformPlus6InletLayers_10mmHorizontalLines_16Layers.gcode",
+  "gcode_sha256": "377c5056e478318cadf70aa9ff9a68a40576769e45831056234d4c9b1ee08b90",
+  "layers": 141,
+  "counts": {
+    "travel": 2872,
+    "prime": 722,
+    "extrusion": 18260,
+    "retraction": 3221
+  },
+  "arc_move_count": 808,
+  "arc_display_chord_error_bound_mm": 0.0002,
+  "extrusion_bounds_mm": [
+    [
+      90.0,
+      142.38301
+    ],
+    [
+      95.0,
+      141.289701
+    ],
+    [
+      0.06,
+      8.46
+    ]
+  ],
+  "lengths_mm": {
+    "travel": 16599.184009825556,
+    "prime": 0.0,
+    "extrusion": 14866.346609606871,
+    "retraction": 1048.0088591150345
+  },
+  "layer_stats": {
+    "1": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "2": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "3": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "4": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "5": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "6": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "7": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "8": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "9": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 846,
+      "retraction": 4
+    },
+    "10": {
+      "travel": 141,
+      "prime": 22,
+      "extrusion": 856,
+      "retraction": 4
+    },
+    "11": {
+      "travel": 82,
+      "prime": 12,
+      "extrusion": 126,
+      "retraction": 2
+    },
+    "12": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "13": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "14": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "15": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "16": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "17": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "18": {
+      "travel": 85,
+      "prime": 12,
+      "extrusion": 188,
+      "retraction": 6
+    },
+    "19": {
+      "travel": 63,
+      "prime": 8,
+      "extrusion": 70
+    },
+    "20": {
+      "travel": 13,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 22
+    },
+    "21": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 22
+    },
+    "22": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 23
+    },
+    "23": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 22
+    },
+    "24": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 22
+    },
+    "25": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 22
+    },
+    "26": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 22
+    },
+    "27": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 21
+    },
+    "28": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 21
+    },
+    "29": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 21
+    },
+    "30": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 88,
+      "retraction": 21
+    },
+    "31": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 21
+    },
+    "32": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 23
+    },
+    "33": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 24
+    },
+    "34": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 25
+    },
+    "35": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 25
+    },
+    "36": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 24
+    },
+    "37": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "38": {
+      "travel": 11,
+      "prime": 4,
+      "extrusion": 75,
+      "retraction": 24
+    },
+    "39": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 70,
+      "retraction": 24
+    },
+    "40": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 70,
+      "retraction": 23
+    },
+    "41": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 70,
+      "retraction": 26
+    },
+    "42": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 71,
+      "retraction": 27
+    },
+    "43": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 67,
+      "retraction": 25
+    },
+    "44": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 26
+    },
+    "45": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 25
+    },
+    "46": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 27
+    },
+    "47": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 27
+    },
+    "48": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 28
+    },
+    "49": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "50": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "51": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "52": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 57,
+      "retraction": 28
+    },
+    "53": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "54": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "55": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "56": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "57": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "58": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "59": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "60": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "61": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "62": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "63": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "64": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "65": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "66": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "67": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "68": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "69": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "70": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "71": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "72": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "73": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "74": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "75": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 28
+    },
+    "76": {
+      "travel": 11,
+      "prime": 4,
+      "extrusion": 58,
+      "retraction": 29
+    },
+    "77": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "78": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "79": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "80": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "81": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "82": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "83": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "84": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "85": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "86": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "87": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "88": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "89": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 59,
+      "retraction": 28
+    },
+    "90": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 57,
+      "retraction": 28
+    },
+    "91": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 64,
+      "retraction": 27
+    },
+    "92": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 70,
+      "retraction": 24
+    },
+    "93": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 23
+    },
+    "94": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 26
+    },
+    "95": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 26
+    },
+    "96": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 26
+    },
+    "97": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 80,
+      "retraction": 25
+    },
+    "98": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "99": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "100": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "101": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "102": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "103": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "104": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "105": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "106": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 76,
+      "retraction": 24
+    },
+    "107": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 23
+    },
+    "108": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 23
+    },
+    "109": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 24
+    },
+    "110": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 24
+    },
+    "111": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 25
+    },
+    "112": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "113": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "114": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "115": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "116": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "117": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "118": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "119": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 72,
+      "retraction": 26
+    },
+    "120": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 71,
+      "retraction": 25
+    },
+    "121": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 70,
+      "retraction": 24
+    },
+    "122": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 71,
+      "retraction": 25
+    },
+    "123": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 70,
+      "retraction": 25
+    },
+    "124": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 24
+    },
+    "125": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 24
+    },
+    "126": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 24
+    },
+    "127": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 26
+    },
+    "128": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 25
+    },
+    "129": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 68,
+      "retraction": 26
+    },
+    "130": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 64,
+      "retraction": 24
+    },
+    "131": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 24
+    },
+    "132": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 24
+    },
+    "133": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 62,
+      "retraction": 24
+    },
+    "134": {
+      "travel": 11,
+      "prime": 4,
+      "extrusion": 61,
+      "retraction": 27
+    },
+    "135": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    },
+    "136": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    },
+    "137": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    },
+    "138": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    },
+    "139": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    },
+    "140": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    },
+    "141": {
+      "travel": 10,
+      "prime": 4,
+      "extrusion": 60,
+      "retraction": 26
+    }
+  },
+  "extrusion_moves_represented": 18260,
+  "omitted_extrusion_moves": 0,
+  "interactive_html_self_contained": true,
+  "interactive_trace_count": 573,
+  "Gcode_unchanged": true,
+  "display_only_exploded_gap_available": true
+}
